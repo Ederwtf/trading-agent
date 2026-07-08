@@ -1,0 +1,114 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-07T21:56:58.620401",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 384334.78
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-07-07T21:56:50.206893",
+    "price": {
+      "current": 939.66,
+      "sma20": 1045.84,
+      "sma50": 870.97,
+      "rsi14": 42.06,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -4.29,
+      "change_5d_pct": -17.93,
+      "change_1m_pct": -5.83
+    },
+    "volume": {
+      "current": 1721027,
+      "avg_20d": 1085521,
+      "ratio": 1.59,
+      "unusual": true
+    },
+    "news": [
+      {
+        "headline": "Ross Gerber Says Chip Sell Off 'a Gift' for Those That Want to Retire Even as SK Hynix US Debut Nears: 'Captured by Very Short-Term Thinking'",
+        "summary": "Ross Gerber calls chip selloff &#34;a gift&#34; for long-term investors ahead of SK Hynix&#39;s $29B U.S. listing this week."
+      },
+      {
+        "headline": "Samsung Selloff Sends Warning To US Investors; Amazon Enters AI Debt Binge",
+        "summary": "\n\n\n\nSamsung Warning\n\n\n\nPlease click here for an enlarged chart of Direxion Daily Semiconductor Bull 3X ETF (NYSE:SOXL).\n\n\n\nNote the following:\n\n\n\n\nSemiconductors are the leading sector that has been d"
+      },
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
+        "summary": "A deepening chipmaker slide pulls all major U.S. indexes lower Tuesday while oil climbs on a Strait of Hormuz strike and defensive sectors led the tape."
+      },
+      {
+        "headline": "Wall Street Welcomes SK Hynix: Will Micron And SanDisk Foot The Bill?",
+        "summary": "SK Hynix plans its U.S. listing, joining other memory stocks in the AI boom. Existing winners may be sold to fund the newcomer."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "La reciente ca\u00edda en el precio de MU es una oportunidad de compra atractiva debido a la tendencia a largo plazo de crecimiento en la industria de semiconductores y la posici\u00f3n competitiva de la empresa",
+    "arguments": [
+      "El RSI14 de 42.06 indica que el activo est\u00e1 en territorio de sobreventa, lo que sugiere un potencial rebote",
+      "La relaci\u00f3n de volumen actual con respecto al promedio de 20 d\u00edas es de 1.59, lo que indica un inter\u00e9s significativo en el activo",
+      "La noticia de Ross Gerber calificando la venta de chips como 'un regalo' para los inversores a largo plazo es un catalizador importante para la entrada en el mercado"
+    ],
+    "key_catalyst": "La inminente lista de SK Hynix en el mercado estadounidense y su potencial impacto en la percepci\u00f3n de los inversores sobre la industria de semiconductores",
+    "price_target": 1100.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.85,
+    "thesis": "El trade alcista para MU falla debido a la tendencia bajista y la debilidad en el sector de semiconductores",
+    "counter_arguments": [
+      "La ca\u00edda del 17.93% en los \u00faltimos 5 d\u00edas indica una fuerte presi\u00f3n vendida",
+      "El RSI de 42.06 sugiere que el activo est\u00e1 en territorio de sobreventa, pero la falta de impulso alcista es preocupante",
+      "La noticia de la entrada de SK Hynix al mercado estadounidense puede generar una mayor competencia para MU"
+    ],
+    "fatal_flaw": "La tendencia a corto plazo es claramente bajista, con el precio actual por debajo de la SMA20 y una ca\u00edda del 4.29% en el \u00faltimo d\u00eda",
+    "downside_target": 850.0,
+    "scenario": "Un escenario de p\u00e9rdida catastr\u00f3fica se producir\u00eda si el sector de semiconductores contin\u00faa debilit\u00e1ndose y MU no puede recuperar su tendencia alcista, lo que llevar\u00eda a una ca\u00edda adicional del 20% en el precio"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.82,
+    "reasoning": "La decisi\u00f3n de comprar MU se basa en la combinaci\u00f3n de factores t\u00e9cnicos y fundamentales que sugieren un potencial rebote en el precio. Aunque el an\u00e1lisis bear presenta argumentos s\u00f3lidos sobre la tendencia bajista y la competencia en el sector, el an\u00e1lisis bull destaca la oportunidad de compra atractiva debido a la tendencia a largo plazo de crecimiento en la industria de semiconductores y la posici\u00f3n competitiva de MU. El RSI14 de 42.06 indica sobreventa, lo que sugiere un potencial rebote. Adem\u00e1s, la relaci\u00f3n de volumen actual con respecto al promedio de 20 d\u00edas es significativa, lo que indica inter\u00e9s en el activo. La noticia de Ross Gerber y la inminente lista de SK Hynix en el mercado estadounidense son catalizadores importantes para la entrada en el mercado.",
+    "bull_weight": 0.65,
+    "bear_weight": 0.35,
+    "entry": 939.66,
+    "take_profit": 1100.0,
+    "stop_loss": 850.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.82 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.79 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "27e8c182-dbb8-4c91-a6e4-3a3ce2c942b8",
+    "symbol": "MU",
+    "side": "buy",
+    "shares": 8,
+    "order_class": "bracket",
+    "estimated_value": 7517.28,
+    "take_profit": 1100.0,
+    "stop_loss": 850.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-07T21:59:51.579735"
+  }
+}

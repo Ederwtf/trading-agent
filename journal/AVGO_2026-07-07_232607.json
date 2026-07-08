@@ -1,0 +1,15 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-07T23:26:07.367872",
+  "pipeline": "monitor",
+  "price": 370.53,
+  "rsi": 42.22,
+  "risk": {
+    "approved": false,
+    "reason": "Decision is HOLD",
+    "rules_passed": [],
+    "rules_failed": [],
+    "final_decision": "HOLD",
+    "position_value": 0.0
+  }
+}

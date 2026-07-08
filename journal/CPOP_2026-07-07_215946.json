@@ -1,0 +1,106 @@
+{
+  "symbol": "CPOP",
+  "timestamp": "2026-07-07T21:58:26.471237",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 384334.78
+  },
+  "research": {
+    "symbol": "CPOP",
+    "timestamp": "2026-07-07T21:58:07.981718",
+    "price": {
+      "current": 0.1,
+      "sma20": 0.28,
+      "sma50": 0.29,
+      "rsi14": 28.34,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": 7.99,
+      "change_5d_pct": 0.91,
+      "change_1m_pct": -64.75
+    },
+    "volume": {
+      "current": 5098067,
+      "avg_20d": 523035,
+      "ratio": 9.75,
+      "unusual": true
+    },
+    "news": [
+      {
+        "headline": "12 Communication Services Stocks Moving In Tuesday's After-Market Session",
+        "summary": "Gainers\n\niOThree (NASDAQ:IOTR) stock increased by 45.4% to $3.65 during Tuesday&#39;s after-market session. The company&#39;s market cap stands at $6.7 million. \nToken Cat (NASDAQ:TC) stock moved upwa"
+      },
+      {
+        "headline": "10 Communication Services Stocks Moving In Tuesday's Pre-Market Session",
+        "summary": "Gainers\n\nPop Culture Gr (NASDAQ:CPOP) stock rose 32.9% to $0.12 during Tuesday&#39;s pre-market session. The company&#39;s market cap stands at $9.7 million. \nTNL Mediagene (NASDAQ:TNMG) stock rose 28"
+      },
+      {
+        "headline": "Why Crinetics Pharmaceuticals Shares Are Trading Higher By 99%; Here Are 20 Stocks Moving Premarket",
+        "summary": "Crinetics Pharmaceuticals Inc (NASDAQ: CRNX) rose in pre-market trading after being acquired by Vertex Pharmaceuticals (NASDAQ: VRTX) for $85/share."
+      },
+      {
+        "headline": "11 Communication Services Stocks Moving In Friday's Intraday Session",
+        "summary": "Gainers\n\nWeShop Holdings (NASDAQ:WSHP) stock rose 29.7% to $6.11 during Friday&#39;s regular session. The company&#39;s market cap stands at $51.6 million. \nCineverse (NASDAQ:CNVS) stock rose 22.38% t"
+      },
+      {
+        "headline": "12 Communication Services Stocks Moving In Tuesday's After-Market Session",
+        "summary": "Gainers\n\nNIP Group (NASDAQ:NIPG) shares rose 5.9% to $0.29 during Tuesday&#39;s after-market session. The company&#39;s market cap stands at $31.7 million. \nTreasure Global (NASDAQ:TGL) shares increas"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "CPOP est\u00e1 listo para una recuperaci\u00f3n significativa debido a su bajo nivel de RSI y el aumento reciente en el volumen de trading",
+    "arguments": [
+      "El RSI14 de 28.34 indica que el activo est\u00e1 oversold y listo para una reversi\u00f3n al alza",
+      "El aumento del 7.99% en el precio en los \u00faltimos d\u00edas y el aumento del 32.9% en la sesi\u00f3n previa de mercado sugieren un impulso alcista",
+      "El volumen de trading actual es 9.75 veces mayor que el promedio de 20 d\u00edas, lo que indica un inter\u00e9s significativo en el activo"
+    ],
+    "key_catalyst": "El aumento reciente en el volumen de trading y el precio, combinado con el bajo nivel de RSI, sugiere que el activo est\u00e1 listo para una recuperaci\u00f3n significativa",
+    "price_target": 0.25,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.9,
+    "thesis": "El trade de CPOP no deber\u00eda tomarse debido a su debilidad estructural y tendencia bajista a largo plazo",
+    "counter_arguments": [
+      "El precio actual de CPOP se encuentra por debajo de las medias m\u00f3viles de 20 y 50 d\u00edas, lo que indica una tendencia bajista",
+      "El RSI de 14 d\u00edas es de 28.34, lo que sugiere que el activo est\u00e1 sobre vendido, pero no necesariamente listo para un rebote sostenido",
+      "El cambio porcentual en 1 mes es de -64.75%, lo que indica una fuerte tendencia bajista a largo plazo"
+    ],
+    "fatal_flaw": "La falta de fundamentos s\u00f3lidos y la alta volatilidad del activo hacen que sea un trade de alto riesgo",
+    "downside_target": 0.05,
+    "scenario": "Si el precio de CPOP no logra romper la resistencia de las medias m\u00f3viles y el volumen de trading disminuye, el activo podr\u00eda experimentar una ca\u00edda catastr\u00f3fica hacia los 0.05"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "La decisi\u00f3n de comprar CPOP se basa en el an\u00e1lisis de que el activo est\u00e1 oversold seg\u00fan su RSI14 de 28.34, lo que sugiere una posible reversi\u00f3n al alza. Adem\u00e1s, el aumento reciente en el volumen de trading y el precio indica un inter\u00e9s significativo en el activo. Aunque el an\u00e1lisis bear presenta argumentos s\u00f3lidos sobre la debilidad estructural y la tendencia bajista a largo plazo, la combinaci\u00f3n del bajo RSI y el aumento en el volumen y precio sugiere que el activo podr\u00eda experimentar una recuperaci\u00f3n significativa en el corto plazo.",
+    "bull_weight": 0.65,
+    "bear_weight": 0.35,
+    "entry": 0.105,
+    "take_profit": 0.25,
+    "stop_loss": 0.075,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 4.83 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "stop_loss.stop_price must be <= base_price - 0.01",
+    "timestamp": "2026-07-07T21:59:46.210143"
+  }
+}

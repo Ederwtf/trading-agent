@@ -1,0 +1,15 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-07T23:26:03.504780",
+  "pipeline": "monitor",
+  "price": 300.64,
+  "rsi": 27.74,
+  "risk": {
+    "approved": false,
+    "reason": "Decision is HOLD",
+    "rules_passed": [],
+    "rules_failed": [],
+    "final_decision": "HOLD",
+    "position_value": 0.0
+  }
+}

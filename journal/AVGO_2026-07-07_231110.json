@@ -1,0 +1,117 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-07T23:09:57.210381",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 377313.89
+  },
+  "research": {
+    "symbol": "AVGO",
+    "timestamp": "2026-07-07T23:08:58.994684",
+    "price": {
+      "current": 370.53,
+      "sma20": 381.24,
+      "sma50": 407.41,
+      "rsi14": 42.22,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -0.93,
+      "change_5d_pct": -0.48,
+      "change_1m_pct": -11.56
+    },
+    "volume": {
+      "current": 802157,
+      "avg_20d": 901721,
+      "ratio": 0.89,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Ross Gerber Says Chip Sell Off 'a Gift' for Those That Want to Retire Even as SK Hynix US Debut Nears: 'Captured by Very Short-Term Thinking'",
+        "summary": "Ross Gerber calls chip selloff &#34;a gift&#34; for long-term investors ahead of SK Hynix&#39;s $29B U.S. listing this week."
+      },
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "Erste Group Downgrades Broadcom to Hold",
+        "summary": ""
+      },
+      {
+        "headline": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
+        "summary": "Corgi launches 24 new leveraged and structured buffer ETFs, extending its rapid ETF expansion after debuting 95 funds in June."
+      },
+      {
+        "headline": "Which Semiconductor ETF Is Winning The AI Race In 2026?",
+        "summary": "PSI has outperformed every major semiconductor ETF in 2026. Here&#39;s why Nvidia&#39;s weighting has created a nearly 40-point performance gap."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.95,
+    "thesis": "AVGO est\u00e1 en una posici\u00f3n atractiva para un rebote significativo despu\u00e9s de una ca\u00edda injustificada, impulsada por su s\u00f3lida posici\u00f3n en el mercado de semiconductores y la expectativa de recuperaci\u00f3n en el sector.",
+    "arguments": [
+      "El RSI14 de 42.22 indica que AVGO est\u00e1 cerca de territorio de sobreventa, lo que sugiere un potencial de rebote",
+      "La ca\u00edda del 11.56% en el \u00faltimo mes podr\u00eda estar sobrevalorando la acci\u00f3n, creando una oportunidad de compra",
+      "El sector de semiconductores hist\u00f3ricamente ha mostrado resiliencia y crecimiento a largo plazo, beneficiando a AVGO",
+      "La menci\u00f3n de Ross Gerber indicando que la venta de chips es 'un regalo' para inversores a largo plazo respalda la tesis de compra"
+    ],
+    "key_catalyst": "La expectativa de recuperaci\u00f3n del sector de semiconductores y la s\u00f3lida posici\u00f3n de AVGO en el mercado, junto con valoraciones que parecen atractivas despu\u00e9s de la reciente ca\u00edda",
+    "price_target": 450.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.8,
+    "thesis": "El caso alcista para AVGO falla debido a la tendencia bajista a corto plazo y se\u00f1ales t\u00e9cnicas negativas.",
+    "counter_arguments": [
+      "El precio actual est\u00e1 por debajo de las medias m\u00f3viles de 20 y 50 d\u00edas, lo que indica una tendencia bajista a corto plazo.",
+      "El RSI14 est\u00e1 en 42.22, lo que sugiere que el activo est\u00e1 en territorio neutral pero cerca de sobrevendido, lo que no respalda un movimiento alcista inmediato.",
+      "El volumen actual es inferior al promedio de 20 d\u00edas, lo que puede indicar falta de inter\u00e9s comprador.",
+      "La noticia de downgrade de Erste Group a Broadcom a 'Hold' puede generar incertidumbre en el sector.",
+      "El cambio porcentual negativo en 1 d\u00eda, 5 d\u00edas y 1 mes (-0.93%, -0.48% y -11.56% respectivamente) indica un momentum bajista."
+    ],
+    "fatal_flaw": "La incapacidad del precio para mantenerse por encima de las medias m\u00f3viles clave (SMA20 y SMA50) es un indicio de debilidad.",
+    "downside_target": 350.0,
+    "scenario": "Una p\u00e9rdida catastr\u00f3fica ocurrir\u00eda si AVGO rompiera por debajo de 350, lo que potencialmente desencadenar\u00eda una venta masiva y una mayor ca\u00edda del precio."
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.7,
+    "reasoning": "El an\u00e1lisis alcista presenta argumentos s\u00f3lidos respaldados por datos, como el RSI14 de 42.22 que indica territorio de sobreventa y el potencial de rebote. Aunque el an\u00e1lisis bajista se\u00f1ala una tendencia bajista a corto plazo, los riesgos estructurales parecen ser superados por la expectativa de recuperaci\u00f3n del sector y la posici\u00f3n de AVGO. El RSI no est\u00e1 en niveles extremos que requieran ajustes significativos en la convicci\u00f3n de compra.",
+    "bull_weight": 0.65,
+    "bear_weight": 0.35,
+    "entry": 370.53,
+    "take_profit": 450.0,
+    "stop_loss": 350.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.70 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.87 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "eb3fe6b1-5d18-4f28-aca2-667778c4db62",
+    "symbol": "AVGO",
+    "side": "buy",
+    "shares": 21,
+    "order_class": "bracket",
+    "estimated_value": 7781.13,
+    "take_profit": 450.0,
+    "stop_loss": 350.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-07T23:11:10.839285"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "symbol": "SMCI",
+  "timestamp": "2026-07-07T21:57:28.086698",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 384334.78
+  },
+  "research": {
+    "symbol": "SMCI",
+    "timestamp": "2026-07-07T21:57:15.993901",
+    "price": {
+      "current": 26.24,
+      "sma20": 31.21,
+      "sma50": 33.41,
+      "rsi14": 39.65,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -3.53,
+      "change_5d_pct": -6.79,
+      "change_1m_pct": -44.03
+    },
+    "volume": {
+      "current": 1418729,
+      "avg_20d": 2733360,
+      "ratio": 0.52,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Why Is Super Micro Computer Stock Falling on Tuesday?",
+        "summary": "Super Micro Computer Inc (NASDAQ:SMCI) stock falls Tuesday amid a broader chip sector downturn triggered by Samsung and rising short interest numbers."
+      },
+      {
+        "headline": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
+        "summary": "Corgi launches 24 new leveraged and structured buffer ETFs, extending its rapid ETF expansion after debuting 95 funds in June."
+      },
+      {
+        "headline": "Benzinga Bulls and Bears: AeroVironment, Reddit, Oracle \u2014 And Stocks End Week on High Note",
+        "summary": "Benzinga examined the prospects for many investors\u2019 favorite stocks over the last week \u2014 here\u2019s a look at some of our top stories."
+      },
+      {
+        "headline": "$100 Invested In Super Micro Computer 15 Years Ago Would Be Worth This Much Today",
+        "summary": "Super Micro Computer (NASDAQ:SMCI) has outperformed the market over the past 15 years by 8.53% on an annualized basis producing an average annual return of 20.62%. Currently, Super Micro Computer has "
+      },
+      {
+        "headline": "What's Going on With Super Micro Computer Stock Thursday?",
+        "summary": "Super Micro (SMCI) remains in a long-term downtrend, trading below key SMAs. Discover the critical support and resistance levels."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "SMCI est\u00e1 listo para una recuperaci\u00f3n significativa debido a su hist\u00f3rico de desempe\u00f1o a largo plazo y su valoraci\u00f3n actual atractiva",
+    "arguments": [
+      "El rendimiento anualizado de SMCI durante los \u00faltimos 15 a\u00f1os ha sido del 20.62%, superando al mercado en un 8.53% anual",
+      "El RSI14 de 39.65 indica que el activo est\u00e1 en territorio de sobreventa, lo que puede ser un catalizador para una reversi\u00f3n al alza",
+      "La ca\u00edda reciente en el precio puede ser una oportunidad de compra, considerando la tendencia a largo plazo y la resiliencia del sector tecnol\u00f3gico"
+    ],
+    "key_catalyst": "La combinaci\u00f3n de un RSI14 bajo y un historial de desempe\u00f1o a largo plazo s\u00f3lido puede impulsar una recuperaci\u00f3n en el precio de SMCI",
+    "price_target": 35.5,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.9,
+    "thesis": "El trade alcista para SMCI falla debido a la tendencia a la baja y la falta de impulso en el precio y el volumen",
+    "counter_arguments": [
+      "El precio actual est\u00e1 por debajo de las medias m\u00f3viles de 20 y 50 d\u00edas, lo que indica una tendencia a la baja",
+      "El RSI de 14 d\u00edas es de 39.65, lo que sugiere que el activo est\u00e1 en una zona de overselling, pero no necesariamente listo para revertir",
+      "El cambio porcentual en 1 d\u00eda y 5 d\u00edas es negativo, lo que indica una falta de impulso alcista",
+      "El volumen actual es inferior al promedio de 20 d\u00edas, lo que sugiere una falta de inter\u00e9s de los inversores",
+      "La noticia de un aumento en el inter\u00e9s corto puede presionar el precio a la baja"
+    ],
+    "fatal_flaw": "La tendencia a la baja y la falta de impulso en el precio y el volumen, combinadas con el aumento en el inter\u00e9s corto, hacen que el trade alcista sea muy riesgoso",
+    "downside_target": 20.0,
+    "scenario": "Si el precio de SMCI sigue cayendo y rompe el soporte clave, podr\u00eda desencadenar una venta en masa y llevar el precio a un m\u00ednimo de 20.0"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.82,
+    "reasoning": "A pesar de que el an\u00e1lisis bear tiene una convicci\u00f3n alta, el an\u00e1lisis bull presenta argumentos respaldados por datos hist\u00f3ricos s\u00f3lidos y una valoraci\u00f3n actual atractiva. El RSI14 de 39.65 indica sobreventa, lo que puede ser un catalizador para una reversi\u00f3n al alza. La tendencia a largo plazo y la resiliencia del sector tecnol\u00f3gico tambi\u00e9n apoyan la decisi\u00f3n de compra.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.65,
+    "entry": 26.24,
+    "take_profit": 35.5,
+    "stop_loss": 22.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.82 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.18 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

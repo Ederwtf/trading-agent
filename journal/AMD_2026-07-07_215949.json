@@ -1,0 +1,114 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-07T21:56:20.596462",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 384334.78
+  },
+  "research": {
+    "symbol": "AMD",
+    "timestamp": "2026-07-07T21:56:08.448571",
+    "price": {
+      "current": 515.95,
+      "sma20": 520.62,
+      "sma50": 469.49,
+      "rsi14": 45.34,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -6.57,
+      "change_5d_pct": -4.36,
+      "change_1m_pct": -1.36
+    },
+    "volume": {
+      "current": 657059,
+      "avg_20d": 675598,
+      "ratio": 0.97,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Cathie Wood Doubles Down on SpaceX Bet Amid Dip in Stock, Keeps on Dumping AMD Stock",
+        "summary": "Ark Invest added roughly $6.6 million in SpaceX shares while trimming its AMD stake by about $4.5 million on Tuesday, July 7, 2026."
+      },
+      {
+        "headline": "Why Is AMD Stock Falling Tuesday?",
+        "summary": "AMD stock drops 4% premarket amid tech sector pullback. Is this a buying opportunity? Get the latest AMD market analysis."
+      },
+      {
+        "headline": "How To Open a Trump Account? Everything Parents Need to Know About Eligibility and the $1,000 Treasury Contribution",
+        "summary": "Learn how to open a Trump Account, who is eligible and what parents need to complete the process."
+      },
+      {
+        "headline": "Cathie Wood's Ark Invest Buys the SpaceX Dip and Dumps $8.6 Million Worth of Surging AMD Stock",
+        "summary": "Cathie Wood&#39;s Ark Invest bought SpaceX shares and sold AMD shares, still bullish on SpaceX&#39;s potential despite pullback, trimming AMD stake."
+      },
+      {
+        "headline": "Nvidia Says 'Our Roadmap Remains Intact' After Kyber AI Server Delay Report, Jim Cramer Says 'Buy' While Others Urges Caution",
+        "summary": "Nvidia denied reports of a Kyber AI server delay, reaffirming its roadmap as Cramer turned bullish and analysts weighed company&#39;s response."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "AMD est\u00e1 listo para un repunte significativo debido a su posici\u00f3n s\u00f3lida en el mercado de semiconductores y la reciente ca\u00edda en su precio que lo hace atractivo para los inversores a largo plazo",
+    "arguments": [
+      "La relaci\u00f3n precio/valor actual es atractiva considerando el crecimiento potencial de la industria de semiconductores",
+      "La ca\u00edda en el precio de las acciones de AMD en los \u00faltimos d\u00edas puede ser una oportunidad de compra, especialmente considerando la tendencia a largo plazo",
+      "La venta de acciones de AMD por parte de Cathie Wood puede ser una estrategia de gesti\u00f3n de cartera y no necesariamente un voto de desconfianza en el potencial de la empresa"
+    ],
+    "key_catalyst": "La industria de semiconductores est\u00e1 experimentando un crecimiento explosivo debido a la adopci\u00f3n generalizada de la tecnolog\u00eda de inteligencia artificial y el Internet de las cosas (IoT), lo que coloca a AMD en una posici\u00f3n ideal para beneficiarse de esta tendencia",
+    "price_target": 650.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.85,
+    "thesis": "El trade alcista para AMD falla debido a la falta de impulso t\u00e9cnico y la venta de acciones por parte de inversores institucionales como Cathie Wood",
+    "counter_arguments": [
+      "La ca\u00edda del 6.57% en un d\u00eda y del 4.36% en cinco d\u00edas indica una tendencia a la baja",
+      "El RSI14 de 45.34 sugiere que el activo no est\u00e1 sobrecomprado, pero la falta de impulso alcista es preocupante",
+      "La venta de acciones por parte de Cathie Wood y Ark Invest, trimiendo su participaci\u00f3n en AMD, puede ser un indicador de una p\u00e9rdida de confianza en el activo"
+    ],
+    "fatal_flaw": "La falta de un catalizador claro para impulsar el crecimiento y la competencia intensa en el sector de semiconductores",
+    "downside_target": 450.0,
+    "scenario": "Un escenario de p\u00e9rdida catastr\u00f3fica se producir\u00eda si Nvidia anuncia un producto innovador que desplace a AMD en el mercado, combinado con una ca\u00edda generalizada en el sector tecnol\u00f3gico"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.82,
+    "reasoning": "La decisi\u00f3n de comprar AMD se basa en la convicci\u00f3n alta del an\u00e1lisis bull (0.92) y la presencia de argumentos s\u00f3lidos respaldados por la posici\u00f3n de AMD en el mercado de semiconductores y la relaci\u00f3n precio/valor atractiva. Aunque el an\u00e1lisis bear tambi\u00e9n presenta puntos v\u00e1lidos, como la falta de impulso t\u00e9cnico y la venta de acciones por parte de inversores institucionales, la tendencia a largo plazo y el potencial de crecimiento en la industria de semiconductores pesan m\u00e1s en la decisi\u00f3n. El RSI14 de 45.34 no indica sobrecompra, lo que reduce la preocupaci\u00f3n por una posible correcci\u00f3n a corto plazo.",
+    "bull_weight": 0.75,
+    "bear_weight": 0.25,
+    "entry": 515.95,
+    "take_profit": 650.0,
+    "stop_loss": 450.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.82 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.03 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "178624ac-81ea-4407-b167-775d969b8fbd",
+    "symbol": "AMD",
+    "side": "buy",
+    "shares": 15,
+    "order_class": "bracket",
+    "estimated_value": 7739.25,
+    "take_profit": 650.0,
+    "stop_loss": 450.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-07T21:59:49.856329"
+  }
+}

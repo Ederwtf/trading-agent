@@ -1,0 +1,15 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-07T23:26:14.583333",
+  "pipeline": "monitor",
+  "price": 939.66,
+  "rsi": 42.06,
+  "risk": {
+    "approved": false,
+    "reason": "Decision is HOLD",
+    "rules_passed": [],
+    "rules_failed": [],
+    "final_decision": "HOLD",
+    "position_value": 0.0
+  }
+}

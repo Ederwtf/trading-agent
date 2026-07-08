@@ -1,0 +1,114 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-07T21:56:33.940482",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 384334.78
+  },
+  "research": {
+    "symbol": "ARM",
+    "timestamp": "2026-07-07T21:56:24.688901",
+    "price": {
+      "current": 300.64,
+      "sma20": 357.88,
+      "sma50": 303.15,
+      "rsi14": 27.74,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -6.68,
+      "change_5d_pct": -12.55,
+      "change_1m_pct": -23.57
+    },
+    "volume": {
+      "current": 251373,
+      "avg_20d": 369930,
+      "ratio": 0.68,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "What's Going on With Arm Holdings Stock Tuesday?",
+        "summary": "Arm Holdings slips 4% in premarket trading amid a tech selloff. Get the latest price action, key support levels, and analysis."
+      },
+      {
+        "headline": "Corgi's ETF Pack Grows Yet Again with 24 New Leveraged and Buffer Launches",
+        "summary": "Corgi launches 24 new leveraged and structured buffer ETFs, extending its rapid ETF expansion after debuting 95 funds in June."
+      },
+      {
+        "headline": "What's Going on With Arm Holdings Stock Monday?",
+        "summary": "ARM stock climbs 5% on Monday. Is Arm Holdings still a Buy? Check out the latest technical analysis, earnings outlook, and price targets."
+      },
+      {
+        "headline": "Weak Jobs, Good News: These 10 Rate-Sensitive Stocks Are Soaring Today",
+        "summary": "A weak June jobs report crushed Fed rate-hike bets, sending gold and silver soaring and rate-sensitive stocks higher. Miners led the rally."
+      },
+      {
+        "headline": "SoftBank Reopens Talks for $10 Billion Loan Backed by OpenAI Stake After Adding Repayment Guarantee to Ease Banks' Valuation Concerns: Report",
+        "summary": "SoftBank reportedly revived talks for a $10 billion loan backed by its OpenAI stake after adding a repayment guarantee."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "El precio actual de ARM est\u00e1 significativamente por debajo de su media m\u00f3vil de 20 d\u00edas, lo que sugiere un potencial de rebote hacia niveles m\u00e1s altos",
+    "arguments": [
+      "El RSI14 de 27.74 indica que la acci\u00f3n est\u00e1 en territorio de sobreventa, lo que hist\u00f3ricamente ha sido un buen momento para comprar",
+      "La ca\u00edda del 6.68% en un d\u00eda y del 12.55% en 5 d\u00edas puede ser una sobreacci\u00f3n, creando una oportunidad de compra",
+      "La noticia de que ARM subi\u00f3 un 5% el lunes pasado sugiere que hay inter\u00e9s comprador en la acci\u00f3n"
+    ],
+    "key_catalyst": "El RSI14 extremadamente bajo de 27.74, lo que sugiere que la acci\u00f3n est\u00e1 lista para un rebote",
+    "price_target": 350.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.9,
+    "thesis": "El trade alcista para ARM falla debido a la tendencia bajista y debilidad en el mercado",
+    "counter_arguments": [
+      "El precio actual est\u00e1 por debajo de las medias m\u00f3viles de 20 y 50 d\u00edas, lo que indica una tendencia bajista",
+      "El RSI de 14 d\u00edas es de 27.74, lo que sugiere que el activo est\u00e1 sobrevendido y puede experimentar un rebote, pero no necesariamente un movimiento alcista sostenido",
+      "La ca\u00edda del 6.68% en un d\u00eda y del 12.55% en 5 d\u00edas indica una fuerte presi\u00f3n vendida"
+    ],
+    "fatal_flaw": "La falta de volumen de trading unusual y la ratio de volumen actual respecto al promedio de 20 d\u00edas de solo 0.68 sugiere una falta de inter\u00e9s y compromiso de los inversores",
+    "downside_target": 250.0,
+    "scenario": "Si el mercado tecnol\u00f3gico contin\u00faa experimentando una correcci\u00f3n y el apetito por el riesgo disminuye, ARM podr\u00eda seguir cayendo hacia los $250, especialmente si no logra recuperar el nivel de la media m\u00f3vil de 20 d\u00edas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "La decisi\u00f3n de comprar se basa en el an\u00e1lisis bull, que presenta un caso s\u00f3lido para un rebote en ARM debido a su RSI14 extremadamente bajo de 27.74, lo que indica sobreventa y potencial para un movimiento alcista. Aunque el an\u00e1lisis bear tambi\u00e9n presenta argumentos v\u00e1lidos sobre la tendencia bajista y la debilidad en el mercado, la falta de volumen de trading unusual y la ratio de volumen actual respecto al promedio de 20 d\u00edas no necesariamente invalidan la posibilidad de un rebote a corto plazo. La regla de ponderaci\u00f3n sobre el RSI < 28 aumenta la convicci\u00f3n de compra.",
+    "bull_weight": 0.7,
+    "bear_weight": 0.3,
+    "entry": 300.64,
+    "take_profit": 350.0,
+    "stop_loss": 270.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.61 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "94c19b4f-42b0-4778-b7c4-c2a4b49d7a70",
+    "symbol": "ARM",
+    "side": "buy",
+    "shares": 26,
+    "order_class": "bracket",
+    "estimated_value": 7816.64,
+    "take_profit": 350.0,
+    "stop_loss": 270.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-07T21:59:44.362123"
+  }
+}

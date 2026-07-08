@@ -1,0 +1,15 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-07-07T23:25:53.910851",
+  "pipeline": "monitor",
+  "price": 196.97,
+  "rsi": 33.76,
+  "risk": {
+    "approved": false,
+    "reason": "Decision is HOLD",
+    "rules_passed": [],
+    "rules_failed": [],
+    "final_decision": "HOLD",
+    "position_value": 0.0
+  }
+}

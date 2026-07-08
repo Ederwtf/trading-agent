@@ -1,0 +1,17 @@
+{
+  "symbols": ["NVDA", "AMD", "ARM", "AVGO", "MU", "TSM", "SMCI", "PLTR"],
+  "max_positions": 5,
+  "dynamic_universe": { "enabled": true, "top": 14, "min_price": 10 },
+  "analysis_cap": 15,
+  "llm_budget": 12,
+  "entry_min_gap_min": 30,
+  "exits": {
+    "auto_close": true,
+    "review_rsi_high": 72,
+    "review_sl_proximity_pct": 0.02,
+    "trend_exit_below_sma50": false
+  },
+  "description": "AI/semiconductores + relleno dinámico most-actives — paper trading",
+  "updated": "2026-07-07",
+  "notes": "symbols = lista fija curada. universo = fija + most-actives (deduplicado, hasta analysis_cap). llm_budget = máx símbolos que llegan a la IA por corrida (el resto se pre-filtra con lógica local)."
+}

@@ -1,0 +1,15 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-07T23:25:58.200254",
+  "pipeline": "monitor",
+  "price": 515.95,
+  "rsi": 45.34,
+  "risk": {
+    "approved": false,
+    "reason": "Decision is HOLD",
+    "rules_passed": [],
+    "rules_failed": [],
+    "final_decision": "HOLD",
+    "position_value": 0.0
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "symbol": "RIVN",
+  "timestamp": "2026-07-07T23:27:17.581751",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 361756.94
+  },
+  "research": {
+    "symbol": "RIVN",
+    "timestamp": "2026-07-07T23:26:35.494844",
+    "price": {
+      "current": 16.48,
+      "sma20": 16.33,
+      "sma50": 15.64,
+      "rsi14": 49.27,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": -18.05,
+      "change_5d_pct": -1.85,
+      "change_1m_pct": -9.05
+    },
+    "volume": {
+      "current": 3331216,
+      "avg_20d": 1538174,
+      "ratio": 2.17,
+      "unusual": true
+    },
+    "news": [
+      {
+        "headline": "Jefferies Maintains Hold on Rivian Automotive, Raises Price Target to $17",
+        "summary": ""
+      },
+      {
+        "headline": "10 Consumer Discretionary Stocks With Whale Alerts In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
+        "summary": "A deepening chipmaker slide pulls all major U.S. indexes lower Tuesday while oil climbs on a Strait of Hormuz strike and defensive sectors led the tape."
+      },
+      {
+        "headline": "Crude Oil Moves Higher; Rivian Automotive Shares Plunge",
+        "summary": "US stocks decline on Tuesday, with Nasdaq falling 0.61% and S&amp;P 500 dropping 0.24%. Consumer staples shares rise 1.8% while tech stocks fall 2.1%. Logistics Manager&#39;s Index records strongest g"
+      },
+      {
+        "headline": "11 Consumer Discretionary Stocks Moving In Tuesday's Intraday Session",
+        "summary": "Gainers\n\nFort Technology (NASDAQ:FRTT) stock increased by 14.9% to $0.88 during Tuesday&#39;s regular session. The company&#39;s market cap stands at $8.7 million. \nNaas Technology (NASDAQ:NAAS) share"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.95,
+    "thesis": "RIVN presenta una oportunidad de compra atractiva despu\u00e9s de una ca\u00edda injustificada en su precio",
+    "arguments": [
+      "El precio de RIVN se encuentra por encima de sus medias m\u00f3viles de 20 y 50 d\u00edas, lo que indica una tendencia alcista",
+      "El RSI14 se encuentra en 49.27, lo que sugiere que el activo no est\u00e1 sobrecomprado ni sobrevendido",
+      "El volumen de negociaci\u00f3n actual es significativamente mayor que el promedio de 20 d\u00edas, lo que indica un inter\u00e9s creciente en el activo",
+      "Jefferies ha aumentado su precio objetivo para RIVN a $17, lo que sugiere un potencial de crecimiento"
+    ],
+    "key_catalyst": "El aumento del precio objetivo por parte de Jefferies, que sugiere un potencial de crecimiento del 3.2% desde el precio actual",
+    "price_target": 20.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.8,
+    "thesis": "El caso alcista para RIVN falla debido a la tendencia bajista reciente y se\u00f1ales de debilidad t\u00e9cnica",
+    "counter_arguments": [
+      "La acci\u00f3n est\u00e1 cotizada justo por encima de la SMA20 y SMA50, lo que puede ser un nivel de resistencia",
+      "El RSI14 est\u00e1 en 49.27, lo que indica que la acci\u00f3n no est\u00e1 en territorio de sobrecompra, pero se acerca a niveles de neutralidad",
+      "El cambio porcentual en 1 d\u00eda y 1 mes es negativo, lo que sugiere una tendencia bajista a corto plazo",
+      "El volumen actual es m\u00e1s del doble del promedio de 20 d\u00edas, lo que puede indicar una venta masiva"
+    ],
+    "fatal_flaw": "La recomendaci\u00f3n de 'Hold' de Jefferies con un precio objetivo de $17 sugiere que no hay un impulso alcista significativo",
+    "downside_target": 14.5,
+    "scenario": "Una ruptura por debajo de la SMA50 podr\u00eda desencadenar una venta masiva y llevar el precio a niveles de $14 o inferiores"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.7,
+    "reasoning": "El an\u00e1lisis alcista presenta argumentos s\u00f3lidos respaldados por datos, como el precio por encima de las medias m\u00f3viles de 20 y 50 d\u00edas, el RSI14 en un nivel neutral y un aumento en el precio objetivo por parte de Jefferies. Aunque el an\u00e1lisis bajista tambi\u00e9n presenta puntos v\u00e1lidos, como la tendencia bajista reciente y se\u00f1ales de debilidad t\u00e9cnica, los argumentos alcistas parecen tener m\u00e1s peso debido a la presencia de datos concretos que respaldan la tesis de compra.",
+    "bull_weight": 0.65,
+    "bear_weight": 0.35,
+    "entry": 16.48,
+    "take_profit": 20.0,
+    "stop_loss": 14.5,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.70 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.78 \u2265 1.5",
+      "Posici\u00f3n $5,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($5,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 5000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

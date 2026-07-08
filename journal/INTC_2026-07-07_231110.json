@@ -1,0 +1,107 @@
+{
+  "symbol": "INTC",
+  "timestamp": "2026-07-07T23:10:51.566915",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 377313.89
+  },
+  "research": {
+    "symbol": "INTC",
+    "timestamp": "2026-07-07T23:09:23.926048",
+    "price": {
+      "current": 110.35,
+      "sma20": 124.18,
+      "sma50": 115.38,
+      "rsi14": 40.79,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -9.73,
+      "change_5d_pct": -16.2,
+      "change_1m_pct": -1.28
+    },
+    "volume": {
+      "current": 3827615,
+      "avg_20d": 3763470,
+      "ratio": 1.02,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "Chip Rout Drags Nasdaq 100 Lower, Oil Climbs: Stock Market Today",
+        "summary": "A deepening chipmaker slide pulls all major U.S. indexes lower Tuesday while oil climbs on a Strait of Hormuz strike and defensive sectors led the tape."
+      },
+      {
+        "headline": "Jim Cramer\u2019s Take: GEV, CAT, INTC Still Have Room \u2014 But Today Is A Punisher",
+        "summary": "&#34;Mad Money&#34; host Jim Cramer notes Tuesday&#39;s brutal rotation for INTC, GEV, CAT as uptrends remain intact long-term."
+      },
+      {
+        "headline": "Why Is Intel Stock Falling Tuesday?",
+        "summary": "Intel stock falls 4% pre-market amid a broader tech pullback. Get the key technical levels to watch for INTC."
+      },
+      {
+        "headline": "Michael Burry Fires Back at AI Bear Critic: 'Most People Think in Three Dimensions. Bears Think in Six'",
+        "summary": "Michael Burry said investors often misunderstand bears after an analyst questioned whether AI skeptics understand the technology."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.9,
+    "thesis": "INTC presenta una oportunidad de compra atractiva despu\u00e9s de una ca\u00edda injustificada y presenta indicadores t\u00e9cnicos y fundamentales que sugieren un potencial de recuperaci\u00f3n significativa.",
+    "arguments": [
+      "El RSI14 de 40.79 indica que la acci\u00f3n est\u00e1 cerca de territorio de sobreventa, lo que hist\u00f3ricamente precede a rebounds.",
+      "La acci\u00f3n cotiza por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas (SMA20: 124.18, SMA50: 115.38), pero esto podr\u00eda estar a punto de cambiar con un posible cruce alcista.",
+      "A pesar de la ca\u00edda del 9.73% en un d\u00eda y del 16.2% en cinco d\u00edas, el volumen de negociaci\u00f3n se mantiene estable con un ratio de 1.02 respecto a la media de 20 d\u00edas, lo que sugiere que la presi\u00f3n de venta podr\u00eda estar disminuyendo.",
+      "La menci\u00f3n en noticias de Jim Cramer sugiriendo que INTC 'tiene espacio para subir' puede actuar como catalizador para un movimiento positivo en el precio."
+    ],
+    "key_catalyst": "Un posible cambio en la tendencia bajista actual podr\u00eda ser catalizado por un cruce alcista de las medias m\u00f3viles y una recuperaci\u00f3n del RSI14 hacia niveles m\u00e1s neutrales o de sobrecompra.",
+    "price_target": 130.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.8,
+    "thesis": "El caso alcista para INTC falla debido a su tendencia bajista reciente y se\u00f1ales t\u00e9cnicas negativas.",
+    "counter_arguments": [
+      "El precio actual de INTC est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas (SMA20: 124.18, SMA50: 115.38), lo que indica una tendencia bajista a corto y medio plazo.",
+      "El RSI14 se encuentra en 40.79, lo que sugiere que el activo est\u00e1 cerca de la zona de sobreventa, pero a\u00fan no ha alcanzado niveles hist\u00f3ricamente bajos que indiquen un posible rebote.",
+      "El cambio porcentual en 1 d\u00eda (-9.73%) y 5 d\u00edas (-16.2%) es significativamente negativo, lo que refleja una presi\u00f3n vendedora intensa.",
+      "La relaci\u00f3n volumen actual vs. promedio de 20 d\u00edas es solo 1.02, lo que no indica un aumento significativo en la actividad de compra que podr\u00eda impulsar un cambio de tendencia."
+    ],
+    "fatal_flaw": "La incapacidad de INTC para mantenerse por encima de sus medias m\u00f3viles clave y la ausencia de se\u00f1ales de compra fuertes en el RSI y el volumen sugieren que la tendencia bajista podr\u00eda continuar.",
+    "downside_target": 90.0,
+    "scenario": "Una p\u00e9rdida catastr\u00f3fica ocurrir\u00eda si INTC rompiera por debajo de su soporte en 100 y continuara su tendencia bajista, posiblemente debido a una falta de innovaci\u00f3n competitiva en el sector de semiconductores o resultados financieros decepcionantes."
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.7,
+    "reasoning": "El an\u00e1lisis alcista presenta argumentos m\u00e1s s\u00f3lidos respaldados por datos t\u00e9cnicos como el RSI14 de 40.79, que indica proximidad a territorio de sobreventa, y un posible cruce alcista de medias m\u00f3viles. Aunque el an\u00e1lisis bajista tambi\u00e9n presenta puntos v\u00e1lidos, como la tendencia bajista reciente y el precio por debajo de las medias m\u00f3viles, el potencial de recuperaci\u00f3n se\u00f1alado por el RSI y el catalizador de la menci\u00f3n de Jim Cramer pesan m\u00e1s en la decisi\u00f3n. La relaci\u00f3n riesgo-recompensa con un stop loss en 100 y un take profit en 130 ofrece un ratio de 1.5:1, lo que apoya la decisi\u00f3n de compra.",
+    "bull_weight": 0.6,
+    "bear_weight": 0.4,
+    "entry": 110.35,
+    "take_profit": 130.0,
+    "stop_loss": 100.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.70 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.90 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

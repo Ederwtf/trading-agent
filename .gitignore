@@ -1,0 +1,16 @@
+# Secretos — NUNCA subir
+.env
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTA: journal/ SÍ se versiona (el workflow commitea el estado entre corridas)

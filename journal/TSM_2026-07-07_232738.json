@@ -1,0 +1,107 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-07-07T23:26:48.261092",
+  "portfolio": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "buying_power": 361756.94
+  },
+  "research": {
+    "symbol": "TSM",
+    "timestamp": "2026-07-07T23:26:16.197409",
+    "price": {
+      "current": 432.75,
+      "sma20": 438.87,
+      "sma50": 421.79,
+      "rsi14": 48.2,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -4.22,
+      "change_5d_pct": -4.92,
+      "change_1m_pct": -2.69
+    },
+    "volume": {
+      "current": 604707,
+      "avg_20d": 643755,
+      "ratio": 0.94,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Which Semiconductor ETF Is Winning The AI Race In 2026?",
+        "summary": "PSI has outperformed every major semiconductor ETF in 2026. Here&#39;s why Nvidia&#39;s weighting has created a nearly 40-point performance gap."
+      },
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "After Apple, Intel Raises Chip Prices by Up to $50, Citing 'Market Dynamics'",
+        "summary": "First Apple, now Intel. Discover how &#39;market dynamics&#39; and supply costs are driving massive price hikes across Core Ultra and Xeon CPUs."
+      },
+      {
+        "headline": "Here\u2019s How Much You Would Have Made Owning Taiwan Semiconductor Stock In The Last 5 Years",
+        "summary": "Taiwan Semiconductor (NYSE:TSM) has outperformed the market over the past 5 years by 17.86% on an annualized basis producing an average annual return of 29.32%. Currently, Taiwan Semiconductor has a m"
+      },
+      {
+        "headline": "10 Information Technology Stocks With Whale Alerts In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.95,
+    "thesis": "TSM est\u00e1 preparado para un fuerte rebote despu\u00e9s de una ca\u00edda temporal, impulsado por su s\u00f3lida posici\u00f3n en el mercado de semiconductores y se\u00f1ales t\u00e9cnicas de recuperaci\u00f3n.",
+    "arguments": [
+      "TSM se encuentra por encima de su SMA50, lo que indica una tendencia alcista a largo plazo.",
+      "El RSI14 est\u00e1 cerca de 50, lo que sugiere que el activo est\u00e1 saliendo de una zona de sobreventa y prepar\u00e1ndose para un movimiento alcista.",
+      "La disminuci\u00f3n del 4.22% en un d\u00eda y el 4.92% en cinco d\u00edas presentan una oportunidad de compra en ca\u00edda.",
+      "El sector de semiconductores est\u00e1 en crecimiento debido al aumento de la demanda de chips para aplicaciones de inteligencia artificial y tecnolog\u00eda."
+    ],
+    "key_catalyst": "La noticia sobre Intel aumentando los precios de los chips podr\u00eda beneficiar indirectamente a TSM, al aumentar la competitividad y los m\u00e1rgenes de ganancia en el sector.",
+    "price_target": 520.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.8,
+    "thesis": "El caso alcista para TSM falla debido a se\u00f1ales t\u00e9cnicas y fundamentales d\u00e9biles.",
+    "counter_arguments": [
+      "El precio actual est\u00e1 por debajo de la SMA20 y muestra un cambio porcentual negativo en diferentes per\u00edodos de tiempo, lo que indica una tendencia bajista.",
+      "El RSI14 est\u00e1 en 48.2, cerca de la zona de sobreventa, lo que podr\u00eda indicar una debilidad adicional en el precio.",
+      "El volumen actual es inferior al promedio de 20 d\u00edas, lo que sugiere una falta de inter\u00e9s comprador.",
+      "Las noticias recientes sobre el aumento de precios de Intel podr\u00edan afectar negativamente la demanda de chips y, por lo tanto, las perspectivas de TSM."
+    ],
+    "fatal_flaw": "La ruptura de la SMA50 en el precio actual podr\u00eda desencadenar una venta masiva, ya que muchos inversores consideran esta media m\u00f3vil como un nivel de soporte clave.",
+    "downside_target": 410.0,
+    "scenario": "Una ca\u00edda por debajo de la SMA50 podr\u00eda desencadenar \u00f3rdenes de stop-loss y una venta acelerada, llevando el precio hacia 410.0."
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.7,
+    "reasoning": "El an\u00e1lisis alcista presenta argumentos s\u00f3lidos respaldados por datos t\u00e9cnicos y fundamentales, como la posici\u00f3n de TSM por encima de su SMA50 y el RSI14 cerca de 50, lo que sugiere una recuperaci\u00f3n. Aunque el an\u00e1lisis bajista se\u00f1ala riesgos, como la tendencia bajista a corto plazo y la posibilidad de una ruptura de la SMA50, los argumentos alcistas pesan m\u00e1s debido a la s\u00f3lida posici\u00f3n de TSM en el mercado de semiconductores y las se\u00f1ales t\u00e9cnicas de recuperaci\u00f3n.",
+    "bull_weight": 0.65,
+    "bear_weight": 0.35,
+    "entry": 432.75,
+    "take_profit": 520.0,
+    "stop_loss": 410.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.70 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.84 \u2265 1.5",
+      "Posici\u00f3n $8,000 \u2264 m\u00e1ximo $10,000",
+      "Capital suficiente ($8,000)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 8000.0
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}
