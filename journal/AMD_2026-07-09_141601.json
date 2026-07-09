@@ -1,0 +1,22 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-09T14:16:01.927053",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 15.0,
+    "avg_entry_price": 513.23,
+    "current_price": 546.52,
+    "unrealized_pl": 499.35,
+    "unrealized_plpc": 0.06486
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "2c9e04b7-6077-4e1f-94fe-6726a61dba46"
+    }
+  }
+}
