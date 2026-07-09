@@ -1,0 +1,22 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-09T19:04:03.742778",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 21.0,
+    "avg_entry_price": 380.130952,
+    "current_price": 401.8047,
+    "unrealized_pl": 455.148708,
+    "unrealized_plpc": 0.05702
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "1bf9d4db-ed14-4ca8-af91-71a38a9b7bd1"
+    }
+  }
+}
