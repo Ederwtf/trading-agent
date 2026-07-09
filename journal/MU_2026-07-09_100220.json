@@ -1,0 +1,22 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-09T10:02:20.312856",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 8.0,
+    "avg_entry_price": 933.8025,
+    "current_price": 1029.665,
+    "unrealized_pl": 766.9,
+    "unrealized_plpc": 0.10266
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "4382bf7c-6010-401e-ac57-da0ebc39148f"
+    }
+  }
+}
