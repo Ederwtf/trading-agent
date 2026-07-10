@@ -1,0 +1,22 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-10T11:43:52.361168",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 320.3982,
+    "unrealized_pl": 466.3932,
+    "unrealized_plpc": 0.05931
+  },
+  "action": "HOLD",
+  "reason": "La tesis original sigue viva porque aunque el RSI14 ha disminuido a\u00fan m\u00e1s hasta 23.95, lo que refuerza la condici\u00f3n de sobreventa, el precio ha subido hacia 320.84, acerc\u00e1ndose al objetivo de 350.0 y mostrando signos de recuperaci\u00f3n. La estructura t\u00e9cnica no se ha deteriorado significativamente como para invalidar la tesis de un rebote a corto plazo.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "70a18c8c-9eea-42ae-a2ae-2611f5fbaaa2"
+    }
+  }
+}
