@@ -1,0 +1,22 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-10T09:23:29.294761",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 320.54,
+    "unrealized_pl": 470.08,
+    "unrealized_plpc": 0.05978
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "70a18c8c-9eea-42ae-a2ae-2611f5fbaaa2"
+    }
+  }
+}
