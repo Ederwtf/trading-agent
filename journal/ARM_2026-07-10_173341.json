@@ -1,0 +1,22 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-10T17:33:41.877275",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 324.23,
+    "unrealized_pl": 566.02,
+    "unrealized_plpc": 0.07198
+  },
+  "action": "HOLD",
+  "reason": "La tesis original sigue viva ya que el RSI14 ha disminuido a\u00fan m\u00e1s hasta 24.2, lo que refuerza la condici\u00f3n de sobreventa, y aunque el precio ha subido, no ha alcanzado el objetivo de $350, pero se mantiene por encima del stop loss de $270.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "70a18c8c-9eea-42ae-a2ae-2611f5fbaaa2"
+    }
+  }
+}
