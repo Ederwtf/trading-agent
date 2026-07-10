@@ -1,0 +1,22 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-10T13:27:54.651462",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 326.42,
+    "unrealized_pl": 622.96,
+    "unrealized_plpc": 0.07922
+  },
+  "action": "HOLD",
+  "reason": "La tesis original sigue viva ya que el RSI14 ha disminuido a\u00fan m\u00e1s hasta 24.44, lo que refuerza la condici\u00f3n de sobreventa, y el precio ha superado el punto de entrada en 302.46, alcanzando un P/L no realizado positivo del 7.92%",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene stop activo",
+      "order_id": "70a18c8c-9eea-42ae-a2ae-2611f5fbaaa2"
+    }
+  }
+}
