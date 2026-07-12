@@ -26,7 +26,12 @@ def local_exit(original: dict, research: dict, position: dict, cfg: dict = None)
     trend_exit = cfg.get("trend_exit_below_sma50", False)
 
     p = research.get("price", {})
-    current = p.get("current")
+    # Precio para las reglas duras: el de la POSICIÓN (real-time, incluye extended hours).
+    # El "current" de research sale de velas diarias IEX y en pre/post es el cierre de la
+    # sesión regular — evaluar SL/TP con ese precio viejo dejaba ciego al gestor fuera de
+    # horario (hallazgo A1 de la auditoría). Research queda como fallback.
+    live    = position.get("current_price")
+    current = float(live) if live else p.get("current")
     sma50   = p.get("sma50")
     rsi     = p.get("rsi14")
     sl      = original.get("stop_loss", 0.0) or 0.0

@@ -9,7 +9,8 @@
     "auto_close": true,
     "review_rsi_high": 72,
     "review_sl_proximity_pct": 0.02,
-    "trend_exit_below_sma50": false
+    "trend_exit_below_sma50": false,
+    "breakeven_at_pct": 0.04
   },
   "description": "AI/semiconductores + relleno dinámico most-actives — paper trading",
   "updated": "2026-07-12",

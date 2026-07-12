@@ -86,8 +86,120 @@ def close_position_extended(symbol: str, limit_price: float) -> dict:
         return {"closed": False, "reason": str(e), "timestamp": datetime.now().isoformat()}
 
 
+def _open_orders_for(api, symbol: str) -> list:
+    """Órdenes abiertas del símbolo, incluyendo piernas de órdenes multi-leg (OCO/bracket)."""
+    found = []
+    try:
+        for o in api.list_orders(status="open", nested=True):
+            if o.symbol != symbol:
+                continue
+            found.append(o)
+            for leg in (getattr(o, "legs", None) or []):
+                found.append(leg)
+    except Exception:
+        pass
+    return found
+
+
+def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty) -> dict:
+    """Mantiene una pareja OCO GTC (TP limit + SL stop) para la posición. SIN LLM.
+
+    Broker-side: el TP y el SL viven en Alpaca y se ejecutan al instante en horario
+    regular, sin depender de la cadencia del cron (hallazgo C2 de la auditoría).
+    Idempotente: si ya existe una OCO con los mismos precios no toca nada; si los
+    precios deseados cambiaron (p. ej. stop subido a breakeven), cancela y re-coloca.
+    Nota: en extended hours ninguna pierna dispara (limitación de Alpaca); ahí el
+    monitor sigue siendo la gestión activa.
+    """
+    import time as _time
+
+    api = _api()
+    if api is None:
+        return {"armed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if not stop_price or float(stop_price) <= 0 or not take_profit or float(take_profit) <= 0:
+        return {"armed": False, "reason": f"precios inválidos (SL={stop_price}, TP={take_profit})"}
+    stop_price  = round(float(stop_price), 2)
+    take_profit = round(float(take_profit), 2)
+    if stop_price >= take_profit:
+        return {"armed": False, "reason": f"SL {stop_price} >= TP {take_profit}"}
+    qty = abs(int(float(qty)))
+    if qty <= 0:
+        return {"armed": False, "reason": "qty inválida"}
+
+    try:
+        # ¿Qué protección hay ya? (stop y/o limit abiertos, incluyendo piernas OCO)
+        cur_stop = cur_limit = None
+        existing = _open_orders_for(api, symbol)
+        for o in existing:
+            otype = (getattr(o, "order_type", None) or getattr(o, "type", None) or "")
+            if "stop" in otype and getattr(o, "stop_price", None):
+                cur_stop = float(o.stop_price)
+            elif otype == "limit" and getattr(o, "limit_price", None):
+                cur_limit = float(o.limit_price)
+
+        if (cur_stop is not None and abs(cur_stop - stop_price) < 0.01
+                and cur_limit is not None and abs(cur_limit - take_profit) < 0.01):
+            return {"armed": False, "reason": "ya tiene OCO vigente",
+                    "stop_price": stop_price, "take_profit": take_profit}
+
+        # Reconciliar: cancelar TODO lo abierto del símbolo (libera los shares) y re-colocar.
+        for o in existing:
+            try:
+                api.cancel_order(o.id)
+            except Exception:
+                pass  # piernas OCO se cancelan en cascada; el segundo cancel puede fallar
+
+        # Esperar a que las cancelaciones procesen antes de re-colocar (evita
+        # "insufficient qty available" por shares aún retenidos por la orden vieja).
+        for _ in range(5):
+            if not _open_orders_for(api, symbol):
+                break
+            _time.sleep(1)
+
+        # Con el mercado cerrado, Alpaca deja la cancelación en pending_cancel y los
+        # shares retenidos — no tiene caso enviar la OCO. La función es idempotente:
+        # la próxima corrida (cancelación ya procesada) la coloca. Sin pérdida real de
+        # protección: fuera de horario regular los stops tampoco disparan.
+        remaining = _open_orders_for(api, symbol)
+        if any(getattr(o, "status", "") == "pending_cancel" for o in remaining):
+            return {"armed": False,
+                    "reason": "stop viejo en pending_cancel (mercado cerrado); "
+                              "la OCO se colocará en la próxima corrida"}
+
+        last_err = None
+        for attempt in range(2):
+            try:
+                order = api.submit_order(
+                    symbol=symbol,
+                    qty=qty,
+                    side="sell",
+                    type="limit",
+                    time_in_force="gtc",
+                    order_class="oco",
+                    take_profit={"limit_price": take_profit},
+                    stop_loss={"stop_price": stop_price},
+                )
+                return {
+                    "armed":       True,
+                    "order_id":    str(order.id),
+                    "order_class": "oco",
+                    "stop_price":  stop_price,
+                    "take_profit": take_profit,
+                    "qty":         qty,
+                    "replaced":    bool(existing),
+                }
+            except Exception as e:
+                last_err = e
+                if attempt == 0:
+                    _time.sleep(2)   # típico: cancelación aún en vuelo
+        return {"armed": False, "reason": f"OCO no colocada: {last_err}"}
+    except Exception as e:
+        return {"armed": False, "reason": str(e)}
+
+
 def ensure_protective_stop(symbol: str, stop_price: float, qty) -> dict:
-    """Coloca un stop-loss GTC si el símbolo no tiene ya una orden stop abierta. Idempotente."""
+    """Coloca un stop-loss GTC si el símbolo no tiene ya una orden stop abierta. Idempotente.
+    Fallback de ensure_exit_bracket cuando no hay TP conocido (protege al menos el piso)."""
     api = _api()
     if api is None:
         return {"armed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}

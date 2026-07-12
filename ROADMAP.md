@@ -22,9 +22,13 @@
 - **Fase 7 — Fixes de la auditoría** (el usuario aprueba qué entra; orden sugerido en §6
   del reporte). **En curso** — aplicados el 2026-07-12: **C1** (modelo migrado a
   `openai/gpt-oss-120b` antes del apagado de Scout del 17-jul; `llm_budget` 12→5;
-  verificado con llamada real) y **B4** (workflow local restaurado). Pendientes:
-  C2+A2 (OCO GTC + breakeven), A1, A3, M5, M1/M2/M4/B3, A4 (alpaca-py), M3 (rollup)
-  y el pacing de llamadas en `agents/llm.py` (seguimiento de C1 por el TPM de 8K).
+  verificado con llamada real), **B4** (workflow local restaurado), **C2+A2** (salidas
+  OCO GTC broker-side + breakeven al +4% vía `ensure_exit_bracket`; las 5 posiciones
+  en transición — stops viejos en pending_cancel por mercado cerrado, las OCO se
+  colocan solas en la primera corrida del lunes), **A1** (reglas duras de salida con
+  precio real de la posición, no el cierre diario) y **A3** (monitoreo aislado por
+  símbolo). Pendientes: M5, M1/M2/M4/B3, A4 (alpaca-py), M3 (rollup) y el pacing de
+  llamadas en `agents/llm.py` (seguimiento de C1 por el TPM de 8K).
 - **Fase 8 — Observabilidad**: dashboard estático auto-generado en cada corrida
   (`journal/` + portfolio history de Alpaca → HTML en GitHub Pages): equity curve,
   posiciones y P/L, win rate, timeline de decisiones, errores, uso de cuota LLM.

@@ -1,0 +1,22 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-12T16:13:55.798129",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 323.39,
+    "unrealized_pl": 544.18,
+    "unrealized_plpc": 0.0692
+  },
+  "action": "HOLD",
+  "reason": "El RSI sigue extremadamente bajo y el precio ha subido por encima de la SMA50, manteniendo la se\u00f1al de rebote, aunque el volumen sigue muy bajo, lo que a\u00f1ade riesgo pero no invalida la tesis original",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "stop viejo en pending_cancel (mercado cerrado); la OCO se colocar\u00e1 en la pr\u00f3xima corrida",
+      "breakeven": true
+    }
+  }
+}

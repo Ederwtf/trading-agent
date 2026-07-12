@@ -33,7 +33,8 @@ from agents.bear_agent import run_bear_agent
 from agents.synthesis_agent import run_synthesis
 from agents.risk_agent import validate_trade
 from agents.execution_agent import (
-    execute_trade, close_position, close_position_extended, ensure_protective_stop,
+    execute_trade, close_position, close_position_extended,
+    ensure_exit_bracket, ensure_protective_stop,
 )
 from agents.universe import build_universe
 from agents.screen import local_screen
@@ -325,8 +326,12 @@ def run_batch(session: str = "regular") -> None:
     print(f"{'━'*54}")
 
     # ── Gestión de salidas: monitorear TODO lo abierto/pendiente (incluso fuera del universo) ──
+    # Aislado por símbolo: un error (research/Alpaca) no deja al resto sin gestión (A3).
     for sym in sorted(excluded):
-        run_light_pipeline(sym, session=session)
+        try:
+            run_light_pipeline(sym, session=session)
+        except Exception as e:
+            print(f"  [ERROR] monitor {sym}: {e} — se continúa con el resto")
 
     # ── ¿Buscar entradas? solo con cupo libre y cadencia cumplida (protege RPD) ──
     if slots <= 0:
@@ -504,10 +509,32 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
             print(f"  RECOMENDACIÓN: cerrar {symbol} (auto_close=off, sin tocar la cuenta)")
             execution = {"closed": False, "reason": "recomendación (auto_close off)"}
     else:
-        # 4. Mantener → re-armar stop GTC persistente si falta
-        protection = ensure_protective_stop(symbol, original.get("stop_loss"), position["qty"])
+        # 4. Mantener → protección broker-side: pareja OCO GTC (TP limit + SL stop).
+        # Breakeven (A2): si el P/L ≥ breakeven_at_pct, el stop sube al precio de
+        # entrada — y nunca baja (max con el SL original).
+        sl_desired = original.get("stop_loss") or 0.0
+        tp_target  = original.get("take_profit") or 0.0
+        be_at      = cfg.get("breakeven_at_pct", 0.04)
+        breakeven  = False
+        if be_at and position.get("unrealized_plpc") is not None \
+                and float(position["unrealized_plpc"]) >= float(be_at):
+            be_price = round(float(position["avg_entry_price"]), 2)
+            if be_price > sl_desired:
+                sl_desired, breakeven = be_price, True
+
+        if sl_desired > 0 and tp_target > 0:
+            protection = ensure_exit_bracket(symbol, sl_desired, tp_target, position["qty"])
+        else:
+            # Sin TP conocido (journal incompleto): al menos el stop persistente
+            protection = ensure_protective_stop(symbol, sl_desired, position["qty"])
+        protection["breakeven"] = breakeven
+
         if protection.get("armed"):
-            print(f"  [protección] stop GTC armado @ ${protection['stop_price']}")
+            kind = "OCO GTC" if protection.get("order_class") == "oco" else "stop GTC"
+            extra = " (stop en breakeven)" if breakeven else ""
+            print(f"  [protección] {kind} armada: SL ${protection.get('stop_price')}"
+                  + (f" / TP ${protection.get('take_profit')}" if protection.get('take_profit') else "")
+                  + extra)
         else:
             print(f"  [protección] {protection.get('reason', '—')}")
         execution = {"protection": protection}
@@ -549,7 +576,10 @@ def main():
                 if not held:
                     print("  Sin posiciones abiertas que gestionar en extended hours.")
                 for sym in held:
-                    run_light_pipeline(sym, session=session)   # solo gestión de salidas
+                    try:
+                        run_light_pipeline(sym, session=session)   # solo gestión de salidas
+                    except Exception as e:
+                        print(f"  [ERROR] monitor {sym}: {e} — se continúa con el resto")
                     time.sleep(2)
             else:
                 print("  Mercado cerrado → no-op.")

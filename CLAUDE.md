@@ -93,15 +93,26 @@ python orchestrator.py monitor [SYMBOL]
 Por cada posición abierta (lee la posición real de Alpaca + la tesis/niveles del último
 `journal/` de entrada):
 1. `exit_agent.local_exit` (SIN LLM): cierra si el precio cruza SL o TP; marca "zona de
-   revisión" si la señal es ambigua (cerca del SL, RSI extremo, P/L negativo). NOTA: el
+   revisión" si la señal es ambigua (cerca del SL, RSI extremo, P/L negativo). Las reglas
+   duras usan el **precio real de la posición** (real-time, incluye extended hours), no el
+   de research (velas diarias = viejo en pre/post) — fix A1 de la auditoría. NOTA: el
    cierre por tendencia (< SMA50) viene **desactivado** (`exits.trend_exit_below_sma50`),
    porque la estrategia compra dips por debajo de la SMA50 — el SL es el piso real.
 2. Solo en zona de revisión → `exit_agent.review_thesis` (LLM): relee la tesis original y
    decide CLOSE/HOLD. (Híbrido = conserva cuota: la IA no se llama en posiciones sanas.)
 3. Si CLOSE y `exits.auto_close` → `execution_agent.close_position` (cancela protectoras y
    cierra a mercado). Si `auto_close` off → solo recomienda, no toca la cuenta.
-4. Si HOLD → `execution_agent.ensure_protective_stop` re-arma un **stop GTC** persistente
-   (los brackets de entrada usan tif=day y expiran al cierre; este stop cubre entre corridas).
+4. Si HOLD → `execution_agent.ensure_exit_bracket` mantiene una pareja **OCO GTC**
+   broker-side (TP limit + SL stop; una cancela a la otra) — fix C2: TP y SL se ejecutan
+   al instante en horario regular sin depender de la cadencia del cron. **Breakeven**
+   (fix A2): si el P/L ≥ `exits.breakeven_at_pct` (default 4%), el stop sube al precio de
+   entrada y nunca baja. Idempotente: solo cancela/re-coloca si los precios deseados
+   cambiaron. Con mercado cerrado la cancelación queda `pending_cancel` y la OCO se
+   coloca en la próxima corrida (sin pérdida real: fuera de horario regular los stops
+   tampoco disparan). Fallback sin TP conocido: `ensure_protective_stop` (stop GTC solo).
+
+El loop de monitoreo está **aislado por símbolo** (fix A3): un error de research/Alpaca
+en un símbolo no deja al resto sin gestión en esa corrida.
 
 Cerrar una posición libera un cupo para el próximo `full` (batch).
 
