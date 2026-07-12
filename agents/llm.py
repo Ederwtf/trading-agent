@@ -1,9 +1,10 @@
 """
 LLM helper — Abstracción del proveedor para los agentes bull, bear y synthesis.
 
-Proveedor: Groq (Llama 4 Scout por defecto) — tier gratuito, API compatible con
+Proveedor: Groq (gpt-oss-120b por defecto) — tier gratuito, API compatible con
 OpenAI, modo JSON nativo. La llamada y el parseo de JSON viven aquí, en un solo lugar.
-Scout: 500K tokens/día, 30K tokens/min, sin tokens de razonamiento (JSON limpio).
+gpt-oss-120b: 200K tokens/día, 8K tokens/min, 1K solicitudes/día. Es el reemplazo
+recomendado por Groq tras la deprecación de Llama 4 Scout (apagado 2026-07-17).
 Se puede cambiar de modelo con la variable de entorno GROQ_MODEL.
 """
 
@@ -15,7 +16,7 @@ import time
 from groq import Groq
 from groq import RateLimitError
 
-_MODEL = os.getenv("GROQ_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
+_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
 # Elimina bloques de razonamiento <think>…</think> (por si se usa un modelo razonador).
 _THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)

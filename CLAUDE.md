@@ -9,14 +9,16 @@ Eres el orquestador. NO tomas decisiones de trading directamente.
 Coordinas sub-agentes especializados y respetas sus outputs.
 
 ## Proveedor LLM
-Agentes LLM (bull/bear/synthesis) usan **Groq / Llama 4 Scout**
-(`meta-llama/llama-4-scout-17b-16e-instruct`, tier gratuito). Key en `GROQ_API_KEY`,
-modelo en `GROQ_MODEL`. La llamada está centralizada en `agents/llm.py`.
+Agentes LLM (bull/bear/synthesis) usan **Groq / gpt-oss-120b**
+(`openai/gpt-oss-120b`, tier gratuito). Key en `GROQ_API_KEY`, modelo en `GROQ_MODEL`.
+La llamada está centralizada en `agents/llm.py`.
 
-Racional del modelo: **30K TPM** (vs 6K de Qwen3/Llama 3.1 → no se bloquea a media
-corrida), **500K tokens/día**, sin tokens de razonamiento (JSON limpio y directo).
-Los límites de Groq son por modelo por API key. `call_json_llm` reintenta 1 vez ante
-rate-limit transitorio.
+Racional: es el reemplazo recomendado por Groq tras la **deprecación de Llama 4 Scout
+(apagado 2026-07-17)**; el mejor balance calidad/límites del free tier sobreviviente.
+Límites: **8K TPM / 200K TPD / 1K RPD** → `llm_budget` bajado a 5 (cada símbolo ≈ 3
+llamadas ≈ 4.5K tokens; más símbolos por corrida reventarían el TPM). Pendiente F7:
+pacing proactivo entre llamadas en `agents/llm.py`. Los límites de Groq son por modelo
+por API key. `call_json_llm` reintenta 1 vez ante rate-limit transitorio.
 
 ---
 
@@ -71,12 +73,13 @@ Orden de ejecución:
 - Objetivo: no gastar las **1,000 solicitudes/día (RPD)** ni el TPM en símbolos que la
   lógica local ya puede descartar.
 
-### Presupuesto de tokens (Groq free tier — Llama 4 Scout)
-- Límites: **500,000 tokens/día**, **30,000 tokens/min**, **1,000 solicitudes/día**.
+### Presupuesto de tokens (Groq free tier — gpt-oss-120b)
+- Límites: **200,000 tokens/día**, **8,000 tokens/min**, **1,000 solicitudes/día**.
 - Cada símbolo ≈ 3 llamadas LLM (~4.5k tokens). Prompts de bull/bear usan
   `compact_research()` (sin resúmenes de noticias).
-- Un batch de ~12 símbolos IA ≈ 36 llamadas / ~55–70k tokens ⇒ margen amplio (~27
-  corridas/día por RPD).
+- Un batch de 5 símbolos IA (llm_budget=5) ≈ 15 llamadas / ~25k tokens ⇒ ~8 batches
+  de entrada/día por TPD; el TPM de 8K es el límite operativo real (ver pendiente F7:
+  pacing entre llamadas).
 - Si topas un límite (error 429), `call_json_llm` reintenta 1 vez; si persiste, espera
   al reset o baja `llm_budget`.
 
@@ -135,6 +138,12 @@ Reglas de operación por sesión:
 - JSON inválido de agente LLM → reintentar con temperatura 0.1, luego HOLD
 
 ---
+
+## Roadmap y auditoría
+- Fases del proyecto: ver `ROADMAP.md` (Fases 1–6 completadas; la Fase Final = dinero
+  real + VPS; las intermedias mejoran el agente en paper).
+- Auditoría de fundamentos (2026-07): `docs/auditoria-2026-07.md` — hallazgos con
+  severidad, veredicto de decisiones base y triaje de herramientas/activos.
 
 ## Watchlist
 Ver: config/watchlist.json

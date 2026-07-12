@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GROQ_API_KEY:      ${{ secrets.GROQ_API_KEY }}
-      GROQ_MODEL:        meta-llama/llama-4-scout-17b-16e-instruct
+      # gpt-oss-120b: reemplazo recomendado por Groq tras la deprecación de Llama 4 Scout
+      # (apagado 2026-07-17). Free tier: 8K TPM / 200K TPD / 1K RPD → llm_budget bajado a 5.
+      GROQ_MODEL:        openai/gpt-oss-120b
       ALPACA_API_KEY:    ${{ secrets.ALPACA_API_KEY }}
       ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
       ALPACA_BASE_URL:   https://paper-api.alpaca.markets

@@ -3,7 +3,7 @@
   "max_positions": 5,
   "dynamic_universe": { "enabled": true, "top": 14, "min_price": 10 },
   "analysis_cap": 15,
-  "llm_budget": 12,
+  "llm_budget": 5,
   "entry_min_gap_min": 30,
   "exits": {
     "auto_close": true,
@@ -12,6 +12,6 @@
     "trend_exit_below_sma50": false
   },
   "description": "AI/semiconductores + relleno dinámico most-actives — paper trading",
-  "updated": "2026-07-07",
-  "notes": "symbols = lista fija curada. universo = fija + most-actives (deduplicado, hasta analysis_cap). llm_budget = máx símbolos que llegan a la IA por corrida (el resto se pre-filtra con lógica local)."
+  "updated": "2026-07-12",
+  "notes": "symbols = lista fija curada. universo = fija + most-actives (deduplicado, hasta analysis_cap). llm_budget = máx símbolos que llegan a la IA por corrida (el resto se pre-filtra con lógica local). llm_budget=5 por el TPM de 8K de gpt-oss-120b (C1, auditoría 2026-07)."
 }
