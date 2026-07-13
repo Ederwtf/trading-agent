@@ -1,0 +1,27 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-07-13T07:43:03.838516",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 26.0,
+    "avg_entry_price": 302.46,
+    "current_price": 315.75,
+    "unrealized_pl": 345.54,
+    "unrealized_plpc": 0.04394
+  },
+  "action": "HOLD",
+  "reason": "El RSI sigue extremadamente bajo (24.2) y el precio est\u00e1 por encima de la SMA50, manteniendo el catalizador de sobreventa, mientras que el bajo volumen no invalida la expectativa de rebote a corto plazo.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "9b47c6f2-1eb0-4ab5-bcb7-79998c04ed9e",
+      "order_class": "oco",
+      "stop_price": 302.46,
+      "take_profit": 350.0,
+      "qty": 26,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
