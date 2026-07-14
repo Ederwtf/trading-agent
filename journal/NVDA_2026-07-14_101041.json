@@ -1,0 +1,22 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-07-14T10:10:41.156158",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 40.0,
+    "avg_entry_price": 196.9635,
+    "current_price": 204.225,
+    "unrealized_pl": 290.46,
+    "unrealized_plpc": 0.03687
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "stop viejo en pending_cancel (mercado cerrado); la OCO se colocar\u00e1 en la pr\u00f3xima corrida",
+      "breakeven": false
+    }
+  }
+}
