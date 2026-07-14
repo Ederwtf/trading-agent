@@ -1,0 +1,24 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-14T18:38:32.149950",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 8.0,
+    "avg_entry_price": 933.8025,
+    "current_price": 979.7,
+    "unrealized_pl": 367.18,
+    "unrealized_plpc": 0.04915
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 933.8,
+      "take_profit": 1100.0,
+      "breakeven": true
+    }
+  }
+}
