@@ -1,0 +1,21 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-15T12:44:27.563189",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 8.0,
+    "avg_entry_price": 933.8025,
+    "current_price": 882.45,
+    "unrealized_pl": -410.82,
+    "unrealized_plpc": -0.05499
+  },
+  "action": "CLOSE",
+  "reason": "La ca\u00edda del precio a 882, bajo ambas SMAs y con RSI en 39, junto a volumen por debajo del promedio, indica que la tendencia bajista se ha reforzado y los catalizadores originales se han debilitado, por lo que la tesis bullish ya no se sostiene.",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "f62e927e-dfe5-4325-bd40-5d732100d729",
+    "symbol": "MU",
+    "timestamp": "2026-07-15T12:44:27.562419"
+  }
+}
