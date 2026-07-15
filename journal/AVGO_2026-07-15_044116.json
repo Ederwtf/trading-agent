@@ -1,0 +1,24 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-15T04:41:16.947025",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 21.0,
+    "avg_entry_price": 380.130952,
+    "current_price": 393.0,
+    "unrealized_pl": 270.250008,
+    "unrealized_plpc": 0.03385
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 350.0,
+      "take_profit": 450.0,
+      "breakeven": false
+    }
+  }
+}
