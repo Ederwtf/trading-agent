@@ -1,0 +1,27 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-07-15T07:58:37.362761",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 8.0,
+    "avg_entry_price": 933.8025,
+    "current_price": 977.4241,
+    "unrealized_pl": 348.9728,
+    "unrealized_plpc": 0.04671
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "37fa1a50-ed18-4546-989a-18dbcad09a29",
+      "order_class": "oco",
+      "stop_price": 933.8,
+      "take_profit": 1100.0,
+      "qty": 8,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
