@@ -1,0 +1,24 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-16T19:36:39.471462",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 15.0,
+    "avg_entry_price": 513.23,
+    "current_price": 492.68,
+    "unrealized_pl": -308.25,
+    "unrealized_plpc": -0.04004
+  },
+  "action": "HOLD",
+  "reason": "El impulso t\u00e9cnico se ha deteriorado (precio bajo SMA20 y ca\u00eddas del 5\u20118% en varios periodos) pero el catalizador macro de crecimiento de IA/IoT sigue vigente y el precio a\u00fan est\u00e1 por encima del stop loss, manteniendo una relaci\u00f3n riesgo\u2011recompensa atractiva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 450.0,
+      "take_profit": 650.0,
+      "breakeven": false
+    }
+  }
+}
