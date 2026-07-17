@@ -1,0 +1,24 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-17T04:55:34.130237",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 15.0,
+    "avg_entry_price": 513.23,
+    "current_price": 479.4,
+    "unrealized_pl": -507.45,
+    "unrealized_plpc": -0.06592
+  },
+  "action": "CLOSE",
+  "reason": "El precio ha ca\u00eddo por debajo del SMA20 y del nivel de entrada, con p\u00e9rdidas del ~6.5% y sin nuevos catalizadores que justifiquen mantener la posici\u00f3n; la falta de impulso t\u00e9cnico y el sentimiento negativo del sector confirman la ruptura de la tesis original.",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "63140386-c1cc-4482-af2a-defd0276c5fb",
+    "symbol": "AMD",
+    "qty": 15,
+    "limit_price": 478.92,
+    "extended_hours": true,
+    "timestamp": "2026-07-17T04:55:34.128767"
+  }
+}

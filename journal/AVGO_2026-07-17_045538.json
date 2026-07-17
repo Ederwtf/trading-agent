@@ -1,0 +1,24 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-17T04:55:38.615138",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 21.0,
+    "avg_entry_price": 380.130952,
+    "current_price": 364.2,
+    "unrealized_pl": -334.549992,
+    "unrealized_plpc": -0.04191
+  },
+  "action": "CLOSE",
+  "reason": "El precio est\u00e1 por debajo de SMA20 y SMA50, el momentum sigue negativo y el RSI se aleja de sobreventa, mientras que los catalizadores de recuperaci\u00f3n del sector no se han materializado, lo que invalida la tesis alcista original.",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "bbf7abf1-6639-403a-bdfa-b1e76d49b7ad",
+    "symbol": "AVGO",
+    "qty": 21,
+    "limit_price": 363.84,
+    "extended_hours": true,
+    "timestamp": "2026-07-17T04:55:38.614329"
+  }
+}
