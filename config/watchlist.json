@@ -5,6 +5,8 @@
   "analysis_cap": 15,
   "llm_budget": 5,
   "entry_min_gap_min": 30,
+  "no_trade_open_min": 15,
+  "no_trade_close_min": 15,
   "exits": {
     "auto_close": true,
     "review_rsi_high": 72,

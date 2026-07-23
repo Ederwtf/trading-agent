@@ -290,6 +290,24 @@ def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
         if entry_price <= 0:
             return {"executed": False, "reason": f"Precio de entrada inválido: {entry_price}"}
 
+        # (M1) Validar los niveles contra el precio VIVO, no solo los números del LLM.
+        # El risk_agent solo checa coherencia interna (R/R, tamaño); si el precio real ya
+        # cruzó el SL/TP propuestos, Alpaca rechaza el bracket (caso CPOP: "stop_price must
+        # be <= base_price") o entraríamos sin colchón. Se descarta el candidato.
+        if decision == "BUY":
+            try:
+                live_price = float(api.get_latest_trade(symbol, feed="iex").price)
+            except Exception:
+                live_price = 0.0
+            if live_price > 0:
+                if stop_loss > 0 and live_price <= stop_loss:
+                    return {"executed": False,
+                            "reason": f"precio vivo ${live_price} <= SL ${stop_loss} (setup inválido)"}
+                if take_profit > 0 and live_price >= take_profit:
+                    return {"executed": False,
+                            "reason": f"precio vivo ${live_price} >= TP ${take_profit} (ya en objetivo)"}
+                entry_price = live_price   # dimensionar con el precio real (la entrada es a mercado)
+
         position_value = equity * size_pct
         shares         = max(1, int(position_value / entry_price))
         side           = "buy" if decision == "BUY" else "sell"

@@ -27,8 +27,20 @@
   en transición — stops viejos en pending_cancel por mercado cerrado, las OCO se
   colocan solas en la primera corrida del lunes), **A1** (reglas duras de salida con
   precio real de la posición, no el cierre diario) y **A3** (monitoreo aislado por
-  símbolo). Pendientes: M5, M1/M2/M4/B3, A4 (alpaca-py), M3 (rollup) y el pacing de
-  llamadas en `agents/llm.py` (seguimiento de C1 por el TPM de 8K).
+  símbolo). Aplicados el 2026-07-23: **M5** (exit code ≠ 0 en fallos críticos →
+  Actions rojo + email), **M4** (protección persistida en `state.json` + breakeven
+  como trinquete que ya no revierte — arregla el flapping 196.96↔180 visto en NVDA),
+  **M1** (validación contra precio vivo + dimensionado con precio real), **M2**
+  (ventanas de no-operar apertura/cierre vía calendario de Alpaca, solo entradas) y
+  **B3** (timestamps tz-aware ET). Pendientes: A4 (alpaca-py), M3 (rollup del journal)
+  y el pacing de llamadas en `agents/llm.py` (seguimiento de C1 por el TPM de 8K).
+
+  > Observación de producción (07-13 → 07-17): los 4 semis tocaron sus stops de
+  > breakeven durante el selloff pero **llenaron 3–9% por debajo del trigger** por
+  > gaps a la baja (un stop es orden de mercado al dispararse). NVDA sobrevivió (+6%).
+  > Cuenta: 100K → pico 102.5K → ~99.1K. Aprendizaje: un stop en breakeven no garantiza
+  > salida en breakeven; en activos con gaps, considerar (futuro) stops-limit o reducir
+  > exposición por nombre. Candidato para el Knowledge Adapter (F11).
 - **Fase 8 — Observabilidad**: dashboard estático auto-generado en cada corrida
   (`journal/` + portfolio history de Alpaca → HTML en GitHub Pages): equity curve,
   posiciones y P/L, win rate, timeline de decisiones, errores, uso de cuota LLM.

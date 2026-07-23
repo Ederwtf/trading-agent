@@ -29,8 +29,13 @@ por API key. `call_json_llm` reintenta 1 vez ante rate-limit transitorio.
 - Confianza mínima 0.60 para ejecutar. Por debajo = HOLD
 - Máximo 5 posiciones simultáneas (se cuentan posiciones + órdenes pendientes)
 - No abrir orden si el símbolo ya tiene posición u orden pendiente (anti-duplicado)
-- No operar los primeros 15 minutos de apertura (09:30–09:45 ET)
-- No operar los últimos 15 minutos de cierre (15:45–16:00 ET)
+- Validación contra precio VIVO antes de ejecutar (M1): se descarta la entrada si el
+  precio real ya cruzó el SL o el TP propuestos (evita rechazos de Alpaca y entradas sin
+  colchón). El dimensionado usa el precio vivo, no el `entry` del LLM.
+- No operar en la ventana de apertura/cierre (M2): por defecto los primeros y últimos 15
+  min de la sesión regular (`no_trade_open_min`/`no_trade_close_min` en watchlist). Se
+  calcula con el calendario de Alpaca → correcto en DST y cierres tempranos. **Solo bloquea
+  ENTRADAS**; las salidas se permiten en todo momento.
 
 ---
 
@@ -110,6 +115,12 @@ Por cada posición abierta (lee la posición real de Alpaca + la tesis/niveles d
    cambiaron. Con mercado cerrado la cancelación queda `pending_cancel` y la OCO se
    coloca en la próxima corrida (sin pérdida real: fuera de horario regular los stops
    tampoco disparan). Fallback sin TP conocido: `ensure_protective_stop` (stop GTC solo).
+   **Estado de protección persistente (M4):** los SL/TP vigentes por símbolo se guardan en
+   `journal/state.json` (`protection`) al ejecutar la entrada y en cada monitoreo. El
+   breakeven es un **trinquete**: el stop deseado nunca baja del nivel ya persistido, así
+   que aunque el P/L retroceda bajo el umbral el stop no revierte (esto elimina el flapping
+   196.96↔180 que se observó en NVDA). Resolución de niveles: `state.json` → journal →
+   OCO/stop abierta en Alpaca (último recurso). Al cerrar, el estado del símbolo se limpia.
 
 El loop de monitoreo está **aislado por símbolo** (fix A3): un error de research/Alpaca
 en un símbolo no deja al resto sin gestión en esa corrida.
@@ -147,6 +158,11 @@ Reglas de operación por sesión:
 - Error en cualquier agente → detener pipeline, registrar en journal/, NO ejecutar
 - Error de conexión con Alpaca → esperar 60s, reintentar una vez, luego detener
 - JSON inválido de agente LLM → reintentar con temperatura 0.1, luego HOLD
+- **Exit code (M5):** un fallo por-símbolo se aísla y la corrida sigue (verde), PERO un
+  fallo CRÍTICO — Alpaca inaccesible, o TODAS las salidas / TODO el análisis IA fallan, o
+  un crash global — hace `sys.exit(1)` para que Actions marque el run en rojo y llegue el
+  email. En modo `auto` se verifica el alcance de Alpaca antes de nada (si estuviera caído,
+  `detect_session` devolvería "closed" y enmascararía la caída como mercado cerrado).
 
 ---
 

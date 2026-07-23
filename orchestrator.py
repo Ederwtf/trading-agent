@@ -17,6 +17,20 @@ import time
 from datetime import datetime, time as dtime
 from pathlib import Path
 
+# Zona horaria del Este para timestamps tz-aware (B3). No depender del TZ del runner:
+# en Actions viene fijado a America/New_York, pero una corrida local en otra TZ mezclaría
+# horas en el journal y rompería la comparación de cadencia de entradas.
+try:
+    from zoneinfo import ZoneInfo
+    _ET = ZoneInfo("America/New_York")
+except Exception:
+    _ET = None  # sin tzdata: se cae a hora local naive (menos ideal, no rompe)
+
+
+def now_et() -> datetime:
+    """Ahora en horario del Este, tz-aware si hay tzdata disponible."""
+    return datetime.now(_ET) if _ET is not None else datetime.now()
+
 # Windows: la consola (cp1252) no imprime los emojis/box-drawing de la salida.
 # Forzamos UTF-8 en stdout/stderr para no depender de PYTHONUTF8 en el entorno.
 for _stream in (sys.stdout, sys.stderr):
@@ -146,6 +160,43 @@ def detect_session() -> str:
         return "closed"
 
 
+def in_no_trade_window(open_buffer_min: int = 15, close_buffer_min: int = 15) -> bool:
+    """True en los primeros/últimos minutos de la sesión regular → no abrir entradas (M2).
+
+    Usa el calendario de Alpaca (open/close reales del día) → correcto en DST y cierres
+    tempranos (donde 15:45–16:00 no aplicaría). Solo afecta ENTRADAS; las salidas siguen
+    permitidas en todo momento. Ante cualquier duda devuelve False (no bloquear de más).
+    """
+    if open_buffer_min <= 0 and close_buffer_min <= 0:
+        return False
+    api = _alpaca_api()
+    if api is None:
+        return False
+    try:
+        clock = api.get_clock()
+        if not clock.is_open:
+            return False
+        now = clock.timestamp                          # ET tz-aware
+        cal = api.get_calendar(start=now.date().isoformat(), end=now.date().isoformat())
+        if not cal:
+            return False
+
+        def _to_dt(v):
+            tt = v if isinstance(v, dtime) else datetime.strptime(str(v), "%H:%M").time()
+            return now.replace(hour=tt.hour, minute=tt.minute, second=0, microsecond=0)
+
+        mins_since_open = (now - _to_dt(cal[0].open)).total_seconds() / 60
+        mins_to_close   = (_to_dt(cal[0].close) - now).total_seconds() / 60
+        if 0 <= mins_since_open < open_buffer_min:
+            return True
+        if 0 <= mins_to_close < close_buffer_min:
+            return True
+        return False
+    except Exception as e:
+        print(f"  [ventana] error evaluando no-trade window: {e}")
+        return False
+
+
 def _reward_risk(synthesis: dict) -> float:
     """R/R de un BUY = (TP − entrada) / (entrada − SL). 0.0 si los precios no son válidos.
 
@@ -162,7 +213,7 @@ def _reward_risk(synthesis: dict) -> float:
 
 def save_journal(state: dict, symbol: str) -> None:
     Path("journal").mkdir(exist_ok=True)
-    ts = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    ts = now_et().strftime("%Y-%m-%d_%H%M%S")
     path = f"journal/{symbol}_{ts}.json"
     with open(path, "w") as f:
         json.dump(state, f, indent=2, default=str)
@@ -204,21 +255,112 @@ def save_state(st: dict) -> None:
         json.dump(st, f, indent=2, default=str)
 
 
+# ── Estado de protección por símbolo (M4): SL/TP vigentes persistidos en state.json ──
+# Antes, la protección salía solo de load_latest_journal(); si ese archivo faltaba (rollup,
+# clone nuevo, símbolo operado a mano) la posición quedaba sin stop. Además el breakeven se
+# recalculaba desde el P/L de cada corrida, así que al bajar de +4% el stop RETROCEDÍA
+# (flapping 196.96↔180 observado en NVDA). Persistir el nivel lo vuelve un trinquete.
+def _load_protection(symbol: str) -> dict:
+    return load_state().get("protection", {}).get(symbol, {})
+
+
+def _save_protection(symbol: str, stop, take_profit, breakeven: bool) -> None:
+    st = load_state()
+    prot = st.setdefault("protection", {})
+    prot[symbol] = {
+        "stop":        round(float(stop), 2) if stop else 0.0,
+        "take_profit": round(float(take_profit), 2) if take_profit else 0.0,
+        "breakeven":   bool(breakeven),
+        "updated":     now_et().isoformat(),
+    }
+    save_state(st)
+
+
+def _clear_protection(symbol: str) -> None:
+    st = load_state()
+    if symbol in st.get("protection", {}):
+        del st["protection"][symbol]
+        save_state(st)
+
+
+def _read_open_protection(symbol: str) -> dict:
+    """Último recurso (M4): lee SL/TP de la OCO/stop abierta en Alpaca cuando ni el state
+    ni el journal los tienen (p. ej. posición entrada a mano)."""
+    api = _alpaca_api()
+    out = {}
+    if api is None:
+        return out
+    try:
+        for o in api.list_orders(status="open", nested=True):
+            if o.symbol != symbol:
+                continue
+            for leg in [o] + list(getattr(o, "legs", None) or []):
+                otype = (getattr(leg, "order_type", None) or getattr(leg, "type", None) or "")
+                if "stop" in otype and getattr(leg, "stop_price", None):
+                    out["stop"] = float(leg.stop_price)
+                elif otype == "limit" and getattr(leg, "limit_price", None):
+                    out["take_profit"] = float(leg.limit_price)
+    except Exception:
+        pass
+    return out
+
+
 def entries_due(min_gap_min: int = 30) -> bool:
     """True si pasó ≥min_gap_min desde la última búsqueda de entradas (protege RPD)."""
     last = load_state().get("last_entry_run")
     if not last:
         return True
     try:
-        return (datetime.now() - datetime.fromisoformat(last)).total_seconds() >= min_gap_min * 60
+        prev = datetime.fromisoformat(last)
+        cur  = now_et()
+        # Tolerar estados viejos naive junto a timestamps nuevos tz-aware (B3).
+        if (prev.tzinfo is None) != (cur.tzinfo is None):
+            prev, cur = prev.replace(tzinfo=None), cur.replace(tzinfo=None)
+        return (cur - prev).total_seconds() >= min_gap_min * 60
     except Exception:
         return True
 
 
 def mark_entries_ran() -> None:
     st = load_state()
-    st["last_entry_run"] = datetime.now().isoformat()
+    st["last_entry_run"] = now_et().isoformat()
     save_state(st)
+
+
+# ── Estado de la corrida: errores críticos para que Actions marque el run en rojo (M5) ──
+# Un fallo "suave" (el agente imprime [ERROR] pero el proceso sale 0) hace que un agente
+# medio-roto se vea "success" para siempre. Estos helpers acumulan fallos CRÍTICOS —
+# Alpaca/Groq caídos o un crash global — y salen con código 1 para disparar el email de
+# GitHub. Los fallos por-símbolo tolerables NO son críticos (se aíslan y la corrida sigue).
+_CRITICAL_ERRORS: list = []
+
+
+def _note_critical(msg: str) -> None:
+    print(f"  [CRÍTICO] {msg}")
+    _CRITICAL_ERRORS.append(msg)
+
+
+def _alpaca_reachable() -> bool:
+    """True si se puede leer la cuenta. Un fallo aquí deja al agente a ciegas → crítico."""
+    api = _alpaca_api()
+    if api is None:
+        return False
+    try:
+        api.get_account()
+        return True
+    except Exception as e:
+        print(f"  [alpaca] get_account falló: {e}")
+        return False
+
+
+def _finish() -> None:
+    """Cierra la corrida: si hubo errores críticos, sale con código 1 (Actions → rojo)."""
+    if _CRITICAL_ERRORS:
+        print(f"\n✗ Corrida con {len(_CRITICAL_ERRORS)} error(es) crítico(s):")
+        for m in _CRITICAL_ERRORS:
+            print(f"    - {m}")
+        sys.exit(1)
+    print("\n✓ Corrida sin errores críticos.")
 
 
 # ─────────────────────────────────────────────────────────
@@ -226,7 +368,7 @@ def mark_entries_ran() -> None:
 # ─────────────────────────────────────────────────────────
 def analyze_symbol(symbol: str, portfolio: dict, research: dict = None) -> dict:
     print(f"\n{'═'*54}")
-    print(f"  ANÁLISIS │ {symbol} │ {datetime.now().strftime('%H:%M:%S')}")
+    print(f"  ANÁLISIS │ {symbol} │ {now_et().strftime('%H:%M:%S')}")
     print(f"{'═'*54}")
 
     # 1. Research (sin LLM) — se reutiliza si ya viene precomputado del pre-screen
@@ -265,7 +407,7 @@ def analyze_symbol(symbol: str, portfolio: dict, research: dict = None) -> dict:
 
     return {
         "symbol":    symbol,
-        "timestamp": datetime.now().isoformat(),
+        "timestamp": now_et().isoformat(),
         "portfolio": {k: v for k, v in portfolio.items() if k not in ("held", "pending")},
         "research":  research,
         "bull":      bull,
@@ -285,6 +427,8 @@ def run_full_pipeline(symbol: str) -> dict:
     print("\n[Ejecución] Execution Agent...")
     execution = execute_trade(state["synthesis"], state["risk"], symbol)
     if execution["executed"]:
+        _save_protection(symbol, state["synthesis"].get("stop_loss"),
+                         state["synthesis"].get("take_profit"), breakeven=False)
         print(f"  ✓ Orden {execution.get('order_class','?')} │ ID: {execution['order_id']} │ Shares: {execution['shares']}")
     else:
         print(f"  — Sin orden: {execution.get('reason', '–')}")
@@ -327,11 +471,16 @@ def run_batch(session: str = "regular") -> None:
 
     # ── Gestión de salidas: monitorear TODO lo abierto/pendiente (incluso fuera del universo) ──
     # Aislado por símbolo: un error (research/Alpaca) no deja al resto sin gestión (A3).
+    mon_fail = 0
     for sym in sorted(excluded):
         try:
             run_light_pipeline(sym, session=session)
         except Exception as e:
+            mon_fail += 1
             print(f"  [ERROR] monitor {sym}: {e} — se continúa con el resto")
+    if excluded and mon_fail == len(excluded):
+        _note_critical(f"gestión de salidas falló en las {len(excluded)} posiciones "
+                       "(posible caída de Alpaca/research)")
 
     # ── ¿Buscar entradas? solo con cupo libre y cadencia cumplida (protege RPD) ──
     if slots <= 0:
@@ -339,6 +488,10 @@ def run_batch(session: str = "regular") -> None:
         return
     if not entries_due(entry_gap):
         print(f"\n  Entradas en pausa (<{entry_gap} min desde la última búsqueda).")
+        return
+    # (M2) No abrir en los primeros/últimos minutos de la sesión (los más caóticos).
+    if in_no_trade_window(cfg.get("no_trade_open_min", 15), cfg.get("no_trade_close_min", 15)):
+        print("\n  En ventana de no-operar (apertura/cierre) → salidas sí, entradas no.")
         return
 
     # ── Fase 1: pre-screen LOCAL (research + screen, SIN IA) ──
@@ -376,14 +529,19 @@ def run_batch(session: str = "regular") -> None:
 
     # ── Fase 3: análisis con IA solo para los seleccionados ──
     candidates = []
+    analysis_fail = 0
     for x in selected:
         try:
             analysis = analyze_symbol(x["symbol"], state, research=x["research"])
             if analysis["risk"]["approved"] and analysis["synthesis"]["decision"] == "BUY":
                 candidates.append(analysis)
         except Exception as e:
+            analysis_fail += 1
             print(f"\n[ERROR] {x['symbol']}: {e}")
         time.sleep(2)  # pausa entre símbolos
+    if selected and analysis_fail == len(selected):
+        _note_critical(f"análisis con IA falló en los {len(selected)} símbolos "
+                       "(posible caída de Groq/LLM)")
 
     # Ranking por confianza; DESEMPATE por R/R (a igual confianza, mejor riesgo/beneficio
     # primero). Scout tiende a aplanar la confianza, así que el R/R hace el ranking útil.
@@ -410,6 +568,8 @@ def run_batch(session: str = "regular") -> None:
             execution = execute_trade(a["synthesis"], a["risk"], sym)
             if execution["executed"]:
                 executed += 1
+                _save_protection(sym, a["synthesis"].get("stop_loss"),
+                                 a["synthesis"].get("take_profit"), breakeven=False)
                 print(f"  ✓ Orden {execution.get('order_class','?')} │ ID: {execution['order_id']} │ Shares: {execution['shares']}")
             else:
                 print(f"  — Sin orden: {execution.get('reason', '–')}")
@@ -451,7 +611,7 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
     session: en 'pre'/'post' los cierres usan limit + extended_hours (Alpaca no permite
     market ni deja disparar stops fuera de hora); en 'regular' cierra a mercado.
     """
-    print(f"\n[MONITOR] {symbol} │ {datetime.now().strftime('%H:%M:%S')} │ sesión {session}")
+    print(f"\n[MONITOR] {symbol} │ {now_et().strftime('%H:%M:%S')} │ sesión {session}")
 
     cfg      = load_config().get("exits", {})
     auto     = cfg.get("auto_close", True)
@@ -461,7 +621,7 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
 
     if not position:
         print(f"  Precio: ${p['current']} │ RSI: {p['rsi14']} │ sin posición abierta (solo pendiente)")
-        state = {"symbol": symbol, "timestamp": datetime.now().isoformat(),
+        state = {"symbol": symbol, "timestamp": now_et().isoformat(),
                  "pipeline": "monitor", "action": "NONE", "reason": "sin posición"}
         save_journal(state, symbol)
         return state
@@ -505,29 +665,46 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
                 print(f"  [Cierre] cerrando {symbol} a mercado...")
                 execution = close_position(symbol)
             print(f"  {'✓ Cerrada' if execution.get('closed') else '— No cerrada: ' + execution.get('reason','')}")
+            if execution.get("closed"):
+                _clear_protection(symbol)   # (M4) la posición se fue; olvida su estado
         else:
             print(f"  RECOMENDACIÓN: cerrar {symbol} (auto_close=off, sin tocar la cuenta)")
             execution = {"closed": False, "reason": "recomendación (auto_close off)"}
     else:
         # 4. Mantener → protección broker-side: pareja OCO GTC (TP limit + SL stop).
-        # Breakeven (A2): si el P/L ≥ breakeven_at_pct, el stop sube al precio de
-        # entrada — y nunca baja (max con el SL original).
-        sl_desired = original.get("stop_loss") or 0.0
-        tp_target  = original.get("take_profit") or 0.0
-        be_at      = cfg.get("breakeven_at_pct", 0.04)
-        breakeven  = False
+        # Resolución de niveles (M4): state.json manda (incluye el stop ya trinqueteado),
+        # journal como fallback (posiciones viejas), OCO viva como último recurso.
+        prot_state = _load_protection(symbol)
+        base_sl    = prot_state.get("stop") or original.get("stop_loss") or 0.0
+        tp_target  = prot_state.get("take_profit") or original.get("take_profit") or 0.0
+        if not base_sl or not tp_target:
+            live = _read_open_protection(symbol)
+            base_sl   = base_sl   or live.get("stop", 0.0)
+            tp_target = tp_target or live.get("take_profit", 0.0)
+
+        # Breakeven como TRINQUETE (A2 corregido): el flag se pega una vez alcanzado, y el
+        # stop deseado nunca baja del nivel ya persistido — aunque el P/L retroceda bajo +4%.
+        be_at     = cfg.get("breakeven_at_pct", 0.04)
+        breakeven = bool(prot_state.get("breakeven", False))
         if be_at and position.get("unrealized_plpc") is not None \
                 and float(position["unrealized_plpc"]) >= float(be_at):
-            be_price = round(float(position["avg_entry_price"]), 2)
-            if be_price > sl_desired:
-                sl_desired, breakeven = be_price, True
+            breakeven = True
+        sl_desired = base_sl
+        if breakeven:
+            sl_desired = max(sl_desired, round(float(position["avg_entry_price"]), 2))
+        sl_desired = max(sl_desired, prot_state.get("stop", 0.0))   # trinquete duro
 
         if sl_desired > 0 and tp_target > 0:
             protection = ensure_exit_bracket(symbol, sl_desired, tp_target, position["qty"])
         else:
-            # Sin TP conocido (journal incompleto): al menos el stop persistente
+            # Sin TP conocido: al menos el stop persistente
             protection = ensure_protective_stop(symbol, sl_desired, position["qty"])
         protection["breakeven"] = breakeven
+
+        # Persistir el nivel deseado (aunque la OCO ya estuviera vigente): el state es la
+        # fuente de verdad del trinquete para la próxima corrida.
+        if sl_desired > 0:
+            _save_protection(symbol, sl_desired, tp_target or sl_desired, breakeven)
 
         if protection.get("armed"):
             kind = "OCO GTC" if protection.get("order_class") == "oco" else "stop GTC"
@@ -536,12 +713,13 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
                   + (f" / TP ${protection.get('take_profit')}" if protection.get('take_profit') else "")
                   + extra)
         else:
-            print(f"  [protección] {protection.get('reason', '—')}")
+            print(f"  [protección] {protection.get('reason', '—')}"
+                  + (" (breakeven persistido)" if breakeven else ""))
         execution = {"protection": protection}
 
     state = {
         "symbol":    symbol,
-        "timestamp": datetime.now().isoformat(),
+        "timestamp": now_et().isoformat(),
         "pipeline":  "monitor",
         "position":  position,
         "action":    action,
@@ -559,32 +737,44 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
 def main():
     print("\n⚡ Trading Agent Orchestrator v1.1")
     print("   Modo: PAPER TRADING (sin capital real)\n")
+    _CRITICAL_ERRORS.clear()
 
     mode = sys.argv[1] if len(sys.argv) > 1 else "full"
     symbol = sys.argv[2].upper() if len(sys.argv) > 2 else None
 
     if mode == "auto":
         # Router por sesión (para GitHub Actions): decide qué hacer según el reloj de Alpaca.
-        session = detect_session()
-        print(f"  Sesión detectada: {session}")
         try:
-            if session == "regular":
-                run_batch(session="regular")            # monitorea abiertos + busca entradas
-            elif session in ("pre", "post"):
-                st = get_portfolio_state()
-                held = sorted(st["held"] | st["pending"])
-                if not held:
-                    print("  Sin posiciones abiertas que gestionar en extended hours.")
-                for sym in held:
-                    try:
-                        run_light_pipeline(sym, session=session)   # solo gestión de salidas
-                    except Exception as e:
-                        print(f"  [ERROR] monitor {sym}: {e} — se continúa con el resto")
-                    time.sleep(2)
+            # Alpaca primero: si está caído, detect_session devolvería "closed" y enmascararía
+            # la caída como "mercado cerrado" (run verde eterno). Verificar alcance rompe eso.
+            if not _alpaca_reachable():
+                _note_critical("Alpaca inaccesible: no se pudo leer la cuenta")
             else:
-                print("  Mercado cerrado → no-op.")
+                session = detect_session()
+                print(f"  Sesión detectada: {session}")
+                if session == "regular":
+                    run_batch(session="regular")        # monitorea abiertos + busca entradas
+                elif session in ("pre", "post"):
+                    st = get_portfolio_state()
+                    held = sorted(st["held"] | st["pending"])
+                    if not held:
+                        print("  Sin posiciones abiertas que gestionar en extended hours.")
+                    mon_fail = 0
+                    for sym in held:
+                        try:
+                            run_light_pipeline(sym, session=session)   # solo gestión de salidas
+                        except Exception as e:
+                            mon_fail += 1
+                            print(f"  [ERROR] monitor {sym}: {e} — se continúa con el resto")
+                        time.sleep(2)
+                    if held and mon_fail == len(held):
+                        _note_critical(f"gestión de salidas falló en las {len(held)} posiciones "
+                                       "(posible caída de Alpaca/research)")
+                else:
+                    print("  Mercado cerrado → no-op.")
         except Exception as e:
-            print(f"\n[ERROR] auto: {e}")
+            _note_critical(f"auto abortó con excepción no controlada: {e}")
+        _finish()
         return
 
     if mode == "full" and symbol is None:
@@ -592,7 +782,8 @@ def main():
         try:
             run_batch()
         except Exception as e:
-            print(f"\n[ERROR] batch: {e}")
+            _note_critical(f"batch abortó: {e}")
+        _finish()
         return
 
     symbols = [symbol] if symbol else load_config().get("symbols", [])
@@ -605,9 +796,10 @@ def main():
             else:
                 print(f"Modo desconocido: {mode}. Usa 'full' o 'monitor'.")
         except Exception as e:
-            print(f"\n[ERROR] {sym}: {e}")
+            _note_critical(f"{sym}: {e}")
             print("  Pipeline detenido. Revisa journal/ para detalles.")
         time.sleep(2)
+    _finish()
 
 
 if __name__ == "__main__":
