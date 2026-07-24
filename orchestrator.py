@@ -11,7 +11,6 @@ Uso:
 
 import glob
 import json
-import os
 import sys
 import time
 from datetime import datetime, time as dtime
@@ -53,6 +52,7 @@ from agents.execution_agent import (
 from agents.universe import build_universe
 from agents.screen import local_screen
 from agents.exit_agent import local_exit, review_thesis
+from agents import broker
 
 
 def load_config() -> dict:
@@ -61,67 +61,29 @@ def load_config() -> dict:
         return json.load(f)
 
 
-def _alpaca_api():
-    """Cliente REST de Alpaca, o None si faltan credenciales / falla la conexión."""
-    try:
-        import alpaca_trade_api as tradeapi
-        return tradeapi.REST(
-            os.getenv("ALPACA_API_KEY"),
-            os.getenv("ALPACA_SECRET_KEY"),
-            os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets"),
-        )
-    except Exception as e:
-        print(f"  [alpaca] No se pudo crear el cliente: {e}")
-        return None
-
-
 def get_portfolio() -> dict:
     """Lee el estado real del portafolio paper desde Alpaca (equity/cash/buying_power)."""
-    api = _alpaca_api()
-    if api is not None:
-        try:
-            account = api.get_account()
-            return {
-                "equity":       float(account.equity),
-                "cash":         float(account.cash),
-                "buying_power": float(account.buying_power),
-            }
-        except Exception as e:
-            print(f"  [portfolio] Error al leer Alpaca: {e}. Usando valores por defecto.")
+    acct = broker.account()
+    if acct:
+        return acct
+    print("  [portfolio] No se pudo leer la cuenta. Usando valores por defecto.")
     return {"equity": 100_000, "cash": 100_000, "buying_power": 100_000}
 
 
 def get_portfolio_state() -> dict:
     """Estado enriquecido: equity/cash + símbolos ya en cartera y con órdenes pendientes."""
     state = get_portfolio()
-    state["held"] = set()
-    state["pending"] = set()
-
-    api = _alpaca_api()
-    if api is not None:
-        try:
-            state["held"] = {p.symbol for p in api.list_positions()}
-        except Exception as e:
-            print(f"  [portfolio] No se pudieron leer posiciones: {e}")
-        try:
-            state["pending"] = {o.symbol for o in api.list_orders(status="open")}
-        except Exception as e:
-            print(f"  [portfolio] No se pudieron leer órdenes abiertas: {e}")
+    state["held"]    = broker.held_symbols()
+    state["pending"] = broker.pending_order_symbols()
     return state
 
 
 def market_status() -> str:
     """Etiqueta legible del estado del mercado según el reloj de Alpaca."""
-    api = _alpaca_api()
-    if api is not None:
-        try:
-            clock = api.get_clock()
-            if clock.is_open:
-                return "ABIERTO"
-            return f"CERRADO (próxima apertura: {clock.next_open})"
-        except Exception:
-            pass
-    return "desconocido"
+    c = broker.clock()
+    if not c:
+        return "desconocido"
+    return "ABIERTO" if c["is_open"] else f"CERRADO (próxima apertura: {c['next_open']})"
 
 
 def detect_session() -> str:
@@ -129,35 +91,20 @@ def detect_session() -> str:
 
     pre  = [04:00, apertura) ET │ post = [cierre, 20:00) ET │ regular = clock.is_open.
     """
-    api = _alpaca_api()
-    if api is None:
+    info = broker.market_session_info()
+    if not info:
         return "closed"
-    try:
-        clock = api.get_clock()
-        if clock.is_open:
-            return "regular"
-
-        now_et = clock.timestamp                      # datetime tz-aware en ET
-        today  = now_et.date().isoformat()
-        cal    = api.get_calendar(start=today, end=today)
-        if not cal:
-            return "closed"                            # fin de semana o feriado
-
-        def _to_time(v):
-            return v if isinstance(v, dtime) else datetime.strptime(str(v), "%H:%M").time()
-
-        open_t  = _to_time(cal[0].open)
-        close_t = _to_time(cal[0].close)
-        t = now_et.time()
-
-        if dtime(4, 0) <= t < open_t:
-            return "pre"
-        if close_t <= t < dtime(20, 0):
-            return "post"
-        return "closed"
-    except Exception as e:
-        print(f"  [session] error detectando sesión: {e}")
-        return "closed"
+    if info["is_open"]:
+        return "regular"
+    open_t, close_t = info.get("open_time"), info.get("close_time")
+    if not open_t or not close_t:
+        return "closed"                                # fin de semana o feriado
+    t = info["now_et"].time()
+    if dtime(4, 0) <= t < open_t:
+        return "pre"
+    if close_t <= t < dtime(20, 0):
+        return "post"
+    return "closed"
 
 
 def in_no_trade_window(open_buffer_min: int = 15, close_buffer_min: int = 15) -> bool:
@@ -169,32 +116,17 @@ def in_no_trade_window(open_buffer_min: int = 15, close_buffer_min: int = 15) ->
     """
     if open_buffer_min <= 0 and close_buffer_min <= 0:
         return False
-    api = _alpaca_api()
-    if api is None:
+    info = broker.market_session_info()
+    if not info or not info["is_open"] or not info.get("open_time") or not info.get("close_time"):
         return False
-    try:
-        clock = api.get_clock()
-        if not clock.is_open:
-            return False
-        now = clock.timestamp                          # ET tz-aware
-        cal = api.get_calendar(start=now.date().isoformat(), end=now.date().isoformat())
-        if not cal:
-            return False
+    now = info["now_et"]
 
-        def _to_dt(v):
-            tt = v if isinstance(v, dtime) else datetime.strptime(str(v), "%H:%M").time()
-            return now.replace(hour=tt.hour, minute=tt.minute, second=0, microsecond=0)
+    def _to_dt(t):
+        return now.replace(hour=t.hour, minute=t.minute, second=0, microsecond=0)
 
-        mins_since_open = (now - _to_dt(cal[0].open)).total_seconds() / 60
-        mins_to_close   = (_to_dt(cal[0].close) - now).total_seconds() / 60
-        if 0 <= mins_since_open < open_buffer_min:
-            return True
-        if 0 <= mins_to_close < close_buffer_min:
-            return True
-        return False
-    except Exception as e:
-        print(f"  [ventana] error evaluando no-trade window: {e}")
-        return False
+    mins_since_open = (now - _to_dt(info["open_time"])).total_seconds() / 60
+    mins_to_close   = (_to_dt(info["close_time"]) - now).total_seconds() / 60
+    return (0 <= mins_since_open < open_buffer_min) or (0 <= mins_to_close < close_buffer_min)
 
 
 def _reward_risk(synthesis: dict) -> float:
@@ -286,22 +218,12 @@ def _clear_protection(symbol: str) -> None:
 def _read_open_protection(symbol: str) -> dict:
     """Último recurso (M4): lee SL/TP de la OCO/stop abierta en Alpaca cuando ni el state
     ni el journal los tienen (p. ej. posición entrada a mano)."""
-    api = _alpaca_api()
     out = {}
-    if api is None:
-        return out
-    try:
-        for o in api.list_orders(status="open", nested=True):
-            if o.symbol != symbol:
-                continue
-            for leg in [o] + list(getattr(o, "legs", None) or []):
-                otype = (getattr(leg, "order_type", None) or getattr(leg, "type", None) or "")
-                if "stop" in otype and getattr(leg, "stop_price", None):
-                    out["stop"] = float(leg.stop_price)
-                elif otype == "limit" and getattr(leg, "limit_price", None):
-                    out["take_profit"] = float(leg.limit_price)
-    except Exception:
-        pass
+    for o in broker.open_orders(symbol):
+        if "stop" in o["order_type"] and o["stop_price"]:
+            out["stop"] = o["stop_price"]
+        elif o["order_type"] == "limit" and o["limit_price"]:
+            out["take_profit"] = o["limit_price"]
     return out
 
 
@@ -342,15 +264,7 @@ def _note_critical(msg: str) -> None:
 
 def _alpaca_reachable() -> bool:
     """True si se puede leer la cuenta. Un fallo aquí deja al agente a ciegas → crítico."""
-    api = _alpaca_api()
-    if api is None:
-        return False
-    try:
-        api.get_account()
-        return True
-    except Exception as e:
-        print(f"  [alpaca] get_account falló: {e}")
-        return False
+    return broker.is_reachable()
 
 
 def _finish() -> None:
@@ -586,20 +500,7 @@ def run_batch(session: str = "regular") -> None:
 # ─────────────────────────────────────────────────────────
 def _read_position(symbol: str) -> dict:
     """Posición abierta real en Alpaca, o {} si no hay."""
-    api = _alpaca_api()
-    if api is None:
-        return {}
-    try:
-        pos = api.get_position(symbol)
-        return {
-            "qty":              float(pos.qty),
-            "avg_entry_price":  float(pos.avg_entry_price),
-            "current_price":    float(pos.current_price),
-            "unrealized_pl":    float(pos.unrealized_pl),
-            "unrealized_plpc":  float(pos.unrealized_plpc),
-        }
-    except Exception:
-        return {}  # sin posición (p. ej. solo orden pendiente)
+    return broker.position(symbol)
 
 
 def run_light_pipeline(symbol: str, session: str = "regular") -> dict:

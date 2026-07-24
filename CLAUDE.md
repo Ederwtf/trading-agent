@@ -56,6 +56,14 @@ Orden de ejecución:
 6. risk_agent.py   → validación de reglas (sin LLM, no modificar)
 7. execution_agent.py → ejecución en Alpaca vía **bracket order** (entrada + TP + SL)
 
+**Frontera con el broker (A4):** TODO el acceso a Alpaca pasa por `agents/broker.py`,
+único módulo que importa el SDK (**alpaca-py**, el oficial; se migró desde el deprecado
+`alpaca-trade-api`). Los agentes y el orquestador llaman funciones del broker que
+devuelven tipos planos (dicts/floats/sets) u objetos de orden. Beneficio: cambiar de SDK
+o enchufar un segundo broker (p. ej. OANDA para forex, futuro) no toca la lógica de los
+agentes. Modo paper se deriva de `ALPACA_BASE_URL`. `requests` directo solo para dos
+endpoints sin método en el SDK (noticias y screener most-actives).
+
 ### Modo BATCH (`full` sin símbolo)
 - Universo = watchlist fija (`config/watchlist.json` → `symbols`) + most-actives de
   Alpaca, deduplicado y cortado en `analysis_cap`.

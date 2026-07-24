@@ -1,38 +1,26 @@
 """
 Execution Agent — Ejecución de órdenes. SIN LLM. Completamente determinístico.
-Solo actúa si risk_agent aprobó. Llama a Alpaca API directamente.
+Solo actúa si risk_agent aprobó. Habla con Alpaca a través de agents/broker.py.
 En paper mode, las órdenes son simuladas (sin dinero real).
 """
 
-import os
+import time as _time
 from datetime import datetime
 
+from . import broker
 
-def _api():
-    """Cliente REST de Alpaca a partir del entorno, o None si faltan credenciales."""
-    api_key    = os.getenv("ALPACA_API_KEY")
-    secret_key = os.getenv("ALPACA_SECRET_KEY")
-    base_url   = os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
-    if not api_key or not secret_key:
-        return None
-    import alpaca_trade_api as tradeapi
-    return tradeapi.REST(api_key, secret_key, base_url)
+
+def _no_creds() -> dict:
+    return {"reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
 
 
 def close_position(symbol: str) -> dict:
     """Cierra a mercado toda la posición del símbolo. SIN LLM."""
-    api = _api()
-    if api is None:
-        return {"closed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if broker.trading() is None:
+        return {"closed": False, **_no_creds()}
     try:
-        # Cancela órdenes protectoras abiertas del símbolo para liberar los shares
-        for o in api.list_orders(status="open"):
-            if o.symbol == symbol:
-                try:
-                    api.cancel_order(o.id)
-                except Exception:
-                    pass
-        order = api.close_position(symbol)
+        broker.cancel_orders_for(symbol)          # libera los shares de las protectoras
+        order = broker.close_position_market(symbol)
         return {
             "closed":    True,
             "order_id":  str(getattr(order, "id", "")),
@@ -46,59 +34,28 @@ def close_position(symbol: str) -> dict:
 def close_position_extended(symbol: str, limit_price: float) -> dict:
     """Cierra en extended hours: sell LIMIT + extended_hours=true (Alpaca no permite market
     ni dispara stops fuera de hora). Cancela órdenes abiertas del símbolo primero. SIN LLM."""
-    api = _api()
-    if api is None:
-        return {"closed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if broker.trading() is None:
+        return {"closed": False, **_no_creds()}
     if not limit_price or float(limit_price) <= 0:
         return {"closed": False, "reason": f"limit_price inválido: {limit_price}"}
     try:
-        pos = api.get_position(symbol)
-        qty = abs(int(float(pos.qty)))
+        qty = broker.position_qty(symbol)
         if qty <= 0:
             return {"closed": False, "reason": "sin posición"}
 
-        for o in api.list_orders(status="open"):
-            if o.symbol == symbol:
-                try:
-                    api.cancel_order(o.id)
-                except Exception:
-                    pass
-
-        order = api.submit_order(
-            symbol=symbol,
-            qty=qty,
-            side="sell",
-            type="limit",
-            limit_price=round(float(limit_price), 2),
-            time_in_force="day",
-            extended_hours=True,
-        )
+        broker.cancel_orders_for(symbol)
+        order = broker.submit_limit_extended(symbol, qty, "sell", round(float(limit_price), 2))
         return {
-            "closed":      True,
-            "order_id":    str(order.id),
-            "symbol":      symbol,
-            "qty":         qty,
-            "limit_price": round(float(limit_price), 2),
+            "closed":         True,
+            "order_id":       str(order.id),
+            "symbol":         symbol,
+            "qty":            qty,
+            "limit_price":    round(float(limit_price), 2),
             "extended_hours": True,
-            "timestamp":   datetime.now().isoformat(),
+            "timestamp":      datetime.now().isoformat(),
         }
     except Exception as e:
         return {"closed": False, "reason": str(e), "timestamp": datetime.now().isoformat()}
-
-
-def _open_orders_for(api, symbol: str) -> list:
-    """Órdenes abiertas del símbolo, incluyendo piernas de órdenes multi-leg (OCO/bracket)."""
-    found = []
-    try:
-        for o in api.list_orders(status="open", nested=True):
-            if o.symbol != symbol:
-                continue
-            found.append(o)
-            for leg in (getattr(o, "legs", None) or []):
-                found.append(leg)
-    except Exception:
-        pass
-    return found
 
 
 def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty) -> dict:
@@ -111,11 +68,8 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
     Nota: en extended hours ninguna pierna dispara (limitación de Alpaca); ahí el
     monitor sigue siendo la gestión activa.
     """
-    import time as _time
-
-    api = _api()
-    if api is None:
-        return {"armed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if broker.trading() is None:
+        return {"armed": False, **_no_creds()}
     if not stop_price or float(stop_price) <= 0 or not take_profit or float(take_profit) <= 0:
         return {"armed": False, "reason": f"precios inválidos (SL={stop_price}, TP={take_profit})"}
     stop_price  = round(float(stop_price), 2)
@@ -129,13 +83,12 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
     try:
         # ¿Qué protección hay ya? (stop y/o limit abiertos, incluyendo piernas OCO)
         cur_stop = cur_limit = None
-        existing = _open_orders_for(api, symbol)
+        existing = broker.open_orders(symbol)
         for o in existing:
-            otype = (getattr(o, "order_type", None) or getattr(o, "type", None) or "")
-            if "stop" in otype and getattr(o, "stop_price", None):
-                cur_stop = float(o.stop_price)
-            elif otype == "limit" and getattr(o, "limit_price", None):
-                cur_limit = float(o.limit_price)
+            if "stop" in o["order_type"] and o["stop_price"]:
+                cur_stop = o["stop_price"]
+            elif o["order_type"] == "limit" and o["limit_price"]:
+                cur_limit = o["limit_price"]
 
         if (cur_stop is not None and abs(cur_stop - stop_price) < 0.01
                 and cur_limit is not None and abs(cur_limit - take_profit) < 0.01):
@@ -143,16 +96,12 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
                     "stop_price": stop_price, "take_profit": take_profit}
 
         # Reconciliar: cancelar TODO lo abierto del símbolo (libera los shares) y re-colocar.
-        for o in existing:
-            try:
-                api.cancel_order(o.id)
-            except Exception:
-                pass  # piernas OCO se cancelan en cascada; el segundo cancel puede fallar
+        broker.cancel_orders_for(symbol)
 
         # Esperar a que las cancelaciones procesen antes de re-colocar (evita
         # "insufficient qty available" por shares aún retenidos por la orden vieja).
         for _ in range(5):
-            if not _open_orders_for(api, symbol):
+            if not broker.open_orders(symbol):
                 break
             _time.sleep(1)
 
@@ -160,8 +109,8 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
         # shares retenidos — no tiene caso enviar la OCO. La función es idempotente:
         # la próxima corrida (cancelación ya procesada) la coloca. Sin pérdida real de
         # protección: fuera de horario regular los stops tampoco disparan.
-        remaining = _open_orders_for(api, symbol)
-        if any(getattr(o, "status", "") == "pending_cancel" for o in remaining):
+        remaining = broker.open_orders(symbol)
+        if any(o["status"] == "pending_cancel" for o in remaining):
             return {"armed": False,
                     "reason": "stop viejo en pending_cancel (mercado cerrado); "
                               "la OCO se colocará en la próxima corrida"}
@@ -169,16 +118,7 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
         last_err = None
         for attempt in range(2):
             try:
-                order = api.submit_order(
-                    symbol=symbol,
-                    qty=qty,
-                    side="sell",
-                    type="limit",
-                    time_in_force="gtc",
-                    order_class="oco",
-                    take_profit={"limit_price": take_profit},
-                    stop_loss={"stop_price": stop_price},
-                )
+                order = broker.submit_oco_gtc(symbol, qty, take_profit, stop_price)
                 return {
                     "armed":       True,
                     "order_id":    str(order.id),
@@ -200,9 +140,8 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
 def ensure_protective_stop(symbol: str, stop_price: float, qty) -> dict:
     """Coloca un stop-loss GTC si el símbolo no tiene ya una orden stop abierta. Idempotente.
     Fallback de ensure_exit_bracket cuando no hay TP conocido (protege al menos el piso)."""
-    api = _api()
-    if api is None:
-        return {"armed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if broker.trading() is None:
+        return {"armed": False, **_no_creds()}
     if not stop_price or float(stop_price) <= 0:
         return {"armed": False, "reason": f"stop_price inválido: {stop_price}"}
     try:
@@ -211,18 +150,11 @@ def ensure_protective_stop(symbol: str, stop_price: float, qty) -> dict:
             return {"armed": False, "reason": "qty inválida"}
 
         # ¿Ya hay una orden stop abierta para el símbolo? → no duplicar
-        for o in api.list_orders(status="open"):
-            if o.symbol == symbol and "stop" in (o.order_type or o.type or ""):
-                return {"armed": False, "reason": "ya tiene stop activo", "order_id": str(o.id)}
+        for o in broker.open_orders(symbol):
+            if "stop" in o["order_type"]:
+                return {"armed": False, "reason": "ya tiene stop activo", "order_id": o["id"]}
 
-        order = api.submit_order(
-            symbol=symbol,
-            qty=qty,
-            side="sell",
-            type="stop",
-            stop_price=round(float(stop_price), 2),
-            time_in_force="gtc",
-        )
+        order = broker.submit_stop_gtc(symbol, qty, round(float(stop_price), 2))
         return {
             "armed":      True,
             "order_id":   str(order.id),
@@ -233,19 +165,9 @@ def ensure_protective_stop(symbol: str, stop_price: float, qty) -> dict:
         return {"armed": False, "reason": str(e)}
 
 
-def _has_exposure(api, symbol: str) -> bool:
+def _has_exposure(symbol: str) -> bool:
     """True si ya existe una posición abierta o una orden pendiente para el símbolo."""
-    try:
-        for pos in api.list_positions():
-            if pos.symbol == symbol:
-                return True
-        for order in api.list_orders(status="open"):
-            if order.symbol == symbol:
-                return True
-    except Exception:
-        # Ante duda al consultar, no bloqueamos aquí; el orquestador ya filtra duplicados.
-        return False
-    return False
+    return symbol in broker.held_symbols() or symbol in broker.pending_order_symbols()
 
 
 def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
@@ -264,29 +186,22 @@ def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
     if decision == "HOLD":
         return {"executed": False, "reason": "Decision is HOLD"}
 
-    api_key    = os.getenv("ALPACA_API_KEY")
-    secret_key = os.getenv("ALPACA_SECRET_KEY")
-    base_url   = os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
-    is_paper   = "paper-api" in base_url
-
-    if not api_key or not secret_key:
-        return {"executed": False, "reason": "Missing ALPACA_API_KEY or ALPACA_SECRET_KEY"}
+    if broker.trading() is None:
+        return {"executed": False, **_no_creds()}
 
     try:
-        import alpaca_trade_api as tradeapi
-        api = tradeapi.REST(api_key, secret_key, base_url)
-
         # Guardrail anti-duplicado: no abrir otra orden si ya hay exposición al símbolo
-        if _has_exposure(api, symbol):
+        if _has_exposure(symbol):
             return {"executed": False, "reason": f"{symbol} ya en cartera o con orden pendiente"}
 
-        account      = api.get_account()
-        equity       = float(account.equity)
+        equity       = broker.account_equity()
         size_pct     = synthesis.get("position_size_pct", 0.05)
         entry_price  = synthesis.get("entry", 0.0)
         take_profit  = synthesis.get("take_profit", 0.0)
         stop_loss    = synthesis.get("stop_loss", 0.0)
 
+        if equity <= 0:
+            return {"executed": False, "reason": "No se pudo leer el equity de la cuenta"}
         if entry_price <= 0:
             return {"executed": False, "reason": f"Precio de entrada inválido: {entry_price}"}
 
@@ -295,10 +210,7 @@ def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
         # cruzó el SL/TP propuestos, Alpaca rechaza el bracket (caso CPOP: "stop_price must
         # be <= base_price") o entraríamos sin colchón. Se descarta el candidato.
         if decision == "BUY":
-            try:
-                live_price = float(api.get_latest_trade(symbol, feed="iex").price)
-            except Exception:
-                live_price = 0.0
+            live_price = broker.latest_price(symbol)
             if live_price > 0:
                 if stop_loss > 0 and live_price <= stop_loss:
                     return {"executed": False,
@@ -315,26 +227,11 @@ def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
         # Bracket order: coloca la entrada junto con TP (limit) y SL (stop) reales.
         # Requiere SL/TP válidos; el risk_agent ya garantiza SL > 0 y R/R ≥ 1.5.
         if side == "buy" and take_profit > 0 and stop_loss > 0:
-            order = api.submit_order(
-                symbol=symbol,
-                qty=shares,
-                side=side,
-                type="market",
-                time_in_force="day",
-                order_class="bracket",
-                take_profit={"limit_price": round(float(take_profit), 2)},
-                stop_loss={"stop_price": round(float(stop_loss), 2)},
-            )
+            order = broker.submit_bracket_buy(symbol, shares, take_profit, stop_loss)
             order_class = "bracket"
         else:
             # Fallback (p. ej. SELL): orden de mercado simple
-            order = api.submit_order(
-                symbol=symbol,
-                qty=shares,
-                side=side,
-                type="market",
-                time_in_force="day",
-            )
+            order = broker.submit_market(symbol, shares, side)
             order_class = "simple"
 
         return {
@@ -347,7 +244,7 @@ def execute_trade(synthesis: dict, risk_approval: dict, symbol: str) -> dict:
             "estimated_value": round(shares * entry_price, 2),
             "take_profit":     take_profit,
             "stop_loss":       stop_loss,
-            "paper_mode":      is_paper,
+            "paper_mode":      broker.is_paper(),
             "timestamp":       datetime.now().isoformat(),
         }
 

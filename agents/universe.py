@@ -15,20 +15,10 @@ import os
 
 import requests
 
+from . import broker
+
 # Palabras clave que delatan ETFs apalancados/inversos (nombre en mayúsculas).
 _LEVERAGED_KEYWORDS = ("BEAR", "BULL", "ULTRA", "INVERSE", "LEVERAG", "2X", "3X", "-1X")
-
-
-def _alpaca_api():
-    try:
-        import alpaca_trade_api as tradeapi
-        return tradeapi.REST(
-            os.getenv("ALPACA_API_KEY"),
-            os.getenv("ALPACA_SECRET_KEY"),
-            os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets"),
-        )
-    except Exception:
-        return None
 
 
 def _alpaca_most_actives(top: int) -> list:
@@ -51,31 +41,22 @@ def _alpaca_most_actives(top: int) -> list:
         return []
 
 
-def _quality_filter(api, symbols: list, min_price: float) -> list:
+def _quality_filter(symbols: list, min_price: float) -> list:
     """Filtra candidatos dinámicos: precio mínimo, tradable, sin ETFs apalancados/inversos."""
-    if api is None:
-        return symbols  # sin API no podemos filtrar; devolvemos tal cual
-
     keep = []
     for sym in symbols:
         # Filtro por precio (descarta penny stocks)
-        try:
-            price = float(api.get_latest_trade(sym, feed="iex").price)
-            if price < min_price:
-                continue
-        except Exception:
-            pass  # sin precio, dejamos que el filtro de nombre y research decidan
+        price = broker.latest_price(sym)
+        if price and price < min_price:
+            continue   # con precio 0.0 (no disponible) dejamos que nombre/research decidan
 
         # Filtro por nombre / tradabilidad (descarta apalancados/inversos)
-        try:
-            asset = api.get_asset(sym)
-            if not getattr(asset, "tradable", True):
+        asset = broker.asset_info(sym)
+        if asset:
+            if not asset.get("tradable", True):
                 continue
-            name = (getattr(asset, "name", "") or "").upper()
-            if any(k in name for k in _LEVERAGED_KEYWORDS):
+            if any(k in asset.get("name", "").upper() for k in _LEVERAGED_KEYWORDS):
                 continue
-        except Exception:
-            pass
 
         keep.append(sym)
     return keep
@@ -95,7 +76,7 @@ def build_universe(static_symbols: list, top: int = 15, cap: int = 20,
         raw = [s.upper() for s in _alpaca_most_actives(top)]
         # No re-filtrar los que ya están en la lista fija
         raw = [s for s in raw if s not in set(fixed)]
-        dynamic_syms = _quality_filter(_alpaca_api(), raw, min_price)
+        dynamic_syms = _quality_filter(raw, min_price)
 
     # Dedup preservando orden (fijos primero)
     seen = set()

@@ -32,8 +32,12 @@
   como trinquete que ya no revierte — arregla el flapping 196.96↔180 visto en NVDA),
   **M1** (validación contra precio vivo + dimensionado con precio real), **M2**
   (ventanas de no-operar apertura/cierre vía calendario de Alpaca, solo entradas) y
-  **B3** (timestamps tz-aware ET). Pendientes: A4 (alpaca-py), M3 (rollup del journal)
-  y el pacing de llamadas en `agents/llm.py` (seguimiento de C1 por el TPM de 8K).
+  **B3** (timestamps tz-aware ET). Aplicado el 2026-07-23: **A4** — migración del SDK
+  deprecado `alpaca-trade-api` al oficial **alpaca-py**, con todo el acceso al broker
+  centralizado en el nuevo `agents/broker.py` (única frontera con el SDK; habilita
+  opciones/cripto y un futuro segundo broker sin tocar la lógica de los agentes).
+  Pendientes: M3 (rollup del journal) y el pacing de llamadas en `agents/llm.py`
+  (seguimiento de C1 por el TPM de 8K).
 
   > Observación de producción (07-13 → 07-17): los 4 semis tocaron sus stops de
   > breakeven durante el selloff pero **llenaron 3–9% por debajo del trigger** por
