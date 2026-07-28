@@ -13,11 +13,13 @@ tolera eso); las ESCRITURAS propagan la excepción (el llamador la captura y la 
 """
 
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+import requests
 
 from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import (
-    GetOrdersRequest, GetCalendarRequest,
+    GetOrdersRequest, GetCalendarRequest, GetPortfolioHistoryRequest,
     MarketOrderRequest, LimitOrderRequest, StopOrderRequest,
     TakeProfitRequest, StopLossRequest,
 )
@@ -257,6 +259,52 @@ def open_orders(symbol: str) -> list:
     except Exception as e:
         print(f"  [broker] open_orders({symbol}) falló: {e}")
     return out
+
+
+# ─────────────────────────── Lecturas para reporting (F8) ───────────────────────────
+def portfolio_history(period: str = "1M", timeframe: str = "1D") -> list:
+    """Serie [(iso_time, equity)] del historial de la cuenta, o [] si no disponible."""
+    tc = trading()
+    if tc is None:
+        return []
+    try:
+        ph = tc.get_portfolio_history(GetPortfolioHistoryRequest(period=period, timeframe=timeframe))
+        out = []
+        for ts, eq in zip(ph.timestamp or [], ph.equity or []):
+            if eq is None:
+                continue
+            iso = datetime.fromtimestamp(int(ts), tz=timezone.utc).isoformat()
+            out.append((iso, float(eq)))
+        return out
+    except Exception as e:
+        print(f"  [broker] portfolio_history falló: {e}")
+        return []
+
+
+def fills(limit: int = 500) -> list:
+    """Fills (ejecuciones) de la cuenta, cronológico ascendente. Vía REST directo porque
+    el TradingClient de alpaca-py no expone activities. [] si no disponible."""
+    key, sec = os.getenv("ALPACA_API_KEY"), os.getenv("ALPACA_SECRET_KEY")
+    if not key or not sec:
+        return []
+    base = os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets").rstrip("/")
+    try:
+        r = requests.get(
+            f"{base}/v2/account/activities/FILL",
+            headers={"APCA-API-KEY-ID": key, "APCA-API-SECRET-KEY": sec},
+            params={"page_size": min(limit, 100)}, timeout=10,
+        )
+        r.raise_for_status()
+        rows = [
+            {"time": f["transaction_time"], "symbol": f["symbol"], "side": f["side"],
+             "qty": abs(float(f["qty"])), "price": float(f["price"])}
+            for f in r.json()
+        ]
+        rows.sort(key=lambda x: x["time"])       # cronológico para el emparejamiento FIFO
+        return rows
+    except Exception as e:
+        print(f"  [broker] fills falló: {e}")
+        return []
 
 
 # ─────────────────────────── Escrituras (propagan excepción) ───────────────────────────

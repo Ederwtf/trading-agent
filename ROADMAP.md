@@ -52,9 +52,15 @@
   > Cuenta: 100K → pico 102.5K → ~99.1K. Aprendizaje: un stop en breakeven no garantiza
   > salida en breakeven; en activos con gaps, considerar (futuro) stops-limit o reducir
   > exposición por nombre. Candidato para el Knowledge Adapter (F11).
-- **Fase 8 — Observabilidad**: dashboard estático auto-generado en cada corrida
-  (`journal/` + portfolio history de Alpaca → HTML en GitHub Pages): equity curve,
-  posiciones y P/L, win rate, timeline de decisiones, errores, uso de cuota LLM.
+- **Fase 8 — Observabilidad (COMPLETA 2026-07-27)**: dashboard estático auto-generado en
+  cada corrida (`report/build_dashboard.py` + `report/render.py` → `docs/index.html`) desde
+  `journal/` + cuenta/portfolio-history/fills de Alpaca: equity curve (SVG), P/L realizado
+  por round-trip FIFO (validado: −$1,312 = cambio de equity), win rate, posiciones con
+  protección, timeline de decisiones, uso estimado de IA. Autocontenido (CSP-safe), servido
+  por GitHub Pages. Incluye **M3** (rollup del journal a `journal/archive/AAAA-MM.jsonl`) y el
+  **prune de protección huérfana** en `state.json`. Wiring: pasos `if: always()` en el
+  workflow (dashboard/commit corren aun si el orquestador falla). **Acción manual pendiente
+  del usuario:** habilitar GitHub Pages (Settings → Pages → branch `master` /docs).
 - **Fase 9 — Estrategia estable pero dinámica**: módulo de régimen de volatilidad
   (VIX vía yfinance + vol realizada + SPY vs SMA200 → calm|nervous|panic → ajusta tamaño,
   entradas y llm_budget) + ETFs líquidos en el universo + tope de concentración por sector.

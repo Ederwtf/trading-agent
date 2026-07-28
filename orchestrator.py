@@ -215,6 +215,20 @@ def _clear_protection(symbol: str) -> None:
         save_state(st)
 
 
+def prune_protection(active: set) -> None:
+    """Borra estados de protección de símbolos que ya no están en cartera/pendientes (M4/M3).
+    Una posición cerrada por su propia OCO broker-side no pasa por el monitor, así que su
+    estado quedaría huérfano en state.json — esto lo limpia al inicio de cada corrida."""
+    st = load_state()
+    prot = st.get("protection", {})
+    stale = [s for s in prot if s not in active]
+    if stale:
+        for s in stale:
+            del prot[s]
+        save_state(st)
+        print(f"  [estado] protección purgada de {', '.join(stale)} (ya no en cartera)")
+
+
 def _read_open_protection(symbol: str) -> dict:
     """Último recurso (M4): lee SL/TP de la OCO/stop abierta en Alpaca cuando ni el state
     ni el journal los tienen (p. ej. posición entrada a mano)."""
@@ -374,6 +388,7 @@ def run_batch(session: str = "regular") -> None:
     state = get_portfolio_state()
     excluded = state["held"] | state["pending"]
     slots = max(0, max_pos - len(excluded))
+    prune_protection(excluded)   # limpia protección de posiciones ya cerradas (p. ej. por OCO)
 
     print(f"\n{'━'*54}")
     print("  MODO BATCH")
@@ -657,7 +672,9 @@ def main():
                     run_batch(session="regular")        # monitorea abiertos + busca entradas
                 elif session in ("pre", "post"):
                     st = get_portfolio_state()
-                    held = sorted(st["held"] | st["pending"])
+                    active = st["held"] | st["pending"]
+                    prune_protection(active)
+                    held = sorted(active)
                     if not held:
                         print("  Sin posiciones abiertas que gestionar en extended hours.")
                     mon_fail = 0

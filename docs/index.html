@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Agent · Dashboard</title>
+<style>
+  :root {
+    --bg:#0e1116; --surface:#161b22; --surface2:#1c232d; --line:#2a3340;
+    --ink:#e6edf3; --muted:#8b98a6; --accent:#58a6ff;
+    --pos:#3fb950; --neg:#f85149; --flat:#8b98a6;
+    --pos-fill:rgba(63,185,80,.14); --neg-fill:rgba(248,81,73,.14);
+    --mono:"SFMono-Regular",ui-monospace,"Cascadia Code",Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg:#f6f8fa; --surface:#ffffff; --surface2:#f0f3f6; --line:#d8dee4;
+      --ink:#1f2328; --muted:#59636e; --accent:#0969da;
+      --pos:#1a7f37; --neg:#cf222e; --flat:#59636e;
+      --pos-fill:rgba(26,127,55,.10); --neg-fill:rgba(207,34,46,.10);
+    }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    line-height:1.5; padding:28px 18px 60px; }
+  .wrap { max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:24px; }
+  header .eyebrow { font-family:var(--mono); font-size:12px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--accent); margin:0; }
+  header h1 { font-size:22px; margin:4px 0 2px; }
+  header .gen { color:var(--muted); font-size:13px; margin:0; }
+  .hero { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-top:8px; }
+  .hero .big { font-family:var(--mono); font-size:34px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .hero .ret { font-family:var(--mono); font-size:18px; font-weight:600; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:10px; }
+  .tile { background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:12px 14px; }
+  .tile .k { font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); }
+  .tile .v { font-family:var(--mono); font-size:20px; font-weight:600; font-variant-numeric:tabular-nums; margin-top:3px; }
+  .tile .sub { font-size:11.5px; color:var(--muted); margin-top:2px; }
+  .pos { color:var(--pos); } .neg { color:var(--neg); } .flat { color:var(--flat); }
+  section { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  section h2 { font-size:13px; font-family:var(--mono); letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 14px; }
+  .curve { width:100%; height:200px; display:block; }
+  .baseline { stroke:var(--muted); stroke-width:1; stroke-dasharray:4 4; opacity:.5; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  .tablewrap { overflow-x:auto; }
+  th { text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:7px 10px; border-bottom:1px solid var(--line); }
+  td { padding:7px 10px; border-bottom:1px solid var(--line); }
+  tr:last-child td { border-bottom:none; }
+  .num { text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  .sym { font-family:var(--mono); font-weight:600; }
+  .dim { color:var(--muted); font-family:var(--mono); font-size:12px; }
+  .prot { font-family:var(--mono); font-size:11.5px; color:var(--muted); }
+  .be { color:var(--accent); }
+  .muted { color:var(--muted); font-size:14px; margin:0; }
+  .timeline { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .timeline li { display:flex; gap:10px; align-items:baseline; font-size:13px; padding:5px 0;
+    border-bottom:1px solid var(--line); }
+  .timeline li:last-child { border-bottom:none; }
+  .tl-time { font-family:var(--mono); font-size:11.5px; color:var(--muted); white-space:nowrap; }
+  .tl-badge { font-family:var(--mono); font-size:11px; font-weight:600; padding:1px 6px; border-radius:4px;
+    background:var(--surface2); border:1px solid var(--line); white-space:nowrap; }
+  .tl-detail { color:var(--ink); }
+  footer { text-align:center; color:var(--muted); font-size:12px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Trading Agent · Paper</p>
+    <h1>Dashboard de rendimiento</h1>
+    <p class="gen">Actualizado 2026-07-28 02:58 UTC · se regenera en cada corrida del agente</p>
+    <div class="hero">
+      <span class="big">$98,687.83</span>
+      <span class="ret neg">-1.31% ($-1,312.17)</span>
+    </div>
+  </header>
+
+  <div class="tiles"><div class="tile"><div class="k">Equity</div><div class="v ">$98,687.83</div><div class="sub">inicial $100,000 · cash $98,687.83</div></div><div class="tile"><div class="k">Retorno total</div><div class="v neg">-1.31%</div><div class="sub">$-1,312.17</div></div><div class="tile"><div class="k">P/L realizado</div><div class="v neg">$-1,312.10</div><div class="sub">13 trades cerrados</div></div><div class="tile"><div class="k">P/L no realizado</div><div class="v flat">$0.00</div><div class="sub">0 posición(es) abierta(s)</div></div><div class="tile"><div class="k">Win rate</div><div class="v ">15%</div><div class="sub">2W / 11L</div></div><div class="tile"><div class="k">Prom. gana / pierde</div><div class="v ">$3 / $-120</div><div class="sub">por trade cerrado</div></div><div class="tile"><div class="k">Corridas</div><div class="v ">167</div><div class="sub">402 registros de journal</div></div><div class="tile"><div class="k">Actividad IA</div><div class="v ">~73</div><div class="sub">llamadas LLM · 8 entradas, 3 cierres</div></div></div>
+
+  <section>
+    <h2>Curva de equity · 1 mes</h2>
+    <svg viewBox="0 0 720 220" class="curve" preserveAspectRatio="none" role="img" aria-label="Curva de equity">
+  <polygon points="0,220 0.0,148.5 40.0,148.5 80.0,148.5 120.0,148.5 160.0,148.5 200.0,148.5 240.0,117.6 280.0,28.5 320.0,15.2 360.0,115.0 400.0,62.2 440.0,112.1 480.0,166.5 520.0,204.8 560.0,203.8 600.0,195.5 640.0,185.5 680.0,192.4 720.0,196.4 720,220" fill="var(--neg-fill)"/>
+  <line x1="0" y1="148.5" x2="720" y2="148.5" class="baseline"/>
+  <polyline points="0.0,148.5 40.0,148.5 80.0,148.5 120.0,148.5 160.0,148.5 200.0,148.5 240.0,117.6 280.0,28.5 320.0,15.2 360.0,115.0 400.0,62.2 440.0,112.1 480.0,166.5 520.0,204.8 560.0,203.8 600.0,195.5 640.0,185.5 680.0,192.4 720.0,196.4" fill="none" stroke="var(--neg)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <circle cx="720.0" cy="196.4" r="3.5" fill="var(--neg)"/>
+</svg>
+  </section>
+
+  <section>
+    <h2>Posiciones abiertas</h2>
+    <div class="tablewrap"><p class="muted">Sin posiciones abiertas — la cuenta está en efectivo.</p></div>
+  </section>
+
+  <section>
+    <h2>Trades cerrados (recientes)</h2>
+    <div class="tablewrap"><table><thead><tr><th>Fecha</th><th>Símbolo</th><th class="num">Qty</th><th class="num">Entrada</th><th class="num">Salida</th><th class="num">P/L</th></tr></thead><tbody><tr><td class="dim">2026-07-27</td><td class="sym">NVDA</td><td class="num">1</td><td class="num">$197.48</td><td class="num">$197.00</td><td class="num neg">$-0.48</td></tr><tr><td class="dim">2026-07-27</td><td class="sym">NVDA</td><td class="num">13</td><td class="num">$196.86</td><td class="num">$197.02</td><td class="num pos">$+2.08</td></tr><tr><td class="dim">2026-07-27</td><td class="sym">NVDA</td><td class="num">2</td><td class="num">$197.69</td><td class="num">$197.02</td><td class="num neg">$-1.34</td></tr><tr><td class="dim">2026-07-27</td><td class="sym">NVDA</td><td class="num">3</td><td class="num">$197.48</td><td class="num">$197.02</td><td class="num neg">$-1.38</td></tr><tr><td class="dim">2026-07-27</td><td class="sym">NVDA</td><td class="num">21</td><td class="num">$196.86</td><td class="num">$197.02</td><td class="num pos">$+3.36</td></tr><tr><td class="dim">2026-07-17</td><td class="sym">AMD</td><td class="num">13</td><td class="num">$513.23</td><td class="num">$479.00</td><td class="num neg">$-444.99</td></tr><tr><td class="dim">2026-07-17</td><td class="sym">AMD</td><td class="num">2</td><td class="num">$513.23</td><td class="num">$479.00</td><td class="num neg">$-68.46</td></tr><tr><td class="dim">2026-07-17</td><td class="sym">AVGO</td><td class="num">5</td><td class="num">$380.71</td><td class="num">$363.88</td><td class="num neg">$-84.15</td></tr><tr><td class="dim">2026-07-17</td><td class="sym">AVGO</td><td class="num">16</td><td class="num">$379.95</td><td class="num">$363.88</td><td class="num neg">$-257.12</td></tr><tr><td class="dim">2026-07-15</td><td class="sym">MU</td><td class="num">2</td><td class="num">$927.57</td><td class="num">$882.22</td><td class="num neg">$-90.70</td></tr><tr><td class="dim">2026-07-15</td><td class="sym">MU</td><td class="num">6</td><td class="num">$935.88</td><td class="num">$882.22</td><td class="num neg">$-321.96</td></tr><tr><td class="dim">2026-07-13</td><td class="sym">ARM</td><td class="num">18</td><td class="num">$302.46</td><td class="num">$300.50</td><td class="num neg">$-35.28</td></tr><tr><td class="dim">2026-07-13</td><td class="sym">ARM</td><td class="num">8</td><td class="num">$302.46</td><td class="num">$301.00</td><td class="num neg">$-11.68</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Decisiones recientes</h2>
+    <ul class="timeline"><li><span class="tl-time">2026-07-27 08:53</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-27 05:56</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.2% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 19:41</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +4.9% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 18:32</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.0% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 17:20</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.0% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 16:12</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.1% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 08:43</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 07:10</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-24 05:08</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.5% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 22:48</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +4.9% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 19:29</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.6% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 18:29</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.5% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 17:19</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.0% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 17:03</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.2% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 16:08</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.2% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 14:49</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.4% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 13:43</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.3% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 12:07</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.0% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 10:28</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +5.9% · tesis intacta</span></li><li><span class="tl-time">2026-07-23 08:09</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L +6.8% · tesis intacta</span></li></ul>
+  </section>
+
+  <footer>Generado por report/build_dashboard.py · datos de Alpaca (paper) + journal · sin capital real</footer>
+</div>
+</body>
+</html>

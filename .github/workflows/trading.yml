@@ -40,15 +40,24 @@ jobs:
       - name: Ejecutar orquestador (auto)
         run: python orchestrator.py auto
 
-      - name: Commit del journal (estado + auditoría)
+      # Dashboard + rollup con if:always() → se actualizan aunque el orquestador salga con
+      # error (M5). El run igual queda rojo (email), pero el dashboard refleja el estado real.
+      - name: Rollup + dashboard
+        if: always()
+        run: |
+          python report/rollup.py || true
+          python report/build_dashboard.py || true
+
+      - name: Commit (journal + dashboard)
+        if: always()
         run: |
           git config user.name  "trading-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add journal/
+          git add journal/ docs/
           if git diff --cached --quiet; then
-            echo "Sin cambios en journal/"
+            echo "Sin cambios que commitear"
           else
-            git commit -m "journal $(date -u +%FT%TZ)"
+            git commit -m "journal+dashboard $(date -u +%FT%TZ)"
             git pull --rebase --autostash
             git push
           fi

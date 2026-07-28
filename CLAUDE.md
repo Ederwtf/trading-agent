@@ -166,8 +166,22 @@ Reglas de operación por sesión:
 ## Despliegue (GitHub Actions)
 - Workflow: `.github/workflows/trading.yml` — cron `*/15 * * * 1-5` (UTC) + `workflow_dispatch`.
 - Secrets del repo: `GROQ_API_KEY`, `ALPACA_API_KEY`, `ALPACA_SECRET_KEY` (el resto va como env).
-- El workflow **commitea `journal/`** al final (persiste estado entre runners efímeros).
+- El workflow **commitea `journal/` y `docs/`** al final (persiste estado entre runners
+  efímeros y publica el dashboard). Los pasos de dashboard y commit corren con `if: always()`
+  → se actualizan aunque el orquestador salga con error (el run igual queda rojo por M5).
 - `.env` está en `.gitignore` — las keys NUNCA van al repo.
+
+## Dashboard / observabilidad (F8)
+- `report/build_dashboard.py` genera `docs/index.html` **autocontenido** (CSS inline, curva
+  de equity en SVG, sin dependencias externas — la CSP de GitHub Pages bloquea CDNs) desde
+  el journal + cuenta Alpaca (equity, P/L realizado por round-trip FIFO, win rate, posiciones,
+  timeline de decisiones). `report/render.py` es el render. Resiliente: si Alpaca es ilegible,
+  conserva el HTML anterior en vez de blanquearlo.
+- **GitHub Pages (acción manual de una vez):** Settings → Pages → Source "Deploy from a
+  branch" → branch `master`, carpeta `/docs`. La URL queda `https://ederwtf.github.io/trading-agent/`.
+- **Rollup del journal (M3):** `report/rollup.py` archiva journals con >`ROLLUP_DAYS` (30)
+  días a `journal/archive/AAAA-MM.jsonl` y borra los sueltos (el dashboard lee live+archivo).
+  Idempotente y no-op hasta que hay archivos viejos.
 
 ---
 
