@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-07-28T17:22:10.166552-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 25.0,
+    "avg_entry_price": 392.4464,
+    "current_price": 394.93,
+    "unrealized_pl": 62.09,
+    "unrealized_plpc": 0.00633
+  },
+  "action": "HOLD",
+  "reason": "Los catalizadores clave (seguridad y reanudaci\u00f3n de la planta Kumamoto, demanda IA) siguen vigentes y el precio muestra ligera ganancia; aunque sigue bajo SMA20/50, no hay evidencia de que la tesis se haya invalidado.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 350.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
