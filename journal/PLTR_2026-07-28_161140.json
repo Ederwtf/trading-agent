@@ -1,0 +1,27 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-07-28T16:11:40.502512-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 63.0,
+    "avg_entry_price": 124.61,
+    "current_price": 123.6019,
+    "unrealized_pl": -63.5103,
+    "unrealized_plpc": -0.00809
+  },
+  "action": "HOLD",
+  "reason": "La posici\u00f3n sigue bajo el SMA20/50 y el RSI indica sobreventa, pero el precio a\u00fan est\u00e1 por encima del stop y el catalizador de earnings no se ha materializado, por lo que la tesis bullish sigue viable.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "658c8822-6c99-4754-8847-1e294b338f54",
+      "order_class": "oco",
+      "stop_price": 121.5,
+      "take_profit": 148.75,
+      "qty": 63,
+      "replaced": true,
+      "breakeven": false
+    }
+  }
+}
