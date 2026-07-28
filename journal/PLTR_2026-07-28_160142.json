@@ -1,0 +1,21 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-07-28T16:01:42.401748-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 63.0,
+    "avg_entry_price": 124.61,
+    "current_price": 123.403,
+    "unrealized_pl": -76.041,
+    "unrealized_plpc": -0.00969
+  },
+  "action": "CLOSE",
+  "reason": "Los indicadores t\u00e9cnicos siguen por debajo de SMA20/50, RSI bajo y noticias negativas indican que el impulso bullish se ha debilitado y el riesgo supera la posible rebote antes del earnings",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "4e0b0683-da00-4dbd-b27d-58091a002de9",
+    "symbol": "PLTR",
+    "timestamp": "2026-07-28T14:01:42.373792"
+  }
+}

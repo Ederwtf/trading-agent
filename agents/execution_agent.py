@@ -132,7 +132,17 @@ def ensure_exit_bracket(symbol: str, stop_price: float, take_profit: float, qty)
                 last_err = e
                 if attempt == 0:
                     _time.sleep(2)   # típico: cancelación aún en vuelo
-        return {"armed": False, "reason": f"OCO no colocada: {last_err}"}
+
+        # RED DE SEGURIDAD (2026-07-28): ya cancelamos la protección anterior, así que fallar
+        # aquí dejaría la posición DESNUDA — fue lo que pasó cuando Alpaca rechazó la OCO mal
+        # formada. Antes de rendirse, colocar al menos un stop GTC (el piso es lo que importa).
+        fallback = ensure_protective_stop(symbol, stop_price, qty)
+        if fallback.get("armed"):
+            fallback["reason"] = f"OCO falló ({last_err}); stop GTC de emergencia colocado"
+            fallback["degraded"] = True
+            return fallback
+        return {"armed": False, "reason": f"OCO no colocada: {last_err}",
+                "unprotected": True}
     except Exception as e:
         return {"armed": False, "reason": str(e)}
 

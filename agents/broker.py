@@ -372,12 +372,15 @@ def submit_stop_gtc(symbol: str, qty: int, stop_price: float):
 def submit_oco_gtc(symbol: str, qty: int, take_profit: float, stop_loss: float):
     """Pareja OCO GTC: TP (limit) + SL (stop), una cancela a la otra.
 
-    Idiom de alpaca-py: el limit_price de nivel superior ES la pierna de take-profit; la de
-    stop-loss va en stop_loss. (No se duplica con take_profit para no mandar el TP dos veces.)
+    Alpaca EXIGE ambas piernas explícitas: `take_profit` y `stop_loss` (error 40010001
+    "oco orders require take_profit" si falta). El limit_price de nivel superior acompaña
+    a la pierna de take-profit. Verificado en vivo el 2026-07-28.
     """
+    tp = round(float(take_profit), 2)
     req = LimitOrderRequest(
         symbol=symbol, qty=qty, side=OrderSide.SELL, time_in_force=TimeInForce.GTC,
-        order_class=OrderClass.OCO, limit_price=round(float(take_profit), 2),
+        order_class=OrderClass.OCO, limit_price=tp,
+        take_profit=TakeProfitRequest(limit_price=tp),
         stop_loss=StopLossRequest(stop_price=round(float(stop_loss), 2)),
     )
     return trading().submit_order(order_data=req)

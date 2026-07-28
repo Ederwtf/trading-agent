@@ -625,12 +625,18 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
         if protection.get("armed"):
             kind = "OCO GTC" if protection.get("order_class") == "oco" else "stop GTC"
             extra = " (stop en breakeven)" if breakeven else ""
+            if protection.get("degraded"):
+                extra += " [DEGRADADO: sin TP]"
             print(f"  [protección] {kind} armada: SL ${protection.get('stop_price')}"
                   + (f" / TP ${protection.get('take_profit')}" if protection.get('take_profit') else "")
                   + extra)
         else:
             print(f"  [protección] {protection.get('reason', '—')}"
                   + (" (breakeven persistido)" if breakeven else ""))
+        # Posición SIN ninguna protección = crítico (M5): que el run salga rojo y avise.
+        # Pasó el 2026-07-28: la OCO mal formada dejó 5 posiciones desnudas en silencio.
+        if protection.get("unprotected"):
+            _note_critical(f"{symbol} quedó SIN protección: {protection.get('reason')}")
         execution = {"protection": protection}
 
     state = {

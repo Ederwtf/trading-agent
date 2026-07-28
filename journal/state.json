@@ -5,31 +5,25 @@
       "stop": 370.0,
       "take_profit": 452.0,
       "breakeven": false,
-      "updated": "2026-07-28T14:53:03.555395-04:00"
+      "updated": "2026-07-28T16:01:11.347727-04:00"
     },
     "TSM": {
       "stop": 350.0,
       "take_profit": 475.0,
       "breakeven": false,
-      "updated": "2026-07-28T14:53:14.531479-04:00"
+      "updated": "2026-07-28T16:01:59.610347-04:00"
     },
     "AMD": {
       "stop": 380.0,
       "take_profit": 600.0,
       "breakeven": false,
-      "updated": "2026-07-28T14:53:01.383620-04:00"
-    },
-    "PLTR": {
-      "stop": 121.5,
-      "take_profit": 148.75,
-      "breakeven": false,
-      "updated": "2026-07-28T14:53:10.762711-04:00"
+      "updated": "2026-07-28T16:00:59.830808-04:00"
     },
     "NVDA": {
       "stop": 190.0,
       "take_profit": 210.0,
       "breakeven": false,
-      "updated": "2026-07-28T14:53:06.797952-04:00"
+      "updated": "2026-07-28T16:01:26.260305-04:00"
     }
   }
 }
