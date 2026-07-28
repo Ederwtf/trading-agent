@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-07-28T19:38:11.317856-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 25.0,
+    "avg_entry_price": 392.4464,
+    "current_price": 391.0,
+    "unrealized_pl": -36.16,
+    "unrealized_plpc": -0.00369
+  },
+  "action": "HOLD",
+  "reason": "Los catalizadores clave (seguridad y reanudaci\u00f3n de la planta Kumamoto, demanda IA) siguen vigentes y el RSI ultra\u2011sobrevendido indica potencial rebote, pese a que el precio sigue bajo las medias m\u00f3viles; el riesgo a\u00fan justifica mantener la posici\u00f3n.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 350.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
