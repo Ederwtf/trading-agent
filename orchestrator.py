@@ -52,6 +52,7 @@ from agents.execution_agent import (
 from agents.universe import build_universe
 from agents.screen import local_screen
 from agents.exit_agent import local_exit, review_thesis
+from agents.regime import detect_regime
 from agents import broker
 
 
@@ -127,6 +128,21 @@ def in_no_trade_window(open_buffer_min: int = 15, close_buffer_min: int = 15) ->
     mins_since_open = (now - _to_dt(info["open_time"])).total_seconds() / 60
     mins_to_close   = (_to_dt(info["close_time"]) - now).total_seconds() / 60
     return (0 <= mins_since_open < open_buffer_min) or (0 <= mins_to_close < close_buffer_min)
+
+
+def sector_of(symbol: str, cfg: dict) -> str:
+    """Sector del símbolo según el mapa de config. Los no mapeados son su propio sector,
+    así que nunca bloquean a otros por el tope (F9)."""
+    return (cfg.get("sectors") or {}).get(symbol.upper(), f"unknown:{symbol.upper()}")
+
+
+def sector_exposure(symbols, cfg: dict) -> dict:
+    """{sector: n} de un conjunto de símbolos (posiciones/pendientes)."""
+    counts = {}
+    for s in symbols:
+        sec = sector_of(s, cfg)
+        counts[sec] = counts.get(sec, 0) + 1
+    return counts
 
 
 def _reward_risk(synthesis: dict) -> float:
@@ -215,6 +231,20 @@ def _clear_protection(symbol: str) -> None:
         save_state(st)
 
 
+def save_regime_state(regime: dict) -> None:
+    """Guarda la última lectura de régimen en state.json (insumo del dashboard y de F11)."""
+    st = load_state()
+    st["regime"] = {
+        "label":    regime["label"],
+        "reasons":  regime["reasons"],
+        "metrics":  regime["metrics"],
+        "policy":   regime["policy"],
+        "degraded": regime["degraded"],
+        "updated":  now_et().isoformat(),
+    }
+    save_state(st)
+
+
 def prune_protection(active: set) -> None:
     """Borra estados de protección de símbolos que ya no están en cartera/pendientes (M4/M3).
     Una posición cerrada por su propia OCO broker-side no pasa por el monitor, así que su
@@ -294,7 +324,8 @@ def _finish() -> None:
 # ─────────────────────────────────────────────────────────
 # Análisis (sin ejecución): research → bull → bear → synthesis → risk
 # ─────────────────────────────────────────────────────────
-def analyze_symbol(symbol: str, portfolio: dict, research: dict = None) -> dict:
+def analyze_symbol(symbol: str, portfolio: dict, research: dict = None,
+                   policy: dict = None) -> dict:
     print(f"\n{'═'*54}")
     print(f"  ANÁLISIS │ {symbol} │ {now_et().strftime('%H:%M:%S')}")
     print(f"{'═'*54}")
@@ -323,9 +354,16 @@ def analyze_symbol(symbol: str, portfolio: dict, research: dict = None) -> dict:
     print(f"  Decisión: {synthesis['decision']} │ Confianza: {synthesis['confidence']:.2f}")
     print(f"  Entrada: ${synthesis.get('entry','?')} │ TP: ${synthesis.get('take_profit','?')} │ SL: ${synthesis.get('stop_loss','?')}")
 
-    # 4. Risk Agent (sin LLM — reglas fijas)
+    # 4. Risk Agent (sin LLM — reglas fijas). La política del régimen (F9) puede recortar el
+    # tamaño de posición y subir el umbral de confianza; las reglas duras no se tocan.
     print("\n[4/4] Risk Agent — validando reglas...")
-    risk = validate_trade(synthesis, portfolio)
+    if policy:
+        cap = policy.get("size_pct")
+        if cap and synthesis.get("position_size_pct", 0) > cap:
+            print(f"  [régimen] tamaño recortado {synthesis['position_size_pct']:.3f} → {cap:.3f}")
+            synthesis["position_size_pct"] = cap
+    risk = validate_trade(synthesis, portfolio,
+                          min_confidence=(policy or {}).get("min_confidence", 0.60))
     if risk["approved"]:
         for r in risk["rules_passed"]:
             print(f"  ✓ {r}")
@@ -390,11 +428,30 @@ def run_batch(session: str = "regular") -> None:
     slots = max(0, max_pos - len(excluded))
     prune_protection(excluded)   # limpia protección de posiciones ya cerradas (p. ej. por OCO)
 
+    # ── Régimen de mercado (F9): estrategia estable pero dinámica ──
+    reg_cfg = cfg.get("regime", {})
+    if reg_cfg.get("enabled", True):
+        regime = detect_regime(reg_cfg)
+    else:
+        regime = {"label": "calm", "reasons": ["régimen desactivado"], "metrics": {},
+                  "policy": {"allow_entries": True, "size_pct": 0.05, "min_confidence": 0.60},
+                  "degraded": False}
+    pol = regime["policy"]
+    save_regime_state(regime)
+
+    exposure = sector_exposure(excluded, cfg)
+
     print(f"\n{'━'*54}")
     print("  MODO BATCH")
     print(f"  Mercado: {market_status()}")
+    print(f"  Régimen: {regime['label'].upper()}"
+          + (" (degradado)" if regime["degraded"] else "")
+          + f" │ {regime['reasons'][0]}")
+    print(f"  Política: entradas={'sí' if pol['allow_entries'] else 'NO'} │ "
+          f"tamaño {pol['size_pct']*100:.1f}% │ confianza mín {pol['min_confidence']:.2f}")
     print(f"  Universo ({len(universe)}): {', '.join(universe)}")
-    print(f"  En cartera/pendiente: {', '.join(sorted(excluded)) or '—'}")
+    print(f"  En cartera/pendiente: {', '.join(sorted(excluded)) or '—'}"
+          + (f" │ sectores: {exposure}" if exposure else ""))
     print(f"  Cupos libres: {slots} de {max_pos} │ Presupuesto IA: {llm_budget} símbolos")
     print(f"{'━'*54}")
 
@@ -414,6 +471,11 @@ def run_batch(session: str = "regular") -> None:
     # ── ¿Buscar entradas? solo con cupo libre y cadencia cumplida (protege RPD) ──
     if slots <= 0:
         print("\n  Sin cupos libres → no se buscan entradas nuevas.")
+        return
+    # (F9) En pánico el agente no abre posiciones nuevas; las salidas ya se gestionaron arriba.
+    if not pol["allow_entries"]:
+        print(f"\n  Régimen {regime['label'].upper()} → entradas suspendidas "
+              f"({'; '.join(regime['reasons'])}). Solo gestión de salidas.")
         return
     if not entries_due(entry_gap):
         print(f"\n  Entradas en pausa (<{entry_gap} min desde la última búsqueda).")
@@ -446,22 +508,32 @@ def run_batch(session: str = "regular") -> None:
             print(f"  [{tag}] {sym:6} RSI {p['rsi14']:>5} │ descartado sin IA: {', '.join(sc['reasons'])}")
         time.sleep(1)
 
-    # ── Fase 2: selección hasta llm_budget (curados primero, dinámicos por score) ──
-    curated = [x for x in screened if x["static"]]
+    # ── Fase 2: selección hasta llm_budget (tope DURO, curados incluidos) ──
+    # Antes los curados ignoraban el presupuesto (8 curados + budget 5 → pasaban los 8 = 24
+    # llamadas en ráfaga). Con los ETFs de F9 serían 13 → reventaría el TPM de 8K. Ahora el
+    # budget capea el total: curados por score primero (prioridad), luego dinámicos por score,
+    # reservando al menos un hueco para que un dinámico bueno pueda entrar.
+    curated = sorted([x for x in screened if x["static"]],
+                     key=lambda x: x["screen"]["score"], reverse=True)
     dynamic = sorted([x for x in screened if not x["static"]],
                      key=lambda x: x["screen"]["score"], reverse=True)
-    remaining = max(0, llm_budget - len(curated))
-    selected = curated + dynamic[:remaining]
-    over_budget = dynamic[remaining:]
+    reserve_dyn = 1 if dynamic and llm_budget > 1 else 0
+    take_cur = max(0, llm_budget - reserve_dyn)
+    selected = curated[:take_cur] + dynamic[:llm_budget - len(curated[:take_cur])]
+    over_budget = curated[take_cur:] + dynamic[max(0, llm_budget - len(curated[:take_cur])):]
     for x in over_budget:
-        print(f"  (sin presupuesto IA) {x['symbol']:6} score {x['screen']['score']}")
+        tag = "curado " if x["static"] else "dinámico"
+        print(f"  (sin presupuesto IA) [{tag}] {x['symbol']:6} score {x['screen']['score']}")
 
     # ── Fase 3: análisis con IA solo para los seleccionados ──
+    # La política del régimen entra aquí: el tamaño de posición se recorta y el umbral de
+    # confianza sube en mercados nerviosos (F9). Las reglas duras del risk_agent no cambian.
     candidates = []
     analysis_fail = 0
     for x in selected:
         try:
-            analysis = analyze_symbol(x["symbol"], state, research=x["research"])
+            analysis = analyze_symbol(x["symbol"], state, research=x["research"],
+                                      policy=pol)
             if analysis["risk"]["approved"] and analysis["synthesis"]["decision"] == "BUY":
                 candidates.append(analysis)
         except Exception as e:
@@ -480,23 +552,36 @@ def run_batch(session: str = "regular") -> None:
     )
 
     print(f"\n{'━'*54}")
-    print(f"  RANKING │ {len(candidates)} candidatos BUY │ {slots} cupos")
+    print(f"  RANKING │ {len(candidates)} candidatos BUY │ {slots} cupos │ régimen {regime['label']}")
     print(f"{'━'*54}")
     for i, a in enumerate(candidates):
         mark = "→ ejecutar" if i < slots else "  (sin cupo)"
-        print(f"  {mark} │ {a['symbol']:6} conf {a['synthesis']['confidence']:.2f} │ R/R {_reward_risk(a['synthesis']):.2f}")
+        print(f"  {mark} │ {a['symbol']:6} [{sector_of(a['symbol'], cfg)}] "
+              f"conf {a['synthesis']['confidence']:.2f} │ R/R {_reward_risk(a['synthesis']):.2f}")
 
+    # Tope por sector (F9): la concentración 5/5 en semis fue lo que amplificó el selloff de
+    # julio. Se cuenta lo que YA está en cartera y se va sumando lo ejecutado en esta corrida.
+    max_sector = cfg.get("max_per_sector", 3)
     executed = 0
     for i, a in enumerate(candidates):
         sym = a["symbol"]
+        sec = sector_of(sym, cfg)
+        a["sector"] = sec
+        a["regime"] = {"label": regime["label"], "policy": pol, "metrics": regime["metrics"]}
         if executed >= slots:
             a["pipeline"] = "batch"
             a["execution"] = {"executed": False, "reason": "sin cupo (slots llenos)"}
+        elif exposure.get(sec, 0) >= max_sector:
+            a["pipeline"] = "batch"
+            a["execution"] = {"executed": False,
+                              "reason": f"tope de sector: {sec} ya tiene {exposure[sec]}/{max_sector}"}
+            print(f"\n  — {sym} saltado: tope de sector ({sec} {exposure[sec]}/{max_sector})")
         else:
-            print(f"\n[Ejecución] {sym}...")
+            print(f"\n[Ejecución] {sym} [{sec}]...")
             execution = execute_trade(a["synthesis"], a["risk"], sym)
             if execution["executed"]:
                 executed += 1
+                exposure[sec] = exposure.get(sec, 0) + 1
                 _save_protection(sym, a["synthesis"].get("stop_loss"),
                                  a["synthesis"].get("take_profit"), breakeven=False)
                 print(f"  ✓ Orden {execution.get('order_class','?')} │ ID: {execution['order_id']} │ Shares: {execution['shares']}")

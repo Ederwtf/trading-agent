@@ -35,8 +35,11 @@ parámetro `reasoning_effort` se omite automáticamente.
 - Máximo 10% del portafolio por posición
 - Stop loss obligatorio en todo trade. Sin SL = no ejecutar
 - R/R mínimo 1.5:1. Por debajo = no ejecutar
-- Confianza mínima 0.60 para ejecutar. Por debajo = HOLD
+- Confianza mínima 0.60 para ejecutar. Por debajo = HOLD. El régimen (F9) puede
+  **endurecer** este umbral, nunca relajarlo (`validate_trade` fuerza el piso de 0.60).
 - Máximo 5 posiciones simultáneas (se cuentan posiciones + órdenes pendientes)
+- **Máximo `max_per_sector` (3) posiciones del mismo sector** (F9): el selloff de julio fue
+  5/5 en semis. Los símbolos sin mapear en `sectors` cuentan como sector propio.
 - No abrir orden si el símbolo ya tiene posición u orden pendiente (anti-duplicado)
 - Validación contra precio VIVO antes de ejecutar (M1): se descarta la entrada si el
   precio real ya cruzó el SL o el TP propuestos (evita rechazos de Alpaca y entradas sin
@@ -86,12 +89,32 @@ endpoints sin método en el SDK (noticias y screener most-actives).
   libres = `max_positions` − (posiciones + pendientes).
 - Solo entradas BUY (no shorts).
 
+### Régimen de mercado (F9) — estrategia estable pero dinámica
+`agents/regime.py` (SIN LLM) clasifica el mercado antes de buscar entradas, usando solo
+`broker.daily_bars`: volatilidad realizada de SPY (20d anualizada), SPY vs SMA200, drawdown
+desde el máximo de 60d, y VIXY vs su media de 60d (proxy gratuito de vol implícita).
+Umbrales calibrados con la distribución real del último año (vol20d mediana 11.8%, p75 13.8%).
+
+| Régimen | Entradas | Tamaño | Confianza mín |
+|---|---|---|---|
+| `calm` | sí | 5% | 0.60 |
+| `nervous` | sí | 3.5% | 0.70 |
+| `panic` | **no** | — | — |
+
+Las salidas se gestionan SIEMPRE, en cualquier régimen. Configurable en
+`config/watchlist.json → regime`. Degradación segura: si los datos fallan asume `calm` y
+avisa (un fallo de red no debe bloquear al agente). El régimen se guarda en `state.json` y
+en cada journal de tipo `batch` (insumo del Knowledge Adapter, F11).
+
 ### Pre-screen local (conservar cuota de IA)
 - Antes de invocar la IA, `agents/screen.py` corre un filtro **local** (sin LLM) sobre
   los datos de research: descarta no-candidatos (p. ej. sobrecompra extrema) y ordena el
   resto por score. Solo los mejores hasta `llm_budget` gastan las 3 llamadas LLM.
 - Los símbolos **curados** (`symbols`) siempre son elegibles; los **dinámicos** deben
   pasar el filtro y compiten por score por el presupuesto restante.
+- `llm_budget` es un **tope DURO que incluye a los curados** (F9): se ordenan por score y
+  se corta ahí, reservando 1 hueco para el mejor dinámico. Antes los curados lo ignoraban
+  (8 curados + budget 5 → pasaban los 8); con los 13 símbolos actuales serían 39 llamadas.
 - Objetivo: no gastar las **1,000 solicitudes/día (RPD)** ni el TPM en símbolos que la
   lógica local ya puede descartar.
 

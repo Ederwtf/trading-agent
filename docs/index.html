@@ -8,7 +8,7 @@
   :root {
     --bg:#0e1116; --surface:#161b22; --surface2:#1c232d; --line:#2a3340;
     --ink:#e6edf3; --muted:#8b98a6; --accent:#58a6ff;
-    --pos:#3fb950; --neg:#f85149; --flat:#8b98a6;
+    --pos:#3fb950; --neg:#f85149; --flat:#8b98a6; --warnc:#d29922;
     --pos-fill:rgba(63,185,80,.14); --neg-fill:rgba(248,81,73,.14);
     --mono:"SFMono-Regular",ui-monospace,"Cascadia Code",Consolas,monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -17,7 +17,7 @@
     :root {
       --bg:#f6f8fa; --surface:#ffffff; --surface2:#f0f3f6; --line:#d8dee4;
       --ink:#1f2328; --muted:#59636e; --accent:#0969da;
-      --pos:#1a7f37; --neg:#cf222e; --flat:#59636e;
+      --pos:#1a7f37; --neg:#cf222e; --flat:#59636e; --warnc:#9a6700;
       --pos-fill:rgba(26,127,55,.10); --neg-fill:rgba(207,34,46,.10);
     }
   }
@@ -54,7 +54,17 @@
   .dim { color:var(--muted); font-family:var(--mono); font-size:12px; }
   .prot { font-family:var(--mono); font-size:11.5px; color:var(--muted); }
   .be { color:var(--accent); }
+  .warn { color:var(--neg); font-weight:600; }
+  .warnc { color:var(--warnc); }
+  .warn-txt { margin-top:10px; font-size:12.5px; }
   .muted { color:var(--muted); font-size:14px; margin:0; }
+  .exposure { margin-top:14px; display:flex; flex-direction:column; gap:5px; }
+  .exp-row { display:flex; align-items:center; gap:9px; font-size:12.5px; }
+  .exp-label { font-family:var(--mono); font-size:11.5px; color:var(--muted); min-width:82px; }
+  .exp-bar { flex:1; height:8px; background:var(--surface2); border-radius:4px; overflow:hidden; }
+  .exp-fill { display:block; height:100%; background:var(--accent); border-radius:4px; }
+  .exp-fill.heavy { background:var(--neg); }
+  .exp-n { font-family:var(--mono); font-size:11.5px; color:var(--muted); min-width:14px; text-align:right; }
   .timeline { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
   .timeline li { display:flex; gap:10px; align-items:baseline; font-size:13px; padding:5px 0;
     border-bottom:1px solid var(--line); }
@@ -72,6 +82,7 @@
   <header>
     <p class="eyebrow">Trading Agent · Paper</p>
     <h1>Dashboard de rendimiento</h1>
+<<<<<<< Updated upstream
     <p class="gen">Actualizado 2026-07-28 20:11 UTC · se regenera en cada corrida del agente</p>
     <div class="hero">
       <span class="big">$98,433.54</span>
@@ -80,6 +91,16 @@
   </header>
 
   <div class="tiles"><div class="tile"><div class="k">Equity</div><div class="v ">$98,433.54</div><div class="sub">inicial $100,000 · cash $57,811.57</div></div><div class="tile"><div class="k">Retorno total</div><div class="v neg">-1.57%</div><div class="sub">$-1,566.46</div></div><div class="tile"><div class="k">P/L realizado</div><div class="v neg">$-1,312.10</div><div class="sub">13 trades cerrados</div></div><div class="tile"><div class="k">P/L no realizado</div><div class="v neg">$-254.27</div><div class="sub">5 posición(es) abierta(s)</div></div><div class="tile"><div class="k">Win rate</div><div class="v ">15%</div><div class="sub">2W / 11L</div></div><div class="tile"><div class="k">Prom. gana / pierde</div><div class="v ">$3 / $-120</div><div class="sub">por trade cerrado</div></div><div class="tile"><div class="k">Corridas</div><div class="v ">176</div><div class="sub">423 registros de journal</div></div><div class="tile"><div class="k">Actividad IA</div><div class="v ">~94</div><div class="sub">llamadas LLM · 13 entradas, 4 cierres</div></div></div>
+=======
+    <p class="gen">Actualizado 2026-07-28 20:30 UTC · se regenera en cada corrida del agente</p>
+    <div class="hero">
+      <span class="big">$98,537.03</span>
+      <span class="ret neg">-1.46% ($-1,462.97)</span>
+    </div>
+  </header>
+
+  <div class="tiles"><div class="tile"><div class="k">Régimen</div><div class="v pos">CALM</div><div class="sub">vol 20d 9.7% · dd -2.46% · tam 5.0%</div></div><div class="tile"><div class="k">Equity</div><div class="v ">$98,537.03</div><div class="sub">inicial $100,000 · cash $57,811.57</div></div><div class="tile"><div class="k">Retorno total</div><div class="v neg">-1.46%</div><div class="sub">$-1,462.97</div></div><div class="tile"><div class="k">P/L realizado</div><div class="v neg">$-1,312.10</div><div class="sub">13 trades cerrados</div></div><div class="tile"><div class="k">P/L no realizado</div><div class="v neg">$-150.78</div><div class="sub">5 posición(es) abierta(s)</div></div><div class="tile"><div class="k">Win rate</div><div class="v ">15%</div><div class="sub">2W / 11L</div></div><div class="tile"><div class="k">Prom. gana / pierde</div><div class="v ">$3 / $-120</div><div class="sub">por trade cerrado</div></div><div class="tile"><div class="k">Corridas</div><div class="v ">176</div><div class="sub">423 registros de journal</div></div><div class="tile"><div class="k">Actividad IA</div><div class="v ">~94</div><div class="sub">llamadas LLM · 13 entradas, 4 cierres</div></div></div>
+>>>>>>> Stashed changes
 
   <section>
     <h2>Curva de equity · 1 mes</h2>
@@ -93,7 +114,11 @@
 
   <section>
     <h2>Posiciones abiertas</h2>
+<<<<<<< Updated upstream
     <div class="tablewrap"><table><thead><tr><th>Símbolo</th><th class="num">Qty</th><th class="num">Entrada</th><th class="num">Actual</th><th class="num">P/L</th><th class="num">%</th><th>Protección</th></tr></thead><tbody><tr><td class="sym">AMD</td><td class="num">17</td><td class="num">$459.56</td><td class="num">$454.49</td><td class="num neg">$-86.19</td><td class="num neg">-1.10%</td><td class="prot">SL $380.00 / TP $600.00</td></tr><tr><td class="sym">AVGO</td><td class="num">20</td><td class="num">$383.87</td><td class="num">$380.60</td><td class="num neg">$-65.40</td><td class="num neg">-0.85%</td><td class="prot">SL $370.00 / TP $452.00</td></tr><tr><td class="sym">NVDA</td><td class="num">39</td><td class="num">$198.07</td><td class="num">$196.73</td><td class="num neg">$-52.26</td><td class="num neg">-0.68%</td><td class="prot">SL $190.00 / TP $210.00</td></tr><tr><td class="sym">PLTR</td><td class="num">63</td><td class="num">$124.61</td><td class="num">$123.60</td><td class="num neg">$-63.51</td><td class="num neg">-0.81%</td><td class="prot">SL $121.50 / TP $148.75</td></tr><tr><td class="sym">TSM</td><td class="num">25</td><td class="num">$392.45</td><td class="num">$392.97</td><td class="num pos">$+13.09</td><td class="num pos">+0.13%</td><td class="prot">SL $350.00 / TP $475.00</td></tr></tbody></table></div>
+=======
+    <div class="tablewrap"><table><thead><tr><th>Símbolo</th><th>Sector</th><th class="num">Qty</th><th class="num">Entrada</th><th class="num">Actual</th><th class="num">P/L</th><th class="num">%</th><th>Protección</th></tr></thead><tbody><tr><td class="sym">AMD</td><td class="dim">semis</td><td class="num">17</td><td class="num">$459.56</td><td class="num">$456.00</td><td class="num neg">$-60.52</td><td class="num neg">-0.78%</td><td class="prot">SL $380.00 / TP $600.00</td></tr><tr><td class="sym">AVGO</td><td class="dim">semis</td><td class="num">20</td><td class="num">$383.87</td><td class="num">$381.02</td><td class="num neg">$-57.00</td><td class="num neg">-0.74%</td><td class="prot">SL $370.00 / TP $452.00</td></tr><tr><td class="sym">NVDA</td><td class="dim">semis</td><td class="num">39</td><td class="num">$198.07</td><td class="num">$197.54</td><td class="num neg">$-20.67</td><td class="num neg">-0.27%</td><td class="prot">SL $190.00 / TP $210.00</td></tr><tr><td class="sym">PLTR</td><td class="dim">software</td><td class="num">63</td><td class="num">$124.61</td><td class="num">$123.50</td><td class="num neg">$-69.93</td><td class="num neg">-0.89%</td><td class="prot">SL $121.50 / TP $148.75</td></tr><tr><td class="sym">TSM</td><td class="dim">semis</td><td class="num">25</td><td class="num">$392.45</td><td class="num">$394.74</td><td class="num pos">$+57.34</td><td class="num pos">+0.58%</td><td class="prot">SL $350.00 / TP $475.00</td></tr></tbody></table><div class="exposure"><div class="exp-row"><span class="exp-label">semis</span><span class="exp-bar"><span class="exp-fill heavy" style="width:80%"></span></span><span class="exp-n">4</span></div><div class="exp-row"><span class="exp-label">software</span><span class="exp-bar"><span class="exp-fill" style="width:20%"></span></span><span class="exp-n">1</span></div></div><p class="muted warn-txt">Concentración alta: un solo sector domina la cartera — es lo que amplificó el selloff de julio.</p></div>
+>>>>>>> Stashed changes
   </section>
 
   <section>
@@ -103,7 +128,11 @@
 
   <section>
     <h2>Decisiones recientes</h2>
+<<<<<<< Updated upstream
     <ul class="timeline"><li><span class="tl-time">2026-07-28 16:11</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L +0.1% · Los catalizadores clave (seguridad y reanudación d</span></li><li><span class="tl-time">2026-07-28 16:11</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">HOLD (llm) P/L -0.8% · La posición sigue bajo el SMA20/50 y el RSI indica</span></li><li><span class="tl-time">2026-07-28 16:11</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:11</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.9% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:11</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -1.1% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L +0.4% · Los catalizadores clave (seguridad y reanudación d</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">CLOSE (llm) P/L -1.0% · Los indicadores técnicos siguen por debajo de SMA2</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:00</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -1.2% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L -0.2% · Los catalizadores clave (seguridad y reanudación d</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">HOLD (llm) P/L -1.2% · La tesis bullish sigue viva: el precio está cerca </span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.5% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 13:23</span><span class="tl-badge entrada">PLTR</span><span class="tl-detail">BUY conf 0.65 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:22</span><span class="tl-badge entrada">TSM</span><span class="tl-detail">BUY conf 0.85 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:21</span><span class="tl-badge entrada">AMD</span><span class="tl-detail">BUY conf 0.85 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:20</span><span class="tl-badge entrada">NVDA</span><span class="tl-detail">BUY conf 0.62 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:20</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li></ul>
+=======
+    <ul class="timeline"><li><span class="tl-time">2026-07-28 16:28</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L +0.6% · Los catalizadores clave (seguridad en Kumamoto y d</span></li><li><span class="tl-time">2026-07-28 16:28</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">HOLD (llm) P/L -0.9% · Aunque el precio sigue bajo las medias móviles y e</span></li><li><span class="tl-time">2026-07-28 16:28</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.3% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:28</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:28</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L +0.4% · Los catalizadores clave (seguridad y reanudación d</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">CLOSE (llm) P/L -1.0% · Los indicadores técnicos siguen por debajo de SMA2</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:01</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.7% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 16:00</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -1.2% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">TSM</span><span class="tl-detail">HOLD (llm) P/L -0.2% · Los catalizadores clave (seguridad y reanudación d</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">PLTR</span><span class="tl-detail">HOLD (llm) P/L -1.2% · La tesis bullish sigue viva: el precio está cerca </span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">NVDA</span><span class="tl-detail">HOLD (local) P/L -0.5% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 14:53</span><span class="tl-badge monitor">AMD</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li><li><span class="tl-time">2026-07-28 13:23</span><span class="tl-badge entrada">PLTR</span><span class="tl-detail">BUY conf 0.65 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:22</span><span class="tl-badge entrada">TSM</span><span class="tl-detail">BUY conf 0.85 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:21</span><span class="tl-badge entrada">AMD</span><span class="tl-detail">BUY conf 0.85 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:20</span><span class="tl-badge entrada">NVDA</span><span class="tl-detail">BUY conf 0.62 → ejecutó</span></li><li><span class="tl-time">2026-07-28 13:20</span><span class="tl-badge monitor">AVGO</span><span class="tl-detail">HOLD (local) P/L -0.8% · tesis intacta</span></li></ul>
+>>>>>>> Stashed changes
   </section>
 
   <footer>Generado por report/build_dashboard.py · datos de Alpaca (paper) + journal · sin capital real</footer>

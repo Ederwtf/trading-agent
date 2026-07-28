@@ -161,9 +161,20 @@ def compute_metrics() -> dict:
 
     positions = []
     prot_state = {}
+    regime = {}
+    state_raw = {}
     try:
         with open("journal/state.json", encoding="utf-8") as f:
-            prot_state = (json.load(f) or {}).get("protection", {})
+            state_raw = json.load(f) or {}
+        prot_state = state_raw.get("protection", {})
+        regime = state_raw.get("regime", {})
+    except Exception:
+        pass
+    # Mapa de sectores para la exposición (F9)
+    sectors_map = {}
+    try:
+        with open("config/watchlist.json", encoding="utf-8") as f:
+            sectors_map = (json.load(f) or {}).get("sectors", {})
     except Exception:
         pass
     for sym in sorted(broker.held_symbols()):
@@ -177,7 +188,13 @@ def compute_metrics() -> dict:
             "plpc": p["unrealized_plpc"] * 100,
             "stop": pr.get("stop"), "tp": pr.get("take_profit"),
             "breakeven": pr.get("breakeven", False),
+            "sector": sectors_map.get(sym, "—"),
         })
+
+    # Exposición por sector: la métrica cuya ausencia costó dinero en julio (5/5 semis)
+    exposure = {}
+    for p in positions:
+        exposure[p["sector"]] = exposure.get(p["sector"], 0) + 1
 
     curve = broker.portfolio_history("1M", "1D")
     rt = realized_trades(broker.fills())
@@ -191,6 +208,8 @@ def compute_metrics() -> dict:
         "total_pl": equity - INITIAL_EQUITY,
         "unrealized_pl": unreal,
         "positions": positions,
+        "exposure": exposure,
+        "regime": regime,
         "curve": curve,
         "realized": rt,
         "activity": act,

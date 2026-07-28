@@ -1,12 +1,43 @@
 {
-  "symbols": ["NVDA", "AMD", "ARM", "AVGO", "MU", "TSM", "SMCI", "PLTR"],
+  "symbols": ["NVDA", "AMD", "ARM", "AVGO", "MU", "TSM", "SMCI", "PLTR",
+              "SPY", "QQQ", "XLE", "XLF", "GLD"],
   "max_positions": 5,
+  "max_per_sector": 3,
+  "sectors": {
+    "NVDA": "semis", "AMD": "semis", "ARM": "semis", "AVGO": "semis",
+    "MU": "semis", "TSM": "semis", "SMCI": "semis", "INTC": "semis",
+    "SMH": "semis", "SOXX": "semis",
+    "PLTR": "software", "MSFT": "software", "GOOGL": "software",
+    "META": "software", "AMZN": "software", "AAPL": "software",
+    "SPY": "broad", "QQQ": "broad", "IWM": "broad", "DIA": "broad",
+    "XLK": "tech_etf",
+    "XLE": "energy", "XOM": "energy", "CVX": "energy",
+    "XLF": "financials", "JPM": "financials", "BAC": "financials",
+    "GLD": "gold", "SLV": "metals",
+    "TSLA": "autos", "RIVN": "autos", "F": "autos",
+    "XLV": "health", "XLI": "industrials", "XLP": "staples"
+  },
   "dynamic_universe": { "enabled": true, "top": 14, "min_price": 10 },
   "analysis_cap": 15,
   "llm_budget": 5,
   "entry_min_gap_min": 30,
   "no_trade_open_min": 15,
   "no_trade_close_min": 15,
+  "regime": {
+    "enabled": true,
+    "thresholds": {
+      "panic_vol": 20.0,
+      "panic_drawdown": -10.0,
+      "nervous_vol": 13.5,
+      "nervous_drawdown": -5.0,
+      "nervous_vixy_ratio": 1.35
+    },
+    "policy": {
+      "calm":    { "allow_entries": true,  "size_pct": 0.05,  "min_confidence": 0.60 },
+      "nervous": { "allow_entries": true,  "size_pct": 0.035, "min_confidence": 0.70 },
+      "panic":   { "allow_entries": false, "size_pct": 0.0,   "min_confidence": 1.0 }
+    }
+  },
   "exits": {
     "auto_close": true,
     "review_rsi_high": 72,
@@ -14,7 +45,7 @@
     "trend_exit_below_sma50": false,
     "breakeven_at_pct": 0.04
   },
-  "description": "AI/semiconductores + relleno dinámico most-actives — paper trading",
-  "updated": "2026-07-12",
-  "notes": "symbols = lista fija curada. universo = fija + most-actives (deduplicado, hasta analysis_cap). llm_budget = máx símbolos que llegan a la IA por corrida (el resto se pre-filtra con lógica local). llm_budget=5 por el TPM de 8K de gpt-oss-120b (C1, auditoría 2026-07)."
+  "description": "AI/semis + ETFs de sectores diversos (F9) + relleno dinámico most-actives — paper trading",
+  "updated": "2026-07-28",
+  "notes": "symbols = lista fija curada (incluye ETFs de sectores distintos a semis para diversificar). universo = fija + most-actives (deduplicado, hasta analysis_cap). llm_budget = tope DURO de símbolos que llegan a la IA por corrida, curados incluidos (TPM de 8K de gpt-oss-120b). max_per_sector limita cuántas posiciones simultáneas pueden compartir sector (el selloff de julio fue 5/5 en semis). sectors = mapa explícito: Alpaca no expone sector en get_asset; los símbolos sin mapear cuentan como sector propio."
 }

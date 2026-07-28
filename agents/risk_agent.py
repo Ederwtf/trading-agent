@@ -5,11 +5,15 @@ Si risk_agent rechaza, execution_agent no actúa. Punto final.
 """
 
 
-def validate_trade(synthesis: dict, portfolio: dict) -> dict:
+def validate_trade(synthesis: dict, portfolio: dict, min_confidence: float = 0.60) -> dict:
     """
     Valida que el trade propuesto cumpla todas las reglas de riesgo.
     Retorna approved=True solo si TODAS las reglas pasan.
+
+    min_confidence: umbral mínimo de confianza. Por defecto 0.60 (regla inmutable); el
+    régimen de mercado (F9) puede ENDURECERLO en condiciones nerviosas, nunca relajarlo.
     """
+    min_confidence = max(0.60, float(min_confidence or 0.60))
     passed = []
     failed = []
 
@@ -32,11 +36,11 @@ def validate_trade(synthesis: dict, portfolio: dict) -> dict:
             "position_value": 0.0,
         }
 
-    # Regla 1: Umbral de confianza mínima
-    if confidence >= 0.60:
-        passed.append(f"Confianza {confidence:.2f} ≥ 0.60")
+    # Regla 1: Umbral de confianza mínima (0.60 base; el régimen puede endurecerlo)
+    if confidence >= min_confidence:
+        passed.append(f"Confianza {confidence:.2f} ≥ {min_confidence:.2f}")
     else:
-        failed.append(f"Confianza {confidence:.2f} < 0.60 — insuficiente")
+        failed.append(f"Confianza {confidence:.2f} < {min_confidence:.2f} — insuficiente")
 
     # Regla 2: Stop loss obligatorio
     if sl > 0:

@@ -66,8 +66,25 @@ def render_html(m: dict) -> str:
     rt = m["realized"]
     act = m["activity"]
 
+    # Régimen de mercado (F9)
+    reg = m.get("regime") or {}
+    reg_label = reg.get("label", "—")
+    reg_metrics = reg.get("metrics") or {}
+    reg_pol = reg.get("policy") or {}
+    reg_cls = {"calm": "pos", "nervous": "warnc", "panic": "neg"}.get(reg_label, "")
+    if reg_metrics:
+        reg_sub = (f'vol 20d {reg_metrics.get("vol_20d","?")}% · '
+                   f'dd {reg_metrics.get("drawdown_60d","?")}%')
+        if not reg_pol.get("allow_entries", True):
+            reg_sub += " · entradas OFF"
+        else:
+            reg_sub += f' · tam {reg_pol.get("size_pct",0)*100:.1f}%'
+    else:
+        reg_sub = "aún sin lectura (se registra en la próxima corrida)"
+
     # Tiles
     tiles = [
+        _tile("Régimen", reg_label.upper(), reg_cls, reg_sub),
         _tile("Equity", f'${_fmt_money(m["equity"])}', "",
               f'inicial $100,000 · cash ${_fmt_money(m["cash"])}'),
         _tile("Retorno total", f'{m["total_return_pct"]:+.2f}%', _cls(m["total_return_pct"]),
@@ -85,7 +102,7 @@ def render_html(m: dict) -> str:
               f'llamadas LLM · {act["entries_executed"]} entradas, {act["closes"]} cierres'),
     ]
 
-    # Posiciones abiertas
+    # Posiciones abiertas (con sector — F9)
     if m["positions"]:
         rows = ""
         for p in m["positions"]:
@@ -93,17 +110,34 @@ def render_html(m: dict) -> str:
             if p["stop"] is not None:
                 be = " · <span class=\"be\">breakeven</span>" if p["breakeven"] else ""
                 prot = f'SL ${p["stop"]:,.2f} / TP ${p["tp"]:,.2f}{be}' if p["tp"] else f'SL ${p["stop"]:,.2f}'
+            else:
+                prot = '<span class="warn">sin protección</span>'
             rows += (f'<tr><td class="sym">{html.escape(p["symbol"])}</td>'
+                     f'<td class="dim">{html.escape(str(p.get("sector","—")))}</td>'
                      f'<td class="num">{p["qty"]:g}</td>'
                      f'<td class="num">${p["entry"]:,.2f}</td>'
                      f'<td class="num">${p["price"]:,.2f}</td>'
                      f'<td class="num {_cls(p["pl"])}">${_fmt_money(p["pl"], sign=True)}</td>'
                      f'<td class="num {_cls(p["plpc"])}">{p["plpc"]:+.2f}%</td>'
                      f'<td class="prot">{prot}</td></tr>')
-        positions_html = (f'<table><thead><tr><th>Símbolo</th><th class="num">Qty</th>'
+        positions_html = (f'<table><thead><tr><th>Símbolo</th><th>Sector</th><th class="num">Qty</th>'
                           f'<th class="num">Entrada</th><th class="num">Actual</th>'
                           f'<th class="num">P/L</th><th class="num">%</th><th>Protección</th></tr></thead>'
                           f'<tbody>{rows}</tbody></table>')
+        # Exposición por sector: barra + aviso de concentración
+        exp = m.get("exposure") or {}
+        total = sum(exp.values()) or 1
+        bars = ""
+        for sec, n in sorted(exp.items(), key=lambda kv: -kv[1]):
+            pct = n / total * 100
+            heavy = " heavy" if n >= 3 else ""
+            bars += (f'<div class="exp-row"><span class="exp-label">{html.escape(str(sec))}</span>'
+                     f'<span class="exp-bar"><span class="exp-fill{heavy}" style="width:{pct:.0f}%"></span></span>'
+                     f'<span class="exp-n">{n}</span></div>')
+        concentrated = max(exp.values()) if exp else 0
+        warn = ('<p class="muted warn-txt">Concentración alta: un solo sector domina la cartera '
+                '— es lo que amplificó el selloff de julio.</p>') if concentrated >= 3 else ""
+        positions_html += f'<div class="exposure">{bars}</div>{warn}'
     else:
         positions_html = '<p class="muted">Sin posiciones abiertas — la cuenta está en efectivo.</p>'
 
@@ -141,7 +175,7 @@ def render_html(m: dict) -> str:
   :root {{
     --bg:#0e1116; --surface:#161b22; --surface2:#1c232d; --line:#2a3340;
     --ink:#e6edf3; --muted:#8b98a6; --accent:#58a6ff;
-    --pos:#3fb950; --neg:#f85149; --flat:#8b98a6;
+    --pos:#3fb950; --neg:#f85149; --flat:#8b98a6; --warnc:#d29922;
     --pos-fill:rgba(63,185,80,.14); --neg-fill:rgba(248,81,73,.14);
     --mono:"SFMono-Regular",ui-monospace,"Cascadia Code",Consolas,monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -150,7 +184,7 @@ def render_html(m: dict) -> str:
     :root {{
       --bg:#f6f8fa; --surface:#ffffff; --surface2:#f0f3f6; --line:#d8dee4;
       --ink:#1f2328; --muted:#59636e; --accent:#0969da;
-      --pos:#1a7f37; --neg:#cf222e; --flat:#59636e;
+      --pos:#1a7f37; --neg:#cf222e; --flat:#59636e; --warnc:#9a6700;
       --pos-fill:rgba(26,127,55,.10); --neg-fill:rgba(207,34,46,.10);
     }}
   }}
@@ -187,7 +221,17 @@ def render_html(m: dict) -> str:
   .dim {{ color:var(--muted); font-family:var(--mono); font-size:12px; }}
   .prot {{ font-family:var(--mono); font-size:11.5px; color:var(--muted); }}
   .be {{ color:var(--accent); }}
+  .warn {{ color:var(--neg); font-weight:600; }}
+  .warnc {{ color:var(--warnc); }}
+  .warn-txt {{ margin-top:10px; font-size:12.5px; }}
   .muted {{ color:var(--muted); font-size:14px; margin:0; }}
+  .exposure {{ margin-top:14px; display:flex; flex-direction:column; gap:5px; }}
+  .exp-row {{ display:flex; align-items:center; gap:9px; font-size:12.5px; }}
+  .exp-label {{ font-family:var(--mono); font-size:11.5px; color:var(--muted); min-width:82px; }}
+  .exp-bar {{ flex:1; height:8px; background:var(--surface2); border-radius:4px; overflow:hidden; }}
+  .exp-fill {{ display:block; height:100%; background:var(--accent); border-radius:4px; }}
+  .exp-fill.heavy {{ background:var(--neg); }}
+  .exp-n {{ font-family:var(--mono); font-size:11.5px; color:var(--muted); min-width:14px; text-align:right; }}
   .timeline {{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }}
   .timeline li {{ display:flex; gap:10px; align-items:baseline; font-size:13px; padding:5px 0;
     border-bottom:1px solid var(--line); }}

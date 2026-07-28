@@ -61,9 +61,16 @@
   **prune de protección huérfana** en `state.json`. Wiring: pasos `if: always()` en el
   workflow (dashboard/commit corren aun si el orquestador falla). **Acción manual pendiente
   del usuario:** habilitar GitHub Pages (Settings → Pages → branch `master` /docs).
-- **Fase 9 — Estrategia estable pero dinámica**: módulo de régimen de volatilidad
-  (VIX vía yfinance + vol realizada + SPY vs SMA200 → calm|nervous|panic → ajusta tamaño,
-  entradas y llm_budget) + ETFs líquidos en el universo + tope de concentración por sector.
+- **Fase 9 — Estrategia estable pero dinámica (COMPLETA 2026-07-28)**:
+  `agents/regime.py` (SIN LLM) clasifica el mercado en `calm|nervous|panic` con vol realizada
+  de SPY, SPY vs SMA200, drawdown 60d y VIXY vs su media — todo vía `broker.daily_bars`, **sin
+  yfinance** (el proyecto ya lo había descartado por throttling). Umbrales calibrados con la
+  distribución real del último año. Política: `nervous` recorta tamaño a 3.5% y sube la
+  confianza mínima a 0.70; `panic` suspende entradas (las salidas siguen siempre).
+  Además: **ETFs de sectores diversos** (SPY, QQQ, XLE, XLF, GLD) en el universo, **tope de 3
+  posiciones por sector** (mapa explícito en config; Alpaca no expone sector), `llm_budget`
+  convertido en **tope duro que incluye a los curados** (evita 39 llamadas con 13 símbolos), y
+  **régimen + exposición sectorial en el dashboard**.
 - **Fase 10 — Según evidencia del dashboard**: cripto 24/7 (misma cuenta Alpaca),
   contexto macro (calendario FOMC/FRED), COT del CFTC.
 - **Fase 11 — Memoria semántica (Knowledge Adapter, etapa 1)**: job semanal *offline*
