@@ -1,0 +1,22 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-07-28T14:53:14.531782-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 25.0,
+    "avg_entry_price": 392.4464,
+    "current_price": 391.535,
+    "unrealized_pl": -22.785,
+    "unrealized_plpc": -0.00232
+  },
+  "action": "HOLD",
+  "reason": "Los catalizadores clave (seguridad y reanudaci\u00f3n de la planta Kumamoto, demanda IA) siguen vigentes y el precio a\u00fan est\u00e1 en zona oversold, por lo que la tesis bullish permanece viva pese al leve descenso y al hecho de que el precio sigue bajo las medias m\u00f3viles.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "OCO no colocada: {\"code\":40010001,\"message\":\"oco orders require take_profit.limit_price\"}",
+      "breakeven": false
+    }
+  }
+}

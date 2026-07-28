@@ -1,0 +1,22 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-07-28T14:53:10.763007-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 63.0,
+    "avg_entry_price": 124.61,
+    "current_price": 123.095,
+    "unrealized_pl": -95.445,
+    "unrealized_plpc": -0.01216
+  },
+  "action": "HOLD",
+  "reason": "La tesis bullish sigue viva: el precio est\u00e1 cerca del nivel de soporte t\u00e9cnico bajo la SMA20/50, el RSI indica sobreventa y el catalizador de earnings sigue a 2\u20113 semanas, mientras que el riesgo de ruptura a\u00fan no se ha materializado y el stop est\u00e1 intacto.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "OCO no colocada: {\"code\":40010001,\"message\":\"oco orders require take_profit.limit_price\"}",
+      "breakeven": false
+    }
+  }
+}
