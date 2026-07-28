@@ -1,0 +1,116 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-28T13:21:11.660163-04:00",
+  "portfolio": {
+    "equity": 98628.21,
+    "cash": 91010.41,
+    "buying_power": 385371.48
+  },
+  "research": {
+    "symbol": "AMD",
+    "timestamp": "2026-07-28T13:20:25.590020",
+    "price": {
+      "current": 458.32,
+      "sma20": 527.58,
+      "sma50": 509.54,
+      "rsi14": 39.54,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -7.39,
+      "change_5d_pct": -15.81,
+      "change_1m_pct": -11.9
+    },
+    "volume": {
+      "current": 1118785,
+      "avg_20d": 688112,
+      "ratio": 1.63,
+      "unusual": true
+    },
+    "news": [
+      {
+        "headline": "AMD Stock Drops: Why Chipmaker Shares Are Falling Ahead of August Earnings",
+        "summary": "AMD stock tumbled premarket amid broader AI memory trade anxiety. Here\u2019s what\u2019s driving the pullback, key technical levels, and what analysts expect for earnings."
+      },
+      {
+        "headline": "Is the AI Chip Trade Actually Cracking? $1 Trillion Wiped Out in Korea \u2014 And It's Spreading",
+        "summary": "Korean chipmakers lose $1 trillion in 6 weeks and the rout is spreading to U.S.-listed AI chip stocks like Nvidia, Marvell and Micron."
+      },
+      {
+        "headline": "Why AMD Could Be The Next Trillion-Dollar Company\u2013Our Experts Weigh In",
+        "summary": "We invited our expert network to name their top stock pick with the potential to become the next trillion-dollar company. They chose AMD."
+      },
+      {
+        "headline": "Micron, Nvidia, AMD on Watch as Asia's Chip Selloff Sends Warning to Wall Street",
+        "summary": "Chip-stocks plunge after brutal overnight session in South Korea, as US semiconductor names extend losses in premarket trading."
+      },
+      {
+        "headline": "Core Scientific Isn't Just a Bitcoin Miner Anymore. AMD Just Confirmed Its AI Pivot.",
+        "summary": "AMD&#39;s infra deal reinforces Core Scientific&#39;s shift from Bitcoin mining to AI data centers with &gt;$24 billion in potential contracts."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "AMD est\u00e1 en una fase de sobreventa t\u00e9cnica con fuerte impulso de volumen que precede a un rebote impulsado por la demanda de IA y la pr\u00f3xima publicaci\u00f3n de resultados, lo que genera una oportunidad de compra agresiva a corto plazo",
+    "arguments": [
+      "El RSI de 14 est\u00e1 en 39.5, indicando condici\u00f3n de sobreventa profunda y potencial reversi\u00f3n al alza",
+      "El volumen actual es 1.63 veces el promedio de 20 d\u00edas y se marca como inusual, se\u00f1alando acumulaci\u00f3n institucional antes de la earnings de agosto",
+      "Los precios est\u00e1n por debajo de SMA20 (527.58) y SMA50 (509.54), creando un amplio soporte t\u00e9cnico que, al romperse al alza, ofrecer\u00e1 un movimiento r\u00e1pido y amplio"
+    ],
+    "key_catalyst": "Publicaci\u00f3n de resultados de agosto con gu\u00eda de ingresos impulsada por la creciente demanda de chips de IA y la expansi\u00f3n de alianzas estrat\u00e9gicas con fabricantes de servidores",
+    "price_target": 620.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en AMD est\u00e1 sobrevalorado y vulnerable a una ca\u00edda profunda",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas, indicando tendencia bajista sostenida",
+      "El RSI de 39.5 muestra momentum negativo y sobreventa que puede desencadenar m\u00e1s ventas antes de cualquier rebote",
+      "El volumen inusualmente alto coincide con una ca\u00edda del 7.4% en 1 d\u00eda y 15.8% en 5 d\u00edas, sugiriendo presi\u00f3n de venta institucional",
+      "Los titulares de noticias son mixtos pero dominan el miedo: ca\u00edda antes de resultados y alerta de problemas en el mercado de chips AI",
+      "El desempe\u00f1o mensual de -11.9% refleja debilidad estructural y falta de catalizadores claros"
+    ],
+    "fatal_flaw": "El precio est\u00e1 atrapado bajo sus principales medias m\u00f3viles y muestra un momentum bajista fuerte, lo que sugiere que cualquier intento de recuperaci\u00f3n ser\u00e1 r\u00e1pidamente absorbido por la venta agresiva",
+    "downside_target": 340.0,
+    "scenario": "Si los resultados de agosto decepcionan o el sector de IA sufre una nueva correcci\u00f3n, los vendedores se activar\u00e1n masivamente, empujando el precio bajo la SMA20 y SMA50, rompiendo soportes clave alrededor de 380 y 350, y llevando a AMD a niveles cercanos a 340, generando p\u00e9rdidas catastr\u00f3ficas para los compradores alcistas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "El an\u00e1lisis alcista tiene una convicci\u00f3n muy alta (0.92) respaldada por datos concretos: RSI en zona de sobreventa, volumen 1.63x el promedio y soporte t\u00e9cnico amplio bajo SMA20 y SMA50. El an\u00e1lisis bajista muestra una convicci\u00f3n muy baja (0.12) y aunque se\u00f1ala presi\u00f3n de venta, carece de un catalizador fuerte que invalide la tesis alcista. El RSI no est\u00e1 en zona de sobrecompra, por lo que no se reduce la convicci\u00f3n de compra. Con un R/R estimado >2:1 y cumplimiento de todas las reglas de ponderaci\u00f3n, la decisi\u00f3n es comprar.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 458.32,
+    "take_profit": 600.0,
+    "stop_loss": 380.0,
+    "position_size_pct": 0.08
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.81 \u2265 1.5",
+      "Posici\u00f3n $7,890 \u2264 m\u00e1ximo $9,863",
+      "Capital suficiente ($7,890)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 7890.26
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "4878676d-9247-47d1-ae0c-55bcda8a8d22",
+    "symbol": "AMD",
+    "side": "buy",
+    "shares": 17,
+    "order_class": "bracket",
+    "estimated_value": 7804.27,
+    "take_profit": 600.0,
+    "stop_loss": 380.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-28T13:23:07.380308"
+  }
+}
