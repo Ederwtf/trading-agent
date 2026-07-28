@@ -1,4 +1,11 @@
 {
-  "last_entry_run": "2026-07-23T14:52:30.035739",
-  "protection": {}
+  "last_entry_run": "2026-07-28T11:57:20.317026-04:00",
+  "protection": {
+    "AVGO": {
+      "stop": 370.0,
+      "take_profit": 452.0,
+      "breakeven": false,
+      "updated": "2026-07-28T11:57:20.316105-04:00"
+    }
+  }
 }
