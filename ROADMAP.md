@@ -36,8 +36,15 @@
   deprecado `alpaca-trade-api` al oficial **alpaca-py**, con todo el acceso al broker
   centralizado en el nuevo `agents/broker.py` (única frontera con el SDK; habilita
   opciones/cripto y un futuro segundo broker sin tocar la lógica de los agentes).
-  Pendientes: M3 (rollup del journal) y el pacing de llamadas en `agents/llm.py`
-  (seguimiento de C1 por el TPM de 8K).
+  Aplicado el 2026-07-27: **fix de fiabilidad LLM** — gpt-oss-120b truncaba el JSON
+  (~1 de 3 con prompts reales) y tumbaba runs del workflow vía M5; fix con
+  `reasoning_effort="low"` + `max_tokens=1200` + retry ante BadRequestError/JSON inválido,
+  más pacing proactivo entre llamadas (seguimiento de C1). **F7 COMPLETA.**
+  Pendiente movido a F8: M3 (rollup del journal).
+
+  > Nota de operación (2026-07-27): NVDA cerró en su stop de breakeven a $197.02
+  > (entrada $196.9635) — salida en breakeven casi exacta; el trinquete M4/A2 funcionó.
+  > Los fallos del workflow del 24 y 27 de julio eran el JSON de gpt-oss (arriba), no A4.
 
   > Observación de producción (07-13 → 07-17): los 4 semis tocaron sus stops de
   > breakeven durante el selloff pero **llenaron 3–9% por debajo del trigger** por

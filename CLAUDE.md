@@ -16,9 +16,18 @@ La llamada está centralizada en `agents/llm.py`.
 Racional: es el reemplazo recomendado por Groq tras la **deprecación de Llama 4 Scout
 (apagado 2026-07-17)**; el mejor balance calidad/límites del free tier sobreviviente.
 Límites: **8K TPM / 200K TPD / 1K RPD** → `llm_budget` bajado a 5 (cada símbolo ≈ 3
-llamadas ≈ 4.5K tokens; más símbolos por corrida reventarían el TPM). Pendiente F7:
-pacing proactivo entre llamadas en `agents/llm.py`. Los límites de Groq son por modelo
-por API key. `call_json_llm` reintenta 1 vez ante rate-limit transitorio.
+llamadas ≈ 4.5K tokens; más símbolos por corrida reventarían el TPM). Los límites de Groq
+son por modelo por API key.
+
+**Fiabilidad del JSON (crítico con gpt-oss):** los modelos gpt-oss/qwen3 emiten un canal
+de razonamiento que, con `response_format=json_object`, consume el presupuesto de tokens y
+**trunca el JSON** → Groq responde `BadRequestError "Failed to generate JSON"`. Esto tumbó
+runs del workflow (~1 de 3 con los prompts reales). Fix en `call_json_llm`:
+`reasoning_effort="low"` (solo si el modelo lo soporta), `max_tokens=1200` de holgura, y
+**retry (hasta 3) ante BadRequestError / JSON inválido**, además de backoff creciente ante
+rate-limit. **Pacing proactivo** entre llamadas (`GROQ_MIN_INTERVAL_S`, default 1.5s) para
+suavizar ráfagas de TPM. Si se cambia `GROQ_MODEL` a un modelo sin razonamiento, el
+parámetro `reasoning_effort` se omite automáticamente.
 
 ---
 
