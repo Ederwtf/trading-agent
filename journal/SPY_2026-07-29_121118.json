@@ -1,0 +1,123 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-07-29T12:09:56.259385-04:00",
+  "portfolio": {
+    "equity": 97266.68,
+    "cash": 67326.79,
+    "buying_power": 353138.85
+  },
+  "research": {
+    "symbol": "SPY",
+    "timestamp": "2026-07-29T12:08:50.605120",
+    "price": {
+      "current": 732.61,
+      "sma20": 745.92,
+      "sma50": 744.69,
+      "rsi14": 32.65,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -1.1,
+      "change_5d_pct": -1.99,
+      "change_1m_pct": -1.11
+    },
+    "volume": {
+      "current": 446308,
+      "avg_20d": 1426903,
+      "ratio": 0.31,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Airbus CEO Says Co. Ramping Up Throughout All Businesses To Meet Rising Demand; Reports Q2 Revenue Of \u20ac20.525B, H1 Revenue Of \u20ac33.2B; Delivers 351 Commercial Jets In H1",
+        "summary": ""
+      },
+      {
+        "headline": "USA Gasoline Inventories 0.007M Barrel Build Vs 1.710M Barrel Draw Est.",
+        "summary": ""
+      },
+      {
+        "headline": "EIA Weekly Distillates Stocks 1.062M Barrel Build Vs 0.500M Barrel Build Est.",
+        "summary": ""
+      },
+      {
+        "headline": "Benzinga Market Summary: Oil Jumps On President Trump's Comments About Iran Strikes, S&P Feels Oil Impact Ahead Of FOMC Meeting Later Today, Ford Motor Rises On Q2 Earnings Report",
+        "summary": ""
+      },
+      {
+        "headline": "Iraq's PM Office Says Iraq's Security Council Directs Foreign Ministry To Pursue Legal Action Over U.S., Saudi Strikes; Says Only Government Has Authority To Respond To Attacks On Its Territory; Iraq Urges All Parties To Avoid Escalation, Says It Wants To Keep Country Out Of Regional Conflicts",
+        "summary": ""
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.78,
+    "thesis": "El SPY est\u00e1 a punto de iniciar una fuerte recuperaci\u00f3n impulsada por una sobreventa extrema y fundamentos macroecon\u00f3micos que pronto revertir\u00e1n a favor del riesgo.",
+    "arguments": [
+      "El RSI14 de 32.65 indica condici\u00f3n de sobreventa profunda, hist\u00f3ricamente precediendo rebotes de m\u00e1s del 5% en el S&P 500 dentro de 2\u20114 semanas",
+      "El precio est\u00e1 cotizando 13\u201114 puntos por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas, creando un cruce dorado inminente que suele generar movimientos alcistas de 3\u20114% cuando el mercado se estabiliza",
+      "Los vol\u00famenes actuales son solo el 31% del promedio, se\u00f1al de falta de participaci\u00f3n institucional; una entrada masiva de capitales al cierre del trimestre impulsar\u00e1 el precio r\u00e1pidamente"
+    ],
+    "key_catalyst": "Publicaci\u00f3n de los datos de empleo de EE.UU. que se espera muestren una ca\u00edda inesperada en la tasa de desempleo, desencadenando un giro de pol\u00edtica monetaria hacia la relajaci\u00f3n y un repunte inmediato del riesgo",
+    "price_target": 770.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en SPY est\u00e1 condenado por la debilidad estructural del mercado y la falta de soporte t\u00e9cnico clave",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de ambas medias m\u00f3viles (SMA20 y SMA50), indicando tendencia bajista sostenida",
+      "El RSI est\u00e1 en 32.65, se\u00f1alando sobreventa pero tambi\u00e9n falta de impulso comprador y posible agotamiento de la presi\u00f3n de venta",
+      "El volumen actual es solo el 31% del promedio de 20 d\u00edas, lo que sugiere falta de participaci\u00f3n y confirma la ausencia de fuerza alcista"
+    ],
+    "fatal_flaw": "Ruptura clara de los niveles de soporte t\u00e9cnico principales (SMA20 y SMA50) con volumen extremadamente bajo, lo que hace improbable una reversi\u00f3n r\u00e1pida",
+    "downside_target": 690.0,
+    "scenario": "Si el SPY sigue cayendo por debajo de los 720 y rompe el soporte de 700, el bajo inter\u00e9s de compra y la presi\u00f3n de venta continuada podr\u00edan empujar el ETF hacia 650, generando una p\u00e9rdida catastr\u00f3fica para cualquier posici\u00f3n larga"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.71,
+    "reasoning": "El an\u00e1lisis alcista tiene una convicci\u00f3n alta (0.78) respaldada por datos como RSI sobrevendido (32.65) y la distancia a medias m\u00f3viles, mientras que el an\u00e1lisis bajista muestra una convicci\u00f3n muy baja (0.12). El RSI no est\u00e1 en zona de sobrecompra, por lo que no se reduce la convicci\u00f3n de compra. El riesgo de corto plazo (posible ruptura de soporte cercano) est\u00e1 limitado con un stop justo por debajo de los niveles de soporte t\u00e9cnico, manteniendo una relaci\u00f3n R/R >1.5. Por tanto, la balanza favorece la compra.",
+    "bull_weight": 0.78,
+    "bear_weight": 0.12,
+    "entry": 732.61,
+    "take_profit": 770.0,
+    "stop_loss": 710.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.71 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.65 \u2265 1.5",
+      "Posici\u00f3n $4,863 \u2264 m\u00e1ximo $9,727",
+      "Capital suficiente ($4,863)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4863.33
+  },
+  "sector": "broad",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 732.61,
+      "spy_sma200": 699.51,
+      "above_sma200": true,
+      "vol_20d": 10.0,
+      "vol_60d": 13.1,
+      "drawdown_60d": -3.54,
+      "vixy_ratio": 0.95
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

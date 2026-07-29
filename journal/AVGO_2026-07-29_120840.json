@@ -1,0 +1,21 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-29T12:08:40.570923-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 20.0,
+    "avg_entry_price": 383.87,
+    "current_price": 370.655,
+    "unrealized_pl": -264.3,
+    "unrealized_plpc": -0.03443
+  },
+  "action": "CLOSE",
+  "reason": "El precio ha ca\u00eddo bajo la SMA20 y SMA50, RSI en zona de sobreventa y el volumen sigue muy bajo, invalidando los catalizadores bullish y acerc\u00e1ndose al stop inicial, por lo que la tesis alcista se ha roto.",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "5093e20b-6e63-47f9-8f90-d6deb128ca1b",
+    "symbol": "AVGO",
+    "timestamp": "2026-07-29T12:08:40.570425"
+  }
+}

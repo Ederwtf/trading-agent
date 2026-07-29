@@ -1,0 +1,133 @@
+{
+  "symbol": "XLF",
+  "timestamp": "2026-07-29T12:10:18.158209-04:00",
+  "portfolio": {
+    "equity": 97266.68,
+    "cash": 67326.79,
+    "buying_power": 353138.85
+  },
+  "research": {
+    "symbol": "XLF",
+    "timestamp": "2026-07-29T12:08:53.892127",
+    "price": {
+      "current": 57.05,
+      "sma20": 56.12,
+      "sma50": 53.98,
+      "rsi14": 66.7,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": -0.92,
+      "change_5d_pct": 1.8,
+      "change_1m_pct": 6.24
+    },
+    "volume": {
+      "current": 1346084,
+      "avg_20d": 2374923,
+      "ratio": 0.57,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Leading And Lagging Sectors For July 29, 2026",
+        "summary": "Gainers\n\n\n\nSymbol\nName\nPrice\nChange ($)\nChange (%)\nVolume\n\n\n\n\n(NYSE:XLE)\nState Street Energy Select Sector SPDR ETF\n58.85\n1.28\n2.22\n398.8K\n\n\n(NYSE:XLU)\nState Street Utilities Select Sector SPDR"
+      },
+      {
+        "headline": "Leading And Lagging Sectors For July 28, 2026",
+        "summary": "Gainers\n\n\n\nSymbol\nName\nPrice\nChange ($)\nChange (%)\nVolume\n\n\n\n\n(NYSE:XLP)\nState Street Consumer Staples Select Sector SPDR ETF\n86.9200\n1.560\n1.82\n50.6K\n\n\n(NYSE:XLV)\nState Street Health Care Select Sect"
+      },
+      {
+        "headline": "Real Assets Are Beating Tech Right Now. Here's the Proof.",
+        "summary": "Wall Street economists can spend all day debating what the Federal Reserve might do, whether inflation is really defeated, and whether the economy is heading toward a soft landing, a hard landing, or "
+      },
+      {
+        "headline": "Leading And Lagging Sectors For July 27, 2026",
+        "summary": "Gainers\n\n\n\nSymbol\nName\nPrice\nChange ($)\nChange (%)\nVolume\n\n\n\n\n(NYSE:XLK)\nState Street Technology Select Sector SPDR ETF\n178.50\n2.62\n1.48\n48.5K\n\n\n(NYSE:XLY)\nState Street Consumer Discretionary Select S"
+      },
+      {
+        "headline": "Leading And Lagging Sectors For July 24, 2026",
+        "summary": "Gainers\n\n\n\nSymbol\nName\nPrice\nChange ($)\nChange (%)\nVolume\n\n\n\n\n(NYSE:XLY)\nState Street Consumer Discretionary Select Sector SPDR ETF\n109.1600\n0.40\n0.36\n1.5K\n\n\n(NYSE:XLP)\nState Street Consumer Staples S"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "El sector financiero est\u00e1 reactiv\u00e1ndose y XLF est\u00e1 posicion\u00e1ndose por encima de sus medias m\u00f3viles clave, lo que indica una fuerte tendencia alcista que continuar\u00e1 impulsada por la recuperaci\u00f3n macro y flujos de capital hacia bancos y aseguradoras.",
+    "arguments": [
+      "Precio actual 57.05 est\u00e1 1.6% por encima de la SMA20 (56.12) y 5.9% por encima de la SMA50 (53.98), se\u00f1al clara de momentum positivo",
+      "RSI de 66.7 muestra fuerza sostenida sin estar en zona de sobrecompra extrema, respaldando m\u00e1s alza",
+      "Rendimiento mensual de +6.24% y semanal de +1.8% confirma impulso reciente, mientras que la ca\u00edda diaria es m\u00ednima (-0.92%) y se espera rebote inmediato"
+    ],
+    "key_catalyst": "Expectativas de recortes de tasas de la Fed y resultados trimestrales robustos de los principales bancos que impulsar\u00e1n la rentabilidad del sector financiero",
+    "price_target": 62.5,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en XLF est\u00e1 sobrevalorado y vulnerable a m\u00faltiples riesgos estructurales",
+    "counter_arguments": [
+      "El RSI est\u00e1 en 66.7, muy cerca de sobrecompra; cualquier retroceso del mercado financiero disparar\u00e1 una venta masiva",
+      "El volumen actual es solo el 57% del promedio de 20 d\u00edas, indicando falta de apoyo y posible falta de liquidez para sostener alzas",
+      "El sector financiero est\u00e1 expuesto a posibles aumentos de tasas de inter\u00e9s y regulaciones m\u00e1s estrictas, lo que puede erosionar m\u00e1rgenes y ganancias",
+      "El precio ha ca\u00eddo un 0.92% en el \u00faltimo d\u00eda pese a estar por encima de SMA20 y SMA50, se\u00f1al de debilidad intradiaria"
+    ],
+    "fatal_flaw": "El RSI sobrecomprado combinado con volumen d\u00e9bil sugiere que el impulso alcista est\u00e1 agotado y cualquier noticia negativa provocar\u00e1 una ruptura r\u00e1pida",
+    "downside_target": 52.3,
+    "scenario": "Una sorpresa de pol\u00edtica monetaria que eleve las tasas de inter\u00e9s inesperadamente, provocando una ca\u00edda en los valores bancarios y una venta masiva del ETF financiero, arrastrando el precio de XLF bajo su SMA50 y disparando el objetivo bajista"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "El an\u00e1lisis bullish muestra una fuerte convicci\u00f3n (0.92) respaldada por datos claros: precio por encima de SMA20 y SMA50, RSI s\u00f3lido sin sobrecompra extrema y buen impulso mensual/semanal. Los argumentos bear, aunque v\u00e1lidos, tienen convicci\u00f3n muy baja (0.12) y se basan en riesgos de corto plazo que a\u00fan no se materializan. El RSI est\u00e1 por debajo del umbral de sobrecompra (72), por lo que no se reduce la convicci\u00f3n de compra. El nivel de stop loss se coloca justo bajo la SMA20, punto que invalidar\u00eda la tesis alcista, mientras que el take profit corresponde al primer objetivo t\u00e9cnico indicado (62.5). La relaci\u00f3n riesgo/recompensa supera 1.5:1, y el tama\u00f1o de posici\u00f3n se mantiene dentro del 10% del portafolio.",
+    "bull_weight": 0.78,
+    "bear_weight": 0.22,
+    "entry": 57.05,
+    "take_profit": 62.5,
+    "stop_loss": 55.5,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.52 \u2265 1.5",
+      "Posici\u00f3n $4,863 \u2264 m\u00e1ximo $9,727",
+      "Capital suficiente ($4,863)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4863.33
+  },
+  "sector": "financials",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 732.61,
+      "spy_sma200": 699.51,
+      "above_sma200": true,
+      "vol_20d": 10.0,
+      "vol_60d": 13.1,
+      "drawdown_60d": -3.54,
+      "vixy_ratio": 0.95
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "6c8939d9-2cb9-49e6-b262-383a6a328dec",
+    "symbol": "XLF",
+    "side": "buy",
+    "shares": 85,
+    "order_class": "bracket",
+    "estimated_value": 4847.12,
+    "take_profit": 62.5,
+    "stop_loss": 55.5,
+    "paper_mode": true,
+    "timestamp": "2026-07-29T12:11:18.207181"
+  }
+}
