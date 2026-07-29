@@ -1,0 +1,24 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-29T13:35:42.768280-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 17.0,
+    "avg_entry_price": 459.56,
+    "current_price": 437.61,
+    "unrealized_pl": -373.15,
+    "unrealized_plpc": -0.04776
+  },
+  "action": "HOLD",
+  "reason": "El precio sigue bajo las medias m\u00f3viles y el volumen ha disminuido, pero el RSI ultra\u2011sobreventa y la proximidad del catalizador de resultados mantienen viva la tesis alcista, aunque con mayor incertidumbre.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 380.0,
+      "take_profit": 600.0,
+      "breakeven": false
+    }
+  }
+}

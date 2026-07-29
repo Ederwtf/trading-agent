@@ -1,38 +1,50 @@
 {
-  "last_entry_run": "2026-07-29T12:11:18.209037-04:00",
+  "last_entry_run": "2026-07-29T13:37:45.817840-04:00",
   "protection": {
     "AMD": {
       "stop": 380.0,
       "take_profit": 600.0,
       "breakeven": false,
-      "updated": "2026-07-29T12:08:39.243504-04:00"
+      "updated": "2026-07-29T13:35:42.767982-04:00"
     },
     "PLTR": {
       "stop": 121.5,
       "take_profit": 148.75,
       "breakeven": false,
-      "updated": "2026-07-29T12:08:46.173537-04:00"
+      "updated": "2026-07-29T13:35:42.854692-04:00"
     },
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-07-29T12:11:18.207352-04:00"
+      "updated": "2026-07-29T13:35:44.005010-04:00"
+    },
+    "SMCI": {
+      "stop": 25.5,
+      "take_profit": 38.5,
+      "breakeven": false,
+      "updated": "2026-07-29T13:37:45.777063-04:00"
+    },
+    "GLD": {
+      "stop": 355.0,
+      "take_profit": 395.0,
+      "breakeven": false,
+      "updated": "2026-07-29T13:37:45.816353-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 10.0%, SPY sobre SMA200, drawdown -3.54%"
+      "vol 20d 9.5%, SPY sobre SMA200, drawdown -3.11%"
     ],
     "metrics": {
-      "spy_price": 732.61,
-      "spy_sma200": 699.51,
+      "spy_price": 735.85,
+      "spy_sma200": 699.53,
       "above_sma200": true,
-      "vol_20d": 10.0,
-      "vol_60d": 13.1,
-      "drawdown_60d": -3.54,
-      "vixy_ratio": 0.95
+      "vol_20d": 9.5,
+      "vol_60d": 13.0,
+      "drawdown_60d": -3.11,
+      "vixy_ratio": 0.93
     },
     "policy": {
       "allow_entries": true,
@@ -40,6 +52,6 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-07-29T12:08:38.250802-04:00"
+    "updated": "2026-07-29T13:35:41.988112-04:00"
   }
 }

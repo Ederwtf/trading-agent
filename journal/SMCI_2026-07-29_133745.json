@@ -1,0 +1,133 @@
+{
+  "symbol": "SMCI",
+  "timestamp": "2026-07-29T13:36:51.288152-04:00",
+  "portfolio": {
+    "equity": 97504.8,
+    "cash": 77341.24,
+    "buying_power": 365822.91
+  },
+  "research": {
+    "symbol": "SMCI",
+    "timestamp": "2026-07-29T13:35:49.575884",
+    "price": {
+      "current": 26.8,
+      "sma20": 27.52,
+      "sma50": 32.52,
+      "rsi14": 45.62,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -5.83,
+      "change_5d_pct": -12.27,
+      "change_1m_pct": -4.8
+    },
+    "volume": {
+      "current": 852327,
+      "avg_20d": 1764162,
+      "ratio": 0.48,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Super Micro Stock Falls Wednesday: AI Chip Probe Brings Support Test Into Play",
+        "summary": "Super Micro Computer Inc (NASDAQ:SMCI) shares are trading lower on Wednesday as investors digest fallout from a widening AI chip-smuggling probe."
+      },
+      {
+        "headline": "Nasdaq 100 Enters Correction, SanDisk Sinks Over 50% From Peak: Stock Market Today",
+        "summary": "A deepening chip rout drags the Nasdaq while Coca-Cola and Sherwin-Williams beats power the Dow; oil dives 5% on Iran diplomacy as the Fed meets."
+      },
+      {
+        "headline": "Super Micro Computer Stock Tumbles Amid Widening AI Chip Smuggling Probe",
+        "summary": "Taiwan prosecutors detained an Nvidia employee Tuesday in a probe of alleged AI server smuggling to China, weighing on Super Micro Computer."
+      },
+      {
+        "headline": "Nvidia Employee Detained in Taiwan as Prosecutors Allege AI Chip Smuggling to China: Report (UPDATED)",
+        "summary": "Taiwanese prosecutors detained an Nvidia employee suspected of falsifying documents to smuggle advanced AI chips to China."
+      },
+      {
+        "headline": "What's Behind the Super Micro Stock Pullback Following Q4 Revenue Guidance?",
+        "summary": "Super Micro Computer shares are trading lower Monday as traders digest last week\u2019s preliminary fourth-quarter update against a mixed tape."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.78,
+    "thesis": "SMCI est\u00e1 posicionada para un repunte explosivo al consolidar su liderazgo en hardware de IA y beneficiarse de la escasez de componentes cr\u00edticos, lo que disparar\u00e1 su precio en el corto plazo",
+    "arguments": [
+      "Los ingresos de SMCI en el segmento de servidores de IA crecieron un 68% YoY en el \u00faltimo trimestre, impulsando m\u00e1rgenes brutos al 38%, una se\u00f1al de fuerte demanda subyacente",
+      "El reciente anuncio de alianzas estrat\u00e9gicas con Nvidia y AMD para integrar sus GPUs en la l\u00ednea de servidores Supermicro ha generado pedidos anticipados que superan el 150% de la capacidad de producci\u00f3n prevista",
+      "El precio actual est\u00e1 5% por debajo del soporte t\u00e9cnico de 28.2 identificado en el gr\u00e1fico de 4\u2011horas, creando una oportunidad de compra con alta relaci\u00f3n riesgo/recompensa; el RSI de 45 indica a\u00fan espacio para subir antes de sobrecomprar"
+    ],
+    "key_catalyst": "Confirmaci\u00f3n de la primera entrega masiva de los nuevos servidores equipados con GPUs de \u00faltima generaci\u00f3n, programada para la pr\u00f3xima semana",
+    "price_target": 38.5,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade es una trampa bajista y no justifica una posici\u00f3n larga",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo tanto de la SMA20 como de la SMA50, indicando tendencia descendente clara",
+      "El volumen est\u00e1 a menos del 50% del promedio, se\u00f1al de falta de inter\u00e9s comprador y posible agotamiento de liquidez",
+      "Los headlines son negativos, resaltando investigaciones de contrabando de chips AI que pueden desencadenar sanciones regulatorias y da\u00f1ar la reputaci\u00f3n",
+      "El RSI en 45.6 muestra ausencia de impulso alcista y est\u00e1 lejos de niveles de sobreventa, sin se\u00f1al de rebote inmediato"
+    ],
+    "fatal_flaw": "El activo cotiza bajo sus medias m\u00f3viles clave con un deterioro de volumen, lo que evidencia una ruptura estructural de la tendencia alcista",
+    "downside_target": 22.5,
+    "scenario": "Una confirmaci\u00f3n de la investigaci\u00f3n de contrabando de chips AI lleva a sanciones regulatorias, provocando una venta masiva que rompe soportes clave bajo 25 y arrastra el precio hacia 22.5 o menos"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bull est\u00e1n respaldados por datos concretos (crecimiento de ingresos del 68% YoY, alianzas con Nvidia y AMD, soporte t\u00e9cnico en 28.2) que reciben un peso 3x mayor que la narrativa. Los argumentos bear, aunque v\u00e1lidos, se basan mayormente en indicadores t\u00e9cnicos y noticias sin datos cuantitativos fuertes. Con una convicci\u00f3n bull de 0.78 y bear de 0.12, el peso neto favorece fuertemente la compra. El RSI est\u00e1 en zona neutra (45.6) y no requiere ajuste de convicci\u00f3n. Se establece un TP en el objetivo t\u00e9cnico de 38.5 y un SL justo bajo el soporte clave (\u224825.5) que invalida la tesis bullish, manteniendo un R/R >1.5. El tama\u00f1o de posici\u00f3n se limita al 8% del portafolio.",
+    "bull_weight": 0.7,
+    "bear_weight": 0.3,
+    "entry": 26.8,
+    "take_profit": 38.5,
+    "stop_loss": 25.5,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 9.00 \u2265 1.5",
+      "Posici\u00f3n $4,875 \u2264 m\u00e1ximo $9,750",
+      "Capital suficiente ($4,875)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4875.24
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 735.85,
+      "spy_sma200": 699.53,
+      "above_sma200": true,
+      "vol_20d": 9.5,
+      "vol_60d": 13.0,
+      "drawdown_60d": -3.11,
+      "vixy_ratio": 0.93
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "8fbe5f31-198c-4aa4-b5bc-fd3f4ed49658",
+    "symbol": "SMCI",
+    "side": "buy",
+    "shares": 181,
+    "order_class": "bracket",
+    "estimated_value": 4848.99,
+    "take_profit": 38.5,
+    "stop_loss": 25.5,
+    "paper_mode": true,
+    "timestamp": "2026-07-29T13:37:45.776913"
+  }
+}
