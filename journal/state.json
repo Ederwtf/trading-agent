@@ -5,7 +5,7 @@
       "stop": 370.0,
       "take_profit": 452.0,
       "breakeven": false,
-      "updated": "2026-07-29T06:04:08.085517-04:00"
+      "updated": "2026-07-29T08:17:49.843751-04:00"
     },
     "TSM": {
       "stop": 350.0,
@@ -17,19 +17,19 @@
       "stop": 380.0,
       "take_profit": 600.0,
       "breakeven": false,
-      "updated": "2026-07-29T06:04:05.928365-04:00"
+      "updated": "2026-07-29T08:17:47.759025-04:00"
     },
     "NVDA": {
       "stop": 190.0,
       "take_profit": 210.0,
       "breakeven": false,
-      "updated": "2026-07-29T06:04:10.255770-04:00"
+      "updated": "2026-07-29T08:17:51.930274-04:00"
     },
     "PLTR": {
       "stop": 121.5,
       "take_profit": 148.75,
       "breakeven": false,
-      "updated": "2026-07-29T06:04:13.162139-04:00"
+      "updated": "2026-07-29T08:17:54.855258-04:00"
     }
   },
   "regime": {
