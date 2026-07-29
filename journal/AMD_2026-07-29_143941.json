@@ -1,0 +1,21 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-29T14:39:41.802404-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 17.0,
+    "avg_entry_price": 459.56,
+    "current_price": 443.26,
+    "unrealized_pl": -277.1,
+    "unrealized_plpc": -0.03547
+  },
+  "action": "CLOSE",
+  "reason": "Los indicadores t\u00e9cnicos se han deteriorado (precio bajo SMA20/50, RSI a\u00fan m\u00e1s bajo y volumen por debajo del promedio) y los catalizadores alcistas a\u00fan no se materializan, por lo que la tesis original se ha invalidado.",
+  "source": "llm",
+  "execution": {
+    "closed": true,
+    "order_id": "9e265eef-1aa6-4512-8e25-df0c0ac0dade",
+    "symbol": "AMD",
+    "timestamp": "2026-07-29T14:39:41.802011"
+  }
+}
