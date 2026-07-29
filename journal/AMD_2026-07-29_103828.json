@@ -1,0 +1,20 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-07-29T10:38:28.017050-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 17.0,
+    "avg_entry_price": 459.56,
+    "current_price": 433.0651,
+    "unrealized_pl": -450.4133,
+    "unrealized_plpc": -0.05765
+  },
+  "action": "CLOSE",
+  "reason": "El volumen ha ca\u00eddo dr\u00e1sticamente y el precio sigue muy por debajo de SMA20/50, sin se\u00f1ales de acumulaci\u00f3n que respalden la reversi\u00f3n esperada antes de los resultados, por lo que la tesis alcista se ha debilitado.",
+  "source": "llm",
+  "execution": {
+    "closed": false,
+    "reason": "{\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"17\",\"held_for_orders\":\"17\",\"message\":\"insufficient qty available for order (requested: 17, available: 0)\",\"symbol\":\"AMD\"}",
+    "timestamp": "2026-07-29T10:38:28.017017"
+  }
+}

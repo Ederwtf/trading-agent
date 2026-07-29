@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-07-29T10:38:34.819099-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 63.0,
+    "avg_entry_price": 124.61,
+    "current_price": 124.085,
+    "unrealized_pl": -33.075,
+    "unrealized_plpc": -0.00421
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 121.5,
+      "take_profit": 148.75,
+      "breakeven": false
+    }
+  }
+}
