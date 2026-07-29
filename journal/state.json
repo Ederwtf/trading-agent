@@ -1,23 +1,17 @@
 {
   "last_entry_run": "2026-07-29T13:37:45.817840-04:00",
   "protection": {
-    "PLTR": {
-      "stop": 121.5,
-      "take_profit": 148.75,
-      "breakeven": false,
-      "updated": "2026-07-29T15:59:05.388359-04:00"
-    },
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-07-29T15:59:07.344892-04:00"
+      "updated": "2026-07-29T16:57:42.679360-04:00"
     },
     "GLD": {
       "stop": 355.0,
       "take_profit": 395.0,
       "breakeven": false,
-      "updated": "2026-07-29T15:59:04.241214-04:00"
+      "updated": "2026-07-29T16:57:38.105800-04:00"
     }
   },
   "regime": {
