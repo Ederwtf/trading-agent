@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-07-29T15:59:05.388678-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 63.0,
+    "avg_entry_price": 124.61,
+    "current_price": 123.06,
+    "unrealized_pl": -97.65,
+    "unrealized_plpc": -0.01244
+  },
+  "action": "HOLD",
+  "reason": "La ca\u00edda ligera y el precio bajo las medias no invalidan el catalizador de earnings ni el rebote esperado; el riesgo sigue justificado y la tesis bullish permanece viable.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 121.5,
+      "take_profit": 148.75,
+      "breakeven": false
+    }
+  }
+}
