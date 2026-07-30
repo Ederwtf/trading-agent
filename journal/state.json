@@ -5,13 +5,13 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-07-29T18:59:44.991314-04:00"
+      "updated": "2026-07-30T04:46:42.489471-04:00"
     },
     "GLD": {
       "stop": 355.0,
       "take_profit": 395.0,
       "breakeven": false,
-      "updated": "2026-07-29T18:59:42.833660-04:00"
+      "updated": "2026-07-30T04:46:39.581156-04:00"
     }
   },
   "regime": {
