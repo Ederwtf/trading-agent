@@ -1,0 +1,133 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-07-30T11:04:14.351715-04:00",
+  "portfolio": {
+    "equity": 97176.72,
+    "cash": 87502.49,
+    "buying_power": 377097.8
+  },
+  "research": {
+    "symbol": "AVGO",
+    "timestamp": "2026-07-30T11:03:58.771798",
+    "price": {
+      "current": 383.76,
+      "sma20": 383.04,
+      "sma50": 395.61,
+      "rsi14": 43.25,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": 3.63,
+      "change_5d_pct": -2.25,
+      "change_1m_pct": 1.64
+    },
+    "volume": {
+      "current": 238911,
+      "avg_20d": 608564,
+      "ratio": 0.39,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Semiconductor ETF SOXX Eyes Worst Month Since 2001: 5 Shocking Charts To Watch",
+        "summary": "The iShares Semiconductor ETF is on track for its worst month since September 2001. Marvell, Intel and Micron all set records of their own."
+      },
+      {
+        "headline": "Apple Earnings Prediction Market Preview: What Will Tim Cook Say in His Last Call as CEO?",
+        "summary": "Apple reports Q3 earnings with Cook&#39;s last call as CEO. Polymarket gives 82% chance of beating EPS, Kalshi bets on Cook&#39;s words."
+      },
+      {
+        "headline": "NVIDIA CEO's AI Expansion Play Wins Fans\u2014But Financing Risks Raise Eyebrows",
+        "summary": "NVIDIA stock rises as analysts debate the risks of its aggressive AI infrastructure financing push ahead of its August 26 earnings report."
+      },
+      {
+        "headline": "Chip Stocks Are Crashing\u2014 but This Analyst Says AI Chip Demand Still Outpaces Supply Until At Least 2028: 'You Just Don't Have The..'",
+        "summary": "Wolfe Research&#39;s Chris Caso says AI chip supply remains capacity constrained as memory makers and foundries struggle to meet demand."
+      },
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "AVGO est\u00e1 subvaluado y listo para un fuerte repunte impulsado por su posici\u00f3n dominante en infraestructura de 5G y la creciente demanda de IA, con precios por encima de la SMA20 y un impulso reciente del 3.6% en un d\u00eda.",
+    "arguments": [
+      "Precio actual 383.76 est\u00e1 0.7% por encima de la SMA20 (383.04), indicando soporte t\u00e9cnico inmediato; la SMA50 (395.61) est\u00e1 cerca, se\u00f1alando una posible ruptura al alza.",
+      "RSI14 en 43.25 muestra espacio para subir sin sobrecomprar, mientras que el impulso de 1 d\u00eda (+3.63%) supera la ca\u00edda de 5 d\u00edas (-2.25%), sugiriendo reversi\u00f3n de corto plazo.",
+      "Volumen actual es bajo (0.39\u00d7 el promedio), lo que indica que el movimiento reciente es impulsado por precio y no por venta masiva; cualquier aumento de volumen podr\u00eda disparar el rally.",
+      "AVGO es proveedor clave de componentes para 5G y data centers, sectores que se benefician directamente del auge de IA y la expansi\u00f3n de NVIDIA y Apple, reforzando la demanda de sus chips de alta velocidad."
+    ],
+    "key_catalyst": "Anuncio de nuevos contratos de suministro de chips 5G y IA con Apple y NVIDIA en el pr\u00f3ximo trimestre, que deber\u00eda disparar el precio al romper la SMA50.",
+    "price_target": 452.3,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade alcista en AVGO est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n significativa",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, indicando tendencia bajista a medio plazo",
+      "El volumen actual es solo el 39% del promedio, mostrando falta de apoyo comprador",
+      "Los headlines resaltan presi\u00f3n macro en semiconductores y riesgos de financiaci\u00f3n en IA, lo que puede afectar la demanda de AVGO"
+    ],
+    "fatal_flaw": "Ruptura sostenida bajo la SMA50 combinada con volumen d\u00e9bil, se\u00f1alando que el impulso alcista es ilusorio",
+    "downside_target": 340.12,
+    "scenario": "Una ca\u00edda del precio bajo la SMA50 acompa\u00f1ada de un deterioro en la confianza del sector por resultados negativos en ETFs de semiconductores y problemas de financiaci\u00f3n en IA provocar\u00eda una venta masiva, llevando el precio a 340 o menos"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.66,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n alta (0.92) respaldada por datos t\u00e9cnicos (precio > SMA20, RSI en zona neutra) y un catalizador concreto de contratos 5G/IA. El an\u00e1lisis bearish, aunque muestra riesgos de corto plazo y est\u00e1 bajo la SMA50, tiene una convicci\u00f3n menor (0.78) y carece de un catalizador inmediato. El RSI no indica sobrecompra, por lo que no se reduce la convicci\u00f3n de compra. El potencial de upside hasta el objetivo de 452.3 ofrece un R/R \u22481.5 con un stop loss alrededor de 340, cumpliendo el m\u00ednimo requerido.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 383.76,
+    "take_profit": 452.3,
+    "stop_loss": 340.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.66 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.57 \u2265 1.5",
+      "Posici\u00f3n $4,859 \u2264 m\u00e1ximo $9,718",
+      "Capital suficiente ($4,859)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4858.84
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 735.91,
+      "spy_sma200": 699.91,
+      "above_sma200": true,
+      "vol_20d": 11.2,
+      "vol_60d": 13.4,
+      "drawdown_60d": -3.1,
+      "vixy_ratio": 0.94
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "33d2158e-e7be-4640-9792-0706fe4061ca",
+    "symbol": "AVGO",
+    "side": "buy",
+    "shares": 12,
+    "order_class": "bracket",
+    "estimated_value": 4622.46,
+    "take_profit": 452.3,
+    "stop_loss": 340.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-30T11:05:39.746708"
+  }
+}

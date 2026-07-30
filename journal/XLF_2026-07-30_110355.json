@@ -1,0 +1,24 @@
+{
+  "symbol": "XLF",
+  "timestamp": "2026-07-30T11:03:55.351287-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 85.0,
+    "avg_entry_price": 57.03,
+    "current_price": 56.33,
+    "unrealized_pl": -59.5,
+    "unrealized_plpc": -0.01227
+  },
+  "action": "HOLD",
+  "reason": "El precio sigue por encima de SMA20 y SMA50 y el RSI ha bajado a niveles neutrales, mientras que los catalizadores originales (recortes de tasas y resultados bancarios) no se han invalidado; aunque el volumen es bajo y hay una ligera p\u00e9rdida, la estructura t\u00e9cnica a\u00fan soporta la tesis alcista.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 55.5,
+      "take_profit": 62.5,
+      "breakeven": false
+    }
+  }
+}
