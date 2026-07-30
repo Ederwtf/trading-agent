@@ -1,0 +1,24 @@
+{
+  "symbol": "GLD",
+  "timestamp": "2026-07-30T08:46:10.346974-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 13.0,
+    "avg_entry_price": 370.43,
+    "current_price": 374.0,
+    "unrealized_pl": 46.41,
+    "unrealized_plpc": 0.00964
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 355.0,
+      "take_profit": 395.0,
+      "breakeven": false
+    }
+  }
+}
