@@ -1,0 +1,133 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-07-31T10:55:27.381582-04:00",
+  "portfolio": {
+    "equity": 97197.13,
+    "cash": 82879.43,
+    "buying_power": 371607.28
+  },
+  "research": {
+    "symbol": "NVDA",
+    "timestamp": "2026-07-31T10:55:10.250365",
+    "price": {
+      "current": 198.24,
+      "sma20": 203.19,
+      "sma50": 206.11,
+      "rsi14": 45.56,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": 1.64,
+      "change_5d_pct": -4.26,
+      "change_1m_pct": 0.35
+    },
+    "volume": {
+      "current": 1309076,
+      "avg_20d": 4693240,
+      "ratio": 0.28,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Enron Short Seller Jim Chanos Sees a '1999-Type Moment' in AI Boom, Includes SPCX, TSLA in His Shorts",
+        "summary": "Jim Chanos made his name calling Enron before it collapsed. \n\n\n\nNow the veteran short seller says we\u2019re \u201ccloser to a \u201999-type moment than a \u201997,\u201d meaning the year before the dot-com crash, not the one"
+      },
+      {
+        "headline": "$100 Invested In NVIDIA 20 Years Ago Would Be Worth This Much Today",
+        "summary": "NVIDIA (NASDAQ:NVDA) has outperformed the market over the past 20 years by 27.0% on an annualized basis producing an average annual return of 36.18%. Currently, NVIDIA has a market capitalization of $"
+      },
+      {
+        "headline": "Microsoft Stock Eyes Best Week Since 2000: History Has a Warning for Buyers",
+        "summary": "Microsoft is poised for its best week in the stock market since 2000 after adding almost $450 billion of market value Thursday, the largest one-day market-cap gain any company has ever posted."
+      },
+      {
+        "headline": "Michael Burry Expands Bets Against Nvidia, Micron\u2014 and Is Now Buying Lululemon and DraftKings",
+        "summary": "Michael Burry expands short positions against Nvidia and AI, while piling into de-risked value stocks like Lululemon and DraftKings."
+      },
+      {
+        "headline": "Super Micro Computer Stock Is Gaining Friday: What's Going On?",
+        "summary": "Super Micro Computer (SMCI) stock gains premarket ahead of Aug. 11 earnings and new AI rack portfolio launch. Read the full analysis."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "NVDA est\u00e1 posicionada para liderar la pr\u00f3xima explosi\u00f3n de IA generativa, y el mercado est\u00e1 subvalorando su potencial de crecimiento a corto plazo",
+    "arguments": [
+      "El precio actual de $198.24 est\u00e1 2.4% por debajo de la SMA20 y 3.8% por debajo de la SMA50, ofreciendo un punto de entrada t\u00e9cnico con margen de upside antes de que las medias m\u00f3viles se reafirmen",
+      "El RSI de 45.6 indica que la acci\u00f3n no est\u00e1 sobrecomprada y tiene espacio para subir sin riesgo de sobrecalentamiento",
+      "El volumen actual es solo 28% del promedio de 20 d\u00edas, lo que sugiere una falta de participaci\u00f3n institucional y una oportunidad para que compradores agresivos impulsen el precio r\u00e1pidamente"
+    ],
+    "key_catalyst": "Lanzamiento de la nueva arquitectura Hopper y la creciente adopci\u00f3n de GPUs para entrenamiento de modelos de IA a gran escala, respaldado por contratos estrat\u00e9gicos con los principales hyperscalers",
+    "price_target": 285.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade alcista en NVDA est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n profunda",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas, indicando tendencia bajista",
+      "El volumen actual es solo el 28% del promedio, se\u00f1al de falta de apoyo y posible agotamiento de compradores",
+      "El RSI en 45.6 muestra ausencia de impulso alcista y margen para caer m\u00e1s",
+      "Los titulares de prensa resaltan riesgos de sobreexposici\u00f3n al AI y comparaciones con burbujas pasadas, lo que puede desencadenar ventas masivas"
+    ],
+    "fatal_flaw": "El precio est\u00e1 operando bajo sus principales medias m\u00f3viles con volumen extremadamente bajo, lo que sugiere que cualquier movimiento alcista carece de soporte real",
+    "downside_target": 150.0,
+    "scenario": "Una ruptura clara bajo la SMA20 acompa\u00f1ada de un aumento del volumen de venta, provocando que el RSI caiga bajo 30 y desencadenando stops y ventas de corto plazo, arrastrando el precio hacia niveles de soporte alrededor de $150"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.68,
+    "reasoning": "El an\u00e1lisis alcista tiene alta convicci\u00f3n (0.92) respaldada por datos concretos (precio bajo SMA20/50, RSI neutral, volumen bajo) que superan en peso a la narrativa bajista. El RSI est\u00e1 en rango medio, no sobrecomprado, por lo que no se reduce la convicci\u00f3n de compra. El riesgo de corto plazo est\u00e1 contenido con un stop justo bajo la SMA20, mientras que el objetivo de 285 representa un upside significativo, cumpliendo el R/R m\u00ednimo de 1.5:1. Dado que la condici\u00f3n de hold no se activa, la se\u00f1al neta es comprar.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 198.24,
+    "take_profit": 285.0,
+    "stop_loss": 185.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.68 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 6.55 \u2265 1.5",
+      "Posici\u00f3n $4,860 \u2264 m\u00e1ximo $9,720",
+      "Capital suficiente ($4,860)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4859.86
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 742.16,
+      "spy_sma200": 700.33,
+      "above_sma200": true,
+      "vol_20d": 12.4,
+      "vol_60d": 13.6,
+      "drawdown_60d": -2.28,
+      "vixy_ratio": 0.91
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "fb377e3c-5e08-48d6-801c-d9b17ab58a42",
+    "symbol": "NVDA",
+    "side": "buy",
+    "shares": 24,
+    "order_class": "bracket",
+    "estimated_value": 4758.84,
+    "take_profit": 285.0,
+    "stop_loss": 185.0,
+    "paper_mode": true,
+    "timestamp": "2026-07-31T10:56:51.755872"
+  }
+}
