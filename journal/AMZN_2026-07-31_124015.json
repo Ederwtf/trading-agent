@@ -1,0 +1,27 @@
+{
+  "symbol": "AMZN",
+  "timestamp": "2026-07-31T12:40:15.216511-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 17.0,
+    "avg_entry_price": 271.250588,
+    "current_price": 270.525,
+    "unrealized_pl": -12.334996,
+    "unrealized_plpc": -0.00267
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "eeef3c27-2b99-4a31-93e7-fddea59d6f6a",
+      "order_class": "oco",
+      "stop_price": 245.0,
+      "take_profit": 315.0,
+      "qty": 17,
+      "replaced": true,
+      "breakeven": false
+    }
+  }
+}
