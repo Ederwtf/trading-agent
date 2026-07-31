@@ -5,31 +5,31 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-07-30T19:17:26.218254-04:00"
+      "updated": "2026-07-31T06:14:14.676977-04:00"
     },
     "GLD": {
       "stop": 355.0,
       "take_profit": 395.0,
       "breakeven": false,
-      "updated": "2026-07-30T19:17:21.333597-04:00"
+      "updated": "2026-07-31T06:14:09.459766-04:00"
     },
     "DRAM": {
       "stop": 50.68,
       "take_profit": 68.4,
       "breakeven": true,
-      "updated": "2026-07-30T19:17:18.883726-04:00"
+      "updated": "2026-07-31T06:14:07.360682-04:00"
     },
     "TSM": {
-      "stop": 380.0,
+      "stop": 400.13,
       "take_profit": 475.0,
-      "breakeven": false,
-      "updated": "2026-07-30T19:17:23.774500-04:00"
+      "breakeven": true,
+      "updated": "2026-07-31T06:14:12.607099-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 452.3,
       "breakeven": false,
-      "updated": "2026-07-30T19:17:16.414723-04:00"
+      "updated": "2026-07-31T06:14:05.274735-04:00"
     }
   },
   "regime": {

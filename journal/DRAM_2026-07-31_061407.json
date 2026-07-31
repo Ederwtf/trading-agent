@@ -1,0 +1,24 @@
+{
+  "symbol": "DRAM",
+  "timestamp": "2026-07-31T06:14:07.360948-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 95.0,
+    "avg_entry_price": 50.684211,
+    "current_price": 54.23,
+    "unrealized_pl": 336.849955,
+    "unrealized_plpc": 0.06996
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 50.68,
+      "take_profit": 68.4,
+      "breakeven": true
+    }
+  }
+}
