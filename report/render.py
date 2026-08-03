@@ -82,9 +82,27 @@ def render_html(m: dict) -> str:
     else:
         reg_sub = "aún sin lectura (se registra en la próxima corrida)"
 
+    # Macro (F10): FOMC + COT
+    mac = m.get("macro") or {}
+    fomc = mac.get("fomc") or {}
+    cot = mac.get("cot") or {}
+    if fomc.get("announcement_today"):
+        mac_val, mac_cls = "FOMC HOY", "neg"
+    elif fomc.get("days_to_next") is not None:
+        mac_val, mac_cls = f"{fomc['days_to_next']}d", ""
+    else:
+        mac_val, mac_cls = "—", ""
+    mac_sub = "al próximo FOMC"
+    if cot:
+        mac_sub += f" · COT neto {cot.get('bias','?')} ({cot.get('net_pct_oi',0):+.1f}%)"
+    if fomc and not fomc.get("calendar_ok", True):
+        mac_sub = "calendario FOMC desactualizado"
+        mac_cls = "warnc"
+
     # Tiles
     tiles = [
         _tile("Régimen", reg_label.upper(), reg_cls, reg_sub),
+        _tile("Macro", mac_val, mac_cls, mac_sub),
         _tile("Equity", f'${_fmt_money(m["equity"])}', "",
               f'inicial $100,000 · cash ${_fmt_money(m["cash"])}'),
         _tile("Retorno total", f'{m["total_return_pct"]:+.2f}%', _cls(m["total_return_pct"]),

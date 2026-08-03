@@ -162,12 +162,14 @@ def compute_metrics() -> dict:
     positions = []
     prot_state = {}
     regime = {}
+    macro = {}
     state_raw = {}
     try:
         with open("journal/state.json", encoding="utf-8") as f:
             state_raw = json.load(f) or {}
         prot_state = state_raw.get("protection", {})
         regime = state_raw.get("regime", {})
+        macro = state_raw.get("macro", {})
     except Exception:
         pass
     # Mapa de sectores para la exposición (F9)
@@ -210,6 +212,7 @@ def compute_metrics() -> dict:
         "positions": positions,
         "exposure": exposure,
         "regime": regime,
+        "macro": macro,
         "curve": curve,
         "realized": rt,
         "activity": act,

@@ -38,6 +38,22 @@
       "panic":   { "allow_entries": false, "size_pct": 0.0,   "min_confidence": 1.0 }
     }
   },
+  "macro": {
+    "enabled": true,
+    "block_on_fomc": true,
+    "cot_enabled": true,
+    "fomc": [
+      "2026-01-27..2026-01-28",
+      "2026-03-17..2026-03-18",
+      "2026-04-28..2026-04-29",
+      "2026-06-16..2026-06-17",
+      "2026-07-28..2026-07-29",
+      "2026-09-15..2026-09-16",
+      "2026-10-27..2026-10-28",
+      "2026-12-08..2026-12-09"
+    ],
+    "notes": "Fechas oficiales de la Fed (federalreserve.gov/monetarypolicy/fomccalendars.htm). El ÚLTIMO día de cada reunión es el del anuncio: ese día no se abren entradas (las salidas siguen gestionándose). ACTUALIZAR cuando la Fed publique 2027 — el agente avisa si el calendario se agota."
+  },
   "exits": {
     "auto_close": true,
     "review_rsi_high": 72,

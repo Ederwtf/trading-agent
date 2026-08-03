@@ -106,6 +106,18 @@ Las salidas se gestionan SIEMPRE, en cualquier régimen. Configurable en
 avisa (un fallo de red no debe bloquear al agente). El régimen se guarda en `state.json` y
 en cada journal de tipo `batch` (insumo del Knowledge Adapter, F11).
 
+### Contexto macro (F10) — `agents/macro.py`, SIN LLM
+- **Calendario FOMC** (fechas oficiales de la Fed en `config/watchlist.json → macro.fomc`):
+  el **día del anuncio** (último día de cada reunión) **no se abren entradas**; las salidas
+  se gestionan siempre. Precedente medido: el 2026-07-29 —día del anuncio de julio— el juez
+  liquidó 11 posiciones en pleno dip. El agente **avisa si el calendario se agota**
+  (`calendar_ok: false`) → hay que añadir las fechas del año siguiente cuando la Fed las publique.
+- **COT del CFTC** (API pública Socrata, sin key): posicionamiento neto de non-commercials
+  en el E-MINI S&P 500 (se excluye el contrato MICRO). Señal **semanal y lenta** → se registra
+  como CONTEXTO en `state.json`, journal y dashboard; **nunca bloquea ni dispara órdenes**.
+  Es el sustituto gratuito de Barchart COT, que solo revende este mismo dato público.
+- Degradación segura: si una fuente falla, se permite operar y se registra el motivo.
+
 ### Pre-screen local (conservar cuota de IA)
 - Antes de invocar la IA, `agents/screen.py` corre un filtro **local** (sin LLM) sobre
   los datos de research: descarta no-candidatos (p. ej. sobrecompra extrema) y ordena el

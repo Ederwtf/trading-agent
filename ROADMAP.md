@@ -85,8 +85,19 @@
      −$69 de pérdida; win rate 13%). Fix: escalera breakeven (6% + colchón) → trailing (10%,
      gap 6%), con guardrail de stop nunca por encima del precio vivo.
 
-- **Fase 10 — Según evidencia del dashboard**: cripto 24/7 (misma cuenta Alpaca),
-  contexto macro (calendario FOMC/FRED), COT del CFTC.
+- **Fase 10 — Contexto macro (COMPLETA 2026-08-03)**: `agents/macro.py` (SIN LLM) añade
+  calendario **FOMC** (blackout de entradas el día del anuncio; el agente avisa si el
+  calendario se agota) y **COT del CFTC** (posicionamiento neto non-commercial en E-mini
+  S&P 500, vía API pública sin credenciales) como contexto en journal, `state.json` y
+  dashboard. Ambas señales se eligieron por mejorar las decisiones **sin añadir superficie
+  de riesgo**, dado que la estrategia aún no demuestra edge (win rate 13%).
+
+  > **Cripto pospuesta con motivo técnico** (verificado en docs de Alpaca, 2026-08-03):
+  > el trading de cripto **no admite bracket ni OCO** (solo market/limit/stop_limit, tif
+  > gtc/ioc), así que toda la protección broker-side del fix C2 **no aplica**; además el
+  > cron actual es L–V (el domingo 2-ago hubo 0 runs), lo que dejaría una posición cripto
+  > ~48 h sin gestión en un mercado 24/7. Requisitos para retomarla: (a) que F9.5 demuestre
+  > mejor asimetría, (b) cron de 7 días, (c) diseño de protección propio con stop_limit GTC.
 - **Fase 11 — Memoria semántica (Knowledge Adapter, etapa 1)**: job semanal *offline*
   (fuera del cron de trading) que destila el journal + métricas en notas de conocimiento
   Markdown (`knowledge/`: lecciones, regímenes, estrategias) con la convención wiki

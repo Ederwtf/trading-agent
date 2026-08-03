@@ -53,6 +53,7 @@ from agents.universe import build_universe
 from agents.screen import local_screen
 from agents.exit_agent import local_exit, review_thesis
 from agents.regime import detect_regime
+from agents.macro import macro_context
 from agents import broker
 
 
@@ -242,6 +243,13 @@ def save_regime_state(regime: dict) -> None:
         "degraded": regime["degraded"],
         "updated":  now_et().isoformat(),
     }
+    save_state(st)
+
+
+def save_macro_state(macro: dict) -> None:
+    """Guarda el contexto macro (FOMC/COT) en state.json — dashboard y análisis posterior."""
+    st = load_state()
+    st["macro"] = {**{k: v for k, v in macro.items()}, "updated": now_et().isoformat()}
     save_state(st)
 
 
@@ -439,6 +447,10 @@ def run_batch(session: str = "regular") -> None:
     pol = regime["policy"]
     save_regime_state(regime)
 
+    # ── Contexto macro (F10): FOMC como gate de entradas, COT como contexto ──
+    macro = macro_context(cfg.get("macro", {}))
+    save_macro_state(macro)
+
     exposure = sector_exposure(excluded, cfg)
 
     print(f"\n{'━'*54}")
@@ -449,6 +461,7 @@ def run_batch(session: str = "regular") -> None:
           + f" │ {regime['reasons'][0]}")
     print(f"  Política: entradas={'sí' if pol['allow_entries'] else 'NO'} │ "
           f"tamaño {pol['size_pct']*100:.1f}% │ confianza mín {pol['min_confidence']:.2f}")
+    print(f"  Macro: {'; '.join(macro['reasons'])}")
     print(f"  Universo ({len(universe)}): {', '.join(universe)}")
     print(f"  En cartera/pendiente: {', '.join(sorted(excluded)) or '—'}"
           + (f" │ sectores: {exposure}" if exposure else ""))
@@ -476,6 +489,11 @@ def run_batch(session: str = "regular") -> None:
     if not pol["allow_entries"]:
         print(f"\n  Régimen {regime['label'].upper()} → entradas suspendidas "
               f"({'; '.join(regime['reasons'])}). Solo gestión de salidas.")
+        return
+    # (F10) Blackout macro: el día del anuncio del FOMC no se abren posiciones nuevas.
+    if not macro["allow_entries"]:
+        print(f"\n  Blackout macro → entradas suspendidas ({'; '.join(macro['reasons'])}). "
+              "Solo gestión de salidas.")
         return
     if not entries_due(entry_gap):
         print(f"\n  Entradas en pausa (<{entry_gap} min desde la última búsqueda).")
@@ -568,6 +586,7 @@ def run_batch(session: str = "regular") -> None:
         sec = sector_of(sym, cfg)
         a["sector"] = sec
         a["regime"] = {"label": regime["label"], "policy": pol, "metrics": regime["metrics"]}
+        a["macro"] = {"fomc": macro.get("fomc"), "cot": macro.get("cot")}
         if executed >= slots:
             a["pipeline"] = "batch"
             a["execution"] = {"executed": False, "reason": "sin cupo (slots llenos)"}
