@@ -71,6 +71,20 @@
   posiciones por sector** (mapa explícito en config; Alpaca no expone sector), `llm_budget`
   convertido en **tope duro que incluye a los curados** (evita 39 llamadas con 13 símbolos), y
   **régimen + exposición sectorial en el dashboard**.
+- **Fase 9.5 — Calidad de las decisiones (COMPLETA 2026-08-03)**. Revisión de la primera
+  semana completa con F9: infraestructura impecable (50/50 runs success) y la diversificación
+  funcionó (de 4/4 semis a 5 posiciones en 4 sectores), pero el rendimiento destapó dos
+  fallos estructurales:
+  1. **El juez LLM liquidaba en los dips.** El 29-jul cerró 11 posiciones con la razón
+     "precio bajo SMA20/50, RSI sobrevendido" — exactamente la condición de entrada de la
+     estrategia (la regla local equivalente ya estaba desactivada desde F4, pero al juez
+     nadie se lo había dicho). Fix: el prompt ahora explica la estrategia, exige evidencia
+     de tesis rota real y sesga a HOLD ante la duda. Verificado con replay de los 5 casos
+     reales: **5/5 ahora mantienen**, y sigue cerrando ante catalizador cancelado o fraude.
+  2. **El breakeven al 4% convertía ganadores en scratch** (+$1.16 de ganancia promedio vs
+     −$69 de pérdida; win rate 13%). Fix: escalera breakeven (6% + colchón) → trailing (10%,
+     gap 6%), con guardrail de stop nunca por encima del precio vivo.
+
 - **Fase 10 — Según evidencia del dashboard**: cripto 24/7 (misma cuenta Alpaca),
   contexto macro (calendario FOMC/FRED), COT del CFTC.
 - **Fase 11 — Memoria semántica (Knowledge Adapter, etapa 1)**: job semanal *offline*

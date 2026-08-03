@@ -683,17 +683,41 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
             base_sl   = base_sl   or live.get("stop", 0.0)
             tp_target = tp_target or live.get("take_profit", 0.0)
 
-        # Breakeven como TRINQUETE (A2 corregido): el flag se pega una vez alcanzado, y el
-        # stop deseado nunca baja del nivel ya persistido — aunque el P/L retroceda bajo +4%.
-        be_at     = cfg.get("breakeven_at_pct", 0.04)
+        # Protección escalonada, siempre TRINQUETE (el stop nunca baja):
+        #  1. breakeven_at_pct  → sube el stop a la entrada + un colchón
+        #  2. trail_start_pct   → a partir de ahí, trailing stop que deja correr al ganador
+        # (F9.5) El breakeven al 4% seco convertía los ganadores en scratch: promedio de
+        # ganancia +$1.16 vs -$69 de pérdida. Se activa más tarde, deja colchón sobre la
+        # entrada (no en la entrada exacta, donde el ruido normal te saca) y luego trailea.
+        entry     = float(position["avg_entry_price"])
+        plpc      = float(position.get("unrealized_plpc") or 0.0)
+        be_at     = cfg.get("breakeven_at_pct", 0.06)
+        be_buffer = cfg.get("breakeven_buffer_pct", 0.005)   # stop apenas sobre la entrada
+        trail_at  = cfg.get("trail_start_pct", 0.10)
+        trail_gap = cfg.get("trail_gap_pct", 0.06)           # cuánto por debajo del máximo
+
         breakeven = bool(prot_state.get("breakeven", False))
-        if be_at and position.get("unrealized_plpc") is not None \
-                and float(position["unrealized_plpc"]) >= float(be_at):
+        if be_at and plpc >= float(be_at):
             breakeven = True
+
         sl_desired = base_sl
         if breakeven:
-            sl_desired = max(sl_desired, round(float(position["avg_entry_price"]), 2))
+            sl_desired = max(sl_desired, round(entry * (1 + float(be_buffer)), 2))
+        # Trailing: con ganancia amplia, el stop persigue al precio a `trail_gap` de distancia.
+        trailing = False
+        if trail_at and plpc >= float(trail_at):
+            trail_stop = round(float(position["current_price"]) * (1 - float(trail_gap)), 2)
+            if trail_stop > sl_desired:
+                sl_desired, trailing = trail_stop, True
         sl_desired = max(sl_desired, prot_state.get("stop", 0.0))   # trinquete duro
+        # Guardrail: un stop POR ENCIMA del precio actual se ejecutaría al instante (venta a
+        # mercado no deseada). Se recorta justo por debajo del precio vivo; el trinquete no
+        # se pierde porque el nivel deseado sigue persistido para la próxima corrida.
+        live_px = float(position.get("current_price") or 0.0)
+        if live_px > 0 and sl_desired >= live_px:
+            capped = round(live_px * 0.995, 2)
+            print(f"  [protección] stop {sl_desired} ≥ precio ${live_px} → recortado a {capped}")
+            sl_desired = min(sl_desired, capped)
 
         if sl_desired > 0 and tp_target > 0:
             protection = ensure_exit_bracket(symbol, sl_desired, tp_target, position["qty"])
@@ -709,7 +733,7 @@ def run_light_pipeline(symbol: str, session: str = "regular") -> dict:
 
         if protection.get("armed"):
             kind = "OCO GTC" if protection.get("order_class") == "oco" else "stop GTC"
-            extra = " (stop en breakeven)" if breakeven else ""
+            extra = " (trailing)" if trailing else (" (stop en breakeven)" if breakeven else "")
             if protection.get("degraded"):
                 extra += " [DEGRADADO: sin TP]"
             print(f"  [protección] {kind} armada: SL ${protection.get('stop_price')}"

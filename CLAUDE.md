@@ -145,6 +145,12 @@ Por cada posición abierta (lee la posición real de Alpaca + la tesis/niveles d
    porque la estrategia compra dips por debajo de la SMA50 — el SL es el piso real.
 2. Solo en zona de revisión → `exit_agent.review_thesis` (LLM): relee la tesis original y
    decide CLOSE/HOLD. (Híbrido = conserva cuota: la IA no se llama en posiciones sanas.)
+   **El prompt del juez conoce la estrategia (F9.5):** este sistema COMPRA DIPS, así que
+   "precio bajo SMA20/50" y "RSI sobrevendido" son condiciones de ENTRADA, no razones para
+   cerrar. Solo cierra con evidencia concreta de tesis rota (catalizador invalidado, noticia
+   adversa material); ante la duda, HOLD. Sin esto, el 2026-07-29 el juez liquidó 11
+   posiciones en pleno dip con la razón "precio bajo las medias" — justo lo que la regla
+   local `trend_exit_below_sma50` ya tenía prohibido.
 3. Si CLOSE y `exits.auto_close` → `execution_agent.close_position` (cancela protectoras y
    cierra a mercado). Si `auto_close` off → solo recomienda, no toca la cuenta.
 4. Si HOLD → `execution_agent.ensure_exit_bracket` mantiene una pareja **OCO GTC**
@@ -156,11 +162,21 @@ Por cada posición abierta (lee la posición real de Alpaca + la tesis/niveles d
    coloca en la próxima corrida (sin pérdida real: fuera de horario regular los stops
    tampoco disparan). Fallback sin TP conocido: `ensure_protective_stop` (stop GTC solo).
    **Estado de protección persistente (M4):** los SL/TP vigentes por símbolo se guardan en
-   `journal/state.json` (`protection`) al ejecutar la entrada y en cada monitoreo. El
-   breakeven es un **trinquete**: el stop deseado nunca baja del nivel ya persistido, así
-   que aunque el P/L retroceda bajo el umbral el stop no revierte (esto elimina el flapping
-   196.96↔180 que se observó en NVDA). Resolución de niveles: `state.json` → journal →
-   OCO/stop abierta en Alpaca (último recurso). Al cerrar, el estado del símbolo se limpia.
+   `journal/state.json` (`protection`) al ejecutar la entrada y en cada monitoreo. El stop es
+   un **trinquete**: nunca baja del nivel ya persistido (esto elimina el flapping 196.96↔180
+   que se observó en NVDA). Resolución de niveles: `state.json` → journal → OCO/stop abierta
+   en Alpaca (último recurso). Al cerrar, el estado del símbolo se limpia.
+
+   **Escalera de protección (F9.5)** — configurable en `exits`:
+   1. Stop inicial de la tesis.
+   2. `breakeven_at_pct` (6%) → stop a la entrada **+ `breakeven_buffer_pct`** (0.5%). El
+      colchón importa: con el stop en la entrada exacta, el ruido normal sacaba la posición.
+   3. `trail_start_pct` (10%) → **trailing** a `trail_gap_pct` (6%) bajo el precio, para que
+      el ganador corra.
+   Racional: con breakeven seco al 4% los ganadores acababan en scratch (ganancia promedio
+   **+$1.16** frente a pérdida promedio **−$69**, win rate 13%) — asimetría imposible de
+   superar. Guardrail: un stop que quede ≥ precio vivo se recorta justo por debajo (si no,
+   se ejecutaría al instante como venta a mercado).
 
 El loop de monitoreo está **aislado por símbolo** (fix A3): un error de research/Alpaca
 en un símbolo no deja al resto sin gestión en esa corrida.

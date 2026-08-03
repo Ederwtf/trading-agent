@@ -43,7 +43,10 @@
     "review_rsi_high": 72,
     "review_sl_proximity_pct": 0.02,
     "trend_exit_below_sma50": false,
-    "breakeven_at_pct": 0.04
+    "breakeven_at_pct": 0.06,
+    "breakeven_buffer_pct": 0.005,
+    "trail_start_pct": 0.10,
+    "trail_gap_pct": 0.06
   },
   "description": "AI/semis + ETFs de sectores diversos (F9) + relleno dinámico most-actives — paper trading",
   "updated": "2026-07-28",
