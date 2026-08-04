@@ -1,0 +1,24 @@
+{
+  "symbol": "AMZN",
+  "timestamp": "2026-08-04T16:41:32.859232-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 17.0,
+    "avg_entry_price": 271.250588,
+    "current_price": 277.9505,
+    "unrealized_pl": 113.898504,
+    "unrealized_plpc": 0.0247
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 272.61,
+      "take_profit": 315.0,
+      "breakeven": true
+    }
+  }
+}
