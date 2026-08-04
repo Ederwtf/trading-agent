@@ -5,65 +5,65 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-04T09:22:38.155343-04:00"
+      "updated": "2026-08-04T11:44:09.039977-04:00"
     },
     "GLD": {
       "stop": 355.0,
       "take_profit": 395.0,
       "breakeven": false,
-      "updated": "2026-08-04T09:22:33.553409-04:00"
+      "updated": "2026-08-04T11:44:08.735886-04:00"
     },
     "AVGO": {
-      "stop": 340.0,
+      "stop": 387.31,
       "take_profit": 452.3,
-      "breakeven": false,
-      "updated": "2026-08-04T09:22:31.271457-04:00"
+      "breakeven": true,
+      "updated": "2026-08-04T11:44:08.411947-04:00"
     },
     "AMZN": {
       "stop": 272.61,
       "take_profit": 315.0,
       "breakeven": true,
-      "updated": "2026-08-04T09:22:28.790038-04:00"
+      "updated": "2026-08-04T11:44:06.983824-04:00"
     },
     "NVDA": {
       "stop": 199.22,
       "take_profit": 285.0,
       "breakeven": true,
-      "updated": "2026-08-04T09:22:35.849048-04:00"
+      "updated": "2026-08-04T11:44:08.919159-04:00"
     }
   },
   "regime": {
-    "label": "calm",
+    "label": "nervous",
     "reasons": [
-      "vol 20d 13.3%, SPY sobre SMA200, drawdown -0.23%"
+      "vol 20d 13.9% > 13.5%"
     ],
     "metrics": {
-      "spy_price": 757.72,
-      "spy_sma200": 700.83,
+      "spy_price": 767.99,
+      "spy_sma200": 701.35,
       "above_sma200": true,
-      "vol_20d": 13.3,
-      "vol_60d": 13.7,
-      "drawdown_60d": -0.23,
+      "vol_20d": 13.9,
+      "vol_60d": 13.9,
+      "drawdown_60d": 0.0,
       "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
-      "size_pct": 0.05,
-      "min_confidence": 0.6
+      "size_pct": 0.035,
+      "min_confidence": 0.7
     },
     "degraded": false,
-    "updated": "2026-08-03T19:43:21.757549-04:00"
+    "updated": "2026-08-04T11:43:59.599478-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 44 d\u00eda(s)",
+      "pr\u00f3ximo FOMC en 43 d\u00eda(s)",
       "COT non-comm neto corto (-0.9% del OI, 2026-07-28)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 44,
+      "days_to_next": 43,
       "next_meeting": "2026-09-16",
       "calendar_ok": true
     },
@@ -74,6 +74,6 @@
       "net_pct_oi": -0.9,
       "bias": "corto"
     },
-    "updated": "2026-08-03T19:43:23.173284-04:00"
+    "updated": "2026-08-04T11:44:06.753762-04:00"
   }
 }
