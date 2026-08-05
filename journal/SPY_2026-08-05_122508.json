@@ -1,0 +1,151 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-05T12:24:35.305929-04:00",
+  "portfolio": {
+    "equity": 98446.32,
+    "cash": 78144.27,
+    "buying_power": 369422.81
+  },
+  "research": {
+    "symbol": "SPY",
+    "timestamp": "2026-08-05T12:22:48.616619",
+    "price": {
+      "current": 771.71,
+      "sma20": 748.47,
+      "sma50": 746.37,
+      "rsi14": 62.86,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 0.08,
+      "change_5d_pct": 5.78,
+      "change_1m_pct": 3.2
+    },
+    "volume": {
+      "current": 825715,
+      "avg_20d": 1541005,
+      "ratio": 0.54,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "The Hormuz Letter Posts On X \"Iran has launched a ballistic missile attack on Bahrain, per initial reports from Fars. This is the first attack on Bahrain in nearly two weeks.\"",
+        "summary": ""
+      },
+      {
+        "headline": "EIA Weekly Distillates Stocks 3.473M Barrel Draw Vs 0.200M Barrel Build Est.",
+        "summary": ""
+      },
+      {
+        "headline": "USA Gasoline Inventories 1.643M Barrel Draw Vs 1.300M Barrel Draw Est.",
+        "summary": ""
+      },
+      {
+        "headline": "USA Crude Oil Inventories 2.479M Barrel Build Vs 1.500M Barrel Draw Est.",
+        "summary": ""
+      },
+      {
+        "headline": "ISM Non-Manufacturing Employment For July 47.4 Vs 51.2 Prior",
+        "summary": ""
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "SPY est\u00e1 en una fase alcista clara con momentum fuerte y soporte t\u00e9cnico s\u00f3lido, lo que justifica una entrada larga agresiva ahora",
+    "arguments": [
+      "Precio actual 771.71 est\u00e1 3.1% por encima de la SMA20 (748.47) y 3.4% por encima de la SMA50 (746.37), confirmando tendencia bullish sostenida",
+      "RSI14 en 62.86 indica todav\u00eda espacio alcista antes de sobrecompra, respaldando impulso continuo",
+      "Rendimiento de 5 d\u00edas del 5.78% y de 1 mes del 3.2% muestra una fuerte reanudaci\u00f3n del mercado tras correcci\u00f3n",
+      "Volumen actual 0.54\u00d7 el promedio 20\u2011d, pero la ausencia de venta masiva sugiere que la compra institucional est\u00e1 impulsando el rally",
+      "Noticias de reducci\u00f3n de inventarios de gasolina y destilados en EE.UU. apuntan a presi\u00f3n al alza sobre precios de energ\u00eda, beneficiando al S&P 500",
+      "Entorno geopol\u00edtico con tensiones en el Golfo impulsa a los inversores a buscar refugio en activos estadounidenses de alta calidad como SPY"
+    ],
+    "key_catalyst": "Los inesperados draws de inventarios de gasolina y destilados (\u20111.643M y \u20113.473M barriles) presionan precios de energ\u00eda al alza, impulsando ganancias corporativas y reforzando el rally del SPY",
+    "price_target": 820.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en SPY est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n inmediata",
+    "counter_arguments": [
+      "El RSI est\u00e1 en 62.86, acerc\u00e1ndose a niveles de sobrecompra que hist\u00f3ricamente preceden retrocesos",
+      "El volumen actual es solo el 54% del promedio de 20 d\u00edas, indicando falta de soporte de participaci\u00f3n y posible agotamiento del impulso",
+      "Los recientes aumentos de precios (5.78% en 5 d\u00edas y 3.2% en 1 mes) son impulsados por una base estrecha y pueden ser revertidos por la creciente tensi\u00f3n geopol\u00edtica en Oriente Medio"
+    ],
+    "fatal_flaw": "El bajo volumen relativo muestra que el movimiento no est\u00e1 respaldado por la fuerza del mercado, lo que hace que cualquier noticia negativa provoque una venta r\u00e1pida",
+    "downside_target": 730.0,
+    "scenario": "Una escalada del conflicto entre Ir\u00e1n y Bahr\u00e9in genera incertidumbre global, los precios del petr\u00f3leo se disparan y los inversores huyen a refugios seguros, provocando una venta masiva del SPY que rompe los soportes de SMA20 y SMA50 y lleva el precio bajo 730"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "El an\u00e1lisis bullish muestra una fuerte convicci\u00f3n (0.92) respaldada por datos claros: precio por encima de SMA20 y SMA50, RSI a\u00fan no sobrecomprado, s\u00f3lido rendimiento de 5 d\u00edas y volumen institucional. Los argumentos bear, aunque v\u00e1lidos, tienen convicci\u00f3n muy baja (0.12) y se basan en riesgos de corto plazo que no superan la evidencia bullish. Tras ponderar los argumentos (bull_weight\u202f\u2248\u202f0.70, bear_weight\u202f\u2248\u202f0.30) la se\u00f1al neta es alcista. Se establece un TP en el primer nivel de resistencia t\u00e9cnico (\u2248820) y un SL justo bajo el soporte SMA20 (\u2248745) para mantener un R/R\u202f\u2248\u202f1.8, cumpliendo el m\u00ednimo de 1.5:1.",
+    "bull_weight": 0.7,
+    "bear_weight": 0.3,
+    "entry": 771.71,
+    "take_profit": 820.0,
+    "stop_loss": 745.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 1.81 \u2265 1.5",
+      "Posici\u00f3n $3,446 \u2264 m\u00e1ximo $9,845",
+      "Capital suficiente ($3,446)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3445.62
+  },
+  "sector": "broad",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 771.71,
+      "spy_sma200": 701.92,
+      "above_sma200": true,
+      "vol_20d": 14.4,
+      "vol_60d": 14.0,
+      "drawdown_60d": 0.0,
+      "vixy_ratio": 0.88
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 42,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-07-28",
+      "net": -17196,
+      "net_pct_oi": -0.9,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "99eabb0e-19e7-4655-ab28-f0b939108b6a",
+    "symbol": "SPY",
+    "side": "buy",
+    "shares": 4,
+    "order_class": "bracket",
+    "estimated_value": 3084.92,
+    "take_profit": 820.0,
+    "stop_loss": 745.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-05T12:25:08.848322"
+  }
+}

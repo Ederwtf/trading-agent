@@ -1,35 +1,35 @@
 {
-  "last_entry_run": "2026-07-31T10:56:51.756825-04:00",
+  "last_entry_run": "2026-08-05T12:25:08.849578-04:00",
   "protection": {
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-05T10:44:32.794354-04:00"
+      "updated": "2026-08-05T12:22:40.467492-04:00"
     },
     "GLD": {
       "stop": 355.0,
       "take_profit": 395.0,
       "breakeven": false,
-      "updated": "2026-08-05T10:44:31.447757-04:00"
+      "updated": "2026-08-05T12:22:37.684474-04:00"
     },
     "AVGO": {
       "stop": 387.31,
       "take_profit": 452.3,
       "breakeven": true,
-      "updated": "2026-08-05T10:44:30.417966-04:00"
-    },
-    "AMZN": {
-      "stop": 272.61,
-      "take_profit": 315.0,
-      "breakeven": true,
-      "updated": "2026-08-05T10:44:29.948944-04:00"
+      "updated": "2026-08-05T12:22:37.138593-04:00"
     },
     "NVDA": {
-      "stop": 206.49,
+      "stop": 207.06,
       "take_profit": 285.0,
       "breakeven": true,
-      "updated": "2026-08-05T10:44:32.312951-04:00"
+      "updated": "2026-08-05T12:22:40.014676-04:00"
+    },
+    "SPY": {
+      "stop": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false,
+      "updated": "2026-08-05T12:25:08.848484-04:00"
     }
   },
   "regime": {
@@ -38,13 +38,13 @@
       "vol 20d 14.4% > 13.5%"
     ],
     "metrics": {
-      "spy_price": 774.22,
-      "spy_sma200": 701.93,
+      "spy_price": 771.71,
+      "spy_sma200": 701.92,
       "above_sma200": true,
       "vol_20d": 14.4,
       "vol_60d": 14.0,
       "drawdown_60d": 0.0,
-      "vixy_ratio": 0.89
+      "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.7
     },
     "degraded": false,
-    "updated": "2026-08-05T10:44:28.398770-04:00"
+    "updated": "2026-08-05T12:22:35.700055-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -0.9,
       "bias": "corto"
     },
-    "updated": "2026-08-05T10:44:29.297346-04:00"
+    "updated": "2026-08-05T12:22:36.561197-04:00"
   }
 }
