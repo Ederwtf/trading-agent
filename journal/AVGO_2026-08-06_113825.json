@@ -1,0 +1,24 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-06T11:38:25.236963-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 12.0,
+    "avg_entry_price": 385.38,
+    "current_price": 423.4,
+    "unrealized_pl": 456.24,
+    "unrealized_plpc": 0.09866
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de nuevos contratos 5G/IA sigue vigente y el precio sigue por encima de SMA20 y SMA50; no hay evidencia de que el catalizador se haya invalidado ni de una noticia adversa concreta, por lo que la tesis bullish permanece intacta.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 387.31,
+      "take_profit": 452.3,
+      "breakeven": true
+    }
+  }
+}
