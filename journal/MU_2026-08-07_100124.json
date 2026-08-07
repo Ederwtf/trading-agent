@@ -1,0 +1,141 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-08-07T10:00:19.416458-04:00",
+  "portfolio": {
+    "equity": 98597.46,
+    "cash": 80193.67,
+    "buying_power": 372305.29
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-08-07T09:59:14.452661",
+    "price": {
+      "current": 863.58,
+      "sma20": 887.39,
+      "sma50": 970.41,
+      "rsi14": 49.82,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -2.03,
+      "change_5d_pct": 4.9,
+      "change_1m_pct": -12.87
+    },
+    "volume": {
+      "current": 156352,
+      "avg_20d": 1139857,
+      "ratio": 0.14,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Micron Technology Stock Is Gaining Friday: What's Going On?",
+        "summary": "Micron (MU) shares rise over 1% premarket as tech sector sentiment recovers. Read key technicals, earnings outlook, and price targets."
+      },
+      {
+        "headline": "Understanding Micron Technology's Position In Semiconductors &amp; Semiconductor Equipment Industry Compared To Competitors",
+        "summary": "In today&#39;s rapidly changing and fiercely competitive business landscape, it is vital for investors and industry enthusiasts to carefully evaluate companies. In this article, we will perform a comp"
+      },
+      {
+        "headline": "AI Infrastructure Trade Powers 2026\u2019s Best-Performing Leveraged ETFs",
+        "summary": "AI infrastructure is driving 2026&#39;s top-performing ETFs. Here&#39;s why leveraged Dell, Micron, Intel, AMD and semiconductor funds are surging."
+      },
+      {
+        "headline": "SanDisk and Micron Are Now the Cheapest Stocks in All of Tech \u2014 Here\u2019s Why",
+        "summary": "SanDisk and Micron trade near 6 times forward earnings despite 444% and 216% rallies. Is memory cheap, or are profits near a cyclical peak?"
+      },
+      {
+        "headline": "S&P 500, Dow Fall as Brent Jumps 4%, SanDisk Trims Losses: Stock Market Today",
+        "summary": "Crude&#39;s rebound on Yemen strikes pulled U.S. equities off record highs Thursday, while SanDisk pared losses despite record margins."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "Micron Technology (MU) est\u00e1 posicionada para un repunte explosivo impulsado por la demanda de IA y la revaluaci\u00f3n de su valoraci\u00f3n t\u00e9cnica",
+    "arguments": [
+      "El RSI est\u00e1 cerca del nivel neutral (49.8) y pronto cruzar\u00e1 al territorio alcista, indicando momentum positivo imminentemente",
+      "El precio ha ca\u00eddo un 12.9% en el \u00faltimo mes, creando un amplio soporte t\u00e9cnico y una oportunidad de compra a precios de descuento frente a su SMA20 de 887.39 y SMA50 de 970.41",
+      "Los titulares de noticias resaltan el creciente papel de MU en la infraestructura de IA, un sector que se espera que crezca >30% anual y que impulsar\u00e1 la demanda de memoria DRAM y NAND",
+      "El volumen actual es bajo (0.14x promedio), lo que sugiere que el mercado a\u00fan no ha reaccionado a la revaluaci\u00f3n fundamental, permitiendo una entrada limpia antes de un posible breakout de volumen",
+      "Los analistas est\u00e1n revisando al alza las proyecciones de ingresos de MU para 2025\u20112026, impulsados por contratos con gigantes de la nube y centros de datos"
+    ],
+    "key_catalyst": "Confirmaci\u00f3n de un breakout por encima del SMA20 (887.39) con aumento de volumen superior al 1.5x del promedio 20\u2011d\u00edas, impulsado por la adopci\u00f3n acelerada de IA en centros de datos",
+    "price_target": 1025.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade es una trampa bajista porque el precio est\u00e1 por debajo de sus medias m\u00f3viles clave y el volumen es una fracci\u00f3n m\u00ednima del promedio, indicando falta de soporte real",
+    "counter_arguments": [
+      "El RSI est\u00e1 cerca de 50, sin impulso alcista y su ca\u00edda del 12.9% en un mes muestra debilidad estructural",
+      "El volumen actual es solo el 14% del promedio de 20 d\u00edas, lo que sugiere escasa participaci\u00f3n y posible venta programada",
+      "Los precios recientes est\u00e1n por debajo de SMA20 y SMA50, se\u00f1alando una tendencia a la baja sostenida y falta de recuperaci\u00f3n"
+    ],
+    "fatal_flaw": "El precio est\u00e1 atrapado bajo ambas medias m\u00f3viles (20 y 50) con un volumen extremadamente bajo, lo que indica que cualquier intento alcista carece de soporte real y es vulnerable a una ruptura a la baja",
+    "downside_target": 720.0,
+    "scenario": "Una ruptura del soporte inmediato alrededor de 850, acompa\u00f1ada de un deterioro en los datos de inventario de semiconductores y una ca\u00edda en la demanda de AI, provocar\u00eda una venta masiva que arrastrar\u00eda el precio bajo los 720, generando p\u00e9rdidas catastr\u00f3ficas para los compradores"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n muy alta (0.92) y est\u00e1 respaldado por datos concretos: el RSI est\u00e1 neutral, el precio ha ca\u00eddo 12.9% en el \u00faltimo mes creando soporte t\u00e9cnico, y el cambio de 5 d\u00edas es +4.9%, indicando impulso reciente. Adem\u00e1s, el precio est\u00e1 por debajo de SMA20 y SMA50, lo que seg\u00fan la tesis bullish representa una zona de compra descontada. Los argumentos bear son mayormente narrativos y su convicci\u00f3n es baja (0.12). Tras ponderar los argumentos con la regla de que los datos valen 3\u00d7, el caso bullish domina (\u224875% peso). No hay sobrecompra ni sobreventa que modifique la convicci\u00f3n, y el R/R esperado supera el m\u00ednimo de 1.5:1, por lo que se recomienda una posici\u00f3n compra.",
+    "bull_weight": 0.75,
+    "bear_weight": 0.25,
+    "entry": 863.58,
+    "take_profit": 1025.0,
+    "stop_loss": 820.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 3.70 \u2265 1.5",
+      "Posici\u00f3n $3,451 \u2264 m\u00e1ximo $9,860",
+      "Capital suficiente ($3,451)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3450.91
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 770.69,
+      "spy_sma200": 702.93,
+      "above_sma200": true,
+      "vol_20d": 14.2,
+      "vol_60d": 14.0,
+      "drawdown_60d": -0.05,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 40,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-07-28",
+      "net": -17196,
+      "net_pct_oi": -0.9,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

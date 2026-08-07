@@ -1,0 +1,151 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-08-07T10:01:21.291432-04:00",
+  "portfolio": {
+    "equity": 98597.46,
+    "cash": 80193.67,
+    "buying_power": 372305.29
+  },
+  "research": {
+    "symbol": "SPCX",
+    "timestamp": "2026-08-07T09:59:24.669225",
+    "price": {
+      "current": 120.51,
+      "sma20": 120.24,
+      "sma50": NaN,
+      "rsi14": 50.43,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": 4.87,
+      "change_5d_pct": 11.18,
+      "change_1m_pct": -20.75
+    },
+    "volume": {
+      "current": 1520088,
+      "avg_20d": 2273071,
+      "ratio": 0.67,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Kevin O'Leary Sat Out SpaceX's IPO\u2014 Now He's Plotting His Entry as Elon Musk's Empire Takes Shape: 'As the Stock Settles... I'll Be Watching Closely...'",
+        "summary": "Kevin O\u2019Leary plans to buy SpaceX shares once post-IPO volatility settles. He sees potential in connecting with Elon Musk\u2019s businesses."
+      },
+      {
+        "headline": "Elon Musk Wants Starlink To Take On T-Mobile, Verizon, AT&T\u2014Here's Why That's Easier Said Than Done",
+        "summary": "SpaceX says Starlink Mobile can challenge T-Mobile, Verizon and AT&amp;T, but its plan still depends on building terrestrial cellular infrastructure."
+      },
+      {
+        "headline": "This SpaceX Analyst Turns Bullish; Here Are Top 5 Upgrades For Friday",
+        "summary": "Wall Street analysts upgraded AVITA, Etsy, Unity, and raised target prices for these stocks. See what others think before buying Unity."
+      },
+      {
+        "headline": "Argus Research Upgrades SpaceX to Buy, Announces $160 Price Target",
+        "summary": ""
+      },
+      {
+        "headline": "T-Mobile's CEO Just Dismantled SpaceX's Starlink Mobile Ambitions as Musk's Firm Pours Billions Into Buying Spectrum: 'What's Their Differentiation?'",
+        "summary": "T-Mobile CEO Srini Gopalan dismisses Elon Musk&#39;s Starlink Mobile as exaggerated and questions consumer appeal."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "SPCX est\u00e1 en una fase de ruptura alcista impulsada por fuertes impulsores de crecimiento y una revaluaci\u00f3n del mercado tras la reciente ca\u00edda de precios",
+    "arguments": [
+      "Precio actual 120.51 est\u00e1 ligeramente por encima de la SMA20 (120.24), se\u00f1alando momentum positivo a corto plazo",
+      "El RSI14 en 50.43 indica que el activo no est\u00e1 sobrecomprado y a\u00fan tiene espacio para subir",
+      "El cambio de 1 d\u00eda (+4.87%) y 5 d\u00edas (+11.18%) supera ampliamente el promedio del sector, mostrando un impulso reciente fuerte",
+      "El volumen actual es 0.67 del promedio de 20 d\u00edas, pero la ca\u00edda de precios del \u00faltimo mes (-20.75%) sugiere una oportunidad de compra a precios descontados",
+      "Las noticias destacan el inter\u00e9s de Kevin O'Leary y la visi\u00f3n de Elon Musk de expandir Starlink, lo que genera expectativas de ingresos futuros y potenciales alianzas estrat\u00e9gicas",
+      "Analistas est\u00e1n actualizando sus calificaciones a bullish, proporcionando un impulso de sentimiento positivo"
+    ],
+    "key_catalyst": "El anuncio de Elon Musk de que Starlink competir\u00e1 directamente con los gigantes de telecomunicaciones (T\u2011Mobile, Verizon, AT&T) y la entrada potencial de Kevin O'Leary como inversor institucional, creando una ola de demanda y revaluaci\u00f3n del precio",
+    "price_target": 140.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El impulso alcista de SPCX es ilusorio y est\u00e1 respaldado por datos d\u00e9biles que sugieren una reversi\u00f3n inminente",
+    "counter_arguments": [
+      "El precio solo est\u00e1 ligeramente por encima de la SMA20 y la SMA50 ni siquiera est\u00e1 disponible, lo que indica falta de soporte t\u00e9cnico s\u00f3lido",
+      "El volumen est\u00e1 33% por debajo del promedio de 20 d\u00edas, mostrando escaso inter\u00e9s comprador pese al reciente rally",
+      "El rendimiento mensual es -20.75%, una ca\u00edda profunda que supera con creces cualquier impulso de corto plazo"
+    ],
+    "fatal_flaw": "El descenso del 20.75% en el \u00faltimo mes revela una tendencia bajista estructural que no puede ser superada por un movimiento de 4-5% en d\u00edas recientes",
+    "downside_target": 95.3,
+    "scenario": "Si el volumen sigue deterior\u00e1ndose y el precio rompe la SMA20, el RSI caer\u00e1 bajo 40, desencadenando ventas masivas y llevando el precio a niveles cercanos a los 90, generando p\u00e9rdidas catastr\u00f3ficas para los compradores recientes"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis bullish muestra una alta convicci\u00f3n (0.92) respaldada por datos claros: precio por encima de la SMA20, RSI neutro, fuerte impulso de 1\u20115 d\u00edas y catalizadores de noticias. Los argumentos bear son d\u00e9biles (convicci\u00f3n 0.12) y se basan principalmente en falta de soporte y volumen bajo, sin evidencia de un cambio inminente. No se cumplen condiciones de hold ni de sobrecompra/vendida, por lo que la balanza favorece la compra con un riesgo controlado.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 120.51,
+    "take_profit": 140.0,
+    "stop_loss": 119.5,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 19.30 \u2265 1.5",
+      "Posici\u00f3n $3,451 \u2264 m\u00e1ximo $9,860",
+      "Capital suficiente ($3,451)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3450.91
+  },
+  "sector": "unknown:SPCX",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 770.69,
+      "spy_sma200": 702.93,
+      "above_sma200": true,
+      "vol_20d": 14.2,
+      "vol_60d": 14.0,
+      "drawdown_60d": -0.05,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 40,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-07-28",
+      "net": -17196,
+      "net_pct_oi": -0.9,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "a70b68b6-f991-467d-82b0-48c3c64c84a6",
+    "symbol": "SPCX",
+    "side": "buy",
+    "shares": 28,
+    "order_class": "bracket",
+    "estimated_value": 3380.16,
+    "take_profit": 140.0,
+    "stop_loss": 119.5,
+    "paper_mode": true,
+    "timestamp": "2026-08-07T10:01:24.108853"
+  }
+}
