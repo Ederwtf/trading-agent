@@ -1,0 +1,24 @@
+{
+  "symbol": "GLD",
+  "timestamp": "2026-08-07T04:59:56.611887-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 13.0,
+    "avg_entry_price": 370.43,
+    "current_price": 395.06,
+    "unrealized_pl": 320.19,
+    "unrealized_plpc": 0.06649
+  },
+  "action": "CLOSE",
+  "reason": "TP alcanzado ($395.06 \u2265 $395.0)",
+  "source": "local",
+  "execution": {
+    "closed": true,
+    "order_id": "14e16ad3-78a2-4898-a3a2-54a8a29cc258",
+    "symbol": "GLD",
+    "qty": 13,
+    "limit_price": 394.66,
+    "extended_hours": true,
+    "timestamp": "2026-08-07T04:59:56.611405"
+  }
+}
