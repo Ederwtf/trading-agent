@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-07T16:56:45.801351-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 772.95,
+    "unrealized_pl": 6.76,
+    "unrealized_plpc": 0.00219
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}
