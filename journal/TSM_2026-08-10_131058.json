@@ -1,0 +1,141 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-10T13:09:53.763774-04:00",
+  "portfolio": {
+    "equity": 98765.58,
+    "cash": 80461.04,
+    "buying_power": 373096.87
+  },
+  "research": {
+    "symbol": "TSM",
+    "timestamp": "2026-08-10T13:08:49.650040",
+    "price": {
+      "current": 422.16,
+      "sma20": 409.36,
+      "sma50": 425.86,
+      "rsi14": 48.87,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": 0.53,
+      "change_5d_pct": 3.95,
+      "change_1m_pct": -2.82
+    },
+    "volume": {
+      "current": 314875,
+      "avg_20d": 711620,
+      "ratio": 0.44,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Microsoft Stock Rises 2%: Upcoming Maia 300 Chip Launch Targets Reduced Nvidia Reliance",
+        "summary": "Microsoft stock gained nearly 2% following reports of its upcoming Maia 300 AI chip unveil and discussions with TSMC for 300,000+ units."
+      },
+      {
+        "headline": "TSMC Is Pumping $64B Into Expansion \u2014 Intel Needs a $15B Stock Sale to Do It",
+        "summary": "TSMC plans up to $64B in 2026 capex as Intel raises $15B through stock sales to fund its manufacturing comeback."
+      },
+      {
+        "headline": "Nvidia Built the AI Brain, Now TSMC Wants to Give It Eyes",
+        "summary": "TSMC and Sony plan a $6.3B image-sensor venture, giving TSMC another potential AI growth lane as robotics and autonomous vehicles expand."
+      },
+      {
+        "headline": "Intel Just Put $15 Billion of Stock on the Table. Here's What Investors Need to Know",
+        "summary": "Intel is tapping its surging stock to raise capital for its foundry, putting dilution concerns in front of investors after a huge rally."
+      },
+      {
+        "headline": "Microsoft\u2019s Homegrown AI Chip Effort Shows Signs Of Life After Slow Start; Microsoft Plans To Unveil Its Next-Generation Maia 300 AI Chip In September; Microsoft Is Planning To Ramp Up Its Own Usage Of Maia While Wooing Big Customers; Microsoft Believes Maia Chips Can Run In-House And OpenAI Models At A Lower Cost; Microsoft Has Been In Talks With Chipmaker TSMC To Secure Manufacturing Capacity For Over 300,000 Of Maia Chips For Delivery In 2027",
+        "summary": ""
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "TSM is poised for a breakout rally as AI demand, massive capex, and favorable technical setup converge",
+    "arguments": [
+      "AI boom drives Nvidia and other chip designers to lock in TSMC's advanced 3nm/2nm capacity, securing multi\u2011billion revenue streams",
+      "$64\u202fbn expansion plan will increase supply, capture market share from Intel and Samsung, and boost earnings guidance for FY2025",
+      "Price is already above the 20\u2011day SMA and trading near the 50\u2011day SMA while RSI at 48.9 indicates room to climb, with 1\u2011day +0.53% and 5\u2011day +3.95% momentum"
+    ],
+    "key_catalyst": "Announcement of the next AI\u2011focused wafer fab (3nm/2nm) and the $64\u202fbn capex rollout, expected to be detailed in the upcoming earnings call",
+    "price_target": 515.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en TSM est\u00e1 sobrevalorado y vulnerable a m\u00faltiples riesgos estructurales",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, indicando tendencia bajista intermedia pese al repunte corto plazo",
+      "El volumen actual es menos del 50% del promedio de 20 d\u00edas, se\u00f1al de falta de apoyo real del mercado",
+      "El RSI est\u00e1 cerca de 50, sin sobrecompra, lo que sugiere ausencia de impulso alcista sostenido",
+      "El impulso mensual es negativo (-2.82%), mostrando debilidad a medio plazo",
+      "Las noticias de expansi\u00f3n masiva de $64\u202fB pueden inflar expectativas pero requieren a\u00f1os para materializarse, mientras la competencia de Intel y Samsung acelera su capacidad de fabricaci\u00f3n"
+    ],
+    "fatal_flaw": "El precio est\u00e1 por debajo de la SMA50 y el volumen est\u00e1 dr\u00e1sticamente reducido, lo que evidencia una ruptura de la tendencia alcista y falta de participaci\u00f3n de compradores",
+    "downside_target": 380.0,
+    "scenario": "Una ca\u00edda del precio bajo la SMA50 combinada con un deterioro en la demanda de chips AI (por retrasos en la adopci\u00f3n o competencia de Intel) provocar\u00eda una venta masiva, arrastrando el precio a niveles cercanos a $380 y generando p\u00e9rdidas catastr\u00f3ficas para los compradores"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n muy alta (0.92) respaldada por datos concretos: demanda de IA, expansi\u00f3n de $64\u202fbn y precios por encima de la SMA20. Los argumentos bear, aunque basados en datos de volumen y SMA50, presentan una convicci\u00f3n muy baja (0.12). El RSI est\u00e1 neutral (48.87) y no requiere ajuste. El nivel de stop loss se sit\u00faa en $380, que rompe la tesis alcista al quedar por debajo de la SMA50 y del rango de soporte clave, mientras que el objetivo de $515 ofrece una relaci\u00f3n riesgo/beneficio \u22482.2 (>1.5).",
+    "bull_weight": 0.7,
+    "bear_weight": 0.3,
+    "entry": 422.16,
+    "take_profit": 515.0,
+    "stop_loss": 380.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 2.20 \u2265 1.5",
+      "Posici\u00f3n $3,457 \u2264 m\u00e1ximo $9,877",
+      "Capital suficiente ($3,457)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3456.8
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 772.83,
+      "spy_sma200": 703.45,
+      "above_sma200": true,
+      "vol_20d": 13.9,
+      "vol_60d": 14.0,
+      "drawdown_60d": -0.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 37,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

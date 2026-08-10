@@ -1,35 +1,35 @@
 {
-  "last_entry_run": "2026-08-07T10:01:24.110156-04:00",
+  "last_entry_run": "2026-08-10T13:10:58.874873-04:00",
   "protection": {
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-10T12:13:54.128256-04:00"
+      "updated": "2026-08-10T13:08:46.236198-04:00"
     },
     "AVGO": {
       "stop": 405.91,
       "take_profit": 452.3,
       "breakeven": true,
-      "updated": "2026-08-10T12:13:52.933881-04:00"
+      "updated": "2026-08-10T13:08:45.671484-04:00"
     },
     "NVDA": {
       "stop": 211.41,
       "take_profit": 285.0,
       "breakeven": true,
-      "updated": "2026-08-10T12:13:53.272572-04:00"
+      "updated": "2026-08-10T13:08:45.998437-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-08-10T12:13:53.870288-04:00"
+      "updated": "2026-08-10T13:08:46.092210-04:00"
     },
-    "SPCX": {
-      "stop": 130.2,
-      "take_profit": 140.0,
-      "breakeven": true,
-      "updated": "2026-08-10T12:13:53.574580-04:00"
+    "ARM": {
+      "stop": 225.0,
+      "take_profit": 345.0,
+      "breakeven": false,
+      "updated": "2026-08-10T13:10:58.873537-04:00"
     }
   },
   "regime": {
@@ -38,13 +38,13 @@
       "vol 20d 13.9% > 13.5%"
     ],
     "metrics": {
-      "spy_price": 773.87,
+      "spy_price": 772.83,
       "spy_sma200": 703.45,
       "above_sma200": true,
       "vol_20d": 13.9,
       "vol_60d": 14.0,
-      "drawdown_60d": 0.0,
-      "vixy_ratio": 0.86
+      "drawdown_60d": -0.04,
+      "vixy_ratio": 0.87
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.7
     },
     "degraded": false,
-    "updated": "2026-08-10T12:13:51.938587-04:00"
+    "updated": "2026-08-10T13:08:44.870541-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -1.3,
       "bias": "corto"
     },
-    "updated": "2026-08-10T12:13:52.561902-04:00"
+    "updated": "2026-08-10T13:08:45.584322-04:00"
   }
 }

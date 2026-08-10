@@ -1,0 +1,140 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-08-10T13:09:23.989527-04:00",
+  "portfolio": {
+    "equity": 98765.58,
+    "cash": 80461.04,
+    "buying_power": 373096.87
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-08-10T13:08:48.585445",
+    "price": {
+      "current": 881.46,
+      "sma20": 885.35,
+      "sma50": 969.86,
+      "rsi14": 42.17,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": 0.35,
+      "change_5d_pct": 6.33,
+      "change_1m_pct": -10.0
+    },
+    "volume": {
+      "current": 389538,
+      "avg_20d": 1143885,
+      "ratio": 0.34,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "What's Going On With Marvell Technology Stock Monday?",
+        "summary": "Marvell (MRVL) stock rises in premarket as Wall Street weighs AI data center demand ahead of Q2 earnings on Aug. 27."
+      },
+      {
+        "headline": "Micron\u2019s Memory Boom Is Heading For A Peak, Analyst Warns",
+        "summary": "Micron (MU) stock gains premarket as Citi cuts target to $1,150, citing slowing memory pricing and China capacity risks."
+      },
+      {
+        "headline": "Citigroup Maintains Buy on Micron Technology, Lowers Price Target to $1150",
+        "summary": ""
+      },
+      {
+        "headline": "QUICK SPARK: China\u2019s $488 Billion Chip Giant ChangXin Memory Has Been Added to this AI Memory ETF",
+        "summary": "Tuttle\u2019s HBMX ETF adds CXMT exposure, giving investors access to China\u2019s $488 billion memory-chip giant as AI demand fuels the global memory boom."
+      },
+      {
+        "headline": "Chinese Buying Lifts Gold And Silver From Technical Support; Jobs Report Shocker And Iran Hopium Trigger Aggressive Stock Buying",
+        "summary": "\n\n\n\nShocking Jobs Report\n\n\n\nPlease click here for an enlarged chart of SPDR S&amp;P 500 ETF Trust (NYSE:SPY) which represents the benchmark stock market index S&amp;P 500 (SPX).\n\n\n\nNote the following:"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.93,
+    "thesis": "Microchip Technology (MU) est\u00e1 posicionada para un fuerte rebote y ruptura al alza tras una correcci\u00f3n t\u00e9cnica que ha dejado el precio por debajo de medias m\u00f3viles clave, ofreciendo una oportunidad de compra con gran upside potencial",
+    "arguments": [
+      "El precio actual de $881.46 est\u00e1 apenas $3.9 por debajo de la SMA20 de $885.35, indicando que una m\u00ednima recuperaci\u00f3n superar\u00e1 la media de corto plazo y disparar\u00e1 el impulso alcista",
+      "El RSI de 42.17 muestra que el stock est\u00e1 en zona de sobreventa relativa, dejando amplio margen para subir hacia niveles de sobrecompra alrededor de 60\u201170",
+      "El desempe\u00f1o de 5\u2011d\u00edas (+6.33%) sugiere que el impulso reciente est\u00e1 revirtiendo la ca\u00edda del mes (-10%) y que la presi\u00f3n de venta est\u00e1 disminuyendo",
+      "El volumen actual es solo 34% del promedio de 20 d\u00edas, lo que implica que la mayor\u00eda de los participantes a\u00fan no han entrado; un repunte atraer\u00e1 r\u00e1pidamente flujo de capital y elevar\u00e1 el precio"
+    ],
+    "key_catalyst": "Un breakout por encima de la SMA20 combinado con la reactivaci\u00f3n de la demanda de semiconductores para IA y centros de datos, impulsado por los recientes informes positivos de Micron y el respaldo de Citi, desencadenar\u00e1 una compra masiva",
+    "price_target": 1150.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en MU est\u00e1 sobrevalorado y vulnerable a m\u00faltiples debilidades estructurales",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de ambas medias m\u00f3viles (20 y 50), indicando tendencia bajista sostenida",
+      "El volumen es solo el 34% del promedio, mostrando falta de apoyo de compradores y posible agotamiento de impulso",
+      "El RSI en 42 sugiere momentum neutro\u2011d\u00e9bil y no hay se\u00f1ales de sobrecompra que justifiquen un repunte"
+    ],
+    "fatal_flaw": "El precio est\u00e1 atrapado bajo la SMA\u201150, una barrera t\u00e9cnica que ha contenido al activo durante meses y que, sin un fuerte flujo de compra, actuar\u00e1 como techo y disparar\u00e1 ventas",
+    "downside_target": 720.0,
+    "scenario": "Una ruptura de la SMA\u201150 a la baja acompa\u00f1ada de un aumento del volumen de venta provocar\u00eda una ca\u00edda r\u00e1pida hacia el soporte de $720, generando p\u00e9rdidas catastr\u00f3ficas para cualquier posici\u00f3n larga"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis alcista tiene una convicci\u00f3n muy alta (0.93) respaldada por datos concretos: precio cercano a la SMA20, RSI en zona de sobreventa relativa y fuerte impulso de 5\u2011d\u00edas (+6.33%). El an\u00e1lisis bajista tiene convicci\u00f3n baja (0.12) y se basa en la misma falta de soporte de volumen y medias m\u00f3viles, pero no supera el umbral cr\u00edtico (0.72). No hay sobrecompra (RSI<72) ni sobreventa extrema (RSI>28) que modifique la convicci\u00f3n. Por lo tanto, el peso del caso bull domina (~85\u202f%) y se justifica una posici\u00f3n larga con R/R >1.5.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 881.46,
+    "take_profit": 1150.0,
+    "stop_loss": 840.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 6.48 \u2265 1.5",
+      "Posici\u00f3n $3,457 \u2264 m\u00e1ximo $9,877",
+      "Capital suficiente ($3,457)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3456.8
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 772.83,
+      "spy_sma200": 703.45,
+      "above_sma200": true,
+      "vol_20d": 13.9,
+      "vol_60d": 14.0,
+      "drawdown_60d": -0.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 37,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

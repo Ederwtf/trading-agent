@@ -1,0 +1,148 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-08-10T13:09:02.252610-04:00",
+  "portfolio": {
+    "equity": 98765.58,
+    "cash": 80461.04,
+    "buying_power": 373096.87
+  },
+  "research": {
+    "symbol": "ARM",
+    "timestamp": "2026-08-10T13:08:47.331895",
+    "price": {
+      "current": 271.23,
+      "sma20": 266.24,
+      "sma50": 320.91,
+      "rsi14": 44.68,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": -4.04,
+      "change_5d_pct": 13.49,
+      "change_1m_pct": -16.09
+    },
+    "volume": {
+      "current": 54120,
+      "avg_20d": 259459,
+      "ratio": 0.21,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "SoftBank Shrugs Off AI Bubble Fears: 'Supply Is Very Much Short'",
+        "summary": "SoftBank beats Q1 profit estimates as an $8.2B gain on Intel offsets year-over-year earnings decline. Get the full financial breakdown."
+      },
+      {
+        "headline": "Arm Jumps More Than 11%: Data Center Royalty Growth Drives Post-Selloff Semiconductor Rally",
+        "summary": "Arm Holdings (ARM) stock surged over 11% on Tuesday after analysts highlighted 100%+ year-over-year data center royalty growth and strong AI chip demand."
+      },
+      {
+        "headline": "Caterpillar, Wayfair, Zebra Technologies, Gartner And Other Big Stocks Moving Higher On Tuesday",
+        "summary": "US stocks rose, with Dow Jones gaining 500 points on Tue.Caterpillar Inc (CAT) shares surged 8.3% on better-than-expected earnings. Other stocks recording gains include IBTA, BLZE, AMRC, W, VOYG, UFPT"
+      },
+      {
+        "headline": "5 Stocks In The Spotlight From Wall Street's Most Accurate Analysts Last Month",
+        "summary": "Friday&#39;s close: Nasdaq +1%. Analysts make daily stock picks but their accuracy varies. Benzinga&#39;s API provides top picks from most accurate analysts."
+      },
+      {
+        "headline": "Rosenblatt Maintains Buy on ARM Holdings, Lowers Price Target to $250",
+        "summary": ""
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "ARM est\u00e1 posicionada para un repunte explosivo impulsado por la escasez de capacidad de IA y el crecimiento de royalties de centros de datos",
+    "arguments": [
+      "El precio est\u00e1 por encima de la SMA20 (271.23 > 266.24) indicando impulso a corto plazo",
+      "El RSI de 44.68 muestra margen amplio para subir antes de sobrecomprar",
+      "El cambio de 5 d\u00edas es +13.49% pese a una ca\u00edda reciente, se\u00f1al de reversi\u00f3n fuerte"
+    ],
+    "key_catalyst": "Escasez de suministro de chips para IA seg\u00fan SoftBank, que impulsa demanda de licencias de arquitectura ARM",
+    "price_target": 345.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El impulso alcista de ARM es fr\u00e1gil y est\u00e1 respaldado por indicadores t\u00e9cnicos d\u00e9biles y un volumen extremadamente bajo que sugiere falta de compromiso del mercado",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, indicando una tendencia a medio plazo todav\u00eda bajista",
+      "El RSI est\u00e1 en 44.68, lejos de niveles de sobrecompra y muestra ausencia de fuerza compradora",
+      "El volumen actual es solo el 21% del promedio de 20 d\u00edas, lo que evidencia que el movimiento del precio no est\u00e1 respaldado por participaci\u00f3n real"
+    ],
+    "fatal_flaw": "El precio est\u00e1 negociando por debajo de la SMA50, una barrera t\u00e9cnica clave que ha actuado como resistencia hist\u00f3rica y que, combinada con el volumen deprimido, sugiere que cualquier rebote es insostenible",
+    "downside_target": 225.0,
+    "scenario": "Una ruptura clara por debajo de la SMA50 acompa\u00f1ada de un aumento del volumen de venta provocar\u00eda una ca\u00edda r\u00e1pida hacia el soporte de 225, desencadenando stop\u2011losses y ventas programadas que arrastrar\u00edan el precio a niveles de p\u00e9rdida catastr\u00f3fica"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.86,
+    "reasoning": "Los argumentos bull est\u00e1n respaldados por datos (precio > SMA20, RSI 44.68, +13.49% en 5d) y presentan una convicci\u00f3n alta (0.92). Los argumentos bear tambi\u00e9n est\u00e1n basados en datos (precio < SMA50, volumen 21% del promedio) pero su convicci\u00f3n es menor (0.78) y el RSI no indica sobreventa ni sobrecompra. El ratio riesgo/beneficio calculado con TP 345 y SL 225 da R/R\u22481.6 (>1.5), cumpliendo el requisito m\u00ednimo. Por tanto, pese a la debilidad medio\u2011plazo, la probabilidad de un rebote swing es mayor, lo que justifica una posici\u00f3n compra con tama\u00f1o controlado.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 271.23,
+    "take_profit": 345.0,
+    "stop_loss": 225.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.86 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 1.60 \u2265 1.5",
+      "Posici\u00f3n $3,457 \u2264 m\u00e1ximo $9,877",
+      "Capital suficiente ($3,457)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3456.8
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 772.83,
+      "spy_sma200": 703.45,
+      "above_sma200": true,
+      "vol_20d": 13.9,
+      "vol_60d": 14.0,
+      "drawdown_60d": -0.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 37,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "ad7f597f-e6bb-4a00-971e-2ad337dcbf54",
+    "symbol": "ARM",
+    "side": "buy",
+    "shares": 12,
+    "order_class": "bracket",
+    "estimated_value": 3260.88,
+    "take_profit": 345.0,
+    "stop_loss": 225.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-10T13:10:58.873392"
+  }
+}
