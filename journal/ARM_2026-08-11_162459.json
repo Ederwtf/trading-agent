@@ -1,0 +1,24 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-08-11T16:24:59.844513-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 12.0,
+    "avg_entry_price": 271.81,
+    "current_price": 269.35,
+    "unrealized_pl": -29.52,
+    "unrealized_plpc": -0.00905
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 225.0,
+      "take_profit": 345.0,
+      "breakeven": false
+    }
+  }
+}
