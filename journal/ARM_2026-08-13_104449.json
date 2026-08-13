@@ -1,0 +1,27 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-08-13T10:44:49.028786-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 12.0,
+    "avg_entry_price": 271.81,
+    "current_price": 288.73,
+    "unrealized_pl": 203.04,
+    "unrealized_plpc": 0.06225
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "694a8f0c-8cea-4fa0-afd9-c8ea0371778f",
+      "order_class": "oco",
+      "stop_price": 273.17,
+      "take_profit": 345.0,
+      "qty": 12,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
