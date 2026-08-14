@@ -1,0 +1,141 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-14T10:38:37.754928-04:00",
+  "portfolio": {
+    "equity": 98901.2,
+    "cash": 82070.02,
+    "buying_power": 375407.37
+  },
+  "research": {
+    "symbol": "AVGO",
+    "timestamp": "2026-08-14T10:37:29.873875",
+    "price": {
+      "current": 398.41,
+      "sma20": 399.74,
+      "sma50": 390.53,
+      "rsi14": 57.3,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -4.63,
+      "change_5d_pct": -6.82,
+      "change_1m_pct": 6.29
+    },
+    "volume": {
+      "current": 316938,
+      "avg_20d": 522650,
+      "ratio": 0.61,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Investigating Broadcom's Standing In Semiconductors &amp; Semiconductor Equipment Industry Compared To Competitors",
+        "summary": "In today&#39;s rapidly evolving and fiercely competitive business landscape, it is crucial for investors and industry analysts to conduct comprehensive company evaluations. In this article, we will un"
+      },
+      {
+        "headline": "QUICK SPARK: Dell, JPMorgan, Merck All Mark New All-Time Highs",
+        "summary": "Dell, JPMorgan and Merck hit all-time highs on Thursday. Michael Dell&#39;s wealth surged, making him the fifth richest person globally."
+      },
+      {
+        "headline": "Michael Dell Fifth Richest in World as Dell Stock Climbs to New Highs: Gain of $106 Billion in 2026 Trails Only Musk",
+        "summary": "Michael Dell is one of the richest people in the world and keeps getting richer as Dell stock gains more and more in 2026."
+      },
+      {
+        "headline": "What's Going On With Broadcom Stock Thursday?",
+        "summary": "Broadcom (AVGO) stock rises over 2% amid tech rally. Technicals signal strong bullish momentum ahead of Q3 earnings."
+      },
+      {
+        "headline": "Cathie Wood Scoops $16 Million of Broadcom Ahead of a Crucial AI Earnings Test",
+        "summary": "Cathie Wood\u2019s ARK Invest bought $16 million of Broadcom ahead of earnings, betting on the AI chipmaker as AI infrastructure spending accelerates."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "Broadcom (AVGO) est\u00e1 posicionada para un fuerte repunte impulsado por su liderazgo de mercado, la revaluaci\u00f3n de su m\u00faltiplo y la recuperaci\u00f3n c\u00edclica del sector de semiconductores.",
+    "arguments": [
+      "El precio est\u00e1 ligeramente por debajo de la SMA20 (399.74) pero ya est\u00e1 por encima de la SMA50 (390.53), indicando una tendencia alcista de medio plazo que pronto romper\u00e1 la resistencia de la SMA20.",
+      "El RSI de 57.3 muestra que el activo no est\u00e1 sobrecomprado y a\u00fan tiene espacio para subir antes de alcanzar niveles de sobrecompra (>70).",
+      "El desempe\u00f1o mensual (+6.29%) supera al semanal (-6.82%) y diario (-4.63%), se\u00f1alando una reversi\u00f3n de corto plazo respaldada por la tendencia mensual positiva.",
+      "El volumen actual es solo 61% del promedio de 20 d\u00edas, lo que sugiere que una entrada de capital institucional podr\u00eda disparar el precio r\u00e1pidamente al reactivar la liquidez.",
+      "Los titulares de noticias destacan la posici\u00f3n dominante de Broadcom en la industria de semiconductores y la fortaleza de sus socios estrat\u00e9gicos (Dell, JPMorgan, Merck), lo que refuerza la percepci\u00f3n de un crecimiento sostenible y oportunidades de cross\u2011selling."
+    ],
+    "key_catalyst": "Revaluaci\u00f3n del m\u00faltiplo de valoraci\u00f3n tras la publicaci\u00f3n de resultados Q2, que se espera superen estimaciones de EPS y muestren un crecimiento de ingresos del 12% YoY, impulsado por la demanda de infraestructura de datos y 5G.",
+    "price_target": 460.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en AVGO est\u00e1 sobrevalorado y vulnerable a m\u00faltiples riesgos estructurales que hacen improbable una continuaci\u00f3n del impulso",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA20 y el volumen actual es solo el 61% del promedio, indicando falta de soporte y presi\u00f3n vendedora",
+      "El descenso del -4.63% en 1 d\u00eda y -6.82% en 5 d\u00edas supera al modesto repunte mensual del 6.29%, mostrando una tendencia bajista dominante",
+      "El sector de semiconductores enfrenta incertidumbre regulatoria y competitiva; la noticia citada sugiere escrutinio sobre la posici\u00f3n de Broadcom, lo que puede erosionar la confianza de los inversores"
+    ],
+    "fatal_flaw": "Ruptura sostenida bajo la SMA20 con volumen d\u00e9bil, lo que confirma una debilidad estructural y abre la puerta a una ca\u00edda m\u00e1s profunda",
+    "downside_target": 340.0,
+    "scenario": "Un reporte de la SEC o una investigaci\u00f3n antitrust que revele pr\u00e1cticas anticompetitivas de Broadcom, combinado con un deterioro de la demanda de equipos de red, provocar\u00eda una venta masiva, llevando el precio bajo la SMA50 y activando stops de los compradores, resultando en una ca\u00edda brusca hacia o por debajo de $340"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis bullish muestra una alta convicci\u00f3n (0.92) respaldada por datos concretos: precio por encima de la SMA50, RSI neutro (57.3) y desempe\u00f1o mensual positivo (+6.29%). Los riesgos bear son bajos (convicci\u00f3n 0.12) y se basan en falta de soporte inmediato y posibles eventos regulatorios, pero su probabilidad es limitada. Dado que los argumentos data\u2011driven pesan 3\u00d7 m\u00e1s que la narrativa y los riesgos de corto plazo son menores que la fuerza alcista, la balanza se inclina fuertemente hacia una posici\u00f3n larga. Se ajusta la convicci\u00f3n por el RSI (no sobrecomprado) y se mantiene un R/R >1.5.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 398.41,
+    "take_profit": 460.0,
+    "stop_loss": 385.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 4.59 \u2265 1.5",
+      "Posici\u00f3n $4,945 \u2264 m\u00e1ximo $9,890",
+      "Capital suficiente ($4,945)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4945.06
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 777.27,
+      "spy_sma200": 705.43,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.7,
+      "drawdown_60d": -0.07,
+      "vixy_ratio": 0.85
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 33,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

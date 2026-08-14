@@ -1,0 +1,139 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-08-14T10:38:02.517088-04:00",
+  "portfolio": {
+    "equity": 98901.2,
+    "cash": 82070.02,
+    "buying_power": 375407.37
+  },
+  "research": {
+    "symbol": "AMD",
+    "timestamp": "2026-08-14T10:37:28.407126",
+    "price": {
+      "current": 509.16,
+      "sma20": 494.17,
+      "sma50": 510.29,
+      "rsi14": 52.45,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": 5.42,
+      "change_5d_pct": 5.36,
+      "change_1m_pct": 1.56
+    },
+    "volume": {
+      "current": 238676,
+      "avg_20d": 747851,
+      "ratio": 0.32,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "What's Going On With AMD Stock Friday?",
+        "summary": "AMD stock ticks up as the chipmaker plans a record $5B bond sale to accelerate AI server expansion and fund data-center growth."
+      },
+      {
+        "headline": "AMD Prepares Record $5B Bond Sale to Fuel Massive AI Expansion",
+        "summary": "Advanced Micro Devices plans a record $5 billion bond sale to fund aggressive AI infrastructure investments, refinance debt, and power key partnerships with Microsoft and Anthropic."
+      },
+      {
+        "headline": "Everyone Is Chasing Nvidia: BofA Securities Sees $210 Billion CPU Boom for These 3 Stocks",
+        "summary": "BofA Securities sees AI agents driving server CPU demand to $210 billion by 2030, with AMD, Intel and ARM positioned for the next AI wave."
+      },
+      {
+        "headline": "'AMD to Raise as Much as $5B From Debt Offering'- Bloomberg",
+        "summary": ""
+      },
+      {
+        "headline": "Advanced Micro Devices Files Automatic Shelf Registration Prospectus For Debt Offering Of Indeterminate Size",
+        "summary": ""
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.93,
+    "thesis": "AMD is poised for a breakout rally as AI\u2011driven demand, record financing, and technical upside converge",
+    "arguments": [
+      "Price is already 3% above the 20\u2011day SMA (494.17) while the 50\u2011day SMA (510.29) is just 0.2% higher, indicating a near\u2011term cross that typically triggers strong upside",
+      "RSI at 52.45 shows room to climb without being overbought, and the stock has outperformed the market with +5.42% YTD versus the sector\u2019s average",
+      "A $5\u202fbillion bond issuance will fund massive AI chip capacity expansion, positioning AMD to capture a share of the $210\u202fbillion CPU/AI boom highlighted by BofA Securities"
+    ],
+    "key_catalyst": "Closing of the $5\u202fB bond sale and the subsequent rollout of next\u2011gen AI\u2011optimized GPUs expected within the next 2\u20113 months",
+    "price_target": 620.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade alcista en AMD est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n significativa",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, indicando tendencia bajista a medio plazo",
+      "El volumen actual es solo el 32% del promedio, mostrando falta de apoyo de compradores",
+      "El impulso de noticias es superficial; el bono de $5\u202fB aumenta deuda y el hype de IA no se traduce en ingresos inmediatos"
+    ],
+    "fatal_flaw": "El precio est\u00e1 por debajo de la SMA50, se\u00f1al clara de que la tendencia dominante sigue siendo bajista",
+    "downside_target": 440.0,
+    "scenario": "Una ruptura bajo la SMA50 acompa\u00f1ada de un aumento del spread de cr\u00e9dito por el nuevo bono de $5\u202fB provocar\u00eda una venta masiva, llevando el precio a niveles cercanos a $440 y desencadenando stops de margen en posiciones largas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.68,
+    "reasoning": "El an\u00e1lisis bullish tiene mayor convicci\u00f3n (0.93) y est\u00e1 sustentado por datos claros (cruce cercano de SMA20/50, RSI neutral y emisi\u00f3n de bonos que financiar\u00e1 expansi\u00f3n AI). El an\u00e1lisis bearish, aunque tambi\u00e9n basado en datos (precio bajo SMA50, bajo volumen), tiene convicci\u00f3n menor (0.78) y no supera el umbral de 0.72 con bull <0.58, por lo que no se activa la regla de HOLD. El RSI est\u00e1 en 52.45, sin sobrecompra ni sobreventa, por lo que no se ajusta la convicci\u00f3n. El nivel de stop loss se fija en 440, que invalidar\u00eda la tesis alcista (ruptura bajo SMA50 y deterioro del cr\u00e9dito). El take profit se coloca en 620, primer objetivo t\u00e9cnico mencionado, ofreciendo una relaci\u00f3n R/R \u22481.6 (>1.5).",
+    "bull_weight": 0.543,
+    "bear_weight": 0.457,
+    "entry": 509.16,
+    "take_profit": 620.0,
+    "stop_loss": 440.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.68 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.60 \u2265 1.5",
+      "Posici\u00f3n $4,945 \u2264 m\u00e1ximo $9,890",
+      "Capital suficiente ($4,945)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4945.06
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 777.27,
+      "spy_sma200": 705.43,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.7,
+      "drawdown_60d": -0.07,
+      "vixy_ratio": 0.85
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 33,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

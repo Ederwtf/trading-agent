@@ -1,0 +1,150 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-14T10:39:11.081802-04:00",
+  "portfolio": {
+    "equity": 98901.2,
+    "cash": 82070.02,
+    "buying_power": 375407.37
+  },
+  "research": {
+    "symbol": "TSM",
+    "timestamp": "2026-08-14T10:37:32.824136",
+    "price": {
+      "current": 426.19,
+      "sma20": 412.16,
+      "sma50": 425.17,
+      "rsi14": 64.41,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": -0.99,
+      "change_5d_pct": 1.49,
+      "change_1m_pct": 3.96
+    },
+    "volume": {
+      "current": 49418,
+      "avg_20d": 614543,
+      "ratio": 0.08,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Nvidia's Next-Gen Feynman AI Platform Is Ramping Up, Forcing TSMC to Race Ahead: Report",
+        "summary": "Nvidia is reportedly accelerating Feynman development, pushing TSMC to ramp 2nm and advanced packaging capacity."
+      },
+      {
+        "headline": "Trump Wanted Advanced Tech Made in America, Tim Cook Brought Mac Mini Production to Texas: 'Thank You' for the $600 Billion Commitment, Says Howard Lutnick",
+        "summary": "Apple is bringing Mac mini production to Texas as it expands U.S. manufacturing amid Trump\u2019s pressure to make more products domestically."
+      },
+      {
+        "headline": "AMD Prepares Record $5B Bond Sale to Fuel Massive AI Expansion",
+        "summary": "Advanced Micro Devices plans a record $5 billion bond sale to fund aggressive AI infrastructure investments, refinance debt, and power key partnerships with Microsoft and Anthropic."
+      },
+      {
+        "headline": "AMD\u2019s 2027 Server Revenue Outlook Is Already 20% Bigger Than the Entire 2025 Market",
+        "summary": "AMD details massive AI growth plans, targeting 80%+ server revenue growth in H2 2026 backed by major cloud commitments."
+      },
+      {
+        "headline": "SK Hynix, Samsung Stocks Rally as Singapore State Fund Adds Stakes on Memory Giants",
+        "summary": "SK Hynix and Samsung jumped more than 7% after a report that Singapore&#39;s Temasek plans direct stakes, lifting Micron, Sandisk and Seagate in US trading."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.93,
+    "thesis": "TSM est\u00e1 posicionada para un impulso masivo al liderar la producci\u00f3n de chips avanzados para la explosi\u00f3n de IA, respaldada por tendencias macro y tecnol\u00f3gicas favorables",
+    "arguments": [
+      "El precio est\u00e1 por encima de SMA20 (426.19>412.16) y SMA50 (426.19>425.17), indicando fuerza alcista sostenida",
+      "RSI de 64.41 muestra momentum bullish sin estar sobrecomprado, dejando espacio para alzas adicionales",
+      "El sector IA est\u00e1 en auge: Nvidia impulsa a TSMC con su plataforma Feynman, mientras AMD lanza una emisi\u00f3n de bonos de $5\u202fB para IA, generando demanda de capacidad de fabricaci\u00f3n de TSMC",
+      "El reciente repunte del 1\u2011mes (+3.96%) y la recuperaci\u00f3n de 5\u2011d\u00edas (+1.49%) confirman tendencia positiva"
+    ],
+    "key_catalyst": "Lanzamiento de la plataforma Feynman de Nvidia que requiere nodos de proceso de 3nm y 2nm, forzando a TSMC a acelerar su capacidad y capturar cuota de mercado en IA",
+    "price_target": 475.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en TSM est\u00e1 sobrevalorado y vulnerable a varios riesgos estructurales que pueden revertir su impulso",
+    "counter_arguments": [
+      "El precio apenas supera la SMA20 y est\u00e1 pr\u00e1cticamente alineado con la SMA50, indicando falta de fuerza real del movimiento",
+      "El volumen es extremadamente bajo (solo 8% del promedio de 20 d\u00edas), lo que sugiere escasa participaci\u00f3n y alta probabilidad de un breakout a la baja",
+      "El RSI est\u00e1 en 64, cerca de niveles de sobrecompra; cualquier retroceso del sector tecnol\u00f3gico o de la demanda de chips AI podr\u00eda disparar una correcci\u00f3n",
+      "Los titulares de noticias son externos (Nvidia, AMD, pol\u00edtica) y no garantizan demanda directa para TSMC; de hecho, la competencia y la diversificaci\u00f3n de la cadena de suministro podr\u00edan reducir su cuota"
+    ],
+    "fatal_flaw": "El soporte t\u00e9cnico es d\u00e9bil: el precio est\u00e1 apenas por encima de la SMA20 y cualquier ca\u00edda del 1% diario ya rompe esa barrera, lo que podr\u00eda desencadenar ventas masivas",
+    "downside_target": 380.0,
+    "scenario": "Una ca\u00edda del 1% en el precio combinado con un repunte del RSI a niveles de sobrecompra y la falta de volumen para sostener el movimiento provocar\u00eda una ruptura de la SMA20, activando stops y vendiendo a precios cercanos a 380, generando p\u00e9rdidas catastr\u00f3ficas para los compradores"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n muy alta (0.93) respaldada por datos concretos: precio por encima de SMA20 y SMA50, RSI en zona de momentum sin sobrecompra, y un impulso sectorial de IA que impulsa la demanda de chips avanzados. Los argumentos bear son d\u00e9biles (convicci\u00f3n 0.12) y se basan en falta de volumen y una supuesta fragilidad del soporte, pero no superan la evidencia alcista. El RSI est\u00e1 por debajo del umbral de sobrecompra (72), por lo que no se reduce la convicci\u00f3n de compra. El nivel de stop loss se coloca justo bajo la SMA20, que act\u00faa como soporte t\u00e9cnico clave, mientras que el take profit coincide con el objetivo de precio bullish (475), ofreciendo una relaci\u00f3n R/R superior a 3:1. Se respeta el l\u00edmite de posici\u00f3n del 10% del portafolio.",
+    "bull_weight": 0.78,
+    "bear_weight": 0.22,
+    "entry": 426.19,
+    "take_profit": 475.0,
+    "stop_loss": 410.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.01 \u2265 1.5",
+      "Posici\u00f3n $4,945 \u2264 m\u00e1ximo $9,890",
+      "Capital suficiente ($4,945)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4945.06
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 777.27,
+      "spy_sma200": 705.43,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.7,
+      "drawdown_60d": -0.07,
+      "vixy_ratio": 0.85
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 33,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "13e6dd8d-0e2f-4212-ad8a-16846c8b617c",
+    "symbol": "TSM",
+    "side": "buy",
+    "shares": 11,
+    "order_class": "bracket",
+    "estimated_value": 4691.94,
+    "take_profit": 475.0,
+    "stop_loss": 410.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-14T10:40:00.612644"
+  }
+}

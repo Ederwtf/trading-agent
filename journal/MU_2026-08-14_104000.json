@@ -1,0 +1,144 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-08-14T10:39:32.660234-04:00",
+  "portfolio": {
+    "equity": 98901.2,
+    "cash": 82070.02,
+    "buying_power": 375407.37
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-08-14T10:37:31.225124",
+    "price": {
+      "current": 970.0,
+      "sma20": 889.86,
+      "sma50": 960.46,
+      "rsi14": 56.28,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 2.12,
+      "change_5d_pct": 10.43,
+      "change_1m_pct": 13.61
+    },
+    "volume": {
+      "current": 272628,
+      "avg_20d": 1060714,
+      "ratio": 0.26,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Michael Burry Doubles Down on Oracle, Micron Nebius Shorts After Saying It's Like 'Shooting Fish in a Barrel'",
+        "summary": "Michael Burry added to AI shorts in Oracle, Micron and Nebius as he warned excess compute capacity could hit the market by 2028."
+      },
+      {
+        "headline": "What's Going On With Micron Technology Stock Friday?",
+        "summary": "Micron (MU) stock ticks higher premarket on surging AI memory demand and a new $250M venture fund deployment."
+      },
+      {
+        "headline": "Lam Research to Spend More Than $3 Billion Expanding Its Global Chip R&D Network, CEO Tim Archer Says 'The Pace of Innovation Is Relentless'",
+        "summary": "Lam Research plans to invest $3B over five years to expand its R&amp;D labs for AI-era chip innovation, boosting experiment capacity 50%"
+      },
+      {
+        "headline": "Micron Announces Launch Of $250M Micron Ventures Paradigm Fund To Invest Across AI Stack, Lifting Total Venture Commitment To $550M",
+        "summary": ""
+      },
+      {
+        "headline": "SK Hynix Is Surging. Here\u2019s How ETF Traders Are Playing the AI Memory Boom",
+        "summary": "SK Hynix\u2019s AI-memory rally is fueling a rush of leveraged ETFs. Here are 7 funds offering 2X long or inverse exposure to the chipmaker."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "Micron Technology (MU) est\u00e1 en una fuerte tendencia alcista impulsada por precios por encima de medias m\u00f3viles, impulso RSI y crecimiento mensual s\u00f3lido, lo que justifica una posici\u00f3n larga agresiva ahora",
+    "arguments": [
+      "Precio actual 970 supera la SMA20 (889.86) y la SMA50 (960.46), confirmando ruptura sostenida",
+      "RSI14 en 56.28 indica momentum positivo sin sobrecompra, espacio para seguir subiendo",
+      "Incrementos de 2.12% en 1 d\u00eda, 10.43% en 5 d\u00edas y 13.61% en 1 mes demuestran fuerza continua del precio",
+      "Volumen actual es bajo pero la tendencia ha sido impulsada por compradores institucionales que no necesitan alta actividad diaria para mover el precio",
+      "Noticias positivas: Lam Research anuncia >$3\u202fbn en expansi\u00f3n de I+D de chips, reforzando la demanda de memoria y respaldando el crecimiento de Micron",
+      "Sentimiento del mercado favorecido por la menci\u00f3n de Michael Burry, que aunque critica, genera atenci\u00f3n y posible flujo de capital hacia el sector de semiconductores"
+    ],
+    "key_catalyst": "Anuncio de Lam Research de invertir m\u00e1s de $3\u202fbn en expansi\u00f3n global de I+D de chips, que impulsar\u00e1 la demanda de memoria DRAM y NAND, beneficiando directamente a Micron",
+    "price_target": 1150.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade es una trampa alcista y el precio de MU est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n fuerte",
+    "counter_arguments": [
+      "El volumen actual es solo el 26% del promedio de 20 d\u00edas, indicando falta de apoyo real detr\u00e1s del movimiento de precios",
+      "El RSI est\u00e1 en 56, lejos de niveles de sobrecompra, lo que sugiere que el impulso alcista a\u00fan no est\u00e1 consolidado",
+      "Las noticias son mixtas y destacan cr\u00edticas de inversores como Michael Burry, lo que puede generar presi\u00f3n bajista y miedo entre los participantes",
+      "El precio est\u00e1 apenas por encima de la SMA20 y SMA50; una ligera ca\u00edda romper\u00eda ambas medias y desencadenar\u00eda ventas automatizadas",
+      "El rally de 13.6% en un mes es r\u00e1pido y t\u00edpico de movimientos especulativos que suelen revertirse"
+    ],
+    "fatal_flaw": "El volumen extremadamente bajo (0.26 del promedio) muestra que el impulso alcista carece de participaci\u00f3n real, lo que hace que cualquier retroceso sea amplificado",
+    "downside_target": 820.0,
+    "scenario": "Una ca\u00edda del precio por debajo de la SMA20 (889.86) desencadena ventas programadas, el bajo volumen no absorbe la presi\u00f3n y los esc\u00e9pticos citan a Burry, provocando una venta masiva que lleva el precio a ~820, una p\u00e9rdida catastr\u00f3fica para los compradores recientes"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bull est\u00e1n mayormente respaldados por datos (precio por encima de SMA20/50, RSI, cambios porcentuales) y su convicci\u00f3n (0.92) supera ampliamente al bear (0.12). El RSI est\u00e1 en 56, no sobrecomprado, por lo que no se reduce la convicci\u00f3n. El riesgo de corto plazo (posible ruptura de SMA20) se controla con un stop justo bajo la SMA20, mientras que el potencial upside al objetivo de 1150 brinda un R/R >1.5. Por tanto, la balanza pesa fuertemente a favor de una posici\u00f3n larga.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 970.0,
+    "take_profit": 1150.0,
+    "stop_loss": 880.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.00 \u2265 1.5",
+      "Posici\u00f3n $4,945 \u2264 m\u00e1ximo $9,890",
+      "Capital suficiente ($4,945)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4945.06
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 777.27,
+      "spy_sma200": 705.43,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.7,
+      "drawdown_60d": -0.07,
+      "vixy_ratio": 0.85
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 33,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

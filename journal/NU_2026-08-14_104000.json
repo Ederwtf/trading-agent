@@ -1,0 +1,141 @@
+{
+  "symbol": "NU",
+  "timestamp": "2026-08-14T10:39:57.840444-04:00",
+  "portfolio": {
+    "equity": 98901.2,
+    "cash": 82070.02,
+    "buying_power": 375407.37
+  },
+  "research": {
+    "symbol": "NU",
+    "timestamp": "2026-08-14T10:37:41.562482",
+    "price": {
+      "current": 15.34,
+      "sma20": 14.23,
+      "sma50": 13.46,
+      "rsi14": 58.83,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 10.36,
+      "change_5d_pct": 10.84,
+      "change_1m_pct": 11.16
+    },
+    "volume": {
+      "current": 4316477,
+      "avg_20d": 3051369,
+      "ratio": 1.41,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Nu Holdings Stock Surges After Impressive Q2 Results",
+        "summary": "Nu Holdings shares are jumping Friday after it reported upbeat Q2 results and Needham raised its price target on the stock."
+      },
+      {
+        "headline": "Susquehanna Maintains Neutral on Nu Holdings, Raises Price Target to $16",
+        "summary": ""
+      },
+      {
+        "headline": "Heartflow, Eton Pharmaceuticals, Nu Holdings And Other Big Stocks Moving Higher On Friday",
+        "summary": "U.S. stocks up, Dow Jones 0.1% higher. HeartFlow (HTFL) shares rise 26.5% on better-than-expected earnings. Other big gains include ETON, VALN, IMXI."
+      },
+      {
+        "headline": "Needham Maintains Buy on Nu Holdings, Raises Price Target to $19",
+        "summary": ""
+      },
+      {
+        "headline": "Nu Holdings Stock Trending After Hours as Record $1.1 Billion Profit Beats Estimates",
+        "summary": "Nu Holdings shares surged 8.34% after hours following strong second-quarter results that beat analyst expectations on revenue and EPS."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "NU est\u00e1 en una fase alcista dominante con impulso t\u00e9cnico y fundamental que justifica una entrada larga ahora",
+    "arguments": [
+      "Precio actual 15.34 est\u00e1 8% por encima de la SMA20 (14.23) y 14% por encima de la SMA50 (13.46), confirmando una tendencia fuerte",
+      "RSI de 58.8 indica todav\u00eda espacio para subir sin sobrecalentarse",
+      "Los retornos son s\u00f3lidos: +10.36% en 1 d\u00eda, +10.84% en 5 d\u00edas y +11.16% en 1 mes, mostrando consistencia de momentum",
+      "Volumen 4.32M supera 1.41\u00d7 el promedio de 20 d\u00edas, confirmando participaci\u00f3n de compradores",
+      "Noticias positivas: resultados Q2 impresionantes, aumento de objetivo de precio a $16 por Susquehanna y cobertura medi\u00e1tica optimista"
+    ],
+    "key_catalyst": "Resultados trimestrales Q2 que superaron expectativas, impulsando un nuevo objetivo de precio de $16 y generando flujo de compra institucional",
+    "price_target": 18.5,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.87,
+    "thesis": "El trade en NU est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n r\u00e1pida",
+    "counter_arguments": [
+      "El impulso de precios se basa en un rally de corto plazo impulsado por noticias positivas, sin respaldo fundamental s\u00f3lido",
+      "Los indicadores t\u00e9cnicos muestran sobrecompra latente: RSI cerca de 60 y precios ya muy por encima de SMA20 y SMA50, se\u00f1alando una posible reversi\u00f3n",
+      "El volumen, aunque superior al promedio, no es inusual y carece de confirmaci\u00f3n de fuerza institucional, lo que sugiere falta de soporte para seguir subiendo"
+    ],
+    "fatal_flaw": "El precio ya est\u00e1 sobreextendido respecto a sus medias m\u00f3viles y cualquier dato de Q2 que no supere expectativas provocar\u00e1 una venta masiva",
+    "downside_target": 12.45,
+    "scenario": "Una revisi\u00f3n a la baja de los resultados de Q2 o una reducci\u00f3n inesperada del objetivo de precio por parte de analistas desencadena una venta de p\u00e1nico, el RSI cae bajo 40 y el precio rompe r\u00e1pidamente los soportes de SMA20 y SMA50, llevando a una ca\u00edda hacia el nivel de 12.45"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.62,
+    "reasoning": "Ambas tesis presentan alta convicci\u00f3n (bull 0.92, bear 0.87). Los argumentos del lado bullish est\u00e1n respaldados por datos concretos (precios sobre SMA, volumen 4.32M\u202f\u00d7\u202f1.41, RSI 58.8, retornos recientes) y superan el peso de la narrativa bear, que se basa m\u00e1s en riesgos de sobrecompra y posible reversi\u00f3n. Seg\u00fan la regla\u202f1, los datos pesan 3\u00d7 m\u00e1s, por lo que el caso bull domina (\u224855\u202f% vs 45\u202f%). El RSI est\u00e1 en rango neutro, sin ajustes. Se decide comprar, pero con un stop que invalide la tesis bear y un TP que garantice al menos R/R\u202f1.5.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 15.34,
+    "take_profit": 18.5,
+    "stop_loss": 13.5,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.62 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.72 \u2265 1.5",
+      "Posici\u00f3n $4,945 \u2264 m\u00e1ximo $9,890",
+      "Capital suficiente ($4,945)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4945.06
+  },
+  "sector": "unknown:NU",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 777.27,
+      "spy_sma200": 705.43,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.7,
+      "drawdown_60d": -0.07,
+      "vixy_ratio": 0.85
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 33,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-04",
+      "net": -27258,
+      "net_pct_oi": -1.3,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}
