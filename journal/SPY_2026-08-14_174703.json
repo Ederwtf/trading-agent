@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-14T17:47:03.175311-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 775.96,
+    "unrealized_pl": 18.8,
+    "unrealized_plpc": 0.00609
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de reducci\u00f3n inesperada de inventarios de gasolina y destilados sigue vigente y no hay noticias adversas que lo invaliden; el precio sigue por encima de SMA20/SMA50 y la posici\u00f3n a\u00fan no ha alcanzado el TP ni el nivel de invalidaci\u00f3n, por lo que la tesis bullish permanece intacta.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}
