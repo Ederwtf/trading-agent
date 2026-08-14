@@ -1,0 +1,27 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-14T11:28:36.849158-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 425.46,
+    "unrealized_pl": -12.43,
+    "unrealized_plpc": -0.00265
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "bcba2b12-4732-44c2-90e3-5390408428f5",
+      "order_class": "oco",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "qty": 11,
+      "replaced": true,
+      "breakeven": false
+    }
+  }
+}
