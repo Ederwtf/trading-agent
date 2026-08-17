@@ -5,45 +5,45 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-17T13:53:00.227442-04:00"
+      "updated": "2026-08-17T14:25:17.861610-04:00"
     },
     "NVDA": {
       "stop": 213.81,
       "take_profit": 285.0,
       "breakeven": true,
-      "updated": "2026-08-17T13:52:49.743018-04:00"
+      "updated": "2026-08-17T14:25:15.171950-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-08-17T13:52:59.345285-04:00"
+      "updated": "2026-08-17T14:25:16.584431-04:00"
     },
     "TSM": {
       "stop": 410.0,
       "take_profit": 475.0,
       "breakeven": false,
-      "updated": "2026-08-17T13:52:59.794521-04:00"
+      "updated": "2026-08-17T14:25:17.363824-04:00"
     },
     "AVGO": {
       "stop": 389.0,
       "take_profit": 452.3,
       "breakeven": false,
-      "updated": "2026-08-17T13:52:48.138928-04:00"
+      "updated": "2026-08-17T14:25:13.640821-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 13.4%, SPY sobre SMA200, drawdown -0.57%"
+      "vol 20d 13.3%, SPY sobre SMA200, drawdown -0.53%"
     ],
     "metrics": {
-      "spy_price": 773.44,
+      "spy_price": 773.72,
       "spy_sma200": 705.86,
       "above_sma200": true,
-      "vol_20d": 13.4,
+      "vol_20d": 13.3,
       "vol_60d": 13.6,
-      "drawdown_60d": -0.57,
+      "drawdown_60d": -0.53,
       "vixy_ratio": 0.86
     },
     "policy": {
@@ -52,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-08-17T13:52:46.329000-04:00"
+    "updated": "2026-08-17T14:25:11.549751-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": 0.5,
       "bias": "largo"
     },
-    "updated": "2026-08-17T13:52:47.209058-04:00"
+    "updated": "2026-08-17T14:25:12.524236-04:00"
   }
 }
