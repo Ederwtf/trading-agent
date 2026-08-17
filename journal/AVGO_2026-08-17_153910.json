@@ -1,0 +1,24 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-17T15:39:10.143366-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 12.0,
+    "avg_entry_price": 393.87,
+    "current_price": 393.66,
+    "unrealized_pl": -2.52,
+    "unrealized_plpc": -0.00053
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de nuevos contratos 5G y data\u2011center sigue vigente y no hay evidencia de que se haya invalidado; el precio sigue justo bajo la SMA20, el RSI est\u00e1 neutral\u2011alcista y el volumen es superior al promedio, por lo que la tesis alcista permanece intacta.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 389.0,
+      "take_profit": 452.3,
+      "breakeven": false
+    }
+  }
+}
