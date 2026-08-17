@@ -1,0 +1,24 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-08-17T10:51:57.235721-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 24.0,
+    "avg_entry_price": 198.23125,
+    "current_price": 226.255,
+    "unrealized_pl": 672.57,
+    "unrealized_plpc": 0.14137
+  },
+  "action": "HOLD",
+  "reason": "La tesis sigue viva: el catalizador AI (nuevo acuerdo en Ohio y fuerte adopci\u00f3n de GPUs) no se ha invalidado y no hay noticias adversas; aunque el precio est\u00e1 ahora por encima de SMA20/50 y el RSI est\u00e1 alto, esos son indicadores de entrada, no de salida, por lo que se mantiene la posici\u00f3n.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 213.33,
+      "take_profit": 285.0,
+      "breakeven": true
+    }
+  }
+}
