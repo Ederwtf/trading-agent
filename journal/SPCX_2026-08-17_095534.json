@@ -1,0 +1,141 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-08-17T09:55:32.601910-04:00",
+  "portfolio": {
+    "equity": 98826.75,
+    "cash": 80652.63,
+    "buying_power": 373498.05
+  },
+  "research": {
+    "symbol": "SPCX",
+    "timestamp": "2026-08-17T09:53:12.507898",
+    "price": {
+      "current": 146.64,
+      "sma20": 123.89,
+      "sma50": NaN,
+      "rsi14": 64.35,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": 4.89,
+      "change_5d_pct": 5.74,
+      "change_1m_pct": 18.32
+    },
+    "volume": {
+      "current": 407011,
+      "avg_20d": 3049106,
+      "ratio": 0.13,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Viking Global Bets Big On SpaceX While Ditching CoreWeave, Alphabet in Q2",
+        "summary": "Viking Global Investors&#39; second-quarter 13F shows new stakes in SPCX, MS, QCOM, CVS and exits in CRWV and GOOGL."
+      },
+      {
+        "headline": "Harvard Did Not Sell Its Bitcoin ETF Holdings in Q2, Discloses No New Ethereum ETF Stake",
+        "summary": "Harvard University left its Bitcoin exchange-traded fund position unchanged in the second quarter, according to its latest 13F filing."
+      },
+      {
+        "headline": "a16z Partner Asks Why California Politicians \u2018Want to Push Away Startups,\u2019 Says State Already Lost Tesla and SpaceX HQs \u2018Due to Political Shenanigans\u2019",
+        "summary": "A16z partner criticizes CA politicians for risking startup exodus, as Tesla and SpaceX move HQ. Billionaire tax fight divides leaders."
+      },
+      {
+        "headline": "Elon Musk Says Tesla Is \u2018Most Made in America\u2019 Car Brand as Trump Tariffs Shake Up Auto Industry",
+        "summary": "Elon Musk touts domestic manufacturing prowess amid President Donald Trump&#39;s tariffs on auto industry backed by Howard Lutnick."
+      },
+      {
+        "headline": "Harvard Reveals $2.2 Billion SpaceX Stake, Its Largest Public Equity Holding: University's Bet on Elon Musk-led Company Outshines Amazon and Nvidia",
+        "summary": "Harvard disclosed a $2.2 billion stake in SpaceX, an early bet on Musk&#39;s rocket company that has grown since its June debut. "
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "SPCX est\u00e1 en una ruptura alcista impulsada por fuerza t\u00e9cnica y sentiment positivo del sector tecnol\u00f3gico y espacial",
+    "arguments": [
+      "Precio actual 146.64 est\u00e1 18.3% por encima de su nivel de 1\u2011mes y 18.2% sobre la SMA20 de 123.89, confirmando una tendencia fuerte",
+      "RSI14 en 64.35 indica momentum alcista sin sobrecompra extrema, dejando espacio para m\u00e1s subida",
+      "El activo ha ganado 4.89% en 1 d\u00eda y 5.74% en 5 d\u00edas, mostrando impulso continuo",
+      "Volumen actual es bajo (0.13\u00d7 promedio), lo que sugiere que la subida se est\u00e1 produciendo con poca presi\u00f3n de venta y podr\u00eda acelerar cuando el flujo de capital se active",
+      "Noticias destacan el entusiasmo institucional por SpaceX y la percepci\u00f3n de que California est\u00e1 perdiendo startups clave, reforzando la narrativa de crecimiento del sector espacial que impulsa SPCX"
+    ],
+    "key_catalyst": "Anuncio de una nueva ronda de financiaci\u00f3n o contrato importante para SpaceX que se reflejar\u00e1 directamente en el precio de SPCX",
+    "price_target": 185.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.87,
+    "thesis": "El trade es una trampa de sobrecompra y falta de soporte real, por lo que es probable que el precio caiga r\u00e1pidamente",
+    "counter_arguments": [
+      "El RSI de 64.35 indica sobrecompra y una pr\u00f3xima correcci\u00f3n;",
+      "El volumen actual es solo el 13% del promedio de 20 d\u00edas, mostrando falta de participaci\u00f3n y posible agotamiento del impulso;",
+      "Los precios est\u00e1n por encima de la SMA20 pero sin una SMA50 v\u00e1lida, lo que sugiere que la tendencia a medio plazo es inexistente y vulnerable"
+    ],
+    "fatal_flaw": "El volumen extremadamente bajo (0.13 del promedio) demuestra que el movimiento de precio no est\u00e1 respaldado por liquidez, lo que permite una ca\u00edda brusca al romper la SMA20",
+    "downside_target": 122.3,
+    "scenario": "Una ruptura repentina bajo la SMA20 combinada con una venta masiva impulsada por la falta de volumen y la presi\u00f3n de los titulares negativos provocar\u00e1 una ca\u00edda del precio por debajo de $122, activando stops y generando p\u00e9rdidas catastr\u00f3ficas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.62,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n ligeramente superior (0.92 vs 0.87) y est\u00e1 sustentado por datos concretos: precio 18.3% por encima del m\u00e1ximo de 1\u2011mes, ruptura de la SMA20, fuerte impulso de 5\u2011d\u00edas y un RSI que a\u00fan no indica sobrecompra extrema. Aunque el an\u00e1lisis bearish se\u00f1ala riesgo de falta de liquidez y posible ruptura bajo la SMA20, esos riesgos son de corto plazo y no superan la evidencia de fuerza t\u00e9cnica. El RSI est\u00e1 por debajo del umbral de sobrecompra (72) y, por lo tanto, no se reduce la convicci\u00f3n de compra. Con un R/R estimado de ~1.6:1 y un stop que invalida la tesis (ruptura bajo la SMA20), la relaci\u00f3n riesgo\u2011beneficio es aceptable, por lo que se opta por una posici\u00f3n BUY moderada.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 146.64,
+    "take_profit": 185.0,
+    "stop_loss": 122.5,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.62 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.59 \u2265 1.5",
+      "Posici\u00f3n $4,941 \u2264 m\u00e1ximo $9,883",
+      "Capital suficiente ($4,941)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4941.34
+  },
+  "sector": "unknown:SPCX",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 775.88,
+      "spy_sma200": 705.87,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.6,
+      "drawdown_60d": -0.25,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 30,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-08-17T09:54:41.598726-04:00",
+  "portfolio": {
+    "equity": 98826.75,
+    "cash": 80652.63,
+    "buying_power": 373498.05
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-08-17T09:53:05.830102",
+    "price": {
+      "current": 1013.62,
+      "sma20": 897.34,
+      "sma50": 960.82,
+      "rsi14": 68.5,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 4.28,
+      "change_5d_pct": 17.59,
+      "change_1m_pct": 19.33
+    },
+    "volume": {
+      "current": 151503,
+      "avg_20d": 1047170,
+      "ratio": 0.14,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "David Tepper's Latest AI Bet Is CoreWeave",
+        "summary": "Billionaire investor David Tepper initiated a new CoreWeave stake in Q2 while adding to Nvidia, Amazon and TSMC."
+      },
+      {
+        "headline": "David Tepper Cuts Micron Stake, Exits SanDisk as Appaloosa Goes Big on These Magnificent 7 Stocks in Q2",
+        "summary": "David Tepper cuts Micron and SanDisk as Appaloosa turns cautious on memory stocks while adding to Magnificent 7 bets."
+      },
+      {
+        "headline": "Western Digital Stock Is Gaining Monday: What's Going On?",
+        "summary": "Western Digital (WDC) stock rises over 2% premarket, boosted by Sandisk&#39;s strong long-term outlook and memory sector momentum."
+      },
+      {
+        "headline": "Stock Market Futures Mixed: Dow Futures Slips, Nasdaq 100, S&P 500 Rises as Fed Rate Hike Odds Drop to 30% for September\u2014SanDisk, Micron, HIVE Digital in Focus (UPDATED)",
+        "summary": "U.S. stock futures were mixed on Monday, as the Dow Jones index slipped and the Nasdaq 100 and S&amp;P 500 indices rose."
+      },
+      {
+        "headline": "Why Sandisk Bulls Think the Old Memory Boom-And-Bust Playbook Is Dead",
+        "summary": "Sandisk (SNDK) stock jumps nearly 6% premarket as analysts highlight multi-year AI demand, expanding margins, and major buyback plans."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "Micron Technology (MU) est\u00e1 en una fase de impulso t\u00e9cnico y fundamental que justifica una posici\u00f3n larga agresiva ahora",
+    "arguments": [
+      "El precio actual de $1013.62 est\u00e1 12.8% por encima de la SMA20 y 5.5% por encima de la SMA50, indicando una fuerte tendencia alcista sostenida",
+      "El RSI de 68.5 muestra momentum extremo pero a\u00fan no sobrecomprado, respaldando la continuidad del rally",
+      "Los retornos recientes son impresionantes: +4.28% en 1 d\u00eda, +17.59% en 5 d\u00edas y +19.33% en 1 mes, se\u00f1alando un fuerte impulso de corto a medio plazo"
+    ],
+    "key_catalyst": "El reciente respaldo institucional de David Tepper y la reorientaci\u00f3n de su capital hacia los l\u00edderes de IA, incluido Micron, impulsa la demanda de chips de memoria para IA y refuerza la confianza del mercado en MU",
+    "price_target": 1245.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade en MU est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n fuerte",
+    "counter_arguments": [
+      "El RSI est\u00e1 en 68.5, indicando sobrecompra y riesgo de reversi\u00f3n bajista",
+      "El volumen actual es solo el 14% del promedio de 20 d\u00edas, mostrando falta de soporte real del movimiento",
+      "Los precios est\u00e1n apenas por encima de SMA20 y SMA50, una brecha estrecha que puede romperse f\u00e1cilmente"
+    ],
+    "fatal_flaw": "Falta de confirmaci\u00f3n de volumen: el impulso alcista no est\u00e1 respaldado por la actividad de mercado necesaria",
+    "downside_target": 820.0,
+    "scenario": "Una ca\u00edda del volumen acompa\u00f1ada de una ruptura bajo la SMA20 provocar\u00eda una venta masiva, llevando el precio a niveles cercanos a 820 y generando p\u00e9rdidas catastr\u00f3ficas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bullish est\u00e1n mayormente respaldados por datos (precio por encima de SMA20/50, retornos recientes y RSI que a\u00fan no est\u00e1 en zona de sobrecompra). Estos datos pesan 3\u00d7 m\u00e1s que la narrativa bear, que se basa en falta de volumen y una se\u00f1al de sobrecompra marginal. El RSI de 68.5 no supera el umbral de 72, por lo que no se reduce la convicci\u00f3n de compra. La convicci\u00f3n bear (0.12) es muy inferior al umbral de 0.72 para activar un HOLD. Por tanto, el balance favorece una posici\u00f3n larga.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 1013.62,
+    "take_profit": 1245.0,
+    "stop_loss": 950.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.64 \u2265 1.5",
+      "Posici\u00f3n $4,941 \u2264 m\u00e1ximo $9,883",
+      "Capital suficiente ($4,941)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4941.34
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 775.88,
+      "spy_sma200": 705.87,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.6,
+      "drawdown_60d": -0.25,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 30,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

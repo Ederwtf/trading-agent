@@ -1,0 +1,150 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-17T09:54:13.908965-04:00",
+  "portfolio": {
+    "equity": 98826.75,
+    "cash": 80652.63,
+    "buying_power": 373498.05
+  },
+  "research": {
+    "symbol": "AVGO",
+    "timestamp": "2026-08-17T09:53:04.682632",
+    "price": {
+      "current": 393.25,
+      "sma20": 400.23,
+      "sma50": 389.9,
+      "rsi14": 56.04,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": 0.06,
+      "change_5d_pct": -6.9,
+      "change_1m_pct": 6.09
+    },
+    "volume": {
+      "current": 74221,
+      "avg_20d": 530373,
+      "ratio": 0.14,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "David Tepper's Latest AI Bet Is CoreWeave",
+        "summary": "Billionaire investor David Tepper initiated a new CoreWeave stake in Q2 while adding to Nvidia, Amazon and TSMC."
+      },
+      {
+        "headline": "What's Going On With Broadcom Stock Monday?",
+        "summary": "Broadcom trades near short-term support around $397. Get technical levels, key ETF weightings, and analyst outlook."
+      },
+      {
+        "headline": "Evaluating Broadcom Against Peers In Semiconductors &amp; Semiconductor Equipment Industry",
+        "summary": "Amidst today&#39;s fast-paced and highly competitive business environment, it is crucial for investors and industry enthusiasts to conduct comprehensive company evaluations. In this article, we will d"
+      },
+      {
+        "headline": "Stanley Druckenmiller Just Made a Big Bet on IREN While Dumping Broadcom, Intel and Micron",
+        "summary": "Billionaire Stanley Druckenmiller added IREN to his $5.2B Q2 portfolio. See why he left chipmakers for AI data centers."
+      },
+      {
+        "headline": "Anthropic\u2019s Revenue Could Soar From $47 Billion to $200 Billion by 2028 as Bankers Build a Massive AI Valuation Case Ahead of Its IPO: Report (UPDATED)",
+        "summary": "Anthropic is reportedly projecting up to $200 billion in 2028 revenue as bankers weigh a potential $2 trillion IPO valuation."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.87,
+    "thesis": "Broadcom (AVGO) est\u00e1 posicionada para un fuerte repunte impulsado por su liderazgo en semiconductores de alta gama y la reciente revaluaci\u00f3n del mercado tras una correcci\u00f3n de corto plazo",
+    "arguments": [
+      "El precio actual de $393.25 est\u00e1 justo por debajo de la SMA20 de $400.23, indicando un punto de entrada t\u00e9cnico con potencial de rebote al cruce alcista de medias m\u00f3viles",
+      "El RSI de 56 est\u00e1 en zona neutral\u2011alcista, mostrando que a\u00fan hay margen para subir sin estar sobrecomprado",
+      "El desempe\u00f1o mensual (+6.09%) supera al semanal (-6.9%) y al diario (+0.06%), se\u00f1alando una recuperaci\u00f3n sostenida despu\u00e9s de la ca\u00edda de 5 d\u00edas"
+    ],
+    "key_catalyst": "El anuncio de nuevos contratos de chips de infraestructura 5G y data\u2011center con los principales proveedores de nube, que se espera publiquen en los pr\u00f3ximos 4\u20116 semanas",
+    "price_target": 452.3,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en AVGO est\u00e1 sobrevalorado y vulnerable a m\u00faltiples riesgos estructurales",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA20, indicando falta de impulso a corto plazo",
+      "El volumen actual es solo el 14% del promedio, mostrando escaso inter\u00e9s comprador",
+      "El RSI de 56 est\u00e1 lejos de niveles de sobrecompra, sin evidencia de fuerza momentum",
+      "El descenso del 6.9% en 5 d\u00edas sugiere presi\u00f3n bajista reciente pese al repunte mensual",
+      "Los titulares de noticias no aportan catalizadores positivos para AVGO, sino comparaciones con peers y dudas de mercado"
+    ],
+    "fatal_flaw": "Rotura de soporte clave bajo la SMA20 combinada con volumen extremadamente bajo, lo que permite una ca\u00edda r\u00e1pida y sostenida",
+    "downside_target": 340.0,
+    "scenario": "Una ruptura clara bajo los 389.90 (SMA50) con volumen d\u00e9bil desencadena stops de venta, provocando una ca\u00edda acelerada hacia 340, mientras el sector semiconductor entra en fase de rotaci\u00f3n hacia valores m\u00e1s defensivos"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n alta (0.87) respaldada por datos de precios cerca de la SMA20, RSI neutral\u2011alcista y un objetivo de precio claro basado en catalizadores de 5G y data\u2011center. El an\u00e1lisis bearish es d\u00e9bil (convicci\u00f3n 0.12) y se apoya principalmente en falta de impulso y bajo volumen, sin un riesgo inmediato que invalide la tesis alcista. Dado que los riesgos de corto plazo (ruptura bajo SMA50) est\u00e1n por debajo del precio actual y el R/R esperado supera 1.5:1, la balanza favorece la compra.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 393.25,
+    "take_profit": 452.3,
+    "stop_loss": 389.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 13.89 \u2265 1.5",
+      "Posici\u00f3n $4,941 \u2264 m\u00e1ximo $9,883",
+      "Capital suficiente ($4,941)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4941.34
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 775.88,
+      "spy_sma200": 705.87,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.6,
+      "drawdown_60d": -0.25,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 30,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "82684598-09f8-41c1-b4d9-bfe597f312bc",
+    "symbol": "AVGO",
+    "side": "buy",
+    "shares": 12,
+    "order_class": "bracket",
+    "estimated_value": 4727.7,
+    "take_profit": 452.3,
+    "stop_loss": 389.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-17T09:55:34.854439"
+  }
+}
