@@ -1,0 +1,27 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-08-17T11:17:29.500116-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 24.0,
+    "avg_entry_price": 198.23125,
+    "current_price": 227.455,
+    "unrealized_pl": 701.37,
+    "unrealized_plpc": 0.14742
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave del lanzamiento de la arquitectura Hopper y los nuevos contratos de IA sigue vigente; los precios actuales est\u00e1n por encima de SMA20/50 y el RSI alto indica impulso, sin evidencia de que la tesis se haya invalidado.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "6fb3780e-a5cf-447c-adc0-4a620f8059ba",
+      "order_class": "oco",
+      "stop_price": 213.81,
+      "take_profit": 285.0,
+      "qty": 24,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
