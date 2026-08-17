@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-17T11:47:31.878533-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 775.06,
+    "unrealized_pl": 15.2,
+    "unrealized_plpc": 0.00493
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de reducci\u00f3n inesperada de inventarios de energ\u00eda sigue vigente y no hay noticias adversas espec\u00edficas que invaliden la tesis bullish; el precio sigue por encima de SMA20/SMA50 y, aunque el RSI est\u00e1 alto, no constituye una ruptura de la tesis.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}

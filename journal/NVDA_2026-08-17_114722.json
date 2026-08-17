@@ -1,0 +1,24 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-08-17T11:47:22.084414-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 24.0,
+    "avg_entry_price": 198.23125,
+    "current_price": 227.33,
+    "unrealized_pl": 698.37,
+    "unrealized_plpc": 0.14679
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (lanzamiento de la arquitectura Hopper y nuevos contratos de IA, como el megadeal de Ohio) sigue vigente y no hay evidencia de que se haya invalidado; el precio est\u00e1 ahora por encima de SMA20/50 y el RSI alto indica impulso, pero la tesis de compra en dip permanece viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 213.81,
+      "take_profit": 285.0,
+      "breakeven": true
+    }
+  }
+}

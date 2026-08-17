@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-17T11:47:39.065943-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 433.53,
+    "unrealized_pl": 76.34,
+    "unrealized_plpc": 0.01627
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (plataforma Feynman de Nvidia) sigue vigente y el precio sigue por encima de SMA20 y SMA50; aunque el RSI est\u00e1 alto, eso no invalida la tesis de rebote, por lo que la posici\u00f3n debe mantenerse.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
