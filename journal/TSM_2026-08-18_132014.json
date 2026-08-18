@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-18T13:20:14.415270-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 412.6709,
+    "unrealized_pl": -153.1101,
+    "unrealized_plpc": -0.03263
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (lanzamiento de la plataforma Feynman de Nvidia que impulsa la demanda de nodos avanzados) sigue vigente y no hay noticias adversas concretas que lo invaliden; aunque el precio est\u00e1 bajo la SMA20 y el RSI est\u00e1 alto, esto forma parte del dip que la estrategia busca capturar.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
