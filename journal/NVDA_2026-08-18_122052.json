@@ -1,0 +1,24 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-08-18T12:20:52.320421-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 24.0,
+    "avg_entry_price": 198.23125,
+    "current_price": 219.865,
+    "unrealized_pl": 519.21,
+    "unrealized_plpc": 0.10913
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de lanzamiento de la arquitectura Hopper y la adopci\u00f3n de GPUs para IA sigue vigente y no hay noticias que lo invaliden; aunque el precio est\u00e1 ahora por encima de SMA20/50 y el RSI est\u00e1 en zona de sobrecompra, esto es ruido dentro del dip\u2011trade y no rompe la tesis original.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 213.81,
+      "take_profit": 285.0,
+      "breakeven": true
+    }
+  }
+}
