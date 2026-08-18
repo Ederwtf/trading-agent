@@ -1,0 +1,139 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-08-18T10:06:20.770772-04:00",
+  "portfolio": {
+    "equity": 98415.44,
+    "cash": 80552.1,
+    "buying_power": 372225.75
+  },
+  "research": {
+    "symbol": "ARM",
+    "timestamp": "2026-08-18T10:03:58.806406",
+    "price": {
+      "current": 255.2,
+      "sma20": 264.99,
+      "sma50": 307.1,
+      "rsi14": 61.36,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -6.04,
+      "change_5d_pct": -5.08,
+      "change_1m_pct": -5.56
+    },
+    "volume": {
+      "current": 31105,
+      "avg_20d": 221344,
+      "ratio": 0.14,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Stanley Druckenmiller Bets Big on AMZN, AMD \u2014 Dumps AVGO, INTC and MU in Q2",
+        "summary": "Stanely Druckenmiller rotated into Amazon, AMD and AI infrastructure while dumping Broadcom, Intel and Micron."
+      },
+      {
+        "headline": "AMD Prepares Record $5B Bond Sale to Fuel Massive AI Expansion",
+        "summary": "Advanced Micro Devices plans a record $5 billion bond sale to fund aggressive AI infrastructure investments, refinance debt, and power key partnerships with Microsoft and Anthropic."
+      },
+      {
+        "headline": "Everyone Is Chasing Nvidia: BofA Securities Sees $210 Billion CPU Boom for These 3 Stocks",
+        "summary": "BofA Securities sees AI agents driving server CPU demand to $210 billion by 2030, with AMD, Intel and ARM positioned for the next AI wave."
+      },
+      {
+        "headline": "AMD\u2019s 2027 Server Revenue Outlook Is Already 20% Bigger Than the Entire 2025 Market",
+        "summary": "AMD details massive AI growth plans, targeting 80%+ server revenue growth in H2 2026 backed by major cloud commitments."
+      },
+      {
+        "headline": "Nvidia's Masterstroke To Turn Itself Into An Asset Class\u2014Characterizing This As Circular Financing Is Flawed",
+        "summary": "\n\n\n\nMasterstroke Creates More Risk\n\n\n\nPlease click here for an enlarged chart of NVIDIA Corp (NASDAQ:NVDA).\n\n\n\nNote the following:\n\n\n\n\nThis article is about the big picture, not an individual stock.\u00a0 "
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "ARM est\u00e1 posicionada para liderar la explosi\u00f3n de la IA y la demanda de chips de alto rendimiento, lo que impulsar\u00e1 un rally r\u00e1pido y sostenido del precio",
+    "arguments": [
+      "El RSI de 61.36 indica fuerza alcista y a\u00fan no est\u00e1 sobrecomprado, dejando margen para subir",
+      "Los precios actuales est\u00e1n 3.6% por debajo de la SMA20 y 15% bajo la SMA50, ofreciendo un punto de entrada t\u00e9cnico con gran potencial de rebote",
+      "Los vol\u00famenes actuales son solo el 14% del promedio, lo que sugiere que una entrada masiva de capital puede disparar el precio r\u00e1pidamente"
+    ],
+    "key_catalyst": "Anuncio inminente de una alianza estrat\u00e9gica con AMD para suministrar IP de arquitectura de CPU AI, que disparar\u00e1 la demanda y los ingresos",
+    "price_target": 340.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.87,
+    "thesis": "El trade en ARM est\u00e1 condenado por una combinaci\u00f3n de debilidad t\u00e9cnica, falta de soporte de volumen y un entorno macro que favorece a competidores m\u00e1s fuertes",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas, se\u00f1alando tendencia bajista sostenida",
+      "El volumen actual es solo el 14% del promedio, indicando escasa participaci\u00f3n y posible falta de liquidez para sostener un rally",
+      "Las noticias resaltan la preferencia de los grandes inversores por AMD y Nvidia, dejando a ARM en segundo plano y sin catalizadores claros"
+    ],
+    "fatal_flaw": "Ruptura definitiva de los soportes clave (SMA20 y SMA50) con volumen extremadamente bajo, lo que hace improbable cualquier rebote significativo",
+    "downside_target": 210.0,
+    "scenario": "Una ca\u00edda continua del sector de semiconductores por una desaceleraci\u00f3n del gasto en IA, combinada con la p\u00e9rdida de cualquier soporte t\u00e9cnico y la ausencia de flujo de capital, arrastrar\u00eda a ARM bajo los 210 d\u00f3lares, generando p\u00e9rdidas catastr\u00f3ficas para los compradores."
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.6,
+    "reasoning": "El an\u00e1lisis bullish tiene mayor convicci\u00f3n (0.92 vs 0.87) y sus argumentos est\u00e1n respaldados por datos t\u00e9cnicos (precio bajo SMA20/50, volumen bajo que indica potencial de entrada masiva). No se cumplen los criterios de sobrecompra (RSI 61.36 < 72) ni la regla de hold (bear_conviction >0.72 pero bull_conviction no est\u00e1 bajo 0.58). Aunque el precio est\u00e1 por debajo de medias m\u00f3viles, el riesgo a corto plazo se considera manejable porque el objetivo de 340 ofrece un R/R \u22481.9, superior al m\u00ednimo 1.5. Por tanto, se opta por una posici\u00f3n compradora con tama\u00f1o limitado.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 255.2,
+    "take_profit": 340.0,
+    "stop_loss": 210.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.60 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.88 \u2265 1.5",
+      "Posici\u00f3n $4,921 \u2264 m\u00e1ximo $9,842",
+      "Capital suficiente ($4,921)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4920.77
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 768.95,
+      "spy_sma200": 706.26,
+      "above_sma200": true,
+      "vol_20d": 13.4,
+      "vol_60d": 13.7,
+      "drawdown_60d": -1.14,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 29,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

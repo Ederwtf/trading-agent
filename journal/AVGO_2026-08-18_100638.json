@@ -1,0 +1,148 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-18T10:04:28.373383-04:00",
+  "portfolio": {
+    "equity": 98415.44,
+    "cash": 80552.1,
+    "buying_power": 372225.75
+  },
+  "research": {
+    "symbol": "AVGO",
+    "timestamp": "2026-08-18T10:03:59.866086",
+    "price": {
+      "current": 379.83,
+      "sma20": 399.87,
+      "sma50": 389.77,
+      "rsi14": 54.37,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -3.23,
+      "change_5d_pct": -8.7,
+      "change_1m_pct": 0.49
+    },
+    "volume": {
+      "current": 123667,
+      "avg_20d": 547550,
+      "ratio": 0.23,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Competitor Analysis: Evaluating Broadcom And Competitors In Semiconductors &amp; Semiconductor Equipment Industry",
+        "summary": "In today&#39;s fast-paced and competitive business landscape, it is essential for investors and industry enthusiasts to thoroughly analyze companies before making investment decisions. In this article"
+      },
+      {
+        "headline": "Nvidia Is the Best S&P 500 Stock of the Past 10, 15, 20 Years \u2014 but 4 Stocks Beat It Over the Past 5 Years",
+        "summary": "Nvidia stock is the top stock gainer over the last 10, 15 and 20 years. Here&#39;s who beats the stock in five-year gains."
+      },
+      {
+        "headline": "Ray Dalio Ups Bet on SPY and IVV: Time to Buy the S&P 500?",
+        "summary": "Ray Dalio boosted his SPY and IVV stakes by $6.2 billion. Here&#39;s what the move means for S&amp;P 500 valuations, technicals and the SPY vs. IVV debate."
+      },
+      {
+        "headline": "Dan Loeb Exits Nvidia, Meta And Broadcom \u2014 Bets Big On Warner Bros. Discovery",
+        "summary": "The investor exited Meta, Nvidia, Broadcom, KLA and Lam Research while adding major positions in Warner Bros. Discovery, Riot Platforms and Block."
+      },
+      {
+        "headline": "Here\u2019s How Much You Would Have Made Owning Broadcom Stock In The Last 15 Years",
+        "summary": "Broadcom (NASDAQ:AVGO) has outperformed the market over the past 15 years by 25.19% on an annualized basis producing an average annual return of 38.66%. Currently, Broadcom has a market capitalization"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "AVGO est\u00e1 subvalorado tras una correcci\u00f3n t\u00e9cnica y se beneficiar\u00e1 de la fuerte demanda de infraestructura de datos y 5G, impulsando un rebote r\u00e1pido",
+    "arguments": [
+      "El precio actual $379.83 est\u00e1 5% por debajo de la SMA20 $399.87, indicando un punto de entrada t\u00e9cnico con margen de upside al re\u2011test de la SMA20",
+      "El RSI14 en 54.37 muestra que el momentum a\u00fan no est\u00e1 sobrecomprado, dejando espacio para subir hacia niveles de 60\u201165 antes de sobrecalentarse",
+      "Broadcom lidera la transici\u00f3n a 5G y data\u2011center; los contratos recientes con hyperscalers y proveedores de telecomunicaciones deben traducirse en ingresos de doble d\u00edgito en los pr\u00f3ximos trimestres"
+    ],
+    "key_catalyst": "Anuncio de nuevos contratos de suministro de chips 5G y data\u2011center con los principales hyperscalers en el pr\u00f3ximo earnings (Q3 2024)",
+    "price_target": 445.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade en AVGO est\u00e1 sobrevalorado y muestra se\u00f1ales t\u00e9cnicas y de flujo que indican una probable ca\u00edda",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas, se\u00f1al de tendencia bajista sostenida",
+      "El volumen actual es solo el 23% del promedio, indicando falta de apoyo y posible abandono de compradores",
+      "El descenso del 3.23% en 1 d\u00eda y 8.7% en 5 d\u00edas muestra presi\u00f3n vendedora que no se ha revertido"
+    ],
+    "fatal_flaw": "Ruptura y permanencia bajo ambas medias m\u00f3viles clave con volumen extremadamente bajo, confirmando falta de demanda",
+    "downside_target": 330.0,
+    "scenario": "Una continuaci\u00f3n del descenso de precios acompa\u00f1ada de deterioro en los resultados de la industria de semiconductores y una mayor preferencia de los inversores por competidores como Nvidia, provocando que AVGO caiga por debajo de $330 y active stops masivos"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "Los argumentos bull est\u00e1n mayormente respaldados por datos (precio 5% bajo SMA20, RSI neutral, fuerte demanda 5G) y su convicci\u00f3n (0.92) supera ampliamente al bear (0.12). El RSI no indica sobrecompra, por lo que no se reduce la convicci\u00f3n. No se cumplen condiciones de hold. El riesgo de corto plazo es manejable y el potencial upside supera el downside con un R/R >1.5.",
+    "bull_weight": 0.75,
+    "bear_weight": 0.25,
+    "entry": 379.83,
+    "take_profit": 445.0,
+    "stop_loss": 340.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.64 \u2265 1.5",
+      "Posici\u00f3n $4,921 \u2264 m\u00e1ximo $9,842",
+      "Capital suficiente ($4,921)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4920.77
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 768.95,
+      "spy_sma200": 706.26,
+      "above_sma200": true,
+      "vol_20d": 13.4,
+      "vol_60d": 13.7,
+      "drawdown_60d": -1.14,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 29,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "433ec35e-05f5-4446-b3c4-1214433ec22e",
+    "symbol": "AVGO",
+    "side": "buy",
+    "shares": 12,
+    "order_class": "bracket",
+    "estimated_value": 4550.4,
+    "take_profit": 445.0,
+    "stop_loss": 340.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-18T10:06:38.153139"
+  }
+}
