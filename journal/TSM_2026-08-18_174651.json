@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-18T17:46:51.236233-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 412.8338,
+    "unrealized_pl": -151.3182,
+    "unrealized_plpc": -0.03225
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (demanda de IA y la plataforma Feynman de Nvidia) sigue vigente y no hay noticias adversas que lo invaliden; la ca\u00edda a 412.83 est\u00e1 justo bajo la SMA20, que es la condici\u00f3n de entrada de la estrategia, por lo que la tesis bullish permanece viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
