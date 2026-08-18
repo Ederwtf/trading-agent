@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-18T11:54:47.273622-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 768.54,
+    "unrealized_pl": -10.88,
+    "unrealized_plpc": -0.00353
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de reducci\u00f3n de inventarios de energ\u00eda sigue vigente y no hay noticias adversas que lo invaliden; aunque el RSI est\u00e1 en zona de sobrecompra, eso no rompe la tesis de rebote, por lo que la posici\u00f3n se mantiene.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}
