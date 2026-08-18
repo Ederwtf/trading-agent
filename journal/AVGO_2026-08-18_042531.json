@@ -1,0 +1,24 @@
+{
+  "symbol": "AVGO",
+  "timestamp": "2026-08-18T04:25:31.311385-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 12.0,
+    "avg_entry_price": 393.87,
+    "current_price": 385.78,
+    "unrealized_pl": -97.08,
+    "unrealized_plpc": -0.02054
+  },
+  "action": "CLOSE",
+  "reason": "SL cruzado ($385.78 \u2264 $389.0)",
+  "source": "local",
+  "execution": {
+    "closed": true,
+    "order_id": "4b012b74-551b-4314-a335-592a091b27f4",
+    "symbol": "AVGO",
+    "qty": 12,
+    "limit_price": 385.39,
+    "extended_hours": true,
+    "timestamp": "2026-08-18T04:25:31.310941"
+  }
+}
