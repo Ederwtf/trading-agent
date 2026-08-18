@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-18T13:51:49.946571-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 412.48,
+    "unrealized_pl": -155.21,
+    "unrealized_plpc": -0.03308
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (lanzamiento de la plataforma Feynman de Nvidia) sigue vigente y no hay noticias adversas concretas que invaliden la tesis; la ca\u00edda actual es un dip dentro de la estrategia, por lo que se mantiene la posici\u00f3n.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
