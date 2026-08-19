@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-19T10:51:12.452802-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 770.89,
+    "unrealized_pl": -1.48,
+    "unrealized_plpc": -0.00048
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de draws de inventarios de gasolina y destilados sigue vigente y no hay evidencia de que se haya invalidado; aunque el RSI est\u00e1 alto y el volumen es bajo, la posici\u00f3n sigue alineada con la estrategia de compra en dips y no se ha alcanzado ni el TP ni el nivel de invalidaci\u00f3n.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}

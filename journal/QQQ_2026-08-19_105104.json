@@ -1,0 +1,27 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-19T10:51:04.181635-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 716.57,
+    "unrealized_pl": 6.54,
+    "unrealized_plpc": 0.00229
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "cabde8c0-fccc-42cc-a7fb-7f5244cb6acc",
+      "order_class": "oco",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "qty": 4,
+      "replaced": true,
+      "breakeven": false
+    }
+  }
+}
