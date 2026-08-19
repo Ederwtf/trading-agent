@@ -1,0 +1,149 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-19T10:05:18.959663-04:00",
+  "portfolio": {
+    "equity": 98103.81,
+    "cash": 80511.13,
+    "buying_power": 371304.02
+  },
+  "research": {
+    "symbol": "QQQ",
+    "timestamp": "2026-08-19T10:04:36.368936",
+    "price": {
+      "current": 714.7,
+      "sma20": 706.68,
+      "sma50": 712.88,
+      "rsi14": 66.71,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": -0.43,
+      "change_5d_pct": -1.23,
+      "change_1m_pct": 0.84
+    },
+    "volume": {
+      "current": 93471,
+      "avg_20d": 575914,
+      "ratio": 0.16,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Stock Market Futures Mixed: Dow Jones Gains, Nasdaq 100 Drops as Trump Says 'No Talks' Are Happening With Iran\u2014 Keysight Technologies, Mercury Systems, SK Hynix in Focus (UPDATED)",
+        "summary": "U.S. stock futures were higher on Wednesday, as the Dow Jones, S&amp;P 500, and Nasdaq 100 indices rose, following Tuesday&#39;s lower close."
+      },
+      {
+        "headline": "3 Sectors Investors Should Buy Now as S&P 500 Stumbles \u2014 Strategist Sees 15%-18% Upside",
+        "summary": "Target an 18% S&amp;P 500 gain: Ryan Detrick reveals why tech, financials, and industrials are the exact 3 sectors you need to buy right now."
+      },
+      {
+        "headline": "Exclusive: Marjorie Taylor Greene Warns Social Security Will Go \u2018Bankrupt\u2019\u2014But Wall Street CIO Backs Scott Bessent Amid 30-Year Yield Surge",
+        "summary": "Marjorie Taylor Greene warns Social Security will go bankrupt, while Wall Street CIO Louis Navellier trusts Scott Bessent on 30-year yields."
+      },
+      {
+        "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+        "summary": "Will the S&amp;P 500 open higher? Polymarket odds are split as Wall Street navigates Asian market rout, oil prices, and upcoming FOMC minutes."
+      },
+      {
+        "headline": "US Debt Nearing $40T; Home Depot earnings Better Than Expected",
+        "summary": "\n\n\n\n$40 Trillion Debt\n\n\n\nPlease click here for an enlarged chart of Home Depot Inc (NYSE:HD).\n\n\n\nNote the following:\n\n\n\n\nThis article is about the big picture, not an individual stock.\u00a0 The chart of H"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "QQQ is poised to resume a strong uptrend as it trades above both the 20\u2011day and 50\u2011day SMAs with momentum still robust, offering a high\u2011conviction long entry.",
+    "arguments": [
+      "Price is 1.14% above the 20\u2011day SMA (714.7 vs 706.68) and 0.27% above the 50\u2011day SMA, confirming bullish trend continuity.",
+      "RSI14 at 66.7 indicates strong upward momentum while still below overbought levels, leaving room for further upside.",
+      "Despite a modest 1\u2011day dip, the 1\u2011month gain of +0.84% shows resilience and the ETF is supported by the tech\u2011heavy Nasdaq 100, which benefits from ongoing sector rotation into growth stocks."
+    ],
+    "key_catalyst": "Continued sector rotation into technology and growth names as investors seek yield alternatives, amplified by recent political stability signals that favor risk\u2011on assets.",
+    "price_target": 770.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade alcista en QQQ est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n inmediata",
+    "counter_arguments": [
+      "El RSI est\u00e1 cerca de niveles de sobrecompra (66.7) y cualquier retroceso provocar\u00e1 venta",
+      "El volumen actual es solo el 16% del promedio, indicando falta de soporte real de compradores",
+      "Los precios han ca\u00eddo 1.23% en 5 d\u00edas y 0.43% en 1 d\u00eda, mostrando presi\u00f3n bajista pese a estar sobre medias m\u00f3viles",
+      "Los titulares de noticias son neutrales o negativos, con tensiones geopol\u00edticas y advertencias de inflaci\u00f3n que pueden disparar volatilidad"
+    ],
+    "fatal_flaw": "Falta de confirmaci\u00f3n de fuerza: el bajo volumen y la tendencia a la baja en los \u00faltimos d\u00edas indican que el impulso alcista es fr\u00e1gil y susceptible a una ruptura de soporte",
+    "downside_target": 680.0,
+    "scenario": "Una ruptura del soporte inmediato bajo la SMA20 (\u2248706.7) combinada con un repunte del RSI a niveles de sobrecompra y una oleada de venta inducida por noticias macro negativas provocar\u00eda una ca\u00edda r\u00e1pida hacia los 680, generando p\u00e9rdidas catastr\u00f3ficas para los compradores"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.86,
+    "reasoning": "El an\u00e1lisis bullish tiene alta convicci\u00f3n (0.92) respaldada por datos concretos: precio por encima de SMA20 y SMA50, RSI a\u00fan no sobrecomprado y tendencia semanal positiva. El an\u00e1lisis bearish, aunque muestra riesgos de corto plazo (volumen bajo, ligera ca\u00edda reciente), tiene menor convicci\u00f3n (0.78) y sus argumentos son menos contundentes. Tras ponderar los argumentos (bull ~60%, bear ~40%) la convicci\u00f3n combinada supera el umbral para comprar. Se establece un TP en el objetivo t\u00e9cnico de 770 y un SL justo bajo la SMA20 (~702) que invalidar\u00eda la tesis alcista, manteniendo un R/R >1.5.",
+    "bull_weight": 0.6,
+    "bear_weight": 0.4,
+    "entry": 714.7,
+    "take_profit": 770.0,
+    "stop_loss": 702.0,
+    "position_size_pct": 0.035
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.86 \u2265 0.70",
+      "Stop loss definido",
+      "R/R 4.35 \u2265 1.5",
+      "Posici\u00f3n $3,434 \u2264 m\u00e1ximo $9,810",
+      "Capital suficiente ($3,434)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 3433.63
+  },
+  "sector": "broad",
+  "regime": {
+    "label": "nervous",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.035,
+      "min_confidence": 0.7
+    },
+    "metrics": {
+      "spy_price": 769.61,
+      "spy_sma200": 706.7,
+      "above_sma200": true,
+      "vol_20d": 13.6,
+      "vol_60d": 13.7,
+      "drawdown_60d": -1.06,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 28,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-11",
+      "net": 11280,
+      "net_pct_oi": 0.5,
+      "bias": "largo"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "c1d20c5b-9503-46c4-9300-0b964e9fa9b3",
+    "symbol": "QQQ",
+    "side": "buy",
+    "shares": 4,
+    "order_class": "bracket",
+    "estimated_value": 2858.64,
+    "take_profit": 770.0,
+    "stop_loss": 702.0,
+    "paper_mode": true,
+    "timestamp": "2026-08-19T10:06:59.935827"
+  }
+}
