@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-19T06:53:00.481893-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 767.43,
+    "unrealized_pl": -15.32,
+    "unrealized_plpc": -0.00497
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de inventarios de energ\u00eda sigue vigente y no hay noticias adversas concretas que lo invaliden; aunque el RSI est\u00e1 alto y el precio retrocedi\u00f3 ligeramente, la posici\u00f3n sigue dentro del rango esperado y el stop\u2011loss protege la p\u00e9rdida.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}
