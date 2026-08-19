@@ -1,0 +1,24 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-08-19T14:21:40.506908-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 769.35,
+    "unrealized_pl": -7.64,
+    "unrealized_plpc": -0.00248
+  },
+  "action": "HOLD",
+  "reason": "juez no disponible: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kwzt7nrjey8vey8dfvr70zvg` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199012, Requested 3393. Please try again in 17m18.96s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "breakeven": false
+    }
+  }
+}

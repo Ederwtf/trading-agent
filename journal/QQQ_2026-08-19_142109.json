@@ -1,0 +1,24 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-19T14:21:09.370046-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 715.967,
+    "unrealized_pl": 4.128,
+    "unrealized_plpc": 0.00144
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de rotaci\u00f3n sectorial hacia tecnolog\u00eda sigue vigente y el precio sigue por encima de SMA20 y SMA50; no hay evidencia de que el soporte bajo la SMA20 se haya roto ni noticias adversas concretas, por lo que la tesis alcista permanece intacta.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "breakeven": false
+    }
+  }
+}
