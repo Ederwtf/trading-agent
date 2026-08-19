@@ -1,0 +1,24 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-08-19T07:47:44.790952-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 24.0,
+    "avg_entry_price": 198.23125,
+    "current_price": 219.66,
+    "unrealized_pl": 514.29,
+    "unrealized_plpc": 0.1081
+  },
+  "action": "HOLD",
+  "reason": "La tesis sigue viva: el catalizador de IA (lanzamiento Hopper y demanda de GPUs) no ha sido invalidado y no hay noticias adversas espec\u00edficas sobre NVDA; aunque el precio est\u00e1 sobre SMA20/50 y el RSI est\u00e1 alto, esos son ruidos normales para una posici\u00f3n de dip.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 213.81,
+      "take_profit": 285.0,
+      "breakeven": true
+    }
+  }
+}

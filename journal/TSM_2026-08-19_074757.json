@@ -1,0 +1,24 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-19T07:47:57.795185-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 426.59,
+    "current_price": 413.5,
+    "unrealized_pl": -143.99,
+    "unrealized_plpc": -0.03069
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave del lanzamiento de la plataforma Feynman de Nvidia sigue vigente y no hay noticias que lo invaliden; aunque el precio est\u00e1 ligeramente bajo la SMA20, eso forma parte del dip que la estrategia busca capturar.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 410.0,
+      "take_profit": 475.0,
+      "breakeven": false
+    }
+  }
+}
