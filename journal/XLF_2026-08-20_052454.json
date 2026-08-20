@@ -1,0 +1,24 @@
+{
+  "symbol": "XLF",
+  "timestamp": "2026-08-20T05:24:54.126958-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 85.0,
+    "avg_entry_price": 57.03,
+    "current_price": 57.45,
+    "unrealized_pl": 35.7,
+    "unrealized_plpc": 0.00736
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 55.5,
+      "take_profit": 62.5,
+      "breakeven": false
+    }
+  }
+}
