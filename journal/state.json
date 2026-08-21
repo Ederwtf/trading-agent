@@ -5,31 +5,31 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-21T07:38:12.370021-04:00"
+      "updated": "2026-08-21T07:59:43.860991-04:00"
     },
     "NVDA": {
       "stop": 213.81,
       "take_profit": 285.0,
       "breakeven": true,
-      "updated": "2026-08-21T07:38:06.023864-04:00"
+      "updated": "2026-08-21T07:59:35.787284-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-08-21T07:38:10.274578-04:00"
+      "updated": "2026-08-21T07:59:41.441083-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-08-21T07:38:03.918266-04:00"
+      "updated": "2026-08-21T07:59:33.337388-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-08-21T07:38:08.170458-04:00"
+      "updated": "2026-08-21T07:59:38.986530-04:00"
     }
   },
   "regime": {
