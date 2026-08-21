@@ -1,0 +1,24 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-21T12:22:09.545888-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 713.88,
+    "unrealized_pl": -4.22,
+    "unrealized_plpc": -0.00148
+  },
+  "action": "HOLD",
+  "reason": "La tesis sigue viva: el catalizador de rotaci\u00f3n sectorial a tecnolog\u00eda no se ha invalidado, el precio sigue por encima de SMA20 y SMA50 y el RSI est\u00e1 lejos de sobrecompra, por lo que no hay evidencia concreta de ruptura de la tesis.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "breakeven": false
+    }
+  }
+}
