@@ -1,0 +1,24 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-21T17:41:20.624880-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 713.12,
+    "unrealized_pl": -7.26,
+    "unrealized_plpc": -0.00254
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de rotaci\u00f3n sectorial hacia tecnolog\u00eda sigue vigente y no hay noticias adversas espec\u00edficas que invaliden la tesis; el precio a\u00fan est\u00e1 por encima de la SMA20/50 y el RSI ha bajado a zona neutra, manteni\u00e9ndose la hip\u00f3tesis de rebote.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "breakeven": false
+    }
+  }
+}
