@@ -1,0 +1,24 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-08-24T11:08:15.012896-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 705.105,
+    "unrealized_pl": -39.32,
+    "unrealized_plpc": -0.01375
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de rotaci\u00f3n sectorial hacia tecnolog\u00eda sigue vigente y no hay evidencia de que se haya invalidado; el precio est\u00e1 en dip bajo SMA20 y RSI sobrevendido, condiciones t\u00edpicas de entrada de la estrategia, por lo que la tesis sigue viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "breakeven": false
+    }
+  }
+}
