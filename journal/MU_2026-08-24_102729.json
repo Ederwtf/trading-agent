@@ -1,0 +1,140 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-08-24T10:25:52.114400-04:00",
+  "portfolio": {
+    "equity": 97944.11,
+    "cash": 82764.56,
+    "buying_power": 373560.97
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-08-24T10:24:12.666081",
+    "price": {
+      "current": 896.59,
+      "sma20": 896.1,
+      "sma50": 962.32,
+      "rsi14": 50.64,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": -7.24,
+      "change_5d_pct": -11.42,
+      "change_1m_pct": -2.66
+    },
+    "volume": {
+      "current": 191410,
+      "avg_20d": 975371,
+      "ratio": 0.2,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Dan Ives Says Nvidia's 15% AI Server Price Hike Is Bullish for Tech. Could Micron Be the Real Winner?",
+        "summary": "Prices for Nvidia-powered AI servers are rising more than 15% as memory costs surge. Dan Ives says the move is bullish, but Micron could benefit most."
+      },
+      {
+        "headline": "Micron CEO Sounds Alarm on AI Memory Crunch \u2014 Supply May Not Catch Up Until 2028 as Demand Keeps Growing: MU Stock Falls 4% (UPDATED)",
+        "summary": "Micron CEO Sanjay Mehrotra said memory supply shows no sign of catching up with AI-driven demand, citing long-term customer deals."
+      },
+      {
+        "headline": "What's Going On With Micron Technology Stock Monday?",
+        "summary": "Micron stock fell 4% premarket as tech pulled back. Shares hold long-term gains despite short-term pressure ahead of Sept earnings."
+      },
+      {
+        "headline": "Nvidia\u2019s AI Servers Are About to Get Even More Expensive as Rising Memory Costs Push Prices Up More Than 15%: Report",
+        "summary": "Some Nvidia Corp (NASDAQ:NVDA) customers have reportedly been informed that prices for servers equipped with its AI chips could increase by more than 15%.\n\n\n\nNvidia AI Server Prices Could Rise 15% or "
+      },
+      {
+        "headline": "SanDisk, Micron, Western Digital Remain Cheap as Cyclical and AI Bubble Concerns Remain",
+        "summary": "Here&#39;s why top memory stocks like SanDisk, Micron, and Western Digital are still cheap despite elevated cyclical and AI bubble worries."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.87,
+    "thesis": "Micron (MU) est\u00e1 posicionada para capturar la explosi\u00f3n de demanda de memoria AI, lo que impulsar\u00e1 un fuerte repunte del precio pese a la correcci\u00f3n reciente",
+    "arguments": [
+      "El precio est\u00e1 justo por encima de la SMA20 (896.59 > 896.1), indicando soporte t\u00e9cnico inmediato",
+      "El RSI14 en 50.64 muestra que el activo no est\u00e1 sobrecomprado y tiene margen para subir",
+      "Los titulares de prensa destacan que el alza de precios de los servidores AI de Nvidia beneficia directamente a Micron, creando un catalizador de demanda estructural"
+    ],
+    "key_catalyst": "Anuncio de Nvidia de un aumento del 15% en precios de servidores AI que requiere m\u00e1s memoria HBM, posicionando a Micron como proveedor clave",
+    "price_target": 1150.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade es una trampa alcista y probablemente seguir\u00e1 cayendo",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, se\u00f1al de tendencia bajista prolongada",
+      "El volumen actual es solo el 20% del promedio, indicando falta de apoyo comprador",
+      "Los cambios negativos en 1 d\u00eda (-7.24%) y 5 d\u00edas (-11.42%) superan al leve rebote mensual",
+      "Los titulares de noticias resaltan escasez de suministro y advertencias del CEO, lo que puede frenar la demanda"
+    ],
+    "fatal_flaw": "El precio est\u00e1 firmemente por debajo de la SMA50, demostrando que la tendencia larga sigue siendo bajista",
+    "downside_target": 720.0,
+    "scenario": "Si el volumen sigue siendo bajo y la presi\u00f3n de venta persiste, el precio romper\u00e1 soporte en 800 y caer\u00e1 r\u00e1pidamente hacia 720, generando p\u00e9rdidas catastr\u00f3ficas para los compradores."
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.62,
+    "reasoning": "El an\u00e1lisis bullish tiene mayor convicci\u00f3n (0.87) y argumentos basados en datos como soporte en la SMA20 y un RSI neutro, adem\u00e1s de un catalizador estructural de demanda AI. El an\u00e1lisis bearish tambi\u00e9n aporta datos (precio bajo SMA50, volumen bajo) que representan riesgos de corto plazo, pero su convicci\u00f3n (0.78) es menor y no supera el umbral para un HOLD. Tras ponderar ambos lados, el peso bullish (0.527) supera al bearish (0.473), lo que justifica una posici\u00f3n larga con cautela.",
+    "bull_weight": 0.527,
+    "bear_weight": 0.473,
+    "entry": 896.59,
+    "take_profit": 1150.0,
+    "stop_loss": 800.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.62 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.62 \u2265 1.5",
+      "Posici\u00f3n $4,897 \u2264 m\u00e1ximo $9,794",
+      "Capital suficiente ($4,897)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4897.21
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 763.07,
+      "spy_sma200": 707.95,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.8,
+      "drawdown_60d": -1.9,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 23,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-18",
+      "net": -10560,
+      "net_pct_oi": -0.5,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

@@ -1,50 +1,50 @@
 {
-  "last_entry_run": "2026-08-19T10:06:59.936997-04:00",
+  "last_entry_run": "2026-08-24T10:27:29.184068-04:00",
   "protection": {
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-08-24T09:31:24.677748-04:00"
-    },
-    "NVDA": {
-      "stop": 213.81,
-      "take_profit": 285.0,
-      "breakeven": true,
-      "updated": "2026-08-24T09:31:22.410304-04:00"
+      "updated": "2026-08-24T10:24:09.299786-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-08-24T09:31:24.592989-04:00"
+      "updated": "2026-08-24T10:24:08.831991-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-08-24T09:31:22.316631-04:00"
+      "updated": "2026-08-24T10:24:07.036926-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-08-24T09:31:24.197946-04:00"
+      "updated": "2026-08-24T10:24:08.735426-04:00"
+    },
+    "AMD": {
+      "stop": 430.0,
+      "take_profit": 560.0,
+      "breakeven": false,
+      "updated": "2026-08-24T10:27:29.182724-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 13.1%, SPY sobre SMA200, drawdown -1.81%"
+      "vol 20d 13.2%, SPY sobre SMA200, drawdown -1.9%"
     ],
     "metrics": {
-      "spy_price": 763.76,
-      "spy_sma200": 707.96,
+      "spy_price": 763.07,
+      "spy_sma200": 707.95,
       "above_sma200": true,
-      "vol_20d": 13.1,
+      "vol_20d": 13.2,
       "vol_60d": 13.8,
-      "drawdown_60d": -1.81,
-      "vixy_ratio": 0.85
+      "drawdown_60d": -1.9,
+      "vixy_ratio": 0.86
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-08-24T09:31:20.348238-04:00"
+    "updated": "2026-08-24T10:24:04.600936-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -0.5,
       "bias": "corto"
     },
-    "updated": "2026-08-24T09:31:21.568660-04:00"
+    "updated": "2026-08-24T10:24:06.401426-04:00"
   }
 }

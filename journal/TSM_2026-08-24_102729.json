@@ -1,0 +1,139 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-08-24T10:25:15.252072-04:00",
+  "portfolio": {
+    "equity": 97944.11,
+    "cash": 82764.56,
+    "buying_power": 373560.97
+  },
+  "research": {
+    "symbol": "TSM",
+    "timestamp": "2026-08-24T10:24:13.733903",
+    "price": {
+      "current": 406.6,
+      "sma20": 413.73,
+      "sma50": 424.26,
+      "rsi14": 42.33,
+      "above_sma20": false,
+      "above_sma50": false,
+      "change_1d_pct": -2.94,
+      "change_5d_pct": -5.65,
+      "change_1m_pct": 0.64
+    },
+    "volume": {
+      "current": 194487,
+      "avg_20d": 517114,
+      "ratio": 0.38,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Did Citadel\u2019s $4 Billion AI Stock Selloff Weigh On MU, SNDK, NBIS?",
+        "summary": "Ken Griffin\u2019s Citadel unloaded 80% of its rescued AI stock book in $4 billion of block trades. Did the selling weigh on the AI trade?"
+      },
+      {
+        "headline": "Waymo Unveils First Custom Robotaxi Chip With More Than 1,000 TOPS of AI Processing Power",
+        "summary": "Waymo reveals first custom-designed robotaxi chip for real-time sensor processing, working with outside chipmakers."
+      },
+      {
+        "headline": "Samsung Tumbled Nearly 8% in Seoul Even as AI Demand Drives Chip Prices Up To 15%",
+        "summary": "Samsung raised advanced chipmaking prices by up to 15% as AI demand fills key production lines, even as shares fell nearly 8%."
+      },
+      {
+        "headline": "8 Information Technology Stocks With Whale Alerts In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      },
+      {
+        "headline": "Taiwan Semiconductor\u2019s AI Bottleneck Hands Samsung a Powerful Pricing Opportunity",
+        "summary": "Samsung raises prices on advanced foundry services up to 15% to capitalize on tight capacity and boost profitability."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "TSM est\u00e1 posicionada para liderar la pr\u00f3xima oleada de IA y automoci\u00f3n, lo que impulsar\u00e1 su valoraci\u00f3n a corto plazo",
+    "arguments": [
+      "Los precios de los chips de IA han subido hasta un 15% impulsados por la demanda de soluciones como el nuevo chip robotaxi de Waymo, beneficiando directamente a los fabricantes de semiconductores l\u00edderes como TSM",
+      "El precio actual (406.6) est\u00e1 por debajo de sus medias m\u00f3viles de 20 y 50 d\u00edas (413.73 y 424.26), creando una clara oportunidad de compra con margen de revaluaci\u00f3n cuando el mercado corrija la desviaci\u00f3n",
+      "El volumen actual es solo el 38% del promedio de 20 d\u00edas, indicando falta de presi\u00f3n vendedora y una posible acumulaci\u00f3n institucional antes de un rebote fuerte"
+    ],
+    "key_catalyst": "Anuncio de Waymo de su chip robotaxi con >1,000 TOPS, que requiere suministros masivos de chips avanzados donde TSM es proveedor clave",
+    "price_target": 475.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "El trade falla porque TSM est\u00e1 atrapado bajo medias m\u00f3viles clave y muestra debilidad de volumen, lo que indica presi\u00f3n bajista sostenida",
+    "counter_arguments": [
+      "Precio bajo la SMA20 (406.6\u202fvs\u202f413.73) y bajo la SMA50 (424.26), se\u00f1al de tendencia a la baja",
+      "Volumen actual 38% del promedio de 20 d\u00edas, evidencia de falta de inter\u00e9s comprador y posible agotamiento de liquidez",
+      "Rendimiento negativo en 1\u2011d\u00eda (-2.94%) y 5\u2011d\u00edas (-5.65%) supera la ligera ganancia mensual, mostrando momentum descendente"
+    ],
+    "fatal_flaw": "Ruptura clara y sostenida por debajo de la SMA20 con volumen extremadamente bajo, lo que suele preceder a ca\u00eddas continuas",
+    "downside_target": 350.0,
+    "scenario": "Si el precio rompe la SMA20 y sigue cayendo con volumen escaso, los vendedores se activan, provocando una ca\u00edda r\u00e1pida hacia la zona de soporte de 350, donde el precio podr\u00eda dispararse a\u00fan m\u00e1s bajo al romper niveles de liquidez y desencadenar ventas program\u00e1ticas"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.62,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n alta (0.92) respaldada por datos concretos: precio bajo SMA20 y SMA50, volumen muy bajo que sugiere acumulaci\u00f3n y un catalizador de IA (chip Waymo). El an\u00e1lisis bearish tambi\u00e9n est\u00e1 basado en datos (ruptura SMA20, volumen bajo, momentum negativo) pero su convicci\u00f3n es menor (0.78) y no supera el umbral de 0.72\u202f+\u202fbull\u202f<\u202f0.58 que obligar\u00eda a HOLD. El RSI est\u00e1 en 42, sin sobrecompra ni sobreventa, por lo que no se ajusta la convicci\u00f3n. Tras ponderar los argumentos (bull 0.55, bear 0.45) la balanza favorece la compra. Se establece un TP en el primer objetivo t\u00e9cnico razonable (475) y un SL que invalida la tesis bullish (por debajo de la zona de soporte importante alrededor de 380), manteniendo un R/R >1.5. El tama\u00f1o de posici\u00f3n se limita al 8% del portafolio.",
+    "bull_weight": 0.55,
+    "bear_weight": 0.45,
+    "entry": 406.6,
+    "take_profit": 475.0,
+    "stop_loss": 380.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.62 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.57 \u2265 1.5",
+      "Posici\u00f3n $4,897 \u2264 m\u00e1ximo $9,794",
+      "Capital suficiente ($4,897)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4897.21
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 763.07,
+      "spy_sma200": 707.95,
+      "above_sma200": true,
+      "vol_20d": 13.2,
+      "vol_60d": 13.8,
+      "drawdown_60d": -1.9,
+      "vixy_ratio": 0.86
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 23,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-08-18",
+      "net": -10560,
+      "net_pct_oi": -0.5,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}
