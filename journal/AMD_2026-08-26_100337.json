@@ -1,0 +1,27 @@
+{
+  "symbol": "AMD",
+  "timestamp": "2026-08-26T10:03:37.454204-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 10.0,
+    "avg_entry_price": 455.52,
+    "current_price": 487.945,
+    "unrealized_pl": 324.25,
+    "unrealized_plpc": 0.07118
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "1f056ebd-6329-4d16-a61f-995a338d55f8",
+      "order_class": "oco",
+      "stop_price": 457.8,
+      "take_profit": 560.0,
+      "qty": 10,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
