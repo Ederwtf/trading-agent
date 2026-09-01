@@ -1,50 +1,50 @@
 {
-  "last_entry_run": "2026-08-24T10:27:29.184068-04:00",
+  "last_entry_run": "2026-09-01T11:22:29.368922-04:00",
   "protection": {
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-01T06:50:44.051616-04:00"
+      "updated": "2026-09-01T11:20:03.982660-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-01T06:50:41.869783-04:00"
+      "updated": "2026-09-01T11:20:03.568356-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-01T06:50:37.058734-04:00"
+      "updated": "2026-09-01T11:20:01.551394-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-01T06:50:39.681382-04:00"
+      "updated": "2026-09-01T11:20:03.153435-04:00"
     },
-    "AMD": {
-      "stop": 457.8,
-      "take_profit": 560.0,
-      "breakeven": true,
-      "updated": "2026-09-01T06:50:34.073632-04:00"
+    "NVDA": {
+      "stop": 210.0,
+      "take_profit": 260.0,
+      "breakeven": false,
+      "updated": "2026-09-01T11:22:29.367541-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.4%, SPY sobre SMA200, drawdown -1.57%"
+      "vol 20d 7.0%, SPY sobre SMA200, drawdown -1.88%"
     ],
     "metrics": {
-      "spy_price": 765.65,
-      "spy_sma200": 710.23,
+      "spy_price": 763.23,
+      "spy_sma200": 710.64,
       "above_sma200": true,
-      "vol_20d": 9.4,
-      "vol_60d": 13.8,
-      "drawdown_60d": -1.57,
-      "vixy_ratio": 0.84
+      "vol_20d": 7.0,
+      "vol_60d": 12.7,
+      "drawdown_60d": -1.88,
+      "vixy_ratio": 0.85
     },
     "policy": {
       "allow_entries": true,
@@ -52,18 +52,18 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-08-31T12:33:06.822312-04:00"
+    "updated": "2026-09-01T11:19:59.527241-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 16 d\u00eda(s)",
+      "pr\u00f3ximo FOMC en 15 d\u00eda(s)",
       "COT non-comm neto corto (-3.3% del OI, 2026-08-25)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 16,
+      "days_to_next": 15,
       "next_meeting": "2026-09-16",
       "calendar_ok": true
     },
@@ -74,6 +74,6 @@
       "net_pct_oi": -3.3,
       "bias": "corto"
     },
-    "updated": "2026-08-31T12:33:07.893594-04:00"
+    "updated": "2026-09-01T11:20:00.406645-04:00"
   }
 }
