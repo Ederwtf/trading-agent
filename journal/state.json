@@ -5,45 +5,45 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-04T13:17:08.315278-04:00"
+      "updated": "2026-09-04T15:44:23.445199-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-04T13:17:08.202801-04:00"
+      "updated": "2026-09-04T15:44:22.986554-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-04T13:17:07.341965-04:00"
+      "updated": "2026-09-04T15:44:21.018743-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-04T13:17:07.969725-04:00"
+      "updated": "2026-09-04T15:44:22.520593-04:00"
     },
     "NVDA": {
       "stop": 219.49,
       "take_profit": 260.0,
       "breakeven": true,
-      "updated": "2026-09-04T13:17:07.846418-04:00"
+      "updated": "2026-09-04T15:44:22.034735-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 8.1%, SPY sobre SMA200, drawdown -0.97%"
+      "vol 20d 8.2%, SPY sobre SMA200, drawdown -1.02%"
     ],
     "metrics": {
-      "spy_price": 770.33,
+      "spy_price": 769.88,
       "spy_sma200": 712.12,
       "above_sma200": true,
-      "vol_20d": 8.1,
+      "vol_20d": 8.2,
       "vol_60d": 12.5,
-      "drawdown_60d": -0.97,
+      "drawdown_60d": -1.02,
       "vixy_ratio": 0.83
     },
     "policy": {
@@ -52,13 +52,13 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-04T13:17:05.745906-04:00"
+    "updated": "2026-09-04T15:44:19.134707-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
       "pr\u00f3ximo FOMC en 12 d\u00eda(s)",
-      "COT non-comm neto corto (-3.3% del OI, 2026-08-25)"
+      "COT non-comm neto corto (-3.7% del OI, 2026-09-01)"
     ],
     "fomc": {
       "in_meeting": false,
@@ -69,11 +69,11 @@
     },
     "cot": {
       "market": "E-MINI S&P 500",
-      "report_date": "2026-08-25",
-      "net": -67994,
-      "net_pct_oi": -3.3,
+      "report_date": "2026-09-01",
+      "net": -75941,
+      "net_pct_oi": -3.7,
       "bias": "corto"
     },
-    "updated": "2026-09-04T13:17:06.591595-04:00"
+    "updated": "2026-09-04T15:44:19.921306-04:00"
   }
 }
