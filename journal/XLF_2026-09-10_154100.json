@@ -1,13 +1,13 @@
 {
   "symbol": "XLF",
-  "timestamp": "2026-08-11T14:33:41.112002-04:00",
+  "timestamp": "2026-09-10T15:41:00.489447-04:00",
   "pipeline": "monitor",
   "position": {
     "qty": 85.0,
     "avg_entry_price": 57.03,
-    "current_price": 57.95,
-    "unrealized_pl": 78.2,
-    "unrealized_plpc": 0.01613
+    "current_price": 56.845,
+    "unrealized_pl": -15.725,
+    "unrealized_plpc": -0.00324
   },
   "action": "HOLD",
   "reason": "tesis intacta",
