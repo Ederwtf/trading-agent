@@ -1,0 +1,139 @@
+{
+  "symbol": "ARM",
+  "timestamp": "2026-09-10T13:12:57.200297-04:00",
+  "portfolio": {
+    "equity": 97872.15,
+    "cash": 82785.04,
+    "buying_power": 373384.07
+  },
+  "research": {
+    "symbol": "ARM",
+    "timestamp": "2026-09-10T13:11:51.067706",
+    "price": {
+      "current": 255.79,
+      "sma20": 251.97,
+      "sma50": 268.55,
+      "rsi14": 52.67,
+      "above_sma20": true,
+      "above_sma50": false,
+      "change_1d_pct": -3.22,
+      "change_5d_pct": 8.94,
+      "change_1m_pct": -4.86
+    },
+    "volume": {
+      "current": 76366,
+      "avg_20d": 145249,
+      "ratio": 0.53,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "What's Going On With Arm Holdings Stock Tuesday?",
+        "summary": "Arm stock (NASDAQ: ARM) rises as chip shares outperform. Read technical levels, price predictions, and key support targets."
+      },
+      {
+        "headline": "'Nvidia\u2019s New RTX Spark Laptops Launch In October With Two Different Configs; Nvidia\u2019s N1X Laptop Will Ship In Two Different Configurations For Laptops And Mini PCs' - The Verge",
+        "summary": ""
+      },
+      {
+        "headline": "Why Is Arm Stock Surging on Thursday?",
+        "summary": "Arm Holdings PLC (NASDAQ: ARM) stock surges Thursday following Nvidia\u2019s Q2 financial results and optimistic guidance for AI infrastructure buildout."
+      },
+      {
+        "headline": "Why Is Arm Holdings (ARM) Stock Trending After Hours",
+        "summary": "Arm Holdings shares climbed 4.76% in after-hours trading Wednesday, extending gains after an expanded IBM collaboration announcement."
+      },
+      {
+        "headline": "This Chip Stock Could Overtake Intel by 2027\u2014Wall Street Sees 40% Upside as AI Agents Reshape the CPU Market",
+        "summary": "Raymond James upgrades AMD to Strong Buy, sees it overtaking Intel by 2027 as agentic AI drives CPU market growth."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "ARM est\u00e1 subvalorado y listo para un fuerte repunte impulsado por su posici\u00f3n dominante en arquitectura de chips y la reciente oleada de inter\u00e9s institucional",
+    "arguments": [
+      "El precio actual (255.79) est\u00e1 por encima de la SMA20 (251.97) y el RSI14 en 52.67 indica momentum neutro\u2011alcanzable, listo para subir",
+      "El cambio de 5 d\u00edas es +8.94% mientras que la ca\u00edda de 1 d\u00eda (-3.22%) es una correcci\u00f3n t\u00e9cnica que suele preceder a un rebote en acciones de alta calidad",
+      "ARM lidera la transici\u00f3n a IA en dispositivos m\u00f3viles y servidores; los recientes anuncios de Nvidia sobre RTX Spark y la integraci\u00f3n de arquitectura ARM generan expectativas de alianzas estrat\u00e9gicas y aumento de licencias"
+    ],
+    "key_catalyst": "Anuncio oficial de una gran alianza de licenciamiento ARM con Nvidia para chips de IA en laptops y centros de datos, esperado dentro de 2\u20113 semanas",
+    "price_target": 312.5,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade en ARM est\u00e1 sobrevalorado y vulnerable a una reversi\u00f3n bajista",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA50, indicando tendencia a medio plazo negativa",
+      "El volumen actual es solo el 53% del promedio, se\u00f1al de falta de apoyo y posible agotamiento del impulso alcista",
+      "El RSI est\u00e1 en zona neutra (52.7) sin sobrecompra, mientras que el precio ha ca\u00eddo un 4.86% en el \u00faltimo mes, mostrando debilidad estructural"
+    ],
+    "fatal_flaw": "El cruce bajo la SMA50 combinado con volumen d\u00e9bil sugiere que el impulso alcista es insostenible y pronto se producir\u00e1 una venta masiva",
+    "downside_target": 215.0,
+    "scenario": "Una ruptura clara por debajo de la SMA50 acompa\u00f1ada de un aumento del volumen de venta provocar\u00e1 una ca\u00edda r\u00e1pida hacia el soporte de 215, desencadenando stop\u2011losses y presi\u00f3n de venta adicional"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bull est\u00e1n mayormente respaldados por datos (precio > SMA20, +8.94% en 5d, RSI neutro) y la convicci\u00f3n bull (0.92) supera ampliamente a la bear (0.12). Los riesgos bear son principalmente estructurales (volumen bajo, precio bajo SMA50) y pese a su relevancia, el peso de los datos bull supera al bear. No hay sobrecompra (RSI 52.7) ni condici\u00f3n de hold seg\u00fan la regla 3. Por tanto, la evidencia favorece una posici\u00f3n larga con un buen R/R.",
+    "bull_weight": 0.7,
+    "bear_weight": 0.3,
+    "entry": 255.79,
+    "take_profit": 312.5,
+    "stop_loss": 240.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 3.59 \u2265 1.5",
+      "Posici\u00f3n $4,894 \u2264 m\u00e1ximo $9,787",
+      "Capital suficiente ($4,894)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4893.61
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 759.38,
+      "spy_sma200": 713.69,
+      "above_sma200": true,
+      "vol_20d": 8.4,
+      "vol_60d": 11.6,
+      "drawdown_60d": -2.37,
+      "vixy_ratio": 0.89
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 6,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-01",
+      "net": -75941,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

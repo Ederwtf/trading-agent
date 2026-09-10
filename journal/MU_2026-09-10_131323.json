@@ -1,0 +1,141 @@
+{
+  "symbol": "MU",
+  "timestamp": "2026-09-10T13:12:11.537967-04:00",
+  "portfolio": {
+    "equity": 97872.15,
+    "cash": 82785.04,
+    "buying_power": 373384.07
+  },
+  "research": {
+    "symbol": "MU",
+    "timestamp": "2026-09-10T13:11:52.168043",
+    "price": {
+      "current": 983.67,
+      "sma20": 961.28,
+      "sma50": 929.58,
+      "rsi14": 51.48,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": -4.28,
+      "change_5d_pct": 2.97,
+      "change_1m_pct": 13.3
+    },
+    "volume": {
+      "current": 413352,
+      "avg_20d": 589823,
+      "ratio": 0.7,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Micron, SK Hynix Are Top Bets in New NRAM ETF as AI Memory Demand Surges",
+        "summary": "NRAM joins the growing memory ETF trade as AI accelerators demand more HBM and memory capacity from chipmakers."
+      },
+      {
+        "headline": "What's Going On With Sandisk Stock Thursday?",
+        "summary": "Sandisk (SNDK) stock fell ~4% amid a tech sell-off. Explore Cramer\u2019s insights, technical analysis, and analyst ratings."
+      },
+      {
+        "headline": "Meta\u2019s AI Agents Are Coming for Your Shopping Cart. These ETFs Could Cash In",
+        "summary": "Meta\u2019s Muse pushes agentic AI from chatbots to transactions. Here are three ETFs with significant META exposure that could benefit."
+      },
+      {
+        "headline": "What's Going On With Micron Technology Stock Thursday?",
+        "summary": "Micron (MU) stock falls 3% premarket amid tech pressure. Technical momentum stays bullish above key SMAs. Key resistance sits at $1,012."
+      },
+      {
+        "headline": "AI Memory Crunch Is About to Hit \u201810 Out of 10\u2019 Craziness",
+        "summary": "AI demand triggers historic memory crunch: TechInsights predicts DRAM prices will jump 200%+ as supply tightens through 2027."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "Micron (MU) est\u00e1 posicionada para un fuerte repunte impulsado por la creciente demanda de memoria AI y la ruptura de niveles t\u00e9cnicos clave",
+    "arguments": [
+      "El precio actual (983.67) ya cotiza por encima de la SMA20 (961.28) y SMA50 (929.58), se\u00f1alando una tendencia alcista sostenida",
+      "El RSI14 en 51.48 indica que el activo no est\u00e1 sobrecomprado y tiene espacio para subir sin riesgo de sobrecalentamiento",
+      "El mes pasado MU subi\u00f3 13.3% y los \u00faltimos 5 d\u00edas +2.97%, mostrando impulso reciente pese a una correcci\u00f3n de 1 d\u00eda",
+      "Los titulares de noticias resaltan a Micron como una de las principales apuestas en ETFs de NRAM y memoria AI, lo que sugiere flujos de capital institucional hacia la acci\u00f3n",
+      "El volumen actual es 0.7\u00d7 el promedio de 20 d\u00edas, pero la ca\u00edda de precio reciente (\u20114.28% 1d) probablemente ha atra\u00eddo compradores de valor, preparando un rebote"
+    ],
+    "key_catalyst": "Aumento acelerado de la demanda de memoria AI y la inclusi\u00f3n de Micron en nuevos ETFs de NRAM, que canalizar\u00e1n flujos institucionales masivos",
+    "price_target": 1150.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade en MU est\u00e1 sobrevalorado y vulnerable a varios riesgos que hacen improbable que contin\u00fae su impulso alcista",
+    "counter_arguments": [
+      "El precio actual est\u00e1 apenas por encima de la SMA20 y la SMA50, lo que indica que el soporte t\u00e9cnico es d\u00e9bil y cualquier retroceso romper\u00e1 ambas medias r\u00e1pidamente",
+      "El volumen de negociaci\u00f3n est\u00e1 30% por debajo del promedio de 20 d\u00edas, se\u00f1alando falta de compromiso de los compradores y una posible falta de liquidez para sostener el rally",
+      "El impulso reciente se basa en noticias de hype sobre IA y NRAM, pero esas son especulativas y no se traducen en fundamentos de ingresos ni en contratos firmados por Micron"
+    ],
+    "fatal_flaw": "Dependencia excesiva de la narrativa de IA sin respaldo de crecimiento real en ventas, lo que convierte al rally en una burbuja de sentimiento",
+    "downside_target": 820.0,
+    "scenario": "Una correcci\u00f3n del sector tecnol\u00f3gico combinada con datos de ventas de memoria que muestren una desaceleraci\u00f3n del demandado de IA provocar\u00eda una venta masiva, rompiendo las SMA20/50 y llevando el precio bajo los 820 d\u00f3lares"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bull est\u00e1n mayormente respaldados por datos (precio sobre SMA20/50, RSI neutral, impulso reciente y flujo institucional) y su convicci\u00f3n (0.92) supera ampliamente al bear (0.12). Los riesgos bear son principalmente narrativos y de corto plazo (volumen bajo), pero el RSI no indica sobrecompra y la tendencia sigue intacta. El stop loss se coloca justo bajo la SMA20 (\u2248950) que invalidar\u00eda la tesis alcista, mientras que el take profit en 1150 corresponde al objetivo t\u00e9cnico se\u00f1alado. La relaci\u00f3n riesgo/recompensa supera 1.5:1, por lo que la operaci\u00f3n es viable dentro del l\u00edmite de posici\u00f3n del 10% del portafolio.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 983.67,
+    "take_profit": 1150.0,
+    "stop_loss": 950.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 4.94 \u2265 1.5",
+      "Posici\u00f3n $4,894 \u2264 m\u00e1ximo $9,787",
+      "Capital suficiente ($4,894)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4893.61
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 759.38,
+      "spy_sma200": 713.69,
+      "above_sma200": true,
+      "vol_20d": 8.4,
+      "vol_60d": 11.6,
+      "drawdown_60d": -2.37,
+      "vixy_ratio": 0.89
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 6,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-01",
+      "net": -75941,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

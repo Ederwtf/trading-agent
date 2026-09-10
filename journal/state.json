@@ -1,44 +1,50 @@
 {
-  "last_entry_run": "2026-09-01T11:22:29.368922-04:00",
+  "last_entry_run": "2026-09-10T13:13:23.606353-04:00",
   "protection": {
     "XLF": {
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-10T09:34:53.531058-04:00"
+      "updated": "2026-09-10T13:11:48.839323-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-10T09:34:53.300973-04:00"
+      "updated": "2026-09-10T13:11:48.398642-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-10T09:34:51.824855-04:00"
+      "updated": "2026-09-10T13:11:46.888268-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-10T09:34:53.165855-04:00"
+      "updated": "2026-09-10T13:11:48.245215-04:00"
+    },
+    "SPCX": {
+      "stop": 138.0,
+      "take_profit": 185.0,
+      "breakeven": false,
+      "updated": "2026-09-10T13:13:23.604657-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 8.5%, SPY sobre SMA200, drawdown -2.55%"
+      "vol 20d 8.4%, SPY sobre SMA200, drawdown -2.37%"
     ],
     "metrics": {
-      "spy_price": 757.97,
-      "spy_sma200": 713.68,
+      "spy_price": 759.38,
+      "spy_sma200": 713.69,
       "above_sma200": true,
-      "vol_20d": 8.5,
+      "vol_20d": 8.4,
       "vol_60d": 11.6,
-      "drawdown_60d": -2.55,
-      "vixy_ratio": 0.9
+      "drawdown_60d": -2.37,
+      "vixy_ratio": 0.89
     },
     "policy": {
       "allow_entries": true,
@@ -46,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-10T09:34:50.032632-04:00"
+    "updated": "2026-09-10T13:11:44.521727-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -68,6 +74,6 @@
       "net_pct_oi": -3.7,
       "bias": "corto"
     },
-    "updated": "2026-09-10T09:34:50.553222-04:00"
+    "updated": "2026-09-10T13:11:45.801216-04:00"
   }
 }

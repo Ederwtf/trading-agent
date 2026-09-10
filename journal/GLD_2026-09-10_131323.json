@@ -1,0 +1,140 @@
+{
+  "symbol": "GLD",
+  "timestamp": "2026-09-10T13:12:32.086137-04:00",
+  "portfolio": {
+    "equity": 97872.15,
+    "cash": 82785.04,
+    "buying_power": 373384.07
+  },
+  "research": {
+    "symbol": "GLD",
+    "timestamp": "2026-09-10T13:11:57.831088",
+    "price": {
+      "current": 399.93,
+      "sma20": 409.62,
+      "sma50": 390.72,
+      "rsi14": 40.15,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -0.86,
+      "change_5d_pct": -0.7,
+      "change_1m_pct": -0.25
+    },
+    "volume": {
+      "current": 97906,
+      "avg_20d": 221099,
+      "ratio": 0.44,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Hot PPI Sinks Gold, Freight Stocks: 10 Names To Watch Thursday",
+        "summary": "August PPI ran hot at 5.4%. Gold fell 2%, the 10-year hit 4.90% and economists split on a September Fed hike."
+      },
+      {
+        "headline": "Forget Gold at $4,400? Economist Says A Bond Trade Could Be a Better Inflation Hedge",
+        "summary": "Morningstar&#39;s Preston Caldwell warns $4,400 gold is a trap for inflation fearmongers. Discover why he says investors should buy TIPS instead."
+      },
+      {
+        "headline": "Producer Inflation Jumps to 5.4%, Fuels Fed Hike Bets (UPDATED)",
+        "summary": "US producer prices rose 5.4% year-over-year in August, topping the 5.3% consensus, ahead of next week&#39;s Fed decision."
+      },
+      {
+        "headline": "Healthcare ETFs Were Left Behind. JPMorgan Sees the Money Coming Back",
+        "summary": "JPMorgan sees healthcare ETF flows reversing, with Eli Lilly and AbbVie among stocks that could benefit from renewed sector rotation."
+      },
+      {
+        "headline": "Jeff Currie Calls Scott Bessent\u2019s Treasury Buybacks 'Financial Repression' \u2014 And the Ultimate Buy Signal for Gold",
+        "summary": "Ex-Goldman chief Jeff Currie warns Scott Bessent\u2019s Treasury buybacks are &#34;financial repression,&#34; creating the ultimate buy signal for gold."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.87,
+    "thesis": "El oro est\u00e1 en una fase de acumulaci\u00f3n profunda y pronto romper\u00e1 al alza, ofreciendo una oportunidad de compra agresiva en GLD",
+    "arguments": [
+      "El RSI de 14 est\u00e1 en 40, indicando que el activo est\u00e1 todav\u00eda sobrevendido y listo para un rebote t\u00e9cnico",
+      "El precio est\u00e1 por encima de la SMA50 (390.72) mientras que la SMA20 (409.62) act\u00faa como resistencia din\u00e1mica; una ruptura de la SMA20 generar\u00e1 un fuerte impulso alcista",
+      "Los datos macro muestran inflaci\u00f3n persistente (PPI al alza 5.4%) y expectativas de m\u00e1s alzas de tipos, lo que hist\u00f3ricamente impulsa la demanda de oro como refugio",
+      "El volumen actual es bajo (44% del promedio), lo que sugiere que el mercado a\u00fan no ha absorbido la presi\u00f3n compradora; cualquier entrada de capital provocar\u00e1 un fuerte movimiento ascendente"
+    ],
+    "key_catalyst": "Una ruptura clara por encima de la SMA20 (409.62) acompa\u00f1ada de un aumento del volumen al menos al 80% del promedio 20\u2011d\u00edas",
+    "price_target": 435.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade alcista en GLD est\u00e1 sobrevalorado y vulnerable a m\u00faltiples presiones bajistas",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA20 y el volumen es menos del 50% del promedio, indicando falta de soporte y participaci\u00f3n compradora",
+      "El RSI en 40 sugiere momentum d\u00e9bil y posible tendencia a la baja, lejos de niveles de sobreventa que podr\u00edan impulsar rebotes",
+      "Los headlines macro son negativos para el oro: datos de inflaci\u00f3n m\u00e1s altos aumentan expectativas de alzas de tipos de inter\u00e9s, reduciendo la demanda de activos refugio"
+    ],
+    "fatal_flaw": "El precio est\u00e1 atrapado bajo la SMA20 con volumen extremadamente bajo, lo que suele preceder a rupturas descendentes sostenidas",
+    "downside_target": 375.0,
+    "scenario": "Una publicaci\u00f3n de datos de inflaci\u00f3n mayor a lo esperado dispara expectativas de m\u00e1s subidas de tipos de la Fed, provocando una venta masiva de oro y una ca\u00edda del precio de GLD por debajo de la SMA20, con el volumen permaneciendo deprimido y llevando el precio a niveles cercanos a 375"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.75,
+    "reasoning": "El an\u00e1lisis bullish tiene una convicci\u00f3n alta (0.87) respaldada por datos concretos (RSI 40, precio por encima de SMA50, macroinflaci\u00f3n) y supera ampliamente la convicci\u00f3n bear (0.12). Los riesgos de corto plazo son menores que los estructurales y el RSI no indica sobrecompra. Por tanto, la balanza de pesos favorece la compra.",
+    "bull_weight": 0.87,
+    "bear_weight": 0.12,
+    "entry": 399.93,
+    "take_profit": 435.0,
+    "stop_loss": 395.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.75 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 7.11 \u2265 1.5",
+      "Posici\u00f3n $4,894 \u2264 m\u00e1ximo $9,787",
+      "Capital suficiente ($4,894)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4893.61
+  },
+  "sector": "gold",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 759.38,
+      "spy_sma200": 713.69,
+      "above_sma200": true,
+      "vol_20d": 8.4,
+      "vol_60d": 11.6,
+      "drawdown_60d": -2.37,
+      "vixy_ratio": 0.89
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 6,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-01",
+      "net": -75941,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}

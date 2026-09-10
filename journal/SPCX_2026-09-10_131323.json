@@ -1,0 +1,150 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-09-10T13:13:21.414645-04:00",
+  "portfolio": {
+    "equity": 97872.15,
+    "cash": 82785.04,
+    "buying_power": 373384.07
+  },
+  "research": {
+    "symbol": "SPCX",
+    "timestamp": "2026-09-10T13:11:58.928705",
+    "price": {
+      "current": 150.46,
+      "sma20": 142.58,
+      "sma50": 135.25,
+      "rsi14": 69.85,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 1.99,
+      "change_5d_pct": 6.91,
+      "change_1m_pct": 12.81
+    },
+    "volume": {
+      "current": 3278586,
+      "avg_20d": 2362629,
+      "ratio": 1.39,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Billionaire Investor Added SpaceX to His Portfolio Right After the IPO",
+        "summary": "Dan Loeb\u2019s Third Point acquired 180,415 SpaceX shares worth about $31 million as of June 30, following the company\u2019s Nasdaq debut."
+      },
+      {
+        "headline": "Elon Musk's SpaceX Just Gave Starlink a Major Wi-Fi Upgrade With Its New 4th-Gen Router",
+        "summary": "Starlink unveils Gen 4 router with Wi-Fi 7, 3,500-square-foot coverage, 510-device support and water resistanc."
+      },
+      {
+        "headline": "Ted Cruz Warns \u2018Whole World Is in Trouble\u2019 if China Leads AI, Says \u2018We Need Guardrails\u2019",
+        "summary": "Cruz warns AI\u2019s rapid growth could bring catastrophic risks, urging U.S. safeguards while maintaining leadership to prevent China from dominating."
+      },
+      {
+        "headline": "Elon Musk Says Autopilot Wasn\u2019t in Use During Tesla Crash, Slams \u2018Legacy Media\u2019",
+        "summary": "Elon Musk says Autopilot wasn\u2019t involved in a fatal Tesla crash, slams Legacy Media&#39;s coverage of Tesla incidents."
+      },
+      {
+        "headline": "SpaceX Falls More Than 4% as 319 Million Shares Unlock",
+        "summary": "SpaceX fell over 4% as 319 million shares worth about $49B became eligible for sale, with more lockup expirations still ahead."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.93,
+    "thesis": "SPCX est\u00e1 en una fase de impulso t\u00e9cnico y fundamental que justifica una posici\u00f3n larga agresiva",
+    "arguments": [
+      "Precio actual 150.46 est\u00e1 5.6% por encima de la SMA20 (142.58) y 11.2% por encima de la SMA50 (135.25), indicando fuerte tendencia alcista",
+      "RSI14 en 69.85 muestra momentum extremo sin se\u00f1al de sobreventa, t\u00edpico de rallies impulsados por flujos institucionales",
+      "Volumen 3.28M es 39% superior al promedio 20\u2011d\u00edas, confirmando fuerte inter\u00e9s comprador",
+      "Los \u00faltimos 5 d\u00edas el activo subi\u00f3 6.91% y en 1 mes +12.81%, demostrando aceleraci\u00f3n continua",
+      "Noticias positivas: inversi\u00f3n de un multimillonario tras el IPO y mejoras tecnol\u00f3gicas de SpaceX impulsan la percepci\u00f3n de crecimiento futuro"
+    ],
+    "key_catalyst": "Inversi\u00f3n de un inversor multimillonario justo despu\u00e9s del IPO, combinada con la nueva generaci\u00f3n de routers Starlink que abre nuevas fuentes de ingresos",
+    "price_target": 185.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El impulso alcista de SPCX est\u00e1 sobreextendido y vulnerable a una correcci\u00f3n r\u00e1pida",
+    "counter_arguments": [
+      "El RSI est\u00e1 en 69.85, indicando sobrecompra y alto riesgo de retroceso",
+      "El volumen actual, aunque 39% superior al promedio, no es inusual y no confirma fuerza sostenida",
+      "Los movimientos de precios recientes (1.99% en 1 d\u00eda, 6.91% en 5 d\u00edas) son demasiado r\u00e1pidos para un activo con fundamentos d\u00e9biles, lo que sugiere un rally especulativo"
+    ],
+    "fatal_flaw": "El RSI sobrecomprado combinado con la falta de un impulso de volumen genuino sugiere que el rally es impulsado por hype y no por fundamentos s\u00f3lidos",
+    "downside_target": 132.0,
+    "scenario": "Una noticia negativa sobre SpaceX (por ejemplo, retrasos en el lanzamiento de Starlink o problemas regulatorios) o una correcci\u00f3n del mercado tecnol\u00f3gico provocar\u00eda una venta masiva, llevando el precio por debajo de la SMA50 y activando stops, resultando en una ca\u00edda hacia el objetivo bajista de 132.00"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "El an\u00e1lisis bullish muestra una fuerte convicci\u00f3n (0.93) respaldada por datos claros: precio por encima de SMA20 y SMA50, volumen superior al promedio y un impulso de precios sostenido en 5\u2011d\u00edas y 1\u2011mes. El RSI est\u00e1 alto (69.85) pero no supera el umbral de 72, por lo que no se reduce la convicci\u00f3n de compra. El an\u00e1lisis bearish tiene convicci\u00f3n muy baja (0.12) y se basa principalmente en sobrecompra, sin datos que contrarresten la tendencia alcista. Dado el desequilibrio de convicciones y la ausencia de riesgos de corto plazo cr\u00edticos, la decisi\u00f3n es comprar, con un TP razonable en la resistencia objetivo (\u2248185) y un SL que invalida la tesis si el precio cae por debajo de la SMA20 (\u2248138), manteniendo un R/R >1.5.",
+    "bull_weight": 0.85,
+    "bear_weight": 0.15,
+    "entry": 150.46,
+    "take_profit": 185.0,
+    "stop_loss": 138.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.77 \u2265 1.5",
+      "Posici\u00f3n $4,894 \u2264 m\u00e1ximo $9,787",
+      "Capital suficiente ($4,894)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4893.61
+  },
+  "sector": "unknown:SPCX",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 759.38,
+      "spy_sma200": 713.69,
+      "above_sma200": true,
+      "vol_20d": 8.4,
+      "vol_60d": 11.6,
+      "drawdown_60d": -2.37,
+      "vixy_ratio": 0.89
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 6,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-01",
+      "net": -75941,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "22697e00-4cc9-4ae3-a431-87cb105fed70",
+    "symbol": "SPCX",
+    "side": "buy",
+    "shares": 32,
+    "order_class": "bracket",
+    "estimated_value": 4817.12,
+    "take_profit": 185.0,
+    "stop_loss": 138.0,
+    "paper_mode": true,
+    "timestamp": "2026-09-10T13:13:23.604524"
+  }
+}
