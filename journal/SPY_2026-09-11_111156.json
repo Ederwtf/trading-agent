@@ -1,13 +1,13 @@
 {
   "symbol": "SPY",
-  "timestamp": "2026-08-12T08:10:24.315901-04:00",
+  "timestamp": "2026-09-11T11:11:56.378579-04:00",
   "pipeline": "monitor",
   "position": {
     "qty": 4.0,
     "avg_entry_price": 771.26,
-    "current_price": 772.45,
-    "unrealized_pl": 4.76,
-    "unrealized_plpc": 0.00154
+    "current_price": 764.6209,
+    "unrealized_pl": -26.5564,
+    "unrealized_plpc": -0.00861
   },
   "action": "HOLD",
   "reason": "tesis intacta",
