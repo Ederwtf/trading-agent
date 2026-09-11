@@ -1,0 +1,24 @@
+{
+  "symbol": "QQQ",
+  "timestamp": "2026-09-11T07:37:43.037348-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 714.935,
+    "current_price": 713.02,
+    "unrealized_pl": -7.66,
+    "unrealized_plpc": -0.00268
+  },
+  "action": "HOLD",
+  "reason": "La tesis sigue viva: el catalizador de rotaci\u00f3n sectorial hacia tecnolog\u00eda no se ha invalidado y no hay noticias adversas concretas sobre el ETF; aunque el precio est\u00e1 bajo SMA20/50 y el RSI est\u00e1 en zona de sobreventa, eso forma parte del dip que la estrategia busca capturar.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 702.0,
+      "take_profit": 770.0,
+      "breakeven": false
+    }
+  }
+}

@@ -5,31 +5,31 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-10T19:34:50.008799-04:00"
+      "updated": "2026-09-11T07:37:49.889610-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-10T19:34:47.920440-04:00"
+      "updated": "2026-09-11T07:37:47.592231-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-10T19:34:40.861322-04:00"
+      "updated": "2026-09-11T07:37:40.038688-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-10T19:34:43.492018-04:00"
+      "updated": "2026-09-11T07:37:43.037091-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-10T19:34:45.827041-04:00"
+      "updated": "2026-09-11T07:37:45.300636-04:00"
     }
   },
   "regime": {
