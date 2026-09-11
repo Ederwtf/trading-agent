@@ -1,0 +1,24 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-09-11T17:17:36.756944-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 32.0,
+    "avg_entry_price": 150.51,
+    "current_price": 150.95,
+    "unrealized_pl": 14.08,
+    "unrealized_plpc": 0.00292
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 138.0,
+      "take_profit": 185.0,
+      "breakeven": false
+    }
+  }
+}
