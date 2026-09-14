@@ -5,46 +5,46 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-14T10:59:34.370477-04:00"
+      "updated": "2026-09-14T15:49:33.708504-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-14T10:59:34.002692-04:00"
+      "updated": "2026-09-14T15:48:53.392937-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-14T10:59:31.814277-04:00"
+      "updated": "2026-09-14T15:46:51.915409-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-14T10:59:33.242182-04:00"
+      "updated": "2026-09-14T15:47:32.863263-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-14T10:59:33.622611-04:00"
+      "updated": "2026-09-14T15:48:13.123629-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.0%, SPY sobre SMA200, drawdown -2.49%"
+      "vol 20d 8.8%, SPY sobre SMA200, drawdown -2.08%"
     ],
     "metrics": {
-      "spy_price": 758.47,
-      "spy_sma200": 714.65,
+      "spy_price": 761.69,
+      "spy_sma200": 714.67,
       "above_sma200": true,
-      "vol_20d": 9.0,
-      "vol_60d": 11.5,
-      "drawdown_60d": -2.49,
-      "vixy_ratio": 0.89
+      "vol_20d": 8.8,
+      "vol_60d": 11.4,
+      "drawdown_60d": -2.08,
+      "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-14T10:59:28.786274-04:00"
+    "updated": "2026-09-14T15:46:10.014154-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -3.7,
       "bias": "corto"
     },
-    "updated": "2026-09-14T10:59:30.600688-04:00"
+    "updated": "2026-09-14T15:46:11.037244-04:00"
   }
 }
