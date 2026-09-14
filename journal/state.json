@@ -5,46 +5,46 @@
       "stop": 55.5,
       "take_profit": 62.5,
       "breakeven": false,
-      "updated": "2026-09-14T04:06:41.529807-04:00"
+      "updated": "2026-09-14T10:59:34.370477-04:00"
     },
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-14T04:06:39.066103-04:00"
+      "updated": "2026-09-14T10:59:34.002692-04:00"
     },
     "AVGO": {
       "stop": 340.0,
       "take_profit": 445.0,
       "breakeven": false,
-      "updated": "2026-09-14T04:06:31.254387-04:00"
+      "updated": "2026-09-14T10:59:31.814277-04:00"
     },
     "QQQ": {
       "stop": 702.0,
       "take_profit": 770.0,
       "breakeven": false,
-      "updated": "2026-09-14T04:06:34.166925-04:00"
+      "updated": "2026-09-14T10:59:33.242182-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-14T04:06:36.613815-04:00"
+      "updated": "2026-09-14T10:59:33.622611-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.0%, SPY sobre SMA200, drawdown -1.6%"
+      "vol 20d 9.0%, SPY sobre SMA200, drawdown -2.49%"
     ],
     "metrics": {
-      "spy_price": 765.39,
-      "spy_sma200": 714.21,
+      "spy_price": 758.47,
+      "spy_sma200": 714.65,
       "above_sma200": true,
       "vol_20d": 9.0,
-      "vol_60d": 11.7,
-      "drawdown_60d": -1.6,
-      "vixy_ratio": 0.87
+      "vol_60d": 11.5,
+      "drawdown_60d": -2.49,
+      "vixy_ratio": 0.89
     },
     "policy": {
       "allow_entries": true,
@@ -52,28 +52,28 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-11T14:31:05.672269-04:00"
+    "updated": "2026-09-14T10:59:28.786274-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 5 d\u00eda(s)",
-      "COT non-comm neto corto (-3.7% del OI, 2026-09-01)"
+      "pr\u00f3ximo FOMC en 2 d\u00eda(s)",
+      "COT non-comm neto corto (-3.7% del OI, 2026-09-08)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 5,
+      "days_to_next": 2,
       "next_meeting": "2026-09-16",
       "calendar_ok": true
     },
     "cot": {
       "market": "E-MINI S&P 500",
-      "report_date": "2026-09-01",
-      "net": -75941,
+      "report_date": "2026-09-08",
+      "net": -76036,
       "net_pct_oi": -3.7,
       "bias": "corto"
     },
-    "updated": "2026-09-11T14:31:07.174662-04:00"
+    "updated": "2026-09-14T10:59:30.600688-04:00"
   }
 }
