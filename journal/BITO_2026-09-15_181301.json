@@ -1,0 +1,27 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-15T18:13:01.920541-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 10.11,
+    "unrealized_pl": -47.7,
+    "unrealized_plpc": -0.00979
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (repunte de Bitcoin) sigue vigente y no hay evidencia de que se haya invalidado; el precio est\u00e1 ligeramente bajo la SMA20 pero eso es parte del dip que la estrategia busca, sin noticias adversas espec\u00edficas ni ruptura del objetivo.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "7827adf3-ee07-45c5-baee-ef0817d0d577",
+      "order_class": "oco",
+      "stop_price": 10.05,
+      "take_profit": 12.45,
+      "qty": 477,
+      "replaced": false,
+      "breakeven": false
+    }
+  }
+}

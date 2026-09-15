@@ -1,0 +1,24 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-09-15T18:13:07.385072-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 32.0,
+    "avg_entry_price": 150.51,
+    "current_price": 142.84,
+    "unrealized_pl": -245.44,
+    "unrealized_plpc": -0.05096
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de inversi\u00f3n multimillonaria y los nuevos routers Starlink siguen vigentes; no hay noticias adversas concretas y el precio a\u00fan est\u00e1 por encima del stop\u2011loss, por lo que la tesis bullish permanece intacta.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 138.0,
+      "take_profit": 185.0,
+      "breakeven": false
+    }
+  }
+}
