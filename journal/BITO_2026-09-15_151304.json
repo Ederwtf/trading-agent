@@ -1,0 +1,148 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-15T15:13:02.450053-04:00",
+  "portfolio": {
+    "equity": 97336.59,
+    "cash": 82048.02,
+    "buying_power": 371000.06
+  },
+  "research": {
+    "symbol": "BITO",
+    "timestamp": "2026-09-15T15:12:00.197305",
+    "price": {
+      "current": 10.21,
+      "sma20": 10.35,
+      "sma50": 9.35,
+      "rsi14": 42.35,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": -3.82,
+      "change_5d_pct": -3.18,
+      "change_1m_pct": 20.26
+    },
+    "volume": {
+      "current": 12837226,
+      "avg_20d": 11265067,
+      "ratio": 1.14,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Is Gold Losing Its Hedge \u2014 When Safe Havens Fail, What's Left?",
+        "summary": "Gold faces a ultimate test as prices drop 4.3% in June. Is the yellow metal losing its status as the market&#39;s top safe haven?"
+      },
+      {
+        "headline": "Shares of crypto-linked stocks are trading higher amid a rise in the price of Bitcoin.",
+        "summary": ""
+      },
+      {
+        "headline": "Google's Jaw-Dropping Capex \u2013 AI Story Has More Gas; Unstable Market Structures Hit Silver, Gold, Bitcoin, And Stocks",
+        "summary": "\n\n\n\nAI Cap Ex\n\n\n\nPlease click here for an enlarged chart of Alphabet Inc Class C "
+      },
+      {
+        "headline": "Coinbase Builds Crypto Security Shield To Stop Hackers In Their Tracks",
+        "summary": "Crypto ISAC &amp; Coinbase expand an automated threat-intelligence-sharing initiative to quickly detect and respond to cyber attacks."
+      },
+      {
+        "headline": "Scaramucci Says 25-Year Prison for Sam Bankman-Fried 'Is a Bit Too Much'",
+        "summary": "Anthony Scaramucci weighed in on whether disgraced crypto founder Sam Bankman-Fried should receive the same clemency recently granted to Changpeng Zhao"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "BITO est\u00e1 posicionada para un fuerte rally impulsado por la recuperaci\u00f3n del Bitcoin y la presi\u00f3n alcista en activos de refugio, lo que convierte al ETF en una compra obligada ahora",
+    "arguments": [
+      "El precio de BITO est\u00e1 por encima de la SMA50 (9.35) y la SMA20 est\u00e1 a solo 0.14 puntos, indicando una posible ruptura inminente",
+      "El volumen actual supera en 14% la media de 20 d\u00edas, se\u00f1alando participaci\u00f3n institucional creciente",
+      "El Bitcoin ha disparado en el \u00faltimo mes (+20.26%), y los titulares de noticias resaltan que las acciones vinculadas a cripto est\u00e1n subiendo, reforzando la demanda de BITO"
+    ],
+    "key_catalyst": "El repunte del Bitcoin (+20% en 30 d\u00edas) que est\u00e1 impulsando la compra masiva de ETFs cripto como BITO",
+    "price_target": 12.45,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.22,
+    "thesis": "El trade es una trampa bajista porque el ETF est\u00e1 bajo presi\u00f3n y carece de impulso real",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA20, se\u00f1al de tendencia a la baja",
+      "El RSI en 42 indica falta de fuerza alcista y posible agotamiento",
+      "El volumen solo es 14% superior al promedio, sin evidencia de compra institucional"
+    ],
+    "fatal_flaw": "Ruptura sostenida bajo la SMA20 que confirma una tendencia descendente",
+    "downside_target": 8.45,
+    "scenario": "Una ca\u00edda del Bitcoin por debajo de $25,000 provocar\u00eda una venta masiva de activos vinculados, arrastrando a BITO bajo su SMA20 y disparando el RSI a niveles de sobreventa, lo que desencadenar\u00eda stops y una ca\u00edda brusca hacia $8.45"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.78,
+    "reasoning": "Los argumentos bullish est\u00e1n respaldados por datos (precio por encima de SMA50, volumen 14% superior a la media y fuerte rally de Bitcoin) y su convicci\u00f3n es 0.92, tres veces m\u00e1s peso que la narrativa. Los argumentos bearish tambi\u00e9n son datos (precio bajo SMA20, RSI 42), pero su convicci\u00f3n es solo 0.22. El RSI est\u00e1 en zona neutral, por lo que no se ajusta la convicci\u00f3n. El beneficio potencial (12.45) supera ampliamente el riesgo de ruptura bajo la SMA20, cumpliendo el R/R m\u00ednimo de 1.5:1. Por tanto, la balanza favorece la compra.",
+    "bull_weight": 0.78,
+    "bear_weight": 0.22,
+    "entry": 10.21,
+    "take_profit": 12.45,
+    "stop_loss": 10.05,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.78 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 14.00 \u2265 1.5",
+      "Posici\u00f3n $4,867 \u2264 m\u00e1ximo $9,734",
+      "Capital suficiente ($4,867)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4866.83
+  },
+  "sector": "unknown:BITO",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 757.3,
+      "spy_sma200": 715.07,
+      "above_sma200": true,
+      "vol_20d": 8.8,
+      "vol_60d": 11.4,
+      "drawdown_60d": -2.64,
+      "vixy_ratio": 0.88
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": true,
+      "announcement_today": false,
+      "days_to_next": 1,
+      "next_meeting": "2026-09-16",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-08",
+      "net": -76036,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "6a7df48f-6c09-400d-bcd3-96c9f9e8697b",
+    "symbol": "BITO",
+    "side": "buy",
+    "shares": 477,
+    "order_class": "bracket",
+    "estimated_value": 4865.4,
+    "take_profit": 12.45,
+    "stop_loss": 10.05,
+    "paper_mode": true,
+    "timestamp": "2026-09-15T15:13:04.500375"
+  }
+}
