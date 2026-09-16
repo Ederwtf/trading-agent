@@ -1,0 +1,24 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-16T19:44:29.467025-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 10.212,
+    "unrealized_pl": 0.954,
+    "unrealized_plpc": 0.0002
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave del repunte de Bitcoin sigue vigente y no hay evidencia de que se haya invalidado; el precio est\u00e1 justo en la entrada y aunque est\u00e1 bajo la SMA20, eso es parte de la estrategia de compra en dips y no justifica cerrar.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 10.05,
+      "take_profit": 12.45,
+      "breakeven": false
+    }
+  }
+}

@@ -5,19 +5,19 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-16T17:29:11.876759-04:00"
+      "updated": "2026-09-16T19:44:33.990176-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-16T17:29:09.421856-04:00"
+      "updated": "2026-09-16T19:44:31.713506-04:00"
     },
     "BITO": {
       "stop": 10.05,
       "take_profit": 12.45,
       "breakeven": false,
-      "updated": "2026-09-16T17:29:06.973428-04:00"
+      "updated": "2026-09-16T19:44:29.466683-04:00"
     }
   },
   "regime": {
