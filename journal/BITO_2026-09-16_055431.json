@@ -1,0 +1,24 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-16T05:54:31.796349-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 10.19,
+    "unrealized_pl": -9.54,
+    "unrealized_plpc": -0.00196
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave \u2013 el repunte de Bitcoin que impuls\u00f3 la compra de BITO \u2013 sigue vigente y no hay evidencia de que se haya invalidado; el precio est\u00e1 ligeramente bajo la SMA20 pero eso forma parte del dip que la estrategia busca capturar.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 10.05,
+      "take_profit": 12.45,
+      "breakeven": false
+    }
+  }
+}
