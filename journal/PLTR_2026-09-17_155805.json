@@ -1,0 +1,27 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-09-17T15:58:05.353462-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 176.355,
+    "unrealized_pl": 32.294997,
+    "unrealized_plpc": 0.00683
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "29c5240b-c22a-4e6f-a6f3-fc02df3b7bc8",
+      "order_class": "oco",
+      "stop_price": 160.0,
+      "take_profit": 215.0,
+      "qty": 27,
+      "replaced": true,
+      "breakeven": false
+    }
+  }
+}
