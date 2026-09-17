@@ -1,0 +1,148 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-09-17T12:57:08.498708-04:00",
+  "portfolio": {
+    "equity": 97598.89,
+    "cash": 84703.71,
+    "buying_power": 374921.35
+  },
+  "research": {
+    "symbol": "TSM",
+    "timestamp": "2026-09-17T12:56:52.825719",
+    "price": {
+      "current": 426.92,
+      "sma20": 421.45,
+      "sma50": 417.41,
+      "rsi14": 49.86,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 2.16,
+      "change_5d_pct": -0.32,
+      "change_1m_pct": 3.25
+    },
+    "volume": {
+      "current": 178399,
+      "avg_20d": 433297,
+      "ratio": 0.41,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Why Is Tower Semiconductor Stock Soaring Thursday?",
+        "summary": "Tower Semiconductor (TSEM) stock surges 8% on high-volume shipments of laser-integrated AI optical engine chips."
+      },
+      {
+        "headline": "Taiwan Semiconductor Executive Calls AI Toddler With Superpowers",
+        "summary": "Taiwan Semiconductor (TSM) bounces in premarket action. Technical momentum cools near $420 as fundamentals stay strong."
+      },
+      {
+        "headline": "Elon Musk Flags Taiwan as AI\u2019s Weak Link. These Semiconductor ETFs Could Offer a Hedge",
+        "summary": "Elon Musk\u2019s AI chip warning is putting Taiwan supply risks back in focus. Here are the ETFs offering alternative ways to play the buildout."
+      },
+      {
+        "headline": "SK Hynix Is Shipping 16-Layer HBM4 for Nvidia Rubin: Where Do Micron And Samsung Stand?",
+        "summary": "SK Hynix is at volume on 16-layer HBM4 for Nvidia Rubin. Micron is at samples, Samsung has skipped it, and packaging caps them all."
+      },
+      {
+        "headline": "Meta Looks to Slash Its AI Bill With Homegrown Silicon",
+        "summary": "Meta launches Meta One subscription as custom AI chip plans expand. Stock trades near $665 with a Buy consensus and $774 target."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.93,
+    "thesis": "TSM is poised for a sharp upside as AI\u2011driven demand, favorable technical setup and macro tailwinds converge, making a long entry compelling now",
+    "arguments": [
+      "Price is already above both the 20\u2011day (421.45) and 50\u2011day (417.41) SMAs, indicating a bullish trend; the 1\u2011day gain of 2.16% and 1\u2011month gain of 3.25% show momentum despite a slight 5\u2011day dip",
+      "RSI at 49.86 sits near the neutral\u2011bullish zone, leaving ample room to climb toward overbought levels, supporting further upside",
+      "AI hype is exploding: headlines highlight TSM\u2019s pivotal role in AI chips (\u201cAI Toddler with Superpowers\u201d) and geopolitical positioning, suggesting a surge in orders from hyperscale cloud providers and defense contracts"
+    ],
+    "key_catalyst": "Escalating AI semiconductor demand from hyperscale data\u2011centers and Taiwan\u2019s strategic positioning, amplified by recent executive comments positioning TSM as the AI engine",
+    "price_target": 515.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.73,
+    "thesis": "El impulso alcista de TSM es fr\u00e1gil y probablemente revertir\u00e1 pronto",
+    "counter_arguments": [
+      "El volumen est\u00e1 a solo el 41% del promedio de 20 d\u00edas, indicando falta de apoyo real detr\u00e1s del movimiento de precios",
+      "El RSI est\u00e1 cerca de 50, sin sobrecompra; no hay impulso t\u00e9cnico que respalde una continuaci\u00f3n",
+      "Los titulares son mayormente hype y no reflejan fundamentos; la atenci\u00f3n a IA es especulativa y puede evaporarse r\u00e1pidamente"
+    ],
+    "fatal_flaw": "Volumen extremadamente bajo que desacredita la validez del rally reciente",
+    "downside_target": 380.0,
+    "scenario": "Una correcci\u00f3n del mercado tecnol\u00f3gico combinada con una ca\u00edda del volumen a niveles cr\u00edticos provocar\u00eda una venta masiva, arrastrando a TSM bajo su SMA50 y disparando el precio hacia 380"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.85,
+    "reasoning": "Los argumentos bull est\u00e1n respaldados por datos (precio sobre SMA20/50, RSI neutral, impulso reciente) y presentan una convicci\u00f3n alta (0.93). Los argumentos bear tambi\u00e9n usan datos (volumen 41% del promedio) pero su convicci\u00f3n es menor (0.73) y el riesgo se\u00f1alado es de corto plazo (volumen bajo). Tras aplicar la regla de ponderaci\u00f3n (datos 3x narrativa) y considerando que el riesgo de corto plazo pesa m\u00e1s, el caso bull domina (~60% vs 40%). El RSI est\u00e1 neutral, sin ajustes. Se cumple el R/R m\u00ednimo (TP 515, SL 380 \u2192 R/R\u22481.88).",
+    "bull_weight": 0.6,
+    "bear_weight": 0.4,
+    "entry": 426.92,
+    "take_profit": 515.0,
+    "stop_loss": 380.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.85 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 1.88 \u2265 1.5",
+      "Posici\u00f3n $4,880 \u2264 m\u00e1ximo $9,760",
+      "Capital suficiente ($4,880)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4879.94
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 761.95,
+      "spy_sma200": 715.84,
+      "above_sma200": true,
+      "vol_20d": 9.5,
+      "vol_60d": 11.1,
+      "drawdown_60d": -2.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 41,
+      "next_meeting": "2026-10-28",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-08",
+      "net": -76036,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "ebe361f0-9e8f-456c-98b2-e18db8f6c5dd",
+    "symbol": "TSM",
+    "side": "buy",
+    "shares": 11,
+    "order_class": "bracket",
+    "estimated_value": 4701.57,
+    "take_profit": 515.0,
+    "stop_loss": 380.0,
+    "paper_mode": true,
+    "timestamp": "2026-09-17T12:58:13.771990"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-09-17T12:57:14.663813-04:00",
+  "portfolio": {
+    "equity": 97598.89,
+    "cash": 84703.71,
+    "buying_power": 374921.35
+  },
+  "research": {
+    "symbol": "PLTR",
+    "timestamp": "2026-09-17T12:56:55.327577",
+    "price": {
+      "current": 175.18,
+      "sma20": 175.65,
+      "sma50": 157.27,
+      "rsi14": 40.67,
+      "above_sma20": false,
+      "above_sma50": true,
+      "change_1d_pct": 0.48,
+      "change_5d_pct": 5.6,
+      "change_1m_pct": 2.09
+    },
+    "volume": {
+      "current": 303728,
+      "avg_20d": 714627,
+      "ratio": 0.43,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "What's Going On With Nebius Stock?",
+        "summary": "Nebius Group NV (NASDAQ:NBIS) shares are climbing Wednesday in what appears to be a technical bounce as the stock builds on last week&#39;s news of a strategic partnership with Palantir."
+      },
+      {
+        "headline": "America's Richest Donors Are Tilting Republican \u2014 16 of the Top 20 Billionaires Back GOP as Crypto, AI and Deregulation Shape Donations: Report",
+        "summary": "Donald Trump and the GOP are drawing major support from America\u2019s wealthiest donors as billionaires pour cash into the midterm battle."
+      },
+      {
+        "headline": "China, Russia Tell US to Halt Space Militarization After First Confirmation of Weapons in Orbit: \u2018Stop Preparing for War\u2019",
+        "summary": "China and Russia urge the U.S. to halt space militarization after Washington confirms its first weapon deployment into orbit."
+      },
+      {
+        "headline": "Palantir Shares Up 3.5% After Key Trading Signal",
+        "summary": "A key trading signal flashed for Palantir shares at a price of $170.65, after which PLTR rose 3.5% to an intraday high."
+      },
+      {
+        "headline": "10 Information Technology Stocks Whale Activity In Today\u2019s Session",
+        "summary": "This whale alert can help traders discover the next big trading opportunities.\nWhales are entities with large sums of money and we track their transactions here at Benzinga on our options activity sca"
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.87,
+    "thesis": "PLTR est\u00e1 posicionada para un fuerte repunte al romper su SMA20 y capitalizar la creciente demanda de soluciones de datos de inteligencia artificial en sectores gubernamentales y corporativos",
+    "arguments": [
+      "El precio est\u00e1 apenas 0.27% bajo la SMA20 (175.65) y ya cotiza por encima de la SMA50 (157.27), se\u00f1alando una tendencia alcista de medio plazo",
+      "El RSI de 40.7 indica espacio para subir antes de entrar en zona de sobrecompra, ofreciendo margen de impulso",
+      "El impulso reciente es s\u00f3lido: +5.6% en 5 d\u00edas y +2.09% en 1 mes, mientras que el volumen medio de 20 d\u00edas es alto (714k) mostrando capacidad de absorci\u00f3n de compra cuando el inter\u00e9s se reactive"
+    ],
+    "key_catalyst": "El anuncio de nuevos contratos gubernamentales de an\u00e1lisis de datos para defensa y seguridad, impulsado por la creciente presi\u00f3n geopol\u00edtica y la necesidad de vigilancia espacial, deber\u00eda disparar la demanda de la plataforma de Palantir",
+    "price_target": 215.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.12,
+    "thesis": "El trade es una trampa porque PLTR est\u00e1 perdiendo impulso y muestra se\u00f1ales t\u00e9cnicas y de flujo de capital desfavorables",
+    "counter_arguments": [
+      "El precio est\u00e1 por debajo de la SMA20, indicando tendencia bajista a corto plazo",
+      "El volumen actual es menos del 50% del promedio de 20 d\u00edas, se\u00f1al de falta de apoyo y posible agotamiento de compradores",
+      "El RSI en 40.7 sugiere que el activo est\u00e1 lejos de sobreventa y a\u00fan tiene espacio para caer antes de cualquier rebote"
+    ],
+    "fatal_flaw": "El cruce negativo del precio bajo la SMA20 combinado con un volumen extremadamente bajo indica que la demanda est\u00e1 desapareciendo, lo que puede desencadenar una ca\u00edda r\u00e1pida",
+    "downside_target": 132.45,
+    "scenario": "Una ruptura sostenida bajo la SMA20 acompa\u00f1ada de un deterioro en los ingresos o un anuncio negativo de clientes clave provocar\u00eda una venta masiva, empujando el precio hacia el objetivo bajista de 132.45 y generando p\u00e9rdidas catastr\u00f3ficas para los compradores recientes"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.75,
+    "reasoning": "El an\u00e1lisis bullish muestra una alta convicci\u00f3n (0.87) respaldada por datos concretos: precio cercano a la SMA20, posici\u00f3n por encima de la SMA50, RSI todav\u00eda bajo la zona de sobrecompra y fuerte impulso de +5.6% en 5 d\u00edas. Los argumentos bear son d\u00e9biles (convicci\u00f3n 0.12) y se basan principalmente en la falta de volumen, que no supera al impulso alcista. Dado que los datos favorecen al lado bullish y el RSI no indica sobrecompra, la balanza pesa fuertemente a favor de una compra. Se establece un TP en el nivel t\u00e9cnico objetivo (215) y un SL justo por debajo de la SMA20 para invalidar la tesis si el precio cae bajo soporte, manteniendo un R/R >1.5.",
+    "bull_weight": 0.78,
+    "bear_weight": 0.22,
+    "entry": 175.18,
+    "take_profit": 215.0,
+    "stop_loss": 160.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.75 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 2.62 \u2265 1.5",
+      "Posici\u00f3n $4,880 \u2264 m\u00e1ximo $9,760",
+      "Capital suficiente ($4,880)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4879.94
+  },
+  "sector": "software",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 761.95,
+      "spy_sma200": 715.84,
+      "above_sma200": true,
+      "vol_20d": 9.5,
+      "vol_60d": 11.1,
+      "drawdown_60d": -2.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 41,
+      "next_meeting": "2026-10-28",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-08",
+      "net": -76036,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": true,
+    "order_id": "eff42d29-b549-453a-a0d1-a217880d0c89",
+    "symbol": "PLTR",
+    "side": "buy",
+    "shares": 27,
+    "order_class": "bracket",
+    "estimated_value": 4728.51,
+    "take_profit": 215.0,
+    "stop_loss": 160.0,
+    "paper_mode": true,
+    "timestamp": "2026-09-17T12:58:14.068728"
+  }
+}

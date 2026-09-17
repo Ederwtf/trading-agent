@@ -1,0 +1,139 @@
+{
+  "symbol": "NVDA",
+  "timestamp": "2026-09-17T12:57:45.293897-04:00",
+  "portfolio": {
+    "equity": 97598.89,
+    "cash": 84703.71,
+    "buying_power": 374921.35
+  },
+  "research": {
+    "symbol": "NVDA",
+    "timestamp": "2026-09-17T12:56:46.411969",
+    "price": {
+      "current": 218.66,
+      "sma20": 218.6,
+      "sma50": 213.88,
+      "rsi14": 41.64,
+      "above_sma20": true,
+      "above_sma50": true,
+      "change_1d_pct": 2.21,
+      "change_5d_pct": 0.13,
+      "change_1m_pct": -0.49
+    },
+    "volume": {
+      "current": 1683659,
+      "avg_20d": 3297954,
+      "ratio": 0.51,
+      "unusual": false
+    },
+    "news": [
+      {
+        "headline": "Snap Just Turned Its $2,195 Glasses Into an Nvidia AI Story",
+        "summary": "Snap&#39;s $2,195 SPECS glasses are bringing Nvidia&#39;s AI stack into the workplace, opening a new frontier for AI agents and edge computing."
+      },
+      {
+        "headline": "Micron Jumps 5% as Intel CEO Says Memory Prices Have Surged Over 500%",
+        "summary": "Micron shares jumped as Intel CEO Lip-Bu Tan warned memory prices have surged five to seven times amid tight AI-driven supply."
+      },
+      {
+        "headline": "Nvidia Is an \u2018Awesome Company,\u2019 but Its Stock Is Priced as \u2018Greatest Company Ever,\u2019 Damodaran Says",
+        "summary": "Aswath Damodaran says Nvidia is an \u201cawesome company\u201d but warns its valuation assumes extraordinary AI growth."
+      },
+      {
+        "headline": "NVIDIA Boss Slams AI Doom Mongers, Stock Bounces",
+        "summary": "NVIDIA CEO Jensen Huang rejects calls for new AI regulations at a Salesforce event, declaring safety an engineering challenge as Nvidia stock rebounds 3%."
+      },
+      {
+        "headline": "Steve Eisman Calls AI 'Terminator' Fears 'Garbage': If You're Scared, 'Postpone Your IPO'",
+        "summary": "Steve Eisman challenged AI labs to postpone IPOs if they believe runaway AI risks justify slowing development."
+      }
+    ]
+  },
+  "bull": {
+    "conviction": 0.92,
+    "thesis": "NVDA est\u00e1 posicionada para un impulso alcista sostenido gracias a su liderazgo en IA, precios por encima de medias m\u00f3viles y flujos de capital institucional que se reactivar\u00e1n pronto",
+    "arguments": [
+      "Precio cotiza 0.03% por encima de la SMA20 y 2.2% sobre la SMA50, indicando fuerza de tendencia a corto plazo",
+      "RSI de 41.6 muestra margen amplio para subir antes de sobrecomprado, mientras que el impulso diario del 2.21% confirma demanda",
+      "Noticias de alianzas estrat\u00e9gicas (Snap) y el reconocimiento de la empresa como referente de IA generan expectativas de crecimiento de ingresos exponencial"
+    ],
+    "key_catalyst": "Anuncio de nuevos contratos de IA y GPU de alto rendimiento con gigantes tecnol\u00f3gicos, impulsado por la reciente cobertura medi\u00e1tica de Snap y la valoraci\u00f3n de Damodaran que atrae m\u00e1s inversi\u00f3n institucional",
+    "price_target": 285.0,
+    "timeframe": "swing_week"
+  },
+  "bear": {
+    "conviction": 0.78,
+    "thesis": "NVDA est\u00e1 sobrevalorado y vulnerable a una correcci\u00f3n significativa",
+    "counter_arguments": [
+      "El RSI est\u00e1 en zona neutral\u2011baja (41.6), indicando falta de impulso alcista sostenido",
+      "El volumen actual es apenas la mitad del promedio de 20 d\u00edas, se\u00f1al de d\u00e9bil participaci\u00f3n y posible agotamiento de compradores",
+      "Los precios recientes est\u00e1n apenas por encima de la SMA20 y SMA50, sin margen de seguridad; cualquier retroceso romper\u00e1 ambas medias r\u00e1pidamente"
+    ],
+    "fatal_flaw": "El precio depende excesivamente de expectativas de IA que ya est\u00e1n incorporadas, dejando poco espacio para sorpresas positivas",
+    "downside_target": 165.32,
+    "scenario": "Una revisi\u00f3n a la baja de las proyecciones de ingresos por IA combinada con una ca\u00edda del sentimiento del mercado tecnol\u00f3gico provocar\u00eda una ruptura bajo la SMA20 y SMA50, disparando ventas masivas y llevando el precio a niveles cercanos a $165"
+  },
+  "synthesis": {
+    "decision": "BUY",
+    "confidence": 0.68,
+    "reasoning": "El an\u00e1lisis bullish tiene alta convicci\u00f3n (0.92) respaldada por datos de precios por encima de SMA20 y SMA50, RSI a\u00fan no sobrecomprado y flujo de noticias positivas sobre IA. El an\u00e1lisis bearish, aunque muestra riesgos de volumen bajo y posible sobrevaloraci\u00f3n, tiene convicci\u00f3n menor (0.78) y sus argumentos son m\u00e1s cualitativos. Dado que el RSI est\u00e1 en zona neutral\u2011baja y no supera los umbrales de sobrecompra, la convicci\u00f3n de compra no se reduce. Se pondera el caso bullish (0.6) sobre el bearish (0.4) y se opta por una posici\u00f3n larga con R/R >1.5.",
+    "bull_weight": 0.6,
+    "bear_weight": 0.4,
+    "entry": 218.66,
+    "take_profit": 285.0,
+    "stop_loss": 210.0,
+    "position_size_pct": 0.05
+  },
+  "risk": {
+    "approved": true,
+    "rules_passed": [
+      "Confianza 0.68 \u2265 0.60",
+      "Stop loss definido",
+      "R/R 7.66 \u2265 1.5",
+      "Posici\u00f3n $4,880 \u2264 m\u00e1ximo $9,760",
+      "Capital suficiente ($4,880)"
+    ],
+    "rules_failed": [],
+    "final_decision": "BUY",
+    "position_value": 4879.94
+  },
+  "sector": "semis",
+  "regime": {
+    "label": "calm",
+    "policy": {
+      "allow_entries": true,
+      "size_pct": 0.05,
+      "min_confidence": 0.6
+    },
+    "metrics": {
+      "spy_price": 761.95,
+      "spy_sma200": 715.84,
+      "above_sma200": true,
+      "vol_20d": 9.5,
+      "vol_60d": 11.1,
+      "drawdown_60d": -2.04,
+      "vixy_ratio": 0.87
+    }
+  },
+  "macro": {
+    "fomc": {
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 41,
+      "next_meeting": "2026-10-28",
+      "calendar_ok": true
+    },
+    "cot": {
+      "market": "E-MINI S&P 500",
+      "report_date": "2026-09-08",
+      "net": -76036,
+      "net_pct_oi": -3.7,
+      "bias": "corto"
+    }
+  },
+  "pipeline": "batch",
+  "execution": {
+    "executed": false,
+    "reason": "sin cupo (slots llenos)"
+  }
+}
