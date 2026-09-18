@@ -5,46 +5,46 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-18T13:39:52.695623-04:00"
+      "updated": "2026-09-18T15:57:20.131356-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-18T13:39:52.593875-04:00"
+      "updated": "2026-09-18T15:57:19.559129-04:00"
     },
     "BITO": {
       "stop": 10.26,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-09-18T13:39:52.413130-04:00"
+      "updated": "2026-09-18T15:57:18.754888-04:00"
     },
     "TSM": {
       "stop": 380.0,
       "take_profit": 515.0,
       "breakeven": false,
-      "updated": "2026-09-18T13:39:52.771224-04:00"
+      "updated": "2026-09-18T15:57:20.524466-04:00"
     },
     "PLTR": {
       "stop": 160.0,
       "take_profit": 215.0,
       "breakeven": false,
-      "updated": "2026-09-18T13:39:52.483919-04:00"
+      "updated": "2026-09-18T15:57:19.153686-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.3%, SPY sobre SMA200, drawdown -2.34%"
+      "vol 20d 9.2%, SPY sobre SMA200, drawdown -2.09%"
     ],
     "metrics": {
-      "spy_price": 759.62,
-      "spy_sma200": 716.24,
+      "spy_price": 761.59,
+      "spy_sma200": 716.25,
       "above_sma200": true,
-      "vol_20d": 9.3,
+      "vol_20d": 9.2,
       "vol_60d": 11.2,
-      "drawdown_60d": -2.34,
-      "vixy_ratio": 0.88
+      "drawdown_60d": -2.09,
+      "vixy_ratio": 0.87
     },
     "policy": {
       "allow_entries": true,
@@ -52,13 +52,13 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-18T13:39:50.569564-04:00"
+    "updated": "2026-09-18T15:57:17.441066-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
       "pr\u00f3ximo FOMC en 40 d\u00eda(s)",
-      "COT non-comm neto corto (-3.7% del OI, 2026-09-08)"
+      "COT non-comm neto corto (-4.1% del OI, 2026-09-15)"
     ],
     "fomc": {
       "in_meeting": false,
@@ -69,11 +69,11 @@
     },
     "cot": {
       "market": "E-MINI S&P 500",
-      "report_date": "2026-09-08",
-      "net": -76036,
-      "net_pct_oi": -3.7,
+      "report_date": "2026-09-15",
+      "net": -100461,
+      "net_pct_oi": -4.1,
       "bias": "corto"
     },
-    "updated": "2026-09-18T13:39:51.268567-04:00"
+    "updated": "2026-09-18T15:57:18.268037-04:00"
   }
 }

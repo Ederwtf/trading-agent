@@ -1,13 +1,13 @@
 {
-  "symbol": "QQQ",
-  "timestamp": "2026-08-19T15:00:58.984968-04:00",
+  "symbol": "SPY",
+  "timestamp": "2026-09-18T15:57:20.131621-04:00",
   "pipeline": "monitor",
   "position": {
     "qty": 4.0,
-    "avg_entry_price": 714.935,
-    "current_price": 716.65,
-    "unrealized_pl": 6.86,
-    "unrealized_plpc": 0.0024
+    "avg_entry_price": 771.26,
+    "current_price": 761.67,
+    "unrealized_pl": -38.36,
+    "unrealized_plpc": -0.01243
   },
   "action": "HOLD",
   "reason": "tesis intacta",
@@ -16,8 +16,8 @@
     "protection": {
       "armed": false,
       "reason": "ya tiene OCO vigente",
-      "stop_price": 702.0,
-      "take_profit": 770.0,
+      "stop_price": 745.0,
+      "take_profit": 820.0,
       "breakeven": false
     }
   }
