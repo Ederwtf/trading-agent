@@ -5,46 +5,46 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-21T11:05:38.535511-04:00"
+      "updated": "2026-09-21T15:59:14.236762-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-21T11:05:38.349835-04:00"
+      "updated": "2026-09-21T15:59:13.797007-04:00"
     },
     "BITO": {
-      "stop": 10.87,
+      "stop": 10.94,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-09-21T11:05:37.926164-04:00"
+      "updated": "2026-09-21T15:59:12.901577-04:00"
     },
     "TSM": {
       "stop": 380.0,
       "take_profit": 515.0,
       "breakeven": false,
-      "updated": "2026-09-21T11:05:38.703960-04:00"
+      "updated": "2026-09-21T15:59:14.693360-04:00"
     },
     "PLTR": {
       "stop": 160.0,
       "take_profit": 215.0,
       "breakeven": false,
-      "updated": "2026-09-21T11:05:38.173079-04:00"
+      "updated": "2026-09-21T15:59:13.354699-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.8%, SPY sobre SMA200, drawdown -1.07%"
+      "vol 20d 10.7%, SPY sobre SMA200, drawdown -0.52%"
     ],
     "metrics": {
-      "spy_price": 769.52,
-      "spy_sma200": 716.69,
+      "spy_price": 773.76,
+      "spy_sma200": 716.71,
       "above_sma200": true,
-      "vol_20d": 9.8,
-      "vol_60d": 11.4,
-      "drawdown_60d": -1.07,
-      "vixy_ratio": 0.86
+      "vol_20d": 10.7,
+      "vol_60d": 11.6,
+      "drawdown_60d": -0.52,
+      "vixy_ratio": 0.87
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-21T11:05:35.880021-04:00"
+    "updated": "2026-09-21T15:59:10.124157-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -4.1,
       "bias": "corto"
     },
-    "updated": "2026-09-21T11:05:36.500081-04:00"
+    "updated": "2026-09-21T15:59:10.889779-04:00"
   }
 }
