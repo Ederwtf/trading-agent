@@ -1,0 +1,27 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-21T11:05:37.926527-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 11.5599,
+    "unrealized_pl": 643.9023,
+    "unrealized_plpc": 0.13221
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "884e7bc2-cd35-40c1-9cf0-5d67a09fe8b8",
+      "order_class": "oco",
+      "stop_price": 10.87,
+      "take_profit": 12.45,
+      "qty": 477,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
