@@ -1,0 +1,24 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-09-22T08:14:09.854492-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 11.5503,
+    "unrealized_pl": 639.3231,
+    "unrealized_plpc": 0.13127
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 10.94,
+      "take_profit": 12.45,
+      "breakeven": true
+    }
+  }
+}
