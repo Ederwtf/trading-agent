@@ -5,46 +5,46 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-24T11:19:12.604049-04:00"
+      "updated": "2026-09-24T15:21:14.329175-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-24T11:19:12.465718-04:00"
+      "updated": "2026-09-24T15:21:13.811296-04:00"
     },
     "BITO": {
       "stop": 10.94,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-09-24T11:19:12.197658-04:00"
+      "updated": "2026-09-24T15:21:12.947449-04:00"
     },
     "TSM": {
       "stop": 380.0,
       "take_profit": 515.0,
       "breakeven": false,
-      "updated": "2026-09-24T11:19:12.706457-04:00"
+      "updated": "2026-09-24T15:21:14.746721-04:00"
     },
     "PLTR": {
       "stop": 176.03,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-09-24T11:19:12.373077-04:00"
+      "updated": "2026-09-24T15:21:13.344366-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 11.1%, SPY sobre SMA200, drawdown -1.79%"
+      "vol 20d 10.9%, SPY sobre SMA200, drawdown -1.32%"
     ],
     "metrics": {
-      "spy_price": 763.93,
-      "spy_sma200": 717.97,
+      "spy_price": 767.61,
+      "spy_sma200": 717.99,
       "above_sma200": true,
-      "vol_20d": 11.1,
-      "vol_60d": 11.2,
-      "drawdown_60d": -1.79,
-      "vixy_ratio": 0.89
+      "vol_20d": 10.9,
+      "vol_60d": 11.1,
+      "drawdown_60d": -1.32,
+      "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
@@ -52,7 +52,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-24T11:19:10.951306-04:00"
+    "updated": "2026-09-24T15:21:11.404825-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -74,6 +74,6 @@
       "net_pct_oi": -4.1,
       "bias": "corto"
     },
-    "updated": "2026-09-24T11:19:12.068746-04:00"
+    "updated": "2026-09-24T15:21:12.484089-04:00"
   }
 }
