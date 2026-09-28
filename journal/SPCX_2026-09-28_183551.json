@@ -1,0 +1,24 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-09-28T18:35:51.632041-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 32.0,
+    "avg_entry_price": 150.51,
+    "current_price": 145.9922,
+    "unrealized_pl": -144.5696,
+    "unrealized_plpc": -0.03002
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave (inversi\u00f3n multimillonaria y avances de Starlink) sigue vigente y no hay noticias adversas; la ca\u00edda bajo la SMA20 es parte del dip que la estrategia busca, por lo que la tesis sigue viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 138.0,
+      "take_profit": 185.0,
+      "breakeven": false
+    }
+  }
+}
