@@ -5,46 +5,46 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-28T04:58:43.985812-04:00"
+      "updated": "2026-09-28T13:23:56.085283-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-28T04:58:41.734093-04:00"
+      "updated": "2026-09-28T13:23:55.902690-04:00"
     },
     "BITO": {
       "stop": 10.94,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-09-28T04:58:37.209711-04:00"
+      "updated": "2026-09-28T13:23:54.903475-04:00"
     },
     "TSM": {
       "stop": 429.59,
       "take_profit": 515.0,
       "breakeven": true,
-      "updated": "2026-09-28T04:58:46.236125-04:00"
+      "updated": "2026-09-28T13:23:56.262981-04:00"
     },
     "PLTR": {
       "stop": 176.03,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-09-28T04:58:39.498205-04:00"
+      "updated": "2026-09-28T13:23:55.734223-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 10.7%, SPY sobre SMA200, drawdown -0.95%"
+      "vol 20d 10.9%, SPY sobre SMA200, drawdown -1.36%"
     ],
     "metrics": {
-      "spy_price": 770.48,
-      "spy_sma200": 718.42,
+      "spy_price": 767.29,
+      "spy_sma200": 718.84,
       "above_sma200": true,
-      "vol_20d": 10.7,
-      "vol_60d": 11.1,
-      "drawdown_60d": -0.95,
-      "vixy_ratio": 0.87
+      "vol_20d": 10.9,
+      "vol_60d": 11.2,
+      "drawdown_60d": -1.36,
+      "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
@@ -52,18 +52,18 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-25T15:32:58.830274-04:00"
+    "updated": "2026-09-28T13:23:52.817620-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 33 d\u00eda(s)",
+      "pr\u00f3ximo FOMC en 30 d\u00eda(s)",
       "COT non-comm neto corto (-7.0% del OI, 2026-09-22)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 33,
+      "days_to_next": 30,
       "next_meeting": "2026-10-28",
       "calendar_ok": true
     },
@@ -74,6 +74,6 @@
       "net_pct_oi": -7.0,
       "bias": "corto"
     },
-    "updated": "2026-09-25T15:32:59.526246-04:00"
+    "updated": "2026-09-28T13:23:54.687698-04:00"
   }
 }
