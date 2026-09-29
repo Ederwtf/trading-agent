@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-09-29T04:48:24.396604-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 187.08,
+    "unrealized_pl": 321.869997,
+    "unrealized_plpc": 0.06806
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de nuevos contratos gubernamentales sigue vigente y el precio sigue por encima de SMA20 y SMA50; aunque el RSI est\u00e1 en zona de sobrecompra, eso no invalida la tesis de rebote en dip.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
