@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-09-30T04:47:36.911077-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 186.75,
+    "unrealized_pl": 312.959997,
+    "unrealized_plpc": 0.06617
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de nuevos contratos gubernamentales sigue vigente y no hay noticias adversas que lo invaliden; aunque el RSI est\u00e1 en zona de sobrecompra, eso no rompe la tesis de rebote del dip.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
