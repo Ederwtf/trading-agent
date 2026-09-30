@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-09-30T19:49:20.058112-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 186.9753,
+    "unrealized_pl": 319.043097,
+    "unrealized_plpc": 0.06746
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de nuevos contratos gubernamentales sigue vigente (rumor de contrato IRS de $250M) y el precio a\u00fan est\u00e1 por encima de SMA20 y SMA50; aunque el RSI est\u00e1 en zona de sobrecompra, eso no invalida la tesis de rebote en dip.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
