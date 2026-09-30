@@ -5,45 +5,45 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-09-30T04:47:41.950690-04:00"
+      "updated": "2026-09-30T11:29:09.731210-04:00"
     },
     "SPCX": {
       "stop": 138.0,
       "take_profit": 185.0,
       "breakeven": false,
-      "updated": "2026-09-30T04:47:39.550260-04:00"
+      "updated": "2026-09-30T11:29:09.346609-04:00"
     },
     "BITO": {
       "stop": 10.94,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-09-30T04:47:33.731465-04:00"
+      "updated": "2026-09-30T11:29:07.708561-04:00"
     },
     "TSM": {
       "stop": 429.59,
       "take_profit": 515.0,
       "breakeven": true,
-      "updated": "2026-09-30T04:47:44.342242-04:00"
+      "updated": "2026-09-30T11:29:10.129570-04:00"
     },
     "PLTR": {
       "stop": 176.03,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-09-30T04:47:36.909729-04:00"
+      "updated": "2026-09-30T11:29:08.951968-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 11.0%, SPY sobre SMA200, drawdown -1.76%"
+      "vol 20d 10.9%, SPY sobre SMA200, drawdown -1.21%"
     ],
     "metrics": {
-      "spy_price": 764.16,
-      "spy_sma200": 719.22,
+      "spy_price": 768.43,
+      "spy_sma200": 719.61,
       "above_sma200": true,
-      "vol_20d": 11.0,
+      "vol_20d": 10.9,
       "vol_60d": 11.2,
-      "drawdown_60d": -1.76,
+      "drawdown_60d": -1.21,
       "vixy_ratio": 0.88
     },
     "policy": {
@@ -52,18 +52,18 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-09-29T11:15:28.415386-04:00"
+    "updated": "2026-09-30T11:29:06.007119-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 29 d\u00eda(s)",
+      "pr\u00f3ximo FOMC en 28 d\u00eda(s)",
       "COT non-comm neto corto (-7.0% del OI, 2026-09-22)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 29,
+      "days_to_next": 28,
       "next_meeting": "2026-10-28",
       "calendar_ok": true
     },
@@ -74,6 +74,6 @@
       "net_pct_oi": -7.0,
       "bias": "corto"
     },
-    "updated": "2026-09-29T11:15:29.375120-04:00"
+    "updated": "2026-09-30T11:29:07.261950-04:00"
   }
 }
