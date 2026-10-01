@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-10-01T13:04:52.230429-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 188.905,
+    "unrealized_pl": 371.144997,
+    "unrealized_plpc": 0.07848
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de nuevos contratos gubernamentales sigue vigente y no hay noticias adversas; aunque el RSI est\u00e1 en zona de sobrecompra, la posici\u00f3n a\u00fan est\u00e1 por debajo del TP y la tesis bullish no se ha invalidado.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
