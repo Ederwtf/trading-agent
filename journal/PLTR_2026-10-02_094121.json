@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-10-02T09:41:21.048450-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 192.295,
+    "unrealized_pl": 462.674997,
+    "unrealized_plpc": 0.09783
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de nuevos contratos gubernamentales sigue vigente y el precio est\u00e1 por encima de SMA20 y SMA50; aunque el RSI est\u00e1 en zona de sobrecompra, no hay evidencia de que el catalizador se haya invalidado ni noticias adversas concretas, por lo que la tesis bullish permanece viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
