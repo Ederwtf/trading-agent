@@ -1,0 +1,27 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-10-02T14:41:24.339460-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 427.45,
+    "current_price": 471.42,
+    "unrealized_pl": 483.67,
+    "unrealized_plpc": 0.10287
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de demanda de semiconductores AI sigue vigente y los recientes anuncios de grandes acuerdos refuerzan la tesis bullish; no hay evidencia de que el impulso se haya invalidado.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "d9daacc4-e295-4fd8-b37b-440e96bfeebb",
+      "order_class": "oco",
+      "stop_price": 443.13,
+      "take_profit": 515.0,
+      "qty": 11,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}

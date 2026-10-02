@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-10-02T14:41:21.938296-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 189.665,
+    "unrealized_pl": 391.664997,
+    "unrealized_plpc": 0.08282
+  },
+  "action": "HOLD",
+  "reason": "El catalizador de nuevos contratos gubernamentales sigue vigente y, de hecho, hay noticias positivas sobre un acuerdo de IA soberana que refuerzan la tesis bullish; no hay evidencia de que el catalizador se haya invalidado.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
