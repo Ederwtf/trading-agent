@@ -1,0 +1,24 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-10-02T18:33:26.146414-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 188.5,
+    "unrealized_pl": 360.209997,
+    "unrealized_plpc": 0.07617
+  },
+  "action": "HOLD",
+  "reason": "El catalizador clave de nuevos contratos gubernamentales y el reciente acuerdo Armada sigue vigente; aunque el RSI est\u00e1 en zona de sobrecompra, no hay evidencia de que el catalizador se haya invalidado, por lo que la tesis bullish permanece viva.",
+  "source": "llm",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 176.03,
+      "take_profit": 215.0,
+      "breakeven": true
+    }
+  }
+}
