@@ -1,0 +1,27 @@
+{
+  "symbol": "TSM",
+  "timestamp": "2026-10-05T06:25:43.228271-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 11.0,
+    "avg_entry_price": 427.45,
+    "current_price": 477.83,
+    "unrealized_pl": 554.18,
+    "unrealized_plpc": 0.11786
+  },
+  "action": "HOLD",
+  "reason": "juez no disponible: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "10d6c3a2-e62a-4936-b1f4-a81d234b1683",
+      "order_class": "oco",
+      "stop_price": 449.16,
+      "take_profit": 515.0,
+      "qty": 11,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
