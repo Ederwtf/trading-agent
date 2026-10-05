@@ -1,0 +1,27 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-10-05T15:25:58.456730-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 32.0,
+    "avg_entry_price": 150.51,
+    "current_price": 169.7821,
+    "unrealized_pl": 616.7072,
+    "unrealized_plpc": 0.12805
+  },
+  "action": "HOLD",
+  "reason": "juez no disponible: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "915fb769-a628-4fb2-9a58-32fdff73a483",
+      "order_class": "oco",
+      "stop_price": 159.6,
+      "take_profit": 185.0,
+      "qty": 32,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
