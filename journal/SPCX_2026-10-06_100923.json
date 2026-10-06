@@ -1,0 +1,27 @@
+{
+  "symbol": "SPCX",
+  "timestamp": "2026-10-06T10:09:23.032820-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 32.0,
+    "avg_entry_price": 150.51,
+    "current_price": 175.2877,
+    "unrealized_pl": 792.8864,
+    "unrealized_plpc": 0.16462
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "f9dbbce3-81a1-4b22-8df1-c4391ea75342",
+      "order_class": "oco",
+      "stop_price": 164.77,
+      "take_profit": 185.0,
+      "qty": 32,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
