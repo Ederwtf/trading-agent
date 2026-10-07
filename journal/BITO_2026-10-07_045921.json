@@ -1,0 +1,24 @@
+{
+  "symbol": "BITO",
+  "timestamp": "2026-10-07T04:59:21.687274-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 477.0,
+    "avg_entry_price": 10.21,
+    "current_price": 11.2,
+    "unrealized_pl": 472.23,
+    "unrealized_plpc": 0.09696
+  },
+  "action": "HOLD",
+  "reason": "juez no disponible: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": false,
+      "reason": "ya tiene OCO vigente",
+      "stop_price": 10.96,
+      "take_profit": 12.45,
+      "breakeven": true
+    }
+  }
+}
