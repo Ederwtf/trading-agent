@@ -5,31 +5,31 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-07T12:10:03.858798-04:00"
+      "updated": "2026-10-07T17:16:43.068795-04:00"
     },
     "SPCX": {
       "stop": 164.77,
       "take_profit": 185.0,
       "breakeven": true,
-      "updated": "2026-10-07T12:10:03.314041-04:00"
+      "updated": "2026-10-07T17:16:40.803285-04:00"
     },
     "BITO": {
       "stop": 10.96,
       "take_profit": 12.45,
       "breakeven": true,
-      "updated": "2026-10-07T12:10:00.447217-04:00"
+      "updated": "2026-10-07T17:16:34.806803-04:00"
     },
     "TSM": {
       "stop": 457.33,
       "take_profit": 515.0,
       "breakeven": true,
-      "updated": "2026-10-07T12:10:04.469301-04:00"
+      "updated": "2026-10-07T17:16:45.404945-04:00"
     },
     "PLTR": {
-      "stop": 181.58,
+      "stop": 182.3,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-10-07T12:10:02.738271-04:00"
+      "updated": "2026-10-07T17:16:38.531369-04:00"
     }
   },
   "regime": {
