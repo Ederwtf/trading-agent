@@ -1,0 +1,27 @@
+{
+  "symbol": "PLTR",
+  "timestamp": "2026-10-07T12:10:02.738780-04:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 27.0,
+    "avg_entry_price": 175.158889,
+    "current_price": 193.17,
+    "unrealized_pl": 486.299997,
+    "unrealized_plpc": 0.10283
+  },
+  "action": "HOLD",
+  "reason": "juez no disponible: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "199c4fa2-de68-4ae7-9ec9-c6c2b51baa8a",
+      "order_class": "oco",
+      "stop_price": 181.58,
+      "take_profit": 215.0,
+      "qty": 27,
+      "replaced": true,
+      "breakeven": true
+    }
+  }
+}
