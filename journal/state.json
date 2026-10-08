@@ -5,25 +5,13 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-08T10:44:40.602554-04:00"
-    },
-    "SPCX": {
-      "stop": 164.77,
-      "take_profit": 185.0,
-      "breakeven": true,
-      "updated": "2026-10-08T10:44:40.213948-04:00"
-    },
-    "TSM": {
-      "stop": 457.33,
-      "take_profit": 515.0,
-      "breakeven": true,
-      "updated": "2026-10-08T10:44:41.098921-04:00"
+      "updated": "2026-10-08T16:11:00.558874-04:00"
     },
     "PLTR": {
       "stop": 188.52,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-10-08T10:44:39.599507-04:00"
+      "updated": "2026-10-08T16:10:58.226146-04:00"
     }
   },
   "regime": {
