@@ -5,13 +5,13 @@
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-09T14:59:46.088823-04:00"
+      "updated": "2026-10-09T19:05:44.516676-04:00"
     },
     "PLTR": {
-      "stop": 194.55,
+      "stop": 195.71,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-10-09T14:59:45.808242-04:00"
+      "updated": "2026-10-09T19:05:42.428032-04:00"
     }
   },
   "regime": {
