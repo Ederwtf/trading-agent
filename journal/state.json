@@ -1,32 +1,32 @@
 {
-  "last_entry_run": "2026-10-09T15:00:12.337420-04:00",
+  "last_entry_run": "2026-10-13T13:03:10.838145-04:00",
   "protection": {
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-13T05:21:33.912605-04:00"
+      "updated": "2026-10-13T13:02:43.410519-04:00"
     },
     "PLTR": {
       "stop": 196.14,
       "take_profit": 215.0,
       "breakeven": true,
-      "updated": "2026-10-13T05:21:31.727350-04:00"
+      "updated": "2026-10-13T13:02:43.026529-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 10.0%, SPY sobre SMA200, drawdown -0.04%"
+      "vol 20d 9.7%, SPY sobre SMA200, drawdown -0.25%"
     ],
     "metrics": {
-      "spy_price": 778.82,
-      "spy_sma200": 722.9,
+      "spy_price": 777.17,
+      "spy_sma200": 723.78,
       "above_sma200": true,
-      "vol_20d": 10.0,
-      "vol_60d": 11.1,
-      "drawdown_60d": -0.04,
-      "vixy_ratio": 0.89
+      "vol_20d": 9.7,
+      "vol_60d": 10.8,
+      "drawdown_60d": -0.25,
+      "vixy_ratio": 0.88
     },
     "policy": {
       "allow_entries": true,
@@ -34,28 +34,28 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-10-09T14:59:40.347115-04:00"
+    "updated": "2026-10-13T13:02:34.759246-04:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 19 d\u00eda(s)",
-      "COT non-comm neto corto (-7.5% del OI, 2026-09-29)"
+      "pr\u00f3ximo FOMC en 15 d\u00eda(s)",
+      "COT non-comm neto corto (-8.0% del OI, 2026-10-06)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 19,
+      "days_to_next": 15,
       "next_meeting": "2026-10-28",
       "calendar_ok": true
     },
     "cot": {
       "market": "E-MINI S&P 500",
-      "report_date": "2026-09-29",
-      "net": -142499,
-      "net_pct_oi": -7.5,
+      "report_date": "2026-10-06",
+      "net": -154070,
+      "net_pct_oi": -8.0,
       "bias": "corto"
     },
-    "updated": "2026-10-09T14:59:44.252214-04:00"
+    "updated": "2026-10-13T13:02:42.531797-04:00"
   }
 }
