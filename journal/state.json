@@ -1,26 +1,26 @@
 {
-  "last_entry_run": "2026-10-21T10:40:14.399160-04:00",
+  "last_entry_run": "2026-10-21T14:55:00.503061-04:00",
   "protection": {
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-21T10:39:45.517220-04:00"
+      "updated": "2026-10-21T14:54:34.803555-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 8.6%, SPY sobre SMA200, drawdown -1.24%"
+      "vol 20d 8.8%, SPY sobre SMA200, drawdown -0.74%"
     ],
     "metrics": {
-      "spy_price": 769.46,
-      "spy_sma200": 726.25,
+      "spy_price": 773.3,
+      "spy_sma200": 726.27,
       "above_sma200": true,
-      "vol_20d": 8.6,
-      "vol_60d": 10.9,
-      "drawdown_60d": -1.24,
-      "vixy_ratio": 0.95
+      "vol_20d": 8.8,
+      "vol_60d": 11.0,
+      "drawdown_60d": -0.74,
+      "vixy_ratio": 0.94
     },
     "policy": {
       "allow_entries": true,
@@ -28,7 +28,7 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-10-21T10:39:44.028068-04:00"
+    "updated": "2026-10-21T14:54:33.852353-04:00"
   },
   "macro": {
     "allow_entries": true,
@@ -50,6 +50,6 @@
       "net_pct_oi": -7.3,
       "bias": "corto"
     },
-    "updated": "2026-10-21T10:39:45.088784-04:00"
+    "updated": "2026-10-21T14:54:34.736133-04:00"
   }
 }
