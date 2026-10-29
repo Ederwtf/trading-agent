@@ -1,25 +1,25 @@
 {
-  "last_entry_run": "2026-10-27T11:28:14.261647-04:00",
+  "last_entry_run": "2026-10-29T14:44:51.707153-04:00",
   "protection": {
     "SPY": {
       "stop": 745.0,
       "take_profit": 820.0,
       "breakeven": false,
-      "updated": "2026-10-29T08:54:28.995778-04:00"
+      "updated": "2026-10-29T14:44:21.792527-04:00"
     }
   },
   "regime": {
     "label": "calm",
     "reasons": [
-      "vol 20d 9.9%, SPY sobre SMA200, drawdown -0.98%"
+      "vol 20d 10.3%, SPY sobre SMA200, drawdown -1.55%"
     ],
     "metrics": {
-      "spy_price": 771.43,
-      "spy_sma200": 728.12,
+      "spy_price": 767.0,
+      "spy_sma200": 728.49,
       "above_sma200": true,
-      "vol_20d": 9.9,
-      "vol_60d": 9.3,
-      "drawdown_60d": -0.98,
+      "vol_20d": 10.3,
+      "vol_60d": 9.4,
+      "drawdown_60d": -1.55,
       "vixy_ratio": 0.97
     },
     "policy": {
@@ -28,19 +28,19 @@
       "min_confidence": 0.6
     },
     "degraded": false,
-    "updated": "2026-10-28T11:45:12.117893-04:00"
+    "updated": "2026-10-29T14:44:20.080847-04:00"
   },
   "macro": {
-    "allow_entries": false,
+    "allow_entries": true,
     "reasons": [
-      "d\u00eda de anuncio del FOMC (2026-10-28)",
+      "pr\u00f3ximo FOMC en 41 d\u00eda(s)",
       "COT non-comm neto corto (-7.4% del OI, 2026-10-20)"
     ],
     "fomc": {
-      "in_meeting": true,
-      "announcement_today": true,
-      "days_to_next": 0,
-      "next_meeting": "2026-10-28",
+      "in_meeting": false,
+      "announcement_today": false,
+      "days_to_next": 41,
+      "next_meeting": "2026-12-09",
       "calendar_ok": true
     },
     "cot": {
@@ -50,6 +50,6 @@
       "net_pct_oi": -7.4,
       "bias": "corto"
     },
-    "updated": "2026-10-28T11:45:13.898782-04:00"
+    "updated": "2026-10-29T14:44:20.924962-04:00"
   }
 }
