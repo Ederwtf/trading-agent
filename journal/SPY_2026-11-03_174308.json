@@ -1,0 +1,27 @@
+{
+  "symbol": "SPY",
+  "timestamp": "2026-11-03T17:43:08.000193-05:00",
+  "pipeline": "monitor",
+  "position": {
+    "qty": 4.0,
+    "avg_entry_price": 771.26,
+    "current_price": 755.5786,
+    "unrealized_pl": -62.7256,
+    "unrealized_plpc": -0.02033
+  },
+  "action": "HOLD",
+  "reason": "tesis intacta",
+  "source": "local",
+  "execution": {
+    "protection": {
+      "armed": true,
+      "order_id": "ac34326f-ca8f-4066-8220-c15c80209c05",
+      "order_class": "oco",
+      "stop_price": 745.0,
+      "take_profit": 820.0,
+      "qty": 4,
+      "replaced": false,
+      "breakeven": false
+    }
+  }
+}
