@@ -4,16 +4,16 @@
   "regime": {
     "label": "panic",
     "reasons": [
-      "vol 20d 22.7% > 20.0%"
+      "vol 20d 22.6% > 20.0%"
     ],
     "metrics": {
-      "spy_price": 730.66,
-      "spy_sma200": 732.52,
+      "spy_price": 722.75,
+      "spy_sma200": 732.71,
       "above_sma200": false,
-      "vol_20d": 22.7,
-      "vol_60d": 15.3,
-      "drawdown_60d": -6.22,
-      "vixy_ratio": 1.17
+      "vol_20d": 22.6,
+      "vol_60d": 15.4,
+      "drawdown_60d": -7.23,
+      "vixy_ratio": 1.24
     },
     "policy": {
       "allow_entries": false,
@@ -21,18 +21,18 @@
       "min_confidence": 1.0
     },
     "degraded": false,
-    "updated": "2026-11-18T15:12:26.042748-05:00"
+    "updated": "2026-11-19T13:39:48.706426-05:00"
   },
   "macro": {
     "allow_entries": true,
     "reasons": [
-      "pr\u00f3ximo FOMC en 21 d\u00eda(s)",
+      "pr\u00f3ximo FOMC en 20 d\u00eda(s)",
       "COT non-comm neto corto (-6.9% del OI, 2026-11-10)"
     ],
     "fomc": {
       "in_meeting": false,
       "announcement_today": false,
-      "days_to_next": 21,
+      "days_to_next": 20,
       "next_meeting": "2026-12-09",
       "calendar_ok": true
     },
@@ -43,6 +43,6 @@
       "net_pct_oi": -6.9,
       "bias": "corto"
     },
-    "updated": "2026-11-18T15:12:28.106743-05:00"
+    "updated": "2026-11-19T13:39:49.702893-05:00"
   }
 }
